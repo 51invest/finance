@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://finance.51invest.com/sitemap.xml

@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>权责发生制 · 巫妖投资</title><meta name="description" content="权责发生制在收入赚取和费用发生的期间确认，而不是在现金收付时确认；它提高期间可比性，但依赖估计，利润与现金流仍可能背离。"><link rel="canonical" href="https://finance.51invest.com/learn/accrual-accounting/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/accrual-accounting/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/accrual-accounting/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/accrual-accounting/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/accrual-accounting/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">权责发生制</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">权责发生制</h1> <p class="article-summary">权责发生制在收入赚取和费用发生的期间确认，而不是在现金收付时确认；它提高期间可比性，但依赖估计，利润与现金流仍可能背离。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M10 · 会计基础</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>4 分钟 · 10 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义</h2>
+<p>权责发生制（accrual accounting）在收入赚取、费用发生的期间确认，而不等到现金收付。它与收付实现制相对；美国公认会计原则（GAAP）与国际财务报告准则（IFRS）下的财务报表要求使用权责发生制[1]。</p>
+<h2>直觉</h2>
+<p>12 月完成服务但 1 月才收款，经济成果发生在 12 月；12 月发生工资但 1 月才支付，成本也属于 12 月。权责发生制把交易记在“经济实质发生”的期间，使各期利润可比。代价是需要应计、递延和估计。</p>
+<h2>正式表达</h2>
+<p>收入在商品或服务提供、赚取时确认；费用在发生或与收入配比时确认。[1][2][3]</p>
+<p>应计项目：已赚取或已发生但未收付，如应计收入、应付工资。递延项目：已收付但未赚取或未发生，如预收款项、预付费用。调整分录按收入赚取、费用发生的期间重新归集这些收付，使账目符合权责发生制。</p>
+<h2>适用条件</h2>
+<ol>
+<li>适用准则：这条约束只针对<strong>采用</strong> GAAP 或 IFRS 的主体，该页逐字写 &quot;However, public or private companies using GAAP or IFRS must prepare their financial statements using the rules of accrual accounting.&quot;[1]，并逐字给出口径 &quot;Accrual-basis accounting prescribes that revenues and expenses must be recorded in the accounting period in which they were earned or incurred, no matter when cash receipts or payments occur.&quot;[1]。不采用该框架的公司并不被同一句话约束：不公开发行股票的公司逐字被允许 &quot;Companies that do not sell stock publicly can use cash-basis instead of accrual-basis accounting for internal management purposes or because they are exempt from such requirements in agreements such as a bank loan.&quot;[1]，现金制本身逐字为 &quot;This method is most commonly used by small businesses that deal primarily in cash transactions.&quot;[1]。税务侧也不能一概而论：逐字为 &quot;The Internal Revenue Service requires businesses to report using accrual-basis information when preparing tax returns.&quot;，而 &quot;companies with inventory must use accrual-based accounting for income tax purposes, though there are exceptions to the general rule&quot;[1]——即美国税务申报以权责发生制信息为主、有存货者必须用应计口径，但一般规则另有例外。</li>
+<li>配比：费用应与相关收入在同一期间确认；无法直接配比的费用在发生期间确认。该页逐字写 &quot;Using the accrual method, we match cash inflows and the outflows required to generate them. We call this the matching principle.&quot;[1]，并逐字把两大确认原则归因于应计制：&quot;the revenue recognition principle and the expense recognition principle (also known as the matching principle)&quot;[1]。</li>
+<li>估计（<strong>本文所列</strong>，非该页主张）：坏账、退货、保修、折旧和减值需要估计，估计变化会影响利润。本站取回的 4.1、4.2、4.3 三页正文（剥标签后）均无 bad debt／uncollectible／warranty／depreciation／impairment／materiality／going concern 词面，因此这份清单不挂来源标记。</li>
+<li>重要性（<strong>本文所列</strong>）：金额不重要的项目可以简化处理，但不能用来掩盖重大错报。本站取回的 4.1、4.2、4.3 三页正文（剥标签后）均无 bad debt／uncollectible／warranty／depreciation／impairment／materiality／going concern 词面；页面里出现的 material 只属于许可条款中的&quot;材料&quot;义，不构成重要性原则的表述。</li>
+<li>持续经营（<strong>本文所列</strong>）：权责发生制假设企业会继续经营，资产按持续经营基础计量。本站取回的 4.1、4.2、4.3 三页正文（剥标签后）均无 bad debt／uncollectible／warranty／depreciation／impairment／materiality／going concern 词面。</li>
+<li>现金流仍要单独看：利润确认早于现金时，应收账款和现金流风险上升。</li>
+</ol>
+<figure>
+  <svg role="img" aria-labelledby="fig-acc-title fig-acc-desc" viewBox="0 0 420 215" width="100%">
+    <title id="fig-acc-title">同一笔业务在两个期间的利润与现金</title>
+    <desc id="fig-acc-desc">两组零基线柱，每元 0.015 像素。十二月：权责发生制净利润七千元（高一百零五像素），现金净流量为零（无高度）。一月：净利润为零，现金净流量七千元（一百零五像素）。</desc>
+    <line x1="60" y1="180" x2="380" y2="180" stroke="var(--border)" stroke-width="2"></line>
+    <rect x="90" y="75" width="52" height="105" fill="var(--accent)" opacity="0.85"></rect>
+    <rect x="152" y="178" width="52" height="2" fill="var(--gold)" opacity="0.9"></rect>
+    <rect x="250" y="178" width="52" height="2" fill="var(--accent)" opacity="0.85"></rect>
+    <rect x="312" y="75" width="52" height="105" fill="var(--gold)" opacity="0.9"></rect>
+    <g fill="var(--muted)" font-size="11" font-family="inherit">
+      <text x="60" y="20">元（零基线，每 1 元 = 0.015 像素）</text>
+      <text x="96" y="71">7,000</text>
+      <text x="158" y="172">0</text>
+      <text x="256" y="172">0</text>
+      <text x="318" y="71">7,000</text>
+      <text x="86" y="200">12 月：净利润 / 现金</text>
+      <text x="246" y="200">1 月：净利润 / 现金</text>
+      <text x="60" y="36">合计两期均为 7,000，差别只在确认期间</text>
+    </g>
+  </svg>
+  <figcaption>图 1：一笔 12 月确认、1 月收款的销售：净利润 7,000 元落在 12 月，现金 7,000 元落在 1 月，两期合计相同（零基线，每元 0.015 像素；零值用 2 像素基线条示意，不代表真实高度）。金额为教学假设，用于说明利润与现金的期间差，不是任何公司的账。</figcaption>
+</figure>
+
+<h2>例子与计算</h2>
+<p>教学假设（非真实公司，单位：元）：12 月提供服务 10,000 元，款项 1 月收取；12 月发生工资 3,000 元，1 月支付。</p>
+<table>
+<thead>
+<tr>
+<th>期间</th>
+<th align="right">权责发生制收入</th>
+<th align="right">权责发生制费用</th>
+<th align="right">净利润</th>
+<th align="right">现金净流量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>12 月</td>
+<td align="right">10,000</td>
+<td align="right">3,000</td>
+<td align="right">7,000</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>1 月</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">7,000</td>
+</tr>
+<tr>
+<td>合计</td>
+<td align="right">10,000</td>
+<td align="right">3,000</td>
+<td align="right">7,000</td>
+<td align="right">7,000</td>
+</tr>
+</tbody></table>
+<p>12 月确认收入 10,000、工资费用 3,000，净利润 7,000；同时确认应收 10,000 和应付工资 3,000。1 月收到现金、支付工资，冲减应收和应付，不再确认收入或费用。两个月的总利润和总现金流相同，但时间分布不同。</p>
+<h2>常见误解</h2>
+<p><strong>权责发生制不涉及现金。</strong> 它仍记录现金收付，只是同时记录应计和递延，使收入费用落在正确期间。</p>
+<p><strong>收到现金就确认收入。</strong> 预收款项在义务履行前是负债，不是收入。</p>
+<p><strong>权责发生制的利润总是更真实。</strong> 它依赖估计和判断，可能被用来提前确认收入或推迟确认费用。</p>
+<p><strong>小企业也必须用权责发生制。</strong> 税务和小企业报告可能有收付实现制选择；公开财务报表通常要求权责发生制。</p>
+<p><strong>利润等于现金流。</strong> 应计项目使两者在短期内背离，长期趋势需要一起看。</p>
+<h2>关联</h2>
+<p>先修：资产负债权益等式（FIN-017）、利润表（FIN-018）。后续：现金流量表（FIN-019）、盈利质量分析（INV-008）。另见：资本成本（FIN-016）。</p>
+<h2>图解</h2>
+<p>下面三张图分别检查本文的机制、边界与对照；图内文字取自本文小节，不是新数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">权责发生制：机制链</title>
+    <desc id="fig-batch-chain-desc">权责发生制 的三段结构：问题、机制、判断。图内文字取自本文小节，不是新的数据估计。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">权责发生制：机制链</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图内文字取自本文小节；三段缺一不可。</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">权责发生制在收入赚取</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">和费用发生的期间确认…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">权责发生制在收入赚</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">取和费用发生的期间</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">确认，而不是在现金</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">收付时确认；它提高</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">期间可比性，但依赖…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">定义</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">定义：权责发生制（acc</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">rual accounting）在…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">定义：权责发生制（a</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">ccrual accountin</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">g）在收入赚取、费</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">用发生的期间确认，</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">而不等到现金收付。…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">例子与计算</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">教学假设（非真实公司</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">，单位：元）：12…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">教学假设（非真实公</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">司，单位：元）：12</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">月提供服务 10,000</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start"> 元，款项 1</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">月收取；12…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">读法：先看问题能否成立，再看机制能否连通，最后看判断会不会越界。</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">若中间一步缺证据，后面的结论只能当假设，不能当事实。</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为结构示意，不是新的数据图；样本为本文论证。</text>
+  </svg>
+  <figcaption>图 2：权责发生制的机制链：从问题、机制到判断。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">权责发生制：适用边界</title>
+    <desc id="fig-batch-boundary-desc">把成立条件与失效条件分开；局部例子不能自动推广到所有情形。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">权责发生制：什么情况下成立？</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">先检查条件，再看结论</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">条件、口径或样本一变，结论可能要重算</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成立</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">适用准则：这条约束只针对采用</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">GAAP 或 IFRS 的主体，该页逐字写</text>
+      <text x="24" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start"> &quot;However, public or</text>
+      <text x="24" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">private companies using…</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不成立 / 需改写</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">权责发生制不涉及现金。</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">图为边界示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 3：权责发生制的边界：哪些条件成立，哪些条件失效。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">权责发生制：对象、前提与常见误区</title>
+    <desc id="fig-batch-compare-desc">三行比较本文概念、成立条件与常见误区；比较不等于等价，也不能替代定义。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">权责发生制：一张表看对象、前提与误区</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">本篇</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">容易混淆</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">对象</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">权责发生制在收入赚取和费</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">用发生的期间确认，而不是…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相邻概念/常见说法</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">前提</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">适用准则：这条约束只针对</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">采用 GAAP 或 IFRS…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">权责发生制不涉及现金。</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">检查</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">先定义，再比较；不能只看</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">名称</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相关不等于因果，局部不等于普遍</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为比较示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 4：权责发生制的对象、前提与常见误区比较。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<h2>练习</h2>
+<ol>
+<li><strong>概念辨别。</strong> 权责发生制下，收入在什么时候确认？</li>
+<li><strong>计算。</strong> 12 月赚取收入 50,000 元，收到 40,000 元；发生费用 30,000 元，支付 25,000 元。权责发生制净利润和现金净流量各是多少？</li>
+<li><strong>适用条件。</strong> 公司赊销增长很快但不计提坏账准备，可能高估什么？应补充什么信息？</li>
+</ol>
+<details>
+<summary>参考答案</summary>
+
+<ol>
+<li>在商品或服务提供、收入赚取的期间确认，不以收款为准。</li>
+<li>权责发生制净利润 = 50,000 - 30,000 = 20,000；现金净流量 = 40,000 - 25,000 = 15,000。</li>
+<li>可能高估收入、净利润和应收账款；应评估客户信用、账龄和坏账准备，并结合经营现金流判断回款质量。</li>
+</ol>
+</details>
+
+<h2>来源</h2>
+<ol>
+<li>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “4.1 Cash versus Accrual Accounting.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/4-1-cash-versus-accrual-accounting">https://openstax.org/books/principles-finance-2e/pages/4-1-cash-versus-accrual-accounting</a>（访问日期：2026-11-03）</li>
+<li>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “4.2 Economic Basis for Accrual Accounting.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/4-2-economic-basis-for-accrual-accounting">https://openstax.org/books/principles-finance-2e/pages/4-2-economic-basis-for-accrual-accounting</a>（访问日期：2026-11-03）</li>
+<li>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “4.3 How Does a Company Recognize a Sale and an Expense?” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/4-3-how-does-a-company-recognize-a-sale-and-an-expense">https://openstax.org/books/principles-finance-2e/pages/4-3-how-does-a-company-recognize-a-sale-and-an-expense</a>（访问日期：2026-11-03）</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>能按赚取与发生原则判断收入与费用落在哪个期间，并解释与现金的时点差</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>能指出权责发生制依赖的估计项及其被滥用的方式</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>能按赚取与发生原则判断收入与费用落在哪个期间，并解释与现金的时点差</li><li>能指出权责发生制依赖的估计项及其被滥用的方式</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/accounting-equation/">FIN-017 · 资产负债权益等式</a> </li><li> <a href="/learn/income-statement/">FIN-018 · 利润表</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/cash-flow-statement/">FIN-019 · 现金流量表</a> </li><li> <a href="https://invest.51invest.com/learn/earnings-quality-analysis/">INV-008 · 盈利质量分析</a> </li><li> <a href="/learn/cost-of-capital/">FIN-016 · 资本成本</a> </li><li> <a href="/learn/accounting-equation/">FIN-017 · 资产负债权益等式</a> </li><li> <a href="/learn/income-statement/">FIN-018 · 利润表</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/4-1-cash-versus-accrual-accounting" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 4.1 Cash versus Accrual Accounting</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-11-03 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：本节逐字登记（2026-11-03 curl 200，剥标签正文切片）：适用范围限定句 &quot;However, public or private companies using GAAP or IFRS must prepare their financial statements using the rules of accrual accounting.&quot;；应计口径定义 &quot;Accrual-basis accounting prescribes that revenues and expenses must be recorded in the accounting period in which they were earned or incurred, no matter when cash receipts or payments occur.&quot;；现金制的常见使用者 &quot;This method is most commonly used by small businesses that deal primarily in cash transactions.&quot;；非上市公司可用现金制的逐字表述 &quot;Companies that do not sell stock publicly can use cash-basis instead of accrual-basis accounting for internal management purposes or because they are exempt from such requirements in agreements such as a bank loan.&quot;；税务两句 &quot;The Internal Revenue Service requires businesses to report using accrual-basis information when preparing tax returns.&quot; 与 &quot;companies with inventory must use accrual-based accounting for income tax purposes, though there are exceptions to the general rule&quot;；配比原则 &quot;Using the accrual method, we match cash inflows and the outflows required to generate them. We call this the matching principle.&quot; 与确认原则归属 &quot;the revenue recognition principle and the expense recognition principle (also known as the matching principle)&quot;。因此正文把&quot;GAAP/IFRS 必须权责发生制&quot;收窄为&quot;采用该框架的主体必须&quot;，并保留该页原有的例外与非公开公司可用现金制内部报告这一层。同时按词面实测：该页与 4.2、4.3 三页均无 bad debt／uncollectible／warranty／depreciation／impairment／materiality／going concern，故估计清单、重要性与持续经营三条改为本文所列，不挂来源标记（page 中出现的 material 属许可条款&quot;材料&quot;义）。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/4-2-economic-basis-for-accrual-accounting" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 4.2 Economic Basis for Accrual Accounting</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-11-03 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：利润表要素为收入、费用、利得和损失；收入减费用等于净利润或净亏损；权责发生制反映交易影响的时间，而不是现金流发生的时间。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/4-3-how-does-a-company-recognize-a-sale-and-an-expense" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 4.3 How Does a Company Recognize a Sale and an Expense?</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-11-03 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：收入在赚取的期间确认；费用是为提供商品或服务而发生的成本，会减少企业价值。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/accrual-accounting/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

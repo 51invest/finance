@@ -1,0 +1,291 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>The Time Value of Money · 51Invest</title><meta name="description" content="Cash flows at different dates cannot be added directly; compounding moves value forward and discounting brings it back to today."><link rel="canonical" href="https://finance.51invest.com/en/learn/time-value-of-money/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/time-value-of-money/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/time-value-of-money/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/time-value-of-money/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/en/" data-main-home aria-label="51Invest"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">51Invest</span> <span class="brand-caption">WUYAO INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="Knowledge stations"> <a class="nav-link" href="https://51invest.com/en/" data-main-home> Home </a> <a class="nav-link" href="https://economics.51invest.com/en/"> Economics </a><a class="nav-link active" href="/en/" aria-current="page"> Finance </a><a class="nav-link" href="https://markets.51invest.com/en/"> Markets </a><a class="nav-link" href="https://invest.51invest.com/en/"> Investing </a><a class="nav-link" href="https://history.51invest.com/en/"> History </a><a class="nav-link" href="https://research.51invest.com/en/"> Research </a> <a class="nav-link" href="https://51invest.com/en/contents/"> Content map </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/learn/time-value-of-money/" hreflang="zh-CN" lang="zh-CN" data-language-link="zh" aria-label="Switch to Chinese" title="Switch to Chinese"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="Theme: System" title="Theme: System" data-label-auto="Theme: System" data-label-light="Theme: Light" data-label-dark="Theme: Dark"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">System</span> <span class="theme-text" data-theme-text="light">Light</span> <span class="theme-text" data-theme-text="dark">Dark</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/en/" data-main-home>Home</a> <span class="sep">/</span> <a href="/en/">Finance</a> <span class="sep">/</span> <span aria-current="page">The Time Value of Money</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">Method</span> <h1 class="article-title">The Time Value of Money</h1> <p class="article-summary">Cash flows at different dates cannot be added directly; compounding moves value forward and discounting brings it back to today.</p>  <div class="meta-grid"> <div class="meta-item"><span>Module</span><strong>FIN-M08 · 时间价值</strong></div> <div class="meta-item"><span>Level</span><strong>Foundation</strong></div> <div class="meta-item"><span>Read</span><strong>8 min · 13 sections</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> This article has an interactive demo <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>Problem and output</h2>
+<p>CNY 1,000 today and CNY 1,000 in three years are not the same thing. Every monetary figure in this article is stated in Chinese yuan (CNY), matching the Chinese version, and all rates are per annum unless another frequency is named. Today’s money can be invested, consumed, or kept as an option; future money requires waiting and carries uncertainty. Time-value methods convert cash flows to a common date so that investments, loans, savings and projects can be compared. The output is usually a present value, future value, annuity present value or net present value (NPV), not an unqualified “total return.”</p>
+<h2>Inputs and data requirements</h2>
+<ul>
+<li>amount, sign and date of each cash flow;</li>
+<li>the interest or discount rate and whether it is annual, monthly or effective annual;</li>
+<li>compounding frequency and convention;</li>
+<li>horizon, currency and whether the cash flows are certain;</li>
+<li>taxes, fees, inflation and credit-risk adjustments.</li>
+</ul>
+<p>The rate must match the cash-flow frequency: an annual rate for annual cash flows, a monthly rate for monthly cash flows. Nominal annual and effective annual rates are not interchangeable.</p>
+<p>Compounding grows a sum on interest already earned, and discounting converts a future cash flow into a present value; this article treats the two as opposite directions of one time-value relation. OpenStax 1.8 separately explains that more time produces more compounding, and that market value can be understood by discounting expected future cash flows to today [1].</p>
+<h2>Assumptions</h2>
+<p>The basic formulas assume a constant rate over the horizon, cash flows at agreed dates, reinvestment at that rate, no taxes, fees, inflation or default differences, and certain cash flows. Real comparisons must check each assumption.</p>
+<h2>Steps and formulas</h2>
+<p>Future value:</p>
+<div class="formula" role="math" aria-label="Future value equals present value times one plus the rate raised to n">FV = PV × (1 + r)^n</div>
+
+<p>Present value:</p>
+<div class="formula" role="math" aria-label="Present value equals future value divided by one plus the rate raised to n">PV = FV / (1 + r)^n</div>
+
+<p>Ordinary annuity present value (payment <code>C</code> at the end of each period for <code>n</code> periods):</p>
+<div class="formula" role="math" aria-label="Annuity present value equals the payment times one minus one plus the rate to the negative n, divided by the rate">PV = C × [1 - (1 + r)^(-n)] / r</div>
+
+<p>Net present value:</p>
+<div class="formula" role="math" aria-label="Net present value equals the sum of discounted cash flows minus the initial investment">NPV = Σ_{t=1..n} CF_t / (1 + r)^t - CF_0 (the initial investment CF_0 occurs at t = 0)</div>
+
+<p>For a nominal annual rate <code>r</code> compounded <code>m</code> times per year, the effective annual rate is:</p>
+<div class="formula" role="math" aria-label="Effective annual rate equals one plus the nominal rate divided by m, raised to m, minus one">EAR = (1 + r/m)^m - 1</div>
+
+<h2>Worked example</h2>
+<p><strong>Single cash flow.</strong> Invest CNY 1,000 today at a 5% annual rate compounded annually for three years:</p>
+<p><code>FV = 1,000 × 1.05³ = 1,157.63</code> CNY.</p>
+<p>Conversely, discounting CNY 1,157.63 received in three years at 5% gives <code>1,157.63 / 1.05³ ≈ 1,000.00</code> CNY (the arithmetic result is 1,000.0043). Using the unrounded future value 1,157.625 returns exactly CNY 1,000; the approximation sign reflects rounding the future value to fen - hundredths of a yuan - not a flaw in the formula.</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-tvm-title-en fig-tvm-desc-en" viewBox="0 0 520 200" width="100%">
+    <title id="fig-tvm-title-en">Future value of CNY 1,000 at five percent a year over three years</title>
+    <desc id="fig-tvm-desc-en">A timeline from year zero to year three with amounts in Chinese yuan: 1,000.00 at year zero, 1,050.00 at year one, 1,102.50 at year two, and 1,157.63 at year three. The vertical axis carries no scale; the labels state the amounts.</desc>
+    <line x1="60" y1="140" x2="470" y2="140" stroke="var(--border)" stroke-width="2"></line>
+    <g fill="var(--muted)" font-size="11" font-family="inherit">
+      <text x="55" y="165">0</text>
+      <text x="180" y="165">1</text>
+      <text x="305" y="165">2</text>
+      <text x="430" y="165">3 years</text>
+    </g>
+    <g stroke="var(--accent)" stroke-width="2">
+      <line x1="60" y1="135" x2="60" y2="100"></line>
+      <line x1="185" y1="135" x2="185" y2="100"></line>
+      <line x1="310" y1="135" x2="310" y2="100"></line>
+      <line x1="435" y1="135" x2="435" y2="100"></line>
+    </g>
+    <g fill="var(--accent)" font-size="11" font-family="inherit">
+      <text x="30" y="88">1,000.00</text>
+      <text x="155" y="88">1,050.00</text>
+      <text x="280" y="88">1,102.50</text>
+      <text x="405" y="88">1,157.63</text>
+    </g>
+  </svg>
+  <figcaption>Figure 1: Growth of CNY 1,000 at a 5% annual compound rate. Amounts on the timeline are in Chinese yuan. The figure shows the compounding assumption, not actual investment returns or inflation.</figcaption>
+</figure>
+
+<p><strong>Annuity.</strong> Receive CNY 100 at the end of each year for three years, discounted at 5%:</p>
+<p><code>PV = 100 × [1 - 1.05⁻³] / 0.05 ≈ 272.32</code> CNY. The undiscounted total is CNY 300, so the CNY 27.68 difference between CNY 300 and the present value of CNY 272.32 is the cost of waiting at a 5% discount rate.</p>
+<p><strong>Net present value.</strong> Invest CNY 1,000 and receive CNY 400 at the end of each of three years, discounted at 5%:</p>
+<p><code>NPV = -1,000 + 400/1.05 + 400/1.05² + 400/1.05³ ≈ 89.30</code> CNY (this article signs outflows negative and inflows positive; &quot;pay&quot; below means an outflow and &quot;receive&quot; an inflow, not two different conventions).</p>
+<p>A positive NPV means the present value of the project at a 5% required return exceeds its initial cost. It does not mean the project is risk-free or that the realized return will be exactly 5%.</p>
+<p><strong>Compounding frequency.</strong> A 12% nominal annual rate compounded monthly has an effective annual rate of <code>(1 + 0.12/12)^12 - 1 ≈ 12.68%</code>, above the nominal 12%. Products must be compared on a consistent basis.</p>
+<p>The calculations here are tools, not verdicts: OpenStax describes financial tools as helping people make consistent and repeatable decisions [2]; applying them to compare time, risk and value is this article&#39;s framing.</p>
+<h2>Interpreting the result</h2>
+<ul>
+<li>Present value falls as the discount rate rises; longer horizons are more sensitive.</li>
+<li>Future value rises with the rate and horizon; more frequent compounding usually raises the effective annual rate.</li>
+<li>Positive NPV means the project adds value under the given rate and cash-flow assumptions; negative NPV means it fails the required return.</li>
+<li>Do not compare nominal cash-flow totals; timing, risk and financing costs must be included.</li>
+</ul>
+<h2>Failure conditions</h2>
+<ul>
+<li>Uncertain or decision-dependent cash flows can make a single discount rate hide risk differences; the textbook remedy is to raise or lower the rate used to discount the project’s cash flows according to their riskiness[3].</li>
+<li>A discount rate that does not match cash-flow risk can overstate or understate value.</li>
+<li>Comparing projects with different horizons, scale or risk by NPV alone can mislead; add return, payback or risk-adjusted measures.</li>
+<li>Internal rate of return (IRR) may have no single solution: the textbook condition is negative cash flows in more than one period, which makes the NPV profile cross the axis twice and gives two rates at which NPV equals zero[4]; IRR also converts cash flows into percentages and ignores the size or scale of projects, so projects of different scale cannot be compared with it directly[4].</li>
+<li>Negative rates are mathematically possible; the intuition that money always grows over time fails.</li>
+<li>Ignoring taxes, fees, inflation, liquidity and reinvestment risk can change the conclusion.</li>
+</ul>
+<h2>Verification and reproduction</h2>
+<ol>
+<li>Write down every cash flow with its date and sign.</li>
+<li>Match the rate and cash-flow frequency; state nominal or effective.</li>
+<li>Compute with the formulas and check against a timeline or table.</li>
+<li>Change the discount rate, horizon or growth assumption to test robustness.</li>
+<li>Report assumptions, units, currency and uncertainty; do not present only the final number.</li>
+</ol>
+<!-- kp-supplement:start -->
+<h2>Knowledge-point review</h2>
+<h3>simple and compound interest</h3>
+<p><strong>Definition</strong>: Simple interest accrues only on principal, while compound interest adds accrued interest to principal for future accrual.</p>
+<p><strong>Mechanism</strong>: Compound terminal value is principal times one plus the rate raised to the number of periods; more frequent compounding raises the effective annual rate.</p>
+<p><strong>Example</strong>: For example, 100 yuan at 5 percent gives 110 under simple interest after two years and 110.25 under annual compounding, with the gap widening over time.</p>
+<p><strong>Boundary</strong>: Compounding is not a natural law; negative rates, taxes, fees and cash-flow timing change results, and high-frequency compounding adds little over short horizons.</p>
+<h3>present and future value</h3>
+<p><strong>Definition</strong>: Present value discounts future cash flows to today at a discount rate; future value compounds today&#39;s money forward.</p>
+<p><strong>Mechanism</strong>: The two are inverses; the discount rate reflects opportunity cost, risk and inflation, and cash-flow timing must match the rate convention.</p>
+<p><strong>Example</strong>: For example, 105 yuan a year away at a 5 percent discount rate is worth about 100 today; higher risk raises the rate and lowers the value.</p>
+<p><strong>Boundary</strong>: Present value is not a certain price; discount-rate choice embeds judgement, distant cash flows are highly sensitive, and taxes and liquidity also matter.</p>
+<h3>annuities</h3>
+<p><strong>Definition</strong>: An annuity is a series of equal cash flows at regular intervals, including ordinary, annuity-due, perpetuity and growing versions.</p>
+<p><strong>Mechanism</strong>: Ordinary annuity present value uses an annuity factor; a perpetuity divides cash flow by the discount rate, and a growing perpetuity subtracts growth from the rate.</p>
+<p><strong>Example</strong>: For example, 100 yuan at each year-end for three years at a 5 percent discount rate is worth about 272.32 today.</p>
+<p><strong>Boundary</strong>: Annuity formulas assume fixed cash flows, regular intervals and a constant rate; a growing perpetuity requires growth below the discount rate or the value diverges.</p>
+<h3>discounted cash flow and rate conversion</h3>
+<p><strong>Definition</strong>: Discounted cash flow discounts cash flows at different dates to one present value for valuation and capital budgeting.</p>
+<p><strong>Mechanism</strong>: Rate conversion standardises nominal, real, effective and continuous rates; NPV is present value minus initial outlay, and IRR sets NPV to zero.</p>
+<p><strong>Example</strong>: For example, a 100 yuan project returning 110 next year at an 8 percent rate has an NPV of about 1.85 yuan.</p>
+<p><strong>Boundary</strong>: DCF is sensitive to horizon, terminal value and discount rate; IRR assumes reinvestment and can have multiple solutions, and rate conversion must match cash-flow frequency.</p>
+<!-- kp-supplement:end -->
+
+<h2>Related</h2>
+<p>The present-value mechanics are defined in &quot;Present Value and Discounted Cash Flows&quot; (FIN-011); the simple-versus-compound conversion is in &quot;Simple and Compound Interest&quot; (FIN-010); the nominal-versus-real, pre-tax-versus-after-tax and annualization conventions are in Interest-Rate Types and Conventions (FIN-012). All three share the same hypothetical teaching assumptions.</p>
+<h2>Figures in plain language</h2>
+<p>The three figures below check the mechanism, boundary and comparison in this article; labels come from its own sections, not new data.</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">The Time Value of Money: mechanism chain</title>
+    <desc id="fig-batch-chain-desc">The Time Value of Money — three-step structure: problem, mechanism, judgment. Labels come from the article's sections, not new data.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">The Time Value of Money: mechanism chain</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Labels come from the article's sections; all three steps matter.</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Problem</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Cash flows at</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">different dates…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Cash flows at</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">different dates</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">cannot be added</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">directly;</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">compounding…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Verification and reproduction</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Verification and</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">reproduction: 1.…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Verification</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">and reproduction</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">: 1.</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Inputs and data requirements</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">amount, sign and</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">date of each…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">amount, sign</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">and date of</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">each cash flow;</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">the interest or</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">discount rate…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Reading order: test the problem, then the mechanism, then whether the judgment overreaches.</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">If a middle step lacks evidence, later conclusions are hypotheses, not facts.</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Structural illustration, not a new data chart; sample is the article's own argument.</text>
+  </svg>
+  <figcaption>Figure 2: The Time Value of Money — mechanism chain: problem, mechanism, judgment. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">The Time Value of Money: boundary</title>
+    <desc id="fig-batch-boundary-desc">Separates conditions where the claim holds from those where it fails; a local example is not universal.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">The Time Value of Money: when does it hold?</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">Check the conditions before the conclusion</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">If conditions, definitions or samples change, recompute the conclusion</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Holds</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Uncertain or decision-depend</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">ent cash flows can make a</text>
+      <text x="24" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">single discount rate hide</text>
+      <text x="24" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">risk differences; the…</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Fails / rewrite</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">CNY 1,000 today and CNY</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">1,000 in three years are</text>
+      <text x="188" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">not the same thing.</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">Boundary illustration; sample is the article's own argument; units as stated in the text.</text>
+  </svg>
+  <figcaption>Figure 3: The Time Value of Money — boundary: when the claim holds, and when it fails. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">The Time Value of Money: object, conditions and common mistakes</title>
+    <desc id="fig-batch-compare-desc">Three rows compare the concept, its conditions and common mistakes; comparison is not equivalence and does not replace a definition.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">The Time Value of Money: object, conditions and common mistakes at a glance</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">This article</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Commonly confused</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Object</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Cash flows at</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">different dates…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Adjacent concepts / common claims</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Conditions</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Uncertain or</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">risk-dependent cash…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">CNY 1,000 today and CNY 1,000</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">in three years are not the same…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Check</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Define first, then compare; never judge</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">labels only</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Correlation is not causation; a local case is not universal</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Comparison illustration; sample is the article's own argument; units as stated in the text.</text>
+  </svg>
+  <figcaption>Figure 4: The Time Value of Money — comparison of object, conditions and common mistakes. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<h2>Exercises</h2>
+<ol>
+<li><strong>Present value.</strong> What is the present value of 1,157.63 received in three years at a 5% annual discount rate?</li>
+<li><strong>Frequency.</strong> A 12% nominal annual rate compounded monthly has what effective annual rate? Why is it above 12%?</li>
+<li><strong>Project comparison.</strong> Two projects require the same initial investment and have NPVs of 100 and 200, but the second is riskier. Can you simply choose the second? What else is needed?</li>
+</ol>
+<details>
+<summary>Suggested answers</summary>
+
+<ol>
+<li><code>1,157.63 / 1.05³ ≈ 1,000.00</code>; using the unrounded 1,157.625 gives exactly 1,000.</li>
+<li><code>(1 + 0.12/12)^12 - 1 ≈ 12.68%</code>. Monthly compounding lets interest earn interest within the year, so the effective rate exceeds the nominal rate.</li>
+<li>No. Compare risk, cash-flow uncertainty, horizon, financing conditions and capital constraints, and adjust the discount rate to the riskiness of the cash flows where appropriate[3]. Scenario analysis is this article’s own addition; neither 16.2 nor 16.3 uses the term.</li>
+</ol>
+</details>
+
+<h2>Sources</h2>
+<ol>
+<li><p>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “1.8 Concepts of Time and Value.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/1-8-concepts-of-time-and-value">https://openstax.org/books/principles-finance-2e/pages/1-8-concepts-of-time-and-value</a> (accessed 2026-10-30)</p>
+</li>
+<li><p>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “1 Why It Matters.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/1-why-it-matters">https://openstax.org/books/principles-finance-2e/pages/1-why-it-matters</a> (accessed 2026-10-30)</p>
+</li>
+<li><p>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “16.2 The Net Present Value (NPV) Method.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/16-2-net-present-value-npv-method">https://openstax.org/books/principles-finance-2e/pages/16-2-net-present-value-npv-method</a> (accessed 2026-11-03)</p>
+</li>
+<li><p>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “16.3 The Internal Rate of Return (IRR) Method.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/16-3-internal-rate-of-return-irr-method">https://openstax.org/books/principles-finance-2e/pages/16-3-internal-rate-of-return-irr-method</a> (accessed 2026-11-03)</p>
+</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="en" aria-labelledby="demo-check-title" data-check-done="All three are covered: the core of this article is in place." data-check-pending="One item is still open: go back to the matching section and retell it with a number or counterexample." data-check-count="Ticked"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">Worked demo</p> <button class="demo-reset" type="button" data-demo-reset>Reset</button> </div> <h2 id="demo-check-title">Read-through check: can you say three things?</h2> <p class="demo-intro">No recitation needed. Tick each sentence below and see whether you can explain the mechanism, one worked example and one boundary in your own words.</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>Compare cash flows at different dates using compounding and discounting.</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>Compute future value, present value, annuity present value and net present value from given cash flows, rates and horizons.</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>Name one condition under which the article’s conclusion does not hold</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> Ticked 0 / 3
+</p> </div> <p class="demo-footnote">The numbers are teaching assumptions that show relationships, not forecasts or investment advice.</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> This article has passed the current publication gate. Factual, calculation and translation revisions update both language versions together. </p> <p> <a class="button secondary" href="/en/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>Back to station </a> </p> </div> <aside class="article-aside" aria-label="Article information"> <section class="aside-card"> <h2>Learning objectives</h2> <ul> <li>Compare cash flows at different dates using compounding and discounting.</li><li>Compute future value, present value, annuity present value and net present value from given cash flows, rates and horizons.</li><li>State the rate conventions, cash-flow uncertainty and failure conditions that limit project comparisons.</li> </ul> </section> <section class="aside-card"> <h2>Required prerequisites</h2> <p class="muted"> None. </p> </section> <section class="aside-card"> <h2>Recommended reading</h2> <ul> <li> <a href="/en/learn/simple-and-compound-interest/">FIN-010 · Simple and Compound Interest</a> </li><li> <a href="/en/learn/present-value-and-discounted-cash-flows/">FIN-011 · Present Value and Discounted Cash Flows</a> </li><li> <a href="/en/learn/interest-rate-types-and-conventions/">FIN-012 · Interest-Rate Types and Conventions</a> </li> </ul> </section> <section class="aside-card"> <h2>AI review record</h2> <p class="muted"> There is no human sign-off; these states come from the AI-only editorial review. </p> <ul> <li> Facts and calculations : AI review passed </li><li> Subject : AI review passed </li><li> English : AI review passed </li><li> Page : AI review passed </li> </ul> </section> <section class="aside-card"> <h2>Sources</h2> <div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/1-8-concepts-of-time-and-value" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 1.8 Concepts of Time and Value</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>Accessed: 2026-10-30 · License: CC BY-NC-SA 4.0</p> <p>Supports: Section 1.8 explains that a longer investment horizon produces more compounding and a higher future value, and that market value can be understood by discounting expected future cash flows to today; the page does not state a formula-level inverse relation between compounding and discounting, which is this article&#39;s summary.</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/1-why-it-matters" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 1 Why It Matters</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>Accessed: 2026-10-30 · License: CC BY-NC-SA 4.0</p> <p>Supports: The page says financial tools help people make consistently good and repeatable decisions; it does not limit that role to the three dimensions of time, risk and value, which is this article&#39;s framing.</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/16-2-net-present-value-npv-method" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 16.2 The Net Present Value (NPV) Method</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>Accessed: 2026-11-03 · License: CC BY-NC-SA 4.0</p> <p>Supports: NPV criterion and risk adjustment, verbatim: &quot;the discount rate used to discount future cash flows to the present can be increased or decreased to adjust for the riskiness of the project’s cash flows.&quot;; positive-NPV projects are accepted and negative-NPV projects rejected. The page never uses the adjective risk-adjusted and does not discuss multiple IRRs or scenario analysis.</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/16-3-internal-rate-of-return-irr-method" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 16.3 The Internal Rate of Return (IRR) Method</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>Accessed: 2026-11-03 · License: CC BY-NC-SA 4.0</p> <p>Supports: Two limits of IRR, verbatim: &quot;Another disadvantage of using the IRR method is that there may not be a single mathematical solution to an IRR problem. This can happen when negative cash flows occur in more than one period in the project.&quot;, illustrated with the (−350, 950, −620) million example because &quot;Because the NPV profile line crosses the horizontal axis twice, there are two IRRs. In other words, there are two interest rates at which NPV equals zero.&quot;; on scale, &quot;The IRR converts the cash flows to percentages and ignores differences in the size or scale of projects.&quot;. The page never uses the adjective risk-adjusted.</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">A free, non-commercial knowledge site. Sources and definitions are labelled; nothing here is investment advice.</p> </div> </div> <nav class="footer-links" aria-label="Knowledge stations"> <a href="https://51invest.com/en/" data-main-home>Home</a> <a href="https://51invest.com/en/contents/">Content map</a> <a href="/en/glossary/">Glossary</a> <a href="/en/search/">Search</a> <a href="https://51invest.com/en/charts/" data-main-link>Charts</a> <a href="https://51invest.com/en/sources/" data-main-link>Data &amp; licences</a> <a href="/en/">Station home</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="Knowledge stations"> <a class="mobile-link" href="https://51invest.com/en/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>Home</span> </a> <a class="mobile-link" href="https://51invest.com/en/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>Knowledge stations</span> </a> <a class="mobile-link active" href="/en/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>Station home</span> </a> <a class="mobile-link" href="/learn/time-value-of-money/" data-language-link="zh"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

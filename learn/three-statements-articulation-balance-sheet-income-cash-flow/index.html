@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>三表勾稽：资产负债表、利润表与现金流量表怎么连起来 · 巫妖投资</title><meta name="description" content="利润表的净利润进入资产负债表留存收益，现金流量表的现金变动进入资产负债表货币资金；三表通过少数几个科目咬合。勾稽对不上，往往说明分类、合并范围或估计出了问题。"><link rel="canonical" href="https://finance.51invest.com/learn/three-statements-articulation-balance-sheet-income-cash-flow/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/three-statements-articulation-balance-sheet-income-cash-flow/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/three-statements-articulation-balance-sheet-income-cash-flow/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/three-statements-articulation-balance-sheet-income-cash-flow/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/three-statements-articulation-balance-sheet-income-cash-flow/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">三表勾稽：资产负债表、利润表与现金流量表怎么连起来</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">三表勾稽：资产负债表、利润表与现金流量表怎么连起来</h1> <p class="article-summary">利润表的净利润进入资产负债表留存收益，现金流量表的现金变动进入资产负债表货币资金；三表通过少数几个科目咬合。勾稽对不上，往往说明分类、合并范围或估计出了问题。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M11 · 三张报表</strong></div> <div class="meta-item"><span>层级</span><strong>系统</strong></div> <div class="meta-item"><span>阅读</span><strong>8 分钟 · 11 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义与直觉</h2>
+<p>**三表勾稽（three-statement articulation）**指资产负债表、利润表和现金流量表通过若干科目相互验证。核心连线有五条：</p>
+<ol>
+<li>净利润进入留存收益，减少分红后结转到资产负债表权益；</li>
+<li>折旧摊销在利润表扣减，在现金流量表加回，同时减少资产负债表固定资产；</li>
+<li>应收账款、存货和应付账款的变动连接利润表与经营现金流；</li>
+<li>资本开支进入现金流量表投资活动，同时增加固定资产；</li>
+<li>现金净变动进入资产负债表货币资金。</li>
+</ol>
+<p>勾稽不是会计游戏，而是检查逻辑：如果净利润增加但留存收益没动、现金变动与货币资金不符，说明分类、合并范围或重述有问题[1][2]。</p>
+<h2>正式表达与示例</h2>
+<p>某公司净利润 120 万元，分红 30 万元，留存收益增加 90 万元；期初留存收益 200 万元，期末 290 万元。</p>
+<p>经营现金流 150 万元，投资现金流 −60 万元，融资现金流 −20 万元，现金净变动 70 万元；期初现金 100 万元，期末 170 万元。资产负债表货币资金也应为 170 万元。</p>
+<p>若资产负债表货币资金是 160 万元，差异 10 万元可能来自受限资金、汇率折算或现金等价物定义；若留存收益是 280 万元，差异 10 万元可能来自分红时点或会计政策变更。勾稽差异要逐项查，不能直接抹平。以上数字均为教学假设。</p>
+<h2>三个检查</h2>
+<p><strong>检查一：净利润—留存收益。</strong> 期末留存收益 = 期初 + 净利润 − 分红 ± 会计政策调整。差异通常来自分红宣告时点、股份支付或重述。</p>
+<p><strong>检查二：现金净变动—货币资金。</strong> 现金流量表期末现金 = 资产负债表货币资金 + 现金等价物；受限资金和汇率变动要单独说明。</p>
+<p><strong>检查三：折旧—固定资产。</strong> 期末固定资产 = 期初 + 资本开支 − 折旧 − 处置 + 汇率变动；差异可能来自在建工程转固或减值。</p>
+<p>三表勾稽对不上时，先查分类，再查合并范围，最后查估计和重述；不要假设是“小数点误差”[3][4]。</p>
+<h2>图表</h2>
+<figure>
+<svg role="img" aria-labelledby="fig-three-statements-articulation-balance-sheet-income-cash-flow-1-title fig-three-statements-articulation-balance-sheet-income-cash-flow-1-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-three-statements-articulation-balance-sheet-income-cash-flow-1-title">净利润与现金如何连接三表</title>
+<desc id="fig-three-statements-articulation-balance-sheet-income-cash-flow-1-desc">四步：净利润、留存收益、现金净变动、货币资金。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">三表勾稽链</text>
+<text x="24" y="54" font-size="11" text-anchor="start">净利润、留存收益、现金变动、货币资金四步。</text>
+<rect x="14" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="69" y="140" font-size="12" text-anchor="middle">净利润</text>
+<text x="69" y="184" font-size="12" text-anchor="middle" font-weight="700">120 万</text>
+<rect x="136" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="191" y="140" font-size="12" text-anchor="middle">留存收益</text>
+<text x="191" y="184" font-size="12" text-anchor="middle" font-weight="700">290 万</text>
+<rect x="258" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="313" y="140" font-size="12" text-anchor="middle">现金变动</text>
+<text x="313" y="184" font-size="12" text-anchor="middle" font-weight="700">70 万</text>
+<rect x="380" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="435" y="140" font-size="12" text-anchor="middle">货币资金</text>
+<text x="435" y="184" font-size="12" text-anchor="middle" font-weight="700">170 万</text>
+<line x1="125" y1="160" x2="135" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="247" y1="160" x2="257" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="369" y1="160" x2="379" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<text x="24" y="246" font-size="11" text-anchor="start">教学示意，不含统计数据。</text>
+</g>
+</svg>
+<figcaption>图 1：三表勾稽链；教学示意。</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-three-statements-articulation-balance-sheet-income-cash-flow-2-title fig-three-statements-articulation-balance-sheet-income-cash-flow-2-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-three-statements-articulation-balance-sheet-income-cash-flow-2-title">利润与现金的期末读数</title>
+<desc id="fig-three-statements-articulation-balance-sheet-income-cash-flow-2-desc">四个读数：净利润、经营现金流、现金净变动、期末现金。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">一组三表期末余额</text>
+<text x="24" y="54" font-size="11" text-anchor="start">净利润 120、经营现金流 150、现金净变动 70、期末现金 17</text>
+<text x="24" y="68" font-size="11" text-anchor="start">0。</text>
+<line x1="178" y1="64" x2="178" y2="270" stroke="currentColor" stroke-width="1" opacity=".45"/>
+<text x="20" y="97" font-size="12">净利润</text>
+<rect x="178" y="78" width="254.11764705882354" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="95" font-size="12" font-weight="700">120</text>
+<text x="20" y="145" font-size="12">经营现金流</text>
+<rect x="178" y="126" width="317.6470588235294" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="143" font-size="12" font-weight="700">150</text>
+<text x="20" y="193" font-size="12">现金净变动</text>
+<rect x="178" y="174" width="148.23529411764704" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="191" font-size="12" font-weight="700">70</text>
+<text x="20" y="241" font-size="12">期末现金</text>
+<rect x="178" y="222" width="360" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="239" font-size="12" font-weight="700">170</text>
+<text x="24" y="292" font-size="11" text-anchor="start">教学假设；单位：万元。</text>
+</g>
+</svg>
+<figcaption>图 2：利润与现金的期末读数；教学假设，单位万元。</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-three-statements-articulation-balance-sheet-income-cash-flow-3-title fig-three-statements-articulation-balance-sheet-income-cash-flow-3-desc" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-three-statements-articulation-balance-sheet-income-cash-flow-3-title">利润与现金的二维矩阵</title>
+<desc id="fig-three-statements-articulation-balance-sheet-income-cash-flow-3-desc">两轴：利润方向、现金方向；四象限对应健康增长、应计撑住、现金回收和双重压力。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">利润与现金的四类勾稽</text>
+<text x="24" y="54" font-size="11" text-anchor="start">利润增、现金增最健康；利润增、现金降要查应计。</text>
+<text x="40" y="68" font-size="11">利润增</text>
+<text x="40" y="286" font-size="11">利润降</text>
+<text x="110" y="314" font-size="11" text-anchor="middle">现金降</text>
+<text x="500" y="314" font-size="11" text-anchor="middle">现金增</text>
+<rect x="96" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="100" font-size="12" text-anchor="start">应计撑住</text>
+<text x="108" y="130" font-size="11" text-anchor="start">利润增、现金降</text>
+<text x="108" y="170" font-size="11" font-weight="700">查应收</text>
+<rect x="338" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="100" font-size="12" text-anchor="start">健康增长</text>
+<text x="350" y="130" font-size="11" text-anchor="start">利润增、现金增</text>
+<text x="350" y="170" font-size="11" font-weight="700">可持续</text>
+<rect x="96" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="214" font-size="12" text-anchor="start">双重压力</text>
+<text x="108" y="244" font-size="11" text-anchor="start">利润降、现金降</text>
+<text x="108" y="284" font-size="11" font-weight="700">警示</text>
+<rect x="338" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="214" font-size="12" text-anchor="start">现金回收</text>
+<text x="350" y="244" font-size="11" text-anchor="start">利润降、现金增</text>
+<text x="350" y="284" font-size="11" font-weight="700">去库存</text>
+</g>
+</svg>
+<figcaption>图 3：利润与现金的二维矩阵；对比分类示意。</figcaption>
+</figure>
+
+<p>图 1 把净利润、留存收益、现金变动和货币资金串成勾稽链；图 2 用一组数字展示三表期末余额；图 3 用“利润—现金”两轴划出四类勾稽状态。图中数字均为教学假设。</p>
+<h2>适用条件、边界与常见误区</h2>
+<p><strong>边界一：合并报表与母公司报表不同。</strong> 合并范围变化会让三表勾稽关系改变；比较时要保证口径一致。</p>
+<p><strong>边界二：现金等价物定义有差异。</strong> 三个月内到期的短期投资是否计入现金，不同公司政策不同；要读会计政策附注。</p>
+<p><strong>边界三：汇率折算会打断勾稽。</strong> 外币报表折算差额进入其他综合收益，不影响净利润但影响权益；三表差异可能来自折算。</p>
+<p><strong>误解一：三表勾稽是会计人员的事。</strong> 投资者用勾稽判断盈利质量和现金真实性；勾稽失败是分析信号。</p>
+<p><strong>误解二：勾稽对得上就没有问题。</strong> 勾稽只保证内部一致，不保证估计合理或分类恰当；还要读附注和行业对照。</p>
+<h2>深化：钩稽关系的数值链与常见断点</h2>
+<p>三张表的钩稽不是一句“净利润进留存收益”就结束，而是一条完整的数值链。<strong>利润表</strong>的净利润进入<strong>资产负债表</strong>的留存收益；<strong>现金流量表</strong>的经营活动现金流以净利润为起点，加回折旧摊销、减去营运资本增加；投资活动现金流对应资本开支和资产处置；筹资活动现金流对应借款、还款、分红和增发。期末现金必须等于资产负债表上的现金及等价物。</p>
+<p>用一个简化例子走一遍：收入 1,000，营业成本 600，折旧 100，税前利润 300，税 75，净利润 225。应收账款增加 80，存货增加 40，应付账款增加 30，则经营现金流 = <code>225+100−80−40+30=235</code>。资本开支 200，投资现金流 −200；新增借款 60、分红 40，筹资现金流 20。现金净变动 <code>235−200+20=55</code>。若期初现金 100，期末就是 155。</p>
+<p><strong>资产负债表要能配平</strong>。上例中资产端现金加 55、应收加 80、存货加 40、固定资产因折旧和资本开支净增 100，总资产增加 275；负债端应付加 30、借款加 60，权益端留存收益加 225 减分红 40 等于 185；负债和权益合计增加 275，正好配平。任何一张表单独看都发现不了错误，三张表一起才能。</p>
+<p><strong>常见断点一：外币折算</strong>。海外子公司的资产负债表按期末汇率折算，利润表按平均汇率折算，差额进入其他综合收益，不影响净利润但影响权益。若只看净利润和现金，会漏掉折算差额。</p>
+<p><strong>常见断点二：并购</strong>。收购支付的现金进入投资活动，被收购方的资产和负债按公允价值并入资产负债表，商誉可能很大；并购当年的现金流和利润表不能直接与上年比较。</p>
+<p><strong>常见断点三：租赁</strong>。新租赁准则把使用权资产和租赁负债上表，租金支付拆成利息和本金，分别进入经营和筹资现金流；EBITDA 和经营现金流都会变化，跨准则比较要调整。</p>
+<p><strong>常见断点四：递延税和股票薪酬</strong>。递延税资产或负债的变化不影响当期现金税，但影响利润；股票薪酬是非现金费用，加回后提高经营现金流，同时稀释股本。两者都要在钩稽表中单独列示。</p>
+<p><strong>建模时的循环引用</strong>：利息费用取决于债务余额，债务余额取决于现金短缺，现金短缺又取决于利息，形成循环。实务中用“循环计算”或“现金扫除”工具迭代求解；手算时先估利息，再回算，直到误差可接受。</p>
+<p><strong>预警信号</strong>：连续多年经营现金流低于净利润、应收和存货增速持续高于收入、资本开支长期低于折旧（可能在吃老本）、或者筹资现金流靠不断借新还旧。这些信号单独出现未必是问题，同时出现就要查附注和同业。</p>
+<p><strong>最后</strong>，三表钩稽是一种“一致性检查”，不是质量保证。表能配平，只能说明账务内部一致；收入是否真实、估计是否合理、披露是否充分，仍要回到业务和附注。</p>
+<h2>建模检查清单</h2>
+<p><strong>先建三表，再建比率</strong>：收入、成本、折旧、税、营运资本、资本开支、债务、股利八条线先跑通，确保期末现金等于资产负债表现金、留存收益滚动正确、资产等于负债加权益。比率和估值放在最后，否则错误会被倍数放大。</p>
+<p><strong>逐项对账</strong>：净利润 + 折旧摊销 − 营运资本增加 = 经营现金流；经营现金流 − 资本开支 = 自由现金流；期初现金 + 三项现金流 = 期末现金；期初留存收益 + 净利润 − 股利 = 期末留存收益。四项对账每年都做，不要只在模型首页做一次。</p>
+<p><strong>压力测试</strong>：收入下降 20%、应收天数延长 30 天、利率上升 200 个基点，分别看现金是否够用、债务契约是否触发、分红是否可持续。三表模型的价值在于联动，不是单表预测。</p>
+<p><strong>常见错误</strong>：把资本开支只放在现金流量表、不更新固定资产；把股利只放在留存收益、不进入筹资现金流；把折旧只放在利润表、不调整现金；把营运资本变化的方向写反。每一个都会让三表脱钩。</p>
+<p><strong>披露与口径</strong>：EBITDA 不是现金流，调整项要逐条说明；自由现金流的定义各家不同，比较时要统一；一次性项目要单列，不能藏进“其他”。</p>
+<h2>反证条件</h2>
+<p>三表勾稽的结论依赖报表边界：</p>
+<ol>
+<li><strong>并购与重述。</strong> 若合并范围变化或前期重述，三表的历史连线会断裂。</li>
+<li><strong>外币折算。</strong> 若汇率变动大，权益、现金和净利润的折算差额会让勾稽看起来不平。</li>
+<li><strong>表外工具。</strong> 若租赁、SPV 和担保留在表外，三表无法覆盖真实负债。</li>
+<li><strong>分类调整。</strong> 若企业把费用重分类为资本开支，现金流和利润表的连线会被操纵。</li>
+</ol>
+<p><strong>实践含义：</strong> 三表勾稽是排错起点，不是审计结论；勾稽平了仍要看现金流质量、杠杆和表外负债。</p>
+<p><strong>数据附注：</strong> 勾稽模型要锁定同一会计期间和同一合并范围；跨期和并购会让表间连线看似不平。</p>
+<p><strong>范围说明：</strong> 把模型绑定到申报文件和会计期间；口径一变，勾稽结论就要重跑。</p>
+<h2>练习</h2>
+<ol>
+<li><p>写出三表的五条勾稽连线。</p>
+</li>
+<li><p>净利润 120 万元、分红 30 万元，留存收益增加多少？</p>
+</li>
+<li><p>经营 150、投资 −60、融资 −20，现金净变动多少？</p>
+</li>
+<li><p>期初现金 100、净变动 70，期末现金多少？</p>
+</li>
+<li><p>资产负债表现金少 10 万元，可能有哪些原因？</p>
+</li>
+<li><p>折旧如何同时影响三张表？</p>
+</li>
+<li><p>判断：三表勾稽对得上，就说明报表没有问题吗？说明理由。</p>
+</li>
+<li><p>用文中例子说明净利润如何经过营运资本变化变成经营现金流。</p>
+</li>
+<li><p>并购、租赁、外币折算分别会在哪张表上制造断点？</p>
+</li>
+<li><p>三表模型建成后，应做哪四项逐项对账？</p>
+</li>
+<li><p>为什么比率和估值要放在三表跑通之后？</p>
+</li>
+</ol>
+<h2>关联</h2>
+<p>先修 FIN-024；对照 FIN-023；相邻 FIN-025、FIN-044。</p>
+<h2>来源</h2>
+<ol>
+<li>Mitchell Franklin; Patty Graybeal; Dixon Cooper, <em>Principles of Accounting, Volume 1: Financial Accounting, 2.1 Describe the Income Statement, Statement of Owner&#39;s Equity, Balance Sheet, and Statement of Cash Flows, and How They Interrelate</em>. OpenStax, accessed 2026-11-03. <a href="https://openstax.org/books/principles-financial-accounting/pages/2-1-describe-the-income-statement-statement-of-owners-equity-balance-sheet-and-statement-of-cash-flows-and-how-they-interrelate">https://openstax.org/books/principles-financial-accounting/pages/2-1-describe-the-income-statement-statement-of-owners-equity-balance-sheet-and-statement-of-cash-flows-and-how-they-interrelate</a></li>
+<li>Mitchell Franklin; Patty Graybeal; Dixon Cooper, <em>Principles of Accounting, Volume 1: Financial Accounting, 2.3 Prepare an Income Statement, Statement of Owner&#39;s Equity, and Balance Sheet</em>. OpenStax, accessed 2026-11-03. <a href="https://openstax.org/books/principles-financial-accounting/pages/2-3-prepare-an-income-statement-statement-of-owners-equity-and-balance-sheet">https://openstax.org/books/principles-financial-accounting/pages/2-3-prepare-an-income-statement-statement-of-owners-equity-and-balance-sheet</a></li>
+<li>Mitchell Franklin; Patty Graybeal; Dixon Cooper, <em>Principles of Accounting, Volume 1: Financial Accounting, 16.3 Prepare the Statement of Cash Flows Using the Indirect Method</em>. OpenStax, accessed 2026-10-30. <a href="https://openstax.org/books/principles-financial-accounting/pages/16-3-prepare-the-statement-of-cash-flows-using-the-indirect-method">https://openstax.org/books/principles-financial-accounting/pages/16-3-prepare-the-statement-of-cash-flows-using-the-indirect-method</a></li>
+<li>U.S. Securities and Exchange Commission, <em>Beginners&#39; Guide to Financial Statements</em>. U.S. Securities and Exchange Commission, accessed 2026-10-30. <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsbegfinstmtguide">https://www.sec.gov/reportspubs/investor-publications/investorpubsbegfinstmtguide</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>画出三表勾稽的五条连线。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>用一组数字验证净利润与留存收益、现金与货币资金。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>画出三表勾稽的五条连线。</li><li>用一组数字验证净利润与留存收益、现金与货币资金。</li><li>识别勾稽失败的常见原因。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/corporate-governance-and-conflicts/">FIN-024 · 公司治理与利益冲突</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/dividends-and-buybacks/">FIN-023 · 分红与回购</a> </li><li> <a href="/learn/introduction-to-finance/">FIN-025 · 金融导论</a> </li><li> <a href="/learn/accounting-estimates-accrual-discretion-earnings-quality/">FIN-044 · 会计估计与应计项目：盈利质量从哪里看</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://openstax.org/books/principles-financial-accounting/pages/2-1-describe-the-income-statement-statement-of-owners-equity-balance-sheet-and-statement-of-cash-flows-and-how-they-interrelate" rel="noopener noreferrer" target="_blank">Principles of Accounting, Volume 1: Financial Accounting, 2.1 Describe the Income Statement, Statement of Owner&#39;s Equity, Balance Sheet, and Statement of Cash Flows, and How They Interrelate</a> <p>Mitchell Franklin; Patty Graybeal; Dixon Cooper · OpenStax</p> <p>访问：2026-11-03 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：支持资产负债表、利润表、现金流量表和权益表的整体结构。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-financial-accounting/pages/2-3-prepare-an-income-statement-statement-of-owners-equity-and-balance-sheet" rel="noopener noreferrer" target="_blank">Principles of Accounting, Volume 1: Financial Accounting, 2.3 Prepare an Income Statement, Statement of Owner&#39;s Equity, and Balance Sheet</a> <p>Mitchell Franklin; Patty Graybeal; Dixon Cooper · OpenStax</p> <p>访问：2026-11-03 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：支持利润表项目、收入费用配比与净利润。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-financial-accounting/pages/16-3-prepare-the-statement-of-cash-flows-using-the-indirect-method" rel="noopener noreferrer" target="_blank">Principles of Accounting, Volume 1: Financial Accounting, 16.3 Prepare the Statement of Cash Flows Using the Indirect Method</a> <p>Mitchell Franklin; Patty Graybeal; Dixon Cooper · OpenStax</p> <p>访问：2026-10-30 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：支持间接法现金流与净利润调整。</p> </div><div class="source"> <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsbegfinstmtguide" rel="noopener noreferrer" target="_blank">Beginners&#39; Guide to Financial Statements</a> <p>U.S. Securities and Exchange Commission · U.S. Securities and Exchange Commission</p> <p>访问：2026-10-30 · 许可：U.S. public information; copying and further distribution allowed</p> <p>支持论点：支持三表阅读与现金、利润、权益的关系。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/three-statements-articulation-balance-sheet-income-cash-flow/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>Simple and Compound Interest · 51Invest</title><meta name="description" content="Simple interest is charged only on principal, while compound interest adds interest to principal and earns interest on it; the same rate and horizon can produce different future values and effective annual rates depending on the method and compounding frequency."><link rel="canonical" href="https://finance.51invest.com/en/learn/simple-and-compound-interest/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/simple-and-compound-interest/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/simple-and-compound-interest/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/simple-and-compound-interest/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/en/" data-main-home aria-label="51Invest"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">51Invest</span> <span class="brand-caption">WUYAO INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="Knowledge stations"> <a class="nav-link" href="https://51invest.com/en/" data-main-home> Home </a> <a class="nav-link" href="https://economics.51invest.com/en/"> Economics </a><a class="nav-link active" href="/en/" aria-current="page"> Finance </a><a class="nav-link" href="https://markets.51invest.com/en/"> Markets </a><a class="nav-link" href="https://invest.51invest.com/en/"> Investing </a><a class="nav-link" href="https://history.51invest.com/en/"> History </a><a class="nav-link" href="https://research.51invest.com/en/"> Research </a> <a class="nav-link" href="https://51invest.com/en/contents/"> Content map </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/learn/simple-and-compound-interest/" hreflang="zh-CN" lang="zh-CN" data-language-link="zh" aria-label="Switch to Chinese" title="Switch to Chinese"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="Theme: System" title="Theme: System" data-label-auto="Theme: System" data-label-light="Theme: Light" data-label-dark="Theme: Dark"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">System</span> <span class="theme-text" data-theme-text="light">Light</span> <span class="theme-text" data-theme-text="dark">Dark</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/en/" data-main-home>Home</a> <span class="sep">/</span> <a href="/en/">Finance</a> <span class="sep">/</span> <span aria-current="page">Simple and Compound Interest</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">Concept</span> <h1 class="article-title">Simple and Compound Interest</h1> <p class="article-summary">Simple interest is charged only on principal, while compound interest adds interest to principal and earns interest on it; the same rate and horizon can produce different future values and effective annual rates depending on the method and compounding frequency.</p>  <div class="meta-grid"> <div class="meta-item"><span>Module</span><strong>FIN-M08 · 时间价值</strong></div> <div class="meta-item"><span>Level</span><strong>Foundation</strong></div> <div class="meta-item"><span>Read</span><strong>6 min · 11 sections</strong></div> </div> <p class="demo-jump"> <a href="#demo-compound"> This article has an interactive demo <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>Definition</h2>
+<p>Simple interest is calculated only on the original principal; interest is not added to principal. Compound interest adds each period’s interest to principal, so the next period earns on principal plus accrued interest — “interest on interest.” Simple growth is linear; compound growth accelerates over time.</p>
+<h2>Intuition</h2>
+<p>1,000 (currency units are assumed; state the currency when applying this to real figures) at 5% for three years. Simple interest is 50 each year, ending at 1,150. Under compounding, year 1 earns 50, year 2 earns 52.50 on 1,050, and year 3 earns 55.13 on 1,102.50, ending at 1,157.63. The extra 7.63 comes from interest earning interest.</p>
+<h2>Formal expression</h2>
+<p>Simple interest and future value:</p>
+<div class="formula" role="math" aria-label="Simple interest equals present value times rate times time">I = PV × r × t</div>
+
+<div class="formula" role="math" aria-label="Simple future value equals present value times one plus rate times time">FV = PV × (1 + r × t)</div>
+
+<p>Compound future value:</p>
+<div class="formula" role="math" aria-label="Compound future value equals present value times one plus rate to the n">FV = PV × (1 + r)^n</div>
+
+<p>With <code>m</code> compounding periods per year:</p>
+<div class="formula" role="math" aria-label="Future value equals present value times one plus rate divided by m, raised to m times n">FV = PV × (1 + r/m)^(m×n)</div>
+
+<p>Effective annual rate:</p>
+<div class="formula" role="math" aria-label="Effective annual rate equals one plus the nominal rate divided by m, raised to m, minus one">EAR = (1 + r/m)^m - 1</div>
+
+<p>Continuous compounding:</p>
+<div class="formula" role="math" aria-label="Continuous future value equals present value times e to the rate times time">FV = PV × e^(r×t)</div>
+
+<p><code>PV</code> is the principal (the present value at the start) expressed in currency, <code>e ≈ 2.71828</code>, and rates are always written as decimals. What <code>r</code>, <code>t</code>, <code>n</code> and <code>m</code> stand for depends on the formula, and the uses must not be mixed:</p>
+<ul>
+<li><code>I = PV × r × t</code> and <code>FV = PV × (1 + r × t)</code>: <code>r</code> is the nominal annual rate and <code>t</code> is years;</li>
+<li><code>FV = PV × (1 + r)^n</code>: <code>r</code> is the rate <strong>per period</strong> and <code>n</code> is the <strong>number of periods</strong>, and the two must use the same time unit (an annual rate with years, a monthly rate with months);</li>
+<li><code>FV = PV × (1 + r/m)^(m×n)</code> and <code>EAR = (1 + r/m)^m - 1</code>: <code>r</code> is the nominal annual rate, <code>m</code> is compounds per year and <code>n</code> is years, so <code>m×n</code> is the total number of periods and <code>r/m</code> is the rate per period;</li>
+<li><code>FV = PV × e^(r×t)</code>: <code>r</code> is the nominal annual rate quoted on a continuous-compounding basis and <code>t</code> is years.</li>
+</ul>
+<p>All amounts in this article are hypothetical teaching figures; when applying them to real products, state the currency, the rate convention and the compounding frequency.</p>
+<p>Compounding, as OpenStax defines it, means later periods earn on interest already earned — interest on interest — with future value FV = PV × (1 + r)^n [1].</p>
+<h2>Conditions and limits</h2>
+<ol>
+<li><strong>Simple interest assumes no reinvestment.</strong> The textbook contrast is verbatim: &quot;Simple interest applies to year 1 while compound interest or “interest on interest” applies to year 2.&quot;[1]. Which products actually use simple interest is not asserted here — this site retrieved no per-jurisdiction interest rules, so &quot;short-term money-market instruments, some loans and legal interest&quot; is the article&#39;s own illustration. What is checkable is that conventions vary by instrument: the official release footnotes some short-term series &quot;Annualized using a 360-day year or bank interest.&quot; and others &quot;On a discount basis.&quot;[3].</li>
+<li><strong>Compound interest assumes reinvestment at the same rate.</strong> Early withdrawal, floating rates, taxes and fees change the result.</li>
+<li><strong>A nominal rate must be read with its frequency.</strong> 12% annual and 12% monthly differ [2]; compare effective annual rates.</li>
+<li><strong>Negative rates are possible.</strong> The formulas still work, but future value is below present value.</li>
+<li><strong>Inflation, taxes and credit risk are outside the formula.</strong> Nominal amounts are not purchasing power.</li>
+<li><strong>Continuous compounding is a mathematical limit.</strong> It is not every product’s convention.</li>
+</ol>
+<h2>Worked example</h2>
+<p>All figures are hypothetical.</p>
+<p><strong>Single sum.</strong> <code>PV = 1,000</code>, nominal annual rate <code>r = 5%</code>, <code>t = 3</code> years:</p>
+<ul>
+<li>Simple: <code>FV = 1,000 × (1 + 0.05 × 3) = 1,000 × 1.15 = 1,150</code>.</li>
+<li>Compound: <code>FV = 1,000 × 1.05³ = 1,157.63</code> (<code>1.05³ = 1.157625</code>).</li>
+<li>Difference: <code>1,157.63 - 1,150 = 7.63</code>, which is the interest earned on accrued interest in years two and three (2.50 plus 5.13).</li>
+</ul>
+<p><strong>Frequency.</strong> A nominal annual rate must be read together with its compounding frequency: at 12%, the EAR is exactly 12% when compounded annually and above 12% (about 12.68%) when compounded monthly, since the rate per period is <code>0.12/12 = 1%</code>. The period-by-period comparison and full worked figures are in the interest-rate types and conventions article (FIN-012) and are not repeated here. The same “12%” is not the same annual rate.</p>
+<p><strong>Long horizon.</strong> 1,000 at 5% for 30 years: simple <code>2,500</code>; compound <code>4,321.94</code>. The gap widens with time.</p>
+<h2>Figure</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-interest-title-en fig-interest-desc-en" viewBox="0 0 520 220" width="100%">
+    <title id="fig-interest-title-en">Simple and compound growth over three years</title>
+    <desc id="fig-interest-desc-en">At five percent, one thousand grows by fifty a year under simple interest and reaches one thousand one hundred fifty-seven point six three under compounding after three years.</desc>
+    <line x1="70" y1="180" x2="480" y2="180" stroke="var(--border)" stroke-width="2"></line>
+    <line x1="70" y1="30" x2="70" y2="180" stroke="var(--border)" stroke-width="2"></line>
+    <g fill="var(--muted)" font-size="10" font-family="inherit">
+      <text x="60" y="196">0</text>
+      <text x="160" y="196">1</text>
+      <text x="260" y="196">2</text>
+      <text x="360" y="196">3 years</text>
+      <text x="25" y="184">1,000</text>
+      <text x="25" y="124">1,100</text>
+      <text x="25" y="64">1,200</text>
+    </g>
+    <polyline points="70,180 170,150 270,120 370,90" fill="none" stroke="var(--muted)" stroke-width="2"></polyline>
+    <polyline points="70,180 170,150 270,118.5 370,85.4" fill="none" stroke="var(--accent)" stroke-width="2"></polyline>
+    <g fill="var(--muted)" font-size="10" font-family="inherit">
+      <text x="380" y="104">simple</text>
+      <text x="380" y="78" fill="var(--accent)">compound</text>
+    </g>
+  </svg>
+  <figcaption>Figure 1: Growth of 1,000 at 5% under simple and compound interest (teaching assumption, not actual product returns).</figcaption>
+</figure>
+
+<p>Table 1: Future values under simple and compound interest (currency, teaching assumption)</p>
+<table>
+<thead>
+<tr>
+<th align="right">Year end</th>
+<th align="right">Simple</th>
+<th align="right">Compound</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">0</td>
+<td align="right">1,000.00</td>
+<td align="right">1,000.00</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="right">1,050.00</td>
+<td align="right">1,050.00</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">1,100.00</td>
+<td align="right">1,102.50</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="right">1,150.00</td>
+<td align="right">1,157.63</td>
+</tr>
+</tbody></table>
+<h2>Common misconceptions</h2>
+<ul>
+<li><strong>Compounding guarantees high returns.</strong> No: returns can be negative, and fees and taxes erode them.</li>
+<li><strong>The same nominal rate means the same return.</strong> No: compounding frequency changes the effective rate.</li>
+<li><strong>Simple interest is always below compound interest.</strong> No: that usually holds for positive rates over more than one period; with less than one period or negative rates, do not apply it mechanically.</li>
+<li><strong>The annual rate is the true annual cost.</strong> No: a nominal rate must be read with its compounding frequency[2]; taking U.S. disclosure rules as the example, 12 CFR §1026.4 reads verbatim &quot;The finance charge is the cost of consumer credit as a dollar amount. It includes any charge payable directly or indirectly by the consumer and imposed directly or indirectly by the creditor as an incident to or a condition of the extension of credit&quot;[4], so a charge imposed as an incident to or condition of the credit belongs to the finance charge from which the annualized cost is derived — this site did not retrieve the equivalent Chinese or EU disclosure text, so the item illustrates one jurisdiction and does not claim the same treatment everywhere; and short-term rates are quoted on a 360-day or discount basis[3]. Each of the three changes what the same percentage actually costs.</li>
+</ul>
+<p>A nominal rate must be read with its compounding frequency: 1.5% a month gives (1+0.015)^12 − 1, an effective annual rate of 19.56% in the OpenStax worked example [2].</p>
+<h2>Related</h2>
+<ul>
+<li>Prerequisite: the time value of money (FIN-009).</li>
+<li>Continue with: present value and discounted cash flows (FIN-011), interest-rate types and conventions (FIN-012), bond rights and cash flows (MKT-004), real returns and purchasing power (INV-003).</li>
+<li>Applications: deposits, loans, credit cards and cash and money-market instruments (MKT-002).</li>
+</ul>
+<h2>Figures in plain language</h2>
+<p>The three figures below check the mechanism, boundary and comparison in this article; labels come from its own sections, not new data.</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">Simple and Compound Interest: mechanism chain</title>
+    <desc id="fig-batch-chain-desc">Simple and Compound Interest — three-step structure: problem, mechanism, judgment. Labels come from the article's sections, not new data.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Simple and Compound Interest: mechanism chain</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Labels come from the article's sections; all three steps matter.</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Problem</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Simple interest</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">is charged only…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Simple interest</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">is charged only</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">on principal,</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">while compound</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">interest adds…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Definition</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Definition:</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Simple interest…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Definition:</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Simple interest</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">is calculated</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">only on the</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">original princip…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Worked example</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">All figures are</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">hypothetical.…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">All figures are</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">hypothetical.</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Reading order: test the problem, then the mechanism, then whether the judgment overreaches.</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">If a middle step lacks evidence, later conclusions are hypotheses, not facts.</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Structural illustration, not a new data chart; sample is the article's own argument.</text>
+  </svg>
+  <figcaption>Figure 2: Simple and Compound Interest — mechanism chain: problem, mechanism, judgment. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">Simple and Compound Interest: boundary</title>
+    <desc id="fig-batch-boundary-desc">Separates conditions where the claim holds from those where it fails; a local example is not universal.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Simple and Compound Interest: when does it hold?</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">Check the conditions before the conclusion</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">If conditions, definitions or samples change, recompute the conclusion</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Holds</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Simple interest assumes no</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">reinvestment.</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Fails / rewrite</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Simple interest is</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">calculated only on the</text>
+      <text x="188" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">original principal;</text>
+      <text x="188" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">interest is not added to…</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">Boundary illustration; sample is the article's own argument; units as stated in the text.</text>
+  </svg>
+  <figcaption>Figure 3: Simple and Compound Interest — boundary: when the claim holds, and when it fails. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">Simple and Compound Interest: object, conditions and common mistakes</title>
+    <desc id="fig-batch-compare-desc">Three rows compare the concept, its conditions and common mistakes; comparison is not equivalence and does not replace a definition.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Simple and Compound Interest: object, conditions and common mistakes at a glance</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">This article</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Commonly confused</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Object</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Simple interest is</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">charged only on…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Adjacent concepts / common claims</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Conditions</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Simple interest</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">assumes no reinvestme…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Simple interest is calculated</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">only on the original principal…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Check</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Define first, then compare; never judge</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">labels only</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Correlation is not causation; a local case is not universal</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Comparison illustration; sample is the article's own argument; units as stated in the text.</text>
+  </svg>
+  <figcaption>Figure 4: Simple and Compound Interest — comparison of object, conditions and common mistakes. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<h2>Exercises</h2>
+<ol>
+<li><strong>Concept.</strong> Which method charges interest only on the original principal? A. Compound; B. Simple; C. Continuous compounding; D. Effective annual rate.</li>
+<li><strong>Calculation.</strong> For 2,000 at 6% over four years, what are the simple and compound future values? What is the difference?</li>
+<li><strong>Conditions.</strong> Product A pays a 12% nominal annual rate compounded monthly; product B pays a 12.2% effective annual rate. Which is higher? Why can the two “12%” rates not be compared directly?</li>
+</ol>
+<details>
+<summary>Suggested answers</summary>
+
+<ol>
+<li>B.</li>
+<li>Simple <code>2,000 × (1 + 0.06 × 4) = 2,480</code>; compound <code>2,000 × 1.06⁴ = 2,524.95</code>; difference <code>44.95</code>.</li>
+<li>A is higher: with the formula in this article, <code>EAR = (1 + r/m)^m - 1</code> at <code>r = 0.12</code> and <code>m = 12</code>, the effective annual rate is about 12.68%, above B’s 12.2%; a nominal rate without its frequency cannot be compared directly.</li>
+</ol>
+</details>
+
+<h2>Sources</h2>
+<ol>
+<li>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “7.2 Time Value of Money (TVM) Basics.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/7-2-time-value-of-money-tvm-basics">https://openstax.org/books/principles-finance-2e/pages/7-2-time-value-of-money-tvm-basics</a> (accessed 2026-10-30)</li>
+<li>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “8.4 Stated versus Effective Rates.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/8-4-stated-versus-effective-rates">https://openstax.org/books/principles-finance-2e/pages/8-4-stated-versus-effective-rates</a> (accessed 2026-10-30)</li>
+<li>Board of Governors of the Federal Reserve System. “H.15 Selected Interest Rates.” U.S. Government work, 17 U.S.C. §105 (embedded third-party charts excluded). <a href="https://www.federalreserve.gov/releases/h15/default.htm">https://www.federalreserve.gov/releases/h15/default.htm</a> (accessed 2026-11-03)</li>
+<li>Consumer Financial Protection Bureau. “12 CFR §1026.4 Finance charge.” eCFR. U.S. Government work, 17 U.S.C. §105; eCFR states it is not an official legal edition. <a href="https://www.ecfr.gov/current/title-12/chapter-X/part-1026/subpart-A/section-1026.4">https://www.ecfr.gov/current/title-12/chapter-X/part-1026/subpart-A/section-1026.4</a> (accessed 2026-11-03)</li>
+</ol>
+  <section class="article-demo" id="demo-compound" data-demo="compound" data-lang="en" aria-labelledby="demo-compound-title" data-check-done="All three are covered: the core of this article is in place." data-check-pending="One item is still open: go back to the matching section and retell it with a number or counterexample." data-check-count="Ticked"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">Worked demo</p> <button class="demo-reset" type="button" data-demo-reset>Reset</button> </div> <h2 id="demo-compound-title">Compounding is not a straight line</h2> <p class="demo-intro">With the same principal, rate and horizon, the compounding frequency still changes the result. Drag the controls to see the ending balance.</p> </header> <div class="demo-grid"> <div class="demo-controls"> <div class="demo-field"> <label for="compound-principal"><span>Principal (CNY)</span><output data-for="principal">30,000</output></label> <input id="compound-principal" data-role="principal" data-default="30000" type="range" min="10000" max="100000" step="5000" value="30000"> </div> <div class="demo-field"> <label for="compound-rate"><span>Annual rate (%)</span><output data-for="rate">5.0</output></label> <input id="compound-rate" data-role="rate" data-default="5" type="range" min="1" max="10" step="0.5" value="5"> </div> <div class="demo-field"> <label for="compound-years"><span>Years</span><output data-for="years">20</output></label> <input id="compound-years" data-role="years" data-default="20" type="range" min="1" max="40" step="1" value="20"> </div> <div class="demo-field"> <label for="compound-freq"><span>Compounding</span></label> <select id="compound-freq" data-role="freq" data-default="12"> <option value="1">Annually</option> <option value="2">Semiannually</option> <option value="4">Quarterly</option> <option value="12" selected>Monthly</option> </select> </div> </div> <div class="demo-output"> <div class="demo-stats"> <div class="demo-stat"><span>Ending balance</span><strong data-out="fv">—</strong></div> <div class="demo-stat"><span>Total interest</span><strong data-out="interest">—</strong></div> <div class="demo-stat"><span>Effective annual rate</span><strong data-out="ear">—</strong></div> </div> <div class="demo-chart"> <p class="demo-chart-label">Balance over time</p> <div class="demo-bars" data-chart="compound"></div> </div> </div> </div>          <p class="demo-footnote">The numbers are teaching assumptions that show relationships, not forecasts or investment advice.</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> This article has passed the current publication gate. Factual, calculation and translation revisions update both language versions together. </p> <p> <a class="button secondary" href="/en/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>Back to station </a> </p> </div> <aside class="article-aside" aria-label="Article information"> <section class="aside-card"> <h2>Learning objectives</h2> <ul> <li>Compute the future value of the same principal under simple and compound interest and quantify the gap</li><li>Show how compounding frequency changes the effective annual rate, with the nominal-to-effective conversion</li> </ul> </section> <section class="aside-card"> <h2>Required prerequisites</h2> <ul> <li> <a href="/en/learn/time-value-of-money/">FIN-009 · The Time Value of Money</a> </li> </ul> </section> <section class="aside-card"> <h2>Recommended reading</h2> <ul> <li> <a href="/en/learn/present-value-and-discounted-cash-flows/">FIN-011 · Present Value and Discounted Cash Flows</a> </li><li> <a href="https://markets.51invest.com/en/learn/cash-and-money-market-instruments/">MKT-002 · Cash and Money-Market Instruments</a> </li><li> <a href="https://invest.51invest.com/en/learn/real-returns-and-purchasing-power/">INV-003 · Real Returns and Purchasing Power</a> </li><li> <a href="/en/learn/time-value-of-money/">FIN-009 · The Time Value of Money</a> </li><li> <a href="/en/learn/interest-rate-types-and-conventions/">FIN-012 · Interest-Rate Types and Conventions</a> </li><li> <a href="https://markets.51invest.com/en/learn/bond-rights-and-cash-flows/">MKT-004 · Bond Rights and Cash Flows</a> </li> </ul> </section> <section class="aside-card"> <h2>AI review record</h2> <p class="muted"> There is no human sign-off; these states come from the AI-only editorial review. </p> <ul> <li> Facts and calculations : AI review passed </li><li> Subject : AI review passed </li><li> English : AI review passed </li><li> Page : AI review passed </li> </ul> </section> <section class="aside-card"> <h2>Sources</h2> <div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/7-2-time-value-of-money-tvm-basics" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 7.2 Time Value of Money (TVM) Basics</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>Accessed: 2026-10-30 · License: CC BY-NC-SA 4.0</p> <p>Supports: Compound interest is interest earned in later periods on interest earned earlier — interest on interest — and future value is FV = PV × (1 + r)^n. The same page contrasts them verbatim: &quot;Simple interest applies to year 1 while compound interest or “interest on interest” applies to year 2.&quot;</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/8-4-stated-versus-effective-rates" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 8.4 Stated versus Effective Rates</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>Accessed: 2026-10-30 · License: CC BY-NC-SA 4.0</p> <p>Supports: A stated rate must be read with its compounding frequency; a 1.5% monthly rate compounds to an effective annual rate of 19.56% via (1 + 0.015)^12 − 1.</p> </div><div class="source"> <a href="https://www.federalreserve.gov/releases/h15/default.htm" rel="noopener noreferrer" target="_blank">H.15 Selected Interest Rates</a> <p>Board of Governors of the Federal Reserve System · Board of Governors of the Federal Reserve System</p> <p>Accessed: 2026-11-03 · License: U.S. Government work (public domain), 17 U.S.C. §105</p> <p>Supports: Footnotes label the conventions verbatim: &quot;Annualized using a 360-day year or bank interest.&quot; and &quot;On a discount basis..&quot; The release traces the effective federal funds rate to the Report of Selected Money Market Rates (FR 2420), so these conventions apply to money-market rates.</p> </div><div class="source"> <a href="https://www.ecfr.gov/current/title-12/chapter-X/part-1026/subpart-A/section-1026.4" rel="noopener noreferrer" target="_blank">12 CFR §1026.4 Finance charge</a> <p>Consumer Financial Protection Bureau · eCFR (Electronic Code of Federal Regulations)</p> <p>Accessed: 2026-11-03 · License: U.S. Government work (public domain), 17 U.S.C. §105</p> <p>Supports: What belongs to the cost of credit reads verbatim &quot;The finance charge is the cost of consumer credit as a dollar amount. It includes any charge payable directly or indirectly by the consumer and imposed directly or indirectly by the creditor as an incident to or a condition of the extension of credit&quot;, so a charge imposed as an incident to or condition of the credit is part of the finance charge (the section lists specific exclusions). This section is U.S. disclosure law (part of Regulation Z); no equivalent Chinese or EU disclosure text was retrieved here, so it supports no cross-jurisdiction claim about what a cost figure includes.</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">A free, non-commercial knowledge site. Sources and definitions are labelled; nothing here is investment advice.</p> </div> </div> <nav class="footer-links" aria-label="Knowledge stations"> <a href="https://51invest.com/en/" data-main-home>Home</a> <a href="https://51invest.com/en/contents/">Content map</a> <a href="/en/glossary/">Glossary</a> <a href="/en/search/">Search</a> <a href="https://51invest.com/en/charts/" data-main-link>Charts</a> <a href="https://51invest.com/en/sources/" data-main-link>Data &amp; licences</a> <a href="/en/">Station home</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="Knowledge stations"> <a class="mobile-link" href="https://51invest.com/en/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>Home</span> </a> <a class="mobile-link" href="https://51invest.com/en/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>Knowledge stations</span> </a> <a class="mobile-link active" href="/en/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>Station home</span> </a> <a class="mobile-link" href="/learn/simple-and-compound-interest/" data-language-link="zh"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

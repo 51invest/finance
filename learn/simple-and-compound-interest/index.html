@@ -1,0 +1,278 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>单利与复利 · 巫妖投资</title><meta name="description" content="单利只按本金计息，复利把利息并入本金继续计息；同样的利率和期限，计息方式与复利频率不同，终值和有效年利率就会不同。"><link rel="canonical" href="https://finance.51invest.com/learn/simple-and-compound-interest/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/simple-and-compound-interest/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/simple-and-compound-interest/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/simple-and-compound-interest/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/simple-and-compound-interest/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">单利与复利</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">单利与复利</h1> <p class="article-summary">单利只按本金计息，复利把利息并入本金继续计息；同样的利率和期限，计息方式与复利频率不同，终值和有效年利率就会不同。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M08 · 时间价值</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>5 分钟 · 11 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-compound"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义</h2>
+<p>单利（simple interest）只按原始本金计息，利息不并入本金。复利（compound interest）每期把利息并入本金，下一期按“本金 + 已计利息”计息，即“利息的利息”。单利增长是线性的，复利增长会随时间加速。</p>
+<h2>直觉</h2>
+<p>1,000 元、年利率 5%、三年。单利每年利息 50 元，终值 1,150 元。复利第一年 50 元，第二年按 1,050 元计息得 52.50 元，第三年按 1,102.50 元计息得 55.13 元，终值 1,157.63 元；多出的 7.63 元来自利息继续计息。</p>
+<h2>正式表达</h2>
+<p>单利利息与终值：</p>
+<div class="formula" role="math" aria-label="单利利息等于现值乘利率乘时间">I = PV × r × t</div>
+
+<div class="formula" role="math" aria-label="单利终值等于现值乘一加利率乘时间">FV = PV × (1 + r × t)</div>
+
+<p>复利终值：</p>
+<div class="formula" role="math" aria-label="复利终值等于现值乘一加利率的n次方">FV = PV × (1 + r)^n</div>
+
+<p>每年复利 <code>m</code> 次时：</p>
+<div class="formula" role="math" aria-label="复利终值等于现值乘一加利率除以m的m乘n次方">FV = PV × (1 + r/m)^(m×n)</div>
+
+<p>有效年利率：</p>
+<div class="formula" role="math" aria-label="有效年利率等于一加名义利率除以m的m次方减一">EAR = (1 + r/m)^m - 1</div>
+
+<p>连续复利：</p>
+<div class="formula" role="math" aria-label="连续复利终值等于现值乘e的利率乘时间次方">FV = PV × e^(r×t)</div>
+
+<p><code>PV</code> 是本金（即期初现值，单位为货币），<code>e ≈ 2.71828</code>，利率一律用小数表示。符号含义随公式变化，不能混用：</p>
+<ul>
+<li><code>I = PV × r × t</code> 与 <code>FV = PV × (1 + r × t)</code>：<code>r</code> 为年名义利率，<code>t</code> 为年数；</li>
+<li><code>FV = PV × (1 + r)^n</code>：<code>r</code> 为<strong>每期</strong>利率，<code>n</code> 为<strong>期数</strong>，两者时点单位必须一致（年利率配年数、月利率配月数）；</li>
+<li><code>FV = PV × (1 + r/m)^(m×n)</code> 与 <code>EAR = (1 + r/m)^m - 1</code>：<code>r</code> 为年名义利率，<code>m</code> 为每年复利次数，<code>n</code> 为年数（<code>m×n</code> 才是总期数，每期利率是 <code>r/m</code>）；</li>
+<li><code>FV = PV × e^(r×t)</code>：<code>r</code> 为按连续复利报价的年名义利率，<code>t</code> 为年数。</li>
+</ul>
+<p>本文金额均为教学假设；用于真实产品时必须写明币种、利率口径与计息频率。</p>
+<p>复利按 OpenStax 的定义是后续期间以前期已赚利息为基础继续计息，即“利息的利息”，终值公式为 FV = PV × (1 + r)^n[1]。</p>
+<h2>适用条件与边界</h2>
+<ol>
+<li><strong>单利假设利息不再投资。</strong> 教材的对照原话是第一年按单利计、第二年才是&quot;利息的利息&quot;[1]。哪些产品实际用单利，本文不下断言：本站未取回各法域与各类合约的计息规则，&quot;短期货币市场工具、部分贷款与司法利息&quot;只是本文举例。可核实的是口径确随工具而变——官方利率统计对短期利率分别加注&quot;Annualized using a 360-day year or bank interest.&quot;与&quot;On a discount basis.&quot;[3]。</li>
+<li><strong>复利假设利息按同一利率再投资。</strong> 提前支取、浮动利率、税费会改变结果。</li>
+<li><strong>名义利率必须与频率一起读。</strong> 12% 按年复利与 12% 按月复利不同[2]，比较时应换算为有效年利率。</li>
+<li><strong>负利率下公式仍成立。</strong> 但终值低于现值，“钱一定变多”不成立。</li>
+<li><strong>通胀、税收和信用风险不在公式内。</strong> 名义金额不等于购买力。</li>
+<li><strong>连续复利是理论极限。</strong> 它不等于所有产品的实际计息方式。</li>
+</ol>
+<h2>例子与计算</h2>
+<p>以下均为教学假设。</p>
+<p><strong>单笔。</strong> <code>PV = 1,000</code> 元，年名义利率 <code>r = 5%</code>，<code>t = 3</code> 年：</p>
+<ul>
+<li>单利：<code>FV = 1,000 × (1 + 0.05 × 3) = 1,000 × 1.15 = 1,150</code> 元。</li>
+<li>复利：<code>FV = 1,000 × 1.05³ = 1,157.63</code> 元（<code>1.05³ = 1.157625</code>）。</li>
+<li>差额：<code>1,157.63 - 1,150 = 7.63</code> 元，即第二、三年对已计利息再计息的部分（第二年 2.50 元、第三年 5.13 元）。</li>
+</ul>
+<p><strong>频率。</strong> 名义年利率必须与复利频率一起读：同为 12%，按年复利时 EAR 就是 12%，按月复利（每期利率 <code>0.12/12 = 1%</code>）时 EAR 高于 12%，约 12.68%。不同频率的逐期对照与完整算例见利率种类与口径主文（FIN-012），本文不重复展开。同一个“12%”因频率不同而含义不同。</p>
+<p><strong>长期。</strong> 1,000 元、5%、30 年：单利终值 <code>2,500</code> 元，复利终值 <code>4,321.94</code> 元；期限越长，差额越大。</p>
+<h2>图表</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-interest-title fig-interest-desc" viewBox="0 0 520 220" width="100%">
+    <title id="fig-interest-title">单利与复利三年增长比较</title>
+    <desc id="fig-interest-desc">在百分之五利率下，一千元按单利增长为每年增加五十元，按复利三年后达到一千一百五十七点六三元。</desc>
+    <line x1="70" y1="180" x2="480" y2="180" stroke="var(--border)" stroke-width="2"></line>
+    <line x1="70" y1="30" x2="70" y2="180" stroke="var(--border)" stroke-width="2"></line>
+    <g fill="var(--muted)" font-size="10" font-family="inherit">
+      <text x="60" y="196">0</text>
+      <text x="160" y="196">1</text>
+      <text x="260" y="196">2</text>
+      <text x="360" y="196">3 年</text>
+      <text x="30" y="184">1,000</text>
+      <text x="30" y="124">1,100</text>
+      <text x="30" y="64">1,200</text>
+    </g>
+    <polyline points="70,180 170,150 270,120 370,90" fill="none" stroke="var(--muted)" stroke-width="2"></polyline>
+    <polyline points="70,180 170,150 270,118.5 370,85.4" fill="none" stroke="var(--accent)" stroke-width="2"></polyline>
+    <g fill="var(--muted)" font-size="10" font-family="inherit">
+      <text x="380" y="104">单利</text>
+      <text x="380" y="78" fill="var(--accent)">复利</text>
+    </g>
+  </svg>
+  <figcaption>图 1：1,000 元按 5% 单利与复利三年的增长路径（教学假设，不表示真实产品收益）。</figcaption>
+</figure>
+
+<p>表 1：单利与复利终值（单位：元，教学假设）</p>
+<table>
+<thead>
+<tr>
+<th align="right">年末</th>
+<th align="right">单利终值</th>
+<th align="right">复利终值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">0</td>
+<td align="right">1,000.00</td>
+<td align="right">1,000.00</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="right">1,050.00</td>
+<td align="right">1,050.00</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">1,100.00</td>
+<td align="right">1,102.50</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="right">1,150.00</td>
+<td align="right">1,157.63</td>
+</tr>
+</tbody></table>
+<h2>常见误解</h2>
+<ul>
+<li><strong>复利保证高收益。</strong> 错，收益率可为负，费用与税也会侵蚀收益。</li>
+<li><strong>名义利率相同，收益就相同。</strong> 错，复利频率不同，有效年利率不同。</li>
+<li><strong>单利总是低于复利。</strong> 错，正利率且期限超过一个计息期时通常如此；期限不足一期或负利率时不能机械套用。</li>
+<li><strong>年利率就是实际年成本。</strong> 错：名义利率必须与复利频率一起读[2]；<strong>以美国披露规则为例</strong>，12 CFR §1026.4 逐字为 &quot;The finance charge is the cost of consumer credit as a dollar amount. It includes any charge payable directly or indirectly by the consumer and imposed directly or indirectly by the creditor as an incident to or a condition of the extension of credit&quot;[4]，即作为授信条件向消费者收取的应付费用属于 finance charge，年化成本再由它推得——本站未取回中国或欧盟的同类披露条文，故这一项只是美国法域下的例子，不代表各法域口径一致；短期利率还按 360 天或贴现基础报价[3]。三项各自改变&quot;同一个百分数&quot;的实际成本。</li>
+</ul>
+<p>名义利率必须结合复利频率解读：1.5% 的月利率按 (1+0.015)^12−1 折算，有效年利率为 19.56%，这是 OpenStax 例算给出的口径[2]。</p>
+<h2>关联</h2>
+<ul>
+<li>先修：货币的时间价值（FIN-009）。</li>
+<li>后续：现值与现金流贴现（FIN-011）、利率种类与口径（FIN-012）、债券的权利与现金流（MKT-004）、实际收益与购买力（INV-003）。</li>
+<li>应用：存款、贷款、信用卡，以及现金与货币市场工具（MKT-002）。</li>
+</ul>
+<h2>图解</h2>
+<p>下面三张图分别检查本文的机制、边界与对照；图内文字取自本文小节，不是新数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">单利与复利：机制链</title>
+    <desc id="fig-batch-chain-desc">单利与复利 的三段结构：问题、机制、判断。图内文字取自本文小节，不是新的数据估计。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">单利与复利：机制链</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图内文字取自本文小节；三段缺一不可。</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">单利只按本金计息，复</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">利把利息并入本金继续…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">单利只按本金计息，</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">复利把利息并入本金</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">继续计息；同样的利</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">率和期限，计息方式</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">与复利频率不同，终…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">定义</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">定义：单利（simple</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">interest）只按原始…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">定义：单利（simple</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start"> interest）只按原</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">始本金计息，利息不</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">并入本金。复利（co</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">mpound interest）…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">例子与计算</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">以下均为教学假设。</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">以下均为教学假设。</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">读法：先看问题能否成立，再看机制能否连通，最后看判断会不会越界。</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">若中间一步缺证据，后面的结论只能当假设，不能当事实。</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为结构示意，不是新的数据图；样本为本文论证。</text>
+  </svg>
+  <figcaption>图 2：单利与复利的机制链：从问题、机制到判断。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">单利与复利：适用边界</title>
+    <desc id="fig-batch-boundary-desc">把成立条件与失效条件分开；局部例子不能自动推广到所有情形。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">单利与复利：什么情况下成立？</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">先检查条件，再看结论</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">条件、口径或样本一变，结论可能要重算</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成立</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">单利假设利息不再投资。</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不成立 / 需改写</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">复利保证高收益。</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">图为边界示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 3：单利与复利的边界：哪些条件成立，哪些条件失效。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">单利与复利：对象、前提与常见误区</title>
+    <desc id="fig-batch-compare-desc">三行比较本文概念、成立条件与常见误区；比较不等于等价，也不能替代定义。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">单利与复利：一张表看对象、前提与误区</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">本篇</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">容易混淆</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">对象</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">单利只按本金计息，复利把</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">利息并入本金继续计息；同…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相邻概念/常见说法</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">前提</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">单利假设利息不再投资。</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">复利保证高收益。</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">检查</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">先定义，再比较；不能只看</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">名称</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相关不等于因果，局部不等于普遍</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为比较示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 4：单利与复利的对象、前提与常见误区比较。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<h2>练习</h2>
+<ol>
+<li><strong>概念辨别。</strong> 哪种计息方式每期只按原始本金计息？A. 复利；B. 单利；C. 连续复利；D. 有效年利率。</li>
+<li><strong>计算。</strong> 2,000 元、6%、4 年，单利与复利终值各是多少？差额多少？</li>
+<li><strong>适用条件。</strong> A 产品名义年利率 12%、按月复利；B 产品有效年利率 12.2%。哪个实际年利率更高？为什么不能直接比较两个“12%”？</li>
+</ol>
+<details>
+<summary>参考答案</summary>
+
+<ol>
+<li>B。</li>
+<li>单利 <code>2,000 × (1 + 0.06 × 4) = 2,480</code> 元；复利 <code>2,000 × 1.06⁴ = 2,524.95</code> 元；差额 <code>44.95</code> 元。</li>
+<li>A 更高：用本文公式 <code>EAR = (1 + r/m)^m - 1</code>，取 <code>r = 0.12</code>、<code>m = 12</code>，得约 12.68%，高于 B 的 12.2%；名义利率没有说明复利频率，不能直接比较。</li>
+</ol>
+</details>
+
+<h2>来源</h2>
+<ol>
+<li>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “7.2 Time Value of Money (TVM) Basics.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/7-2-time-value-of-money-tvm-basics">https://openstax.org/books/principles-finance-2e/pages/7-2-time-value-of-money-tvm-basics</a>（访问日期：2026-10-30）</li>
+<li>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “8.4 Stated versus Effective Rates.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/8-4-stated-versus-effective-rates">https://openstax.org/books/principles-finance-2e/pages/8-4-stated-versus-effective-rates</a>（访问日期：2026-10-30）</li>
+<li>Board of Governors of the Federal Reserve System. “H.15 Selected Interest Rates.” 美国政府作品，17 U.S.C. §105（页内嵌入的第三方图表不在此范围内）。 <a href="https://www.federalreserve.gov/releases/h15/default.htm">https://www.federalreserve.gov/releases/h15/default.htm</a>（访问日期：2026-11-03）</li>
+<li>Consumer Financial Protection Bureau. “12 CFR §1026.4 Finance charge.” eCFR. 美国政府作品，17 U.S.C. §105；eCFR 自述非正式法律版本。 <a href="https://www.ecfr.gov/current/title-12/chapter-X/part-1026/subpart-A/section-1026.4">https://www.ecfr.gov/current/title-12/chapter-X/part-1026/subpart-A/section-1026.4</a>（访问日期：2026-11-03）</li>
+</ol>
+  <section class="article-demo" id="demo-compound" data-demo="compound" data-lang="zh" aria-labelledby="demo-compound-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-compound-title">复利不是一条直线</h2> <p class="demo-intro">本金、利率和年限相同，计息频率不同，结果也会差一截。拖动参数，看期末余额怎么变。</p> </header> <div class="demo-grid"> <div class="demo-controls"> <div class="demo-field"> <label for="compound-principal"><span>本金（元）</span><output data-for="principal">30,000</output></label> <input id="compound-principal" data-role="principal" data-default="30000" type="range" min="10000" max="100000" step="5000" value="30000"> </div> <div class="demo-field"> <label for="compound-rate"><span>年利率（%）</span><output data-for="rate">5.0</output></label> <input id="compound-rate" data-role="rate" data-default="5" type="range" min="1" max="10" step="0.5" value="5"> </div> <div class="demo-field"> <label for="compound-years"><span>年数</span><output data-for="years">20</output></label> <input id="compound-years" data-role="years" data-default="20" type="range" min="1" max="40" step="1" value="20"> </div> <div class="demo-field"> <label for="compound-freq"><span>每年计息</span></label> <select id="compound-freq" data-role="freq" data-default="12"> <option value="1">每年 1 次</option> <option value="2">每半年 1 次</option> <option value="4">每季度 1 次</option> <option value="12" selected>每月 1 次</option> </select> </div> </div> <div class="demo-output"> <div class="demo-stats"> <div class="demo-stat"><span>期末余额</span><strong data-out="fv">—</strong></div> <div class="demo-stat"><span>累计利息</span><strong data-out="interest">—</strong></div> <div class="demo-stat"><span>实际年利率</span><strong data-out="ear">—</strong></div> </div> <div class="demo-chart"> <p class="demo-chart-label">余额随时间变化</p> <div class="demo-bars" data-chart="compound"></div> </div> </div> </div>          <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>能用同一本金与利率分别按单利与复利计算终值，并量化差异</li><li>能说明复利频率如何改变有效年利率，并给出从名义到有效的换算</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/time-value-of-money/">FIN-009 · 货币的时间价值</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/present-value-and-discounted-cash-flows/">FIN-011 · 现值与现金流贴现</a> </li><li> <a href="https://markets.51invest.com/learn/cash-and-money-market-instruments/">MKT-002 · 现金与货币市场工具</a> </li><li> <a href="https://invest.51invest.com/learn/real-returns-and-purchasing-power/">INV-003 · 实际收益与购买力</a> </li><li> <a href="/learn/time-value-of-money/">FIN-009 · 货币的时间价值</a> </li><li> <a href="/learn/interest-rate-types-and-conventions/">FIN-012 · 利率种类与口径</a> </li><li> <a href="https://markets.51invest.com/learn/bond-rights-and-cash-flows/">MKT-004 · 债券的权利与现金流</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/7-2-time-value-of-money-tvm-basics" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 7.2 Time Value of Money (TVM) Basics</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-10-30 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：复利是后续期间以前期已赚利息为基础继续计息，即“利息的利息”；终值公式为 FV = PV × (1 + r)^n。同页逐字对比单利与复利：&quot;Simple interest applies to year 1 while compound interest or “interest on interest” applies to year 2.&quot;</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/8-4-stated-versus-effective-rates" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 8.4 Stated versus Effective Rates</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-10-30 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：名义利率必须结合复利频率解读；1.5% 的月利率按 (1+0.015)^12−1 计算，有效年利率为 19.56%。</p> </div><div class="source"> <a href="https://www.federalreserve.gov/releases/h15/default.htm" rel="noopener noreferrer" target="_blank">H.15 Selected Interest Rates</a> <p>Board of Governors of the Federal Reserve System · Board of Governors of the Federal Reserve System</p> <p>访问：2026-11-03 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：短期利率的计息与报价口径由脚注逐项标注，逐字为&quot;Annualized using a 360-day year or bank interest.&quot;与&quot;On a discount basis.&quot;；同一发布还把联邦基金有效利率追溯到 Report of Selected Money Market Rates (FR 2420)，说明这些口径用于货币市场类利率。</p> </div><div class="source"> <a href="https://www.ecfr.gov/current/title-12/chapter-X/part-1026/subpart-A/section-1026.4" rel="noopener noreferrer" target="_blank">12 CFR §1026.4 Finance charge</a> <p>Consumer Financial Protection Bureau · eCFR (Electronic Code of Federal Regulations)</p> <p>访问：2026-11-03 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：年化成本里是否含费用的定义逐字为&quot;The finance charge is the cost of consumer credit as a dollar amount. It includes any charge payable directly or indirectly by the consumer and imposed directly or indirectly by the creditor as an incident to or a condition of the extension of credit&quot;，即作为授信条件向消费者收取的应付费用属于 finance charge（该节另列除外项）。 本节是美国披露规则（Regulation Z 的一部分）；本站未取回中国或欧盟的同类条文，因此它不支撑任何跨法域的成本口径断言。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/simple-and-compound-interest/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

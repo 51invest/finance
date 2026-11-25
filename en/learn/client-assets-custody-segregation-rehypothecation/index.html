@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>Client Asset Custody: Segregation, Rehypothecation and Institution Failure · 51Invest</title><meta name="description" content="Client assets are not the institution's own assets; custody is about segregation and traceability. If client assets are commingled, rehypothecated or lent to counterparties, they become general claims in a failure. The longer the custody chain, the harder the recovery."><link rel="canonical" href="https://finance.51invest.com/en/learn/client-assets-custody-segregation-rehypothecation/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/client-assets-custody-segregation-rehypothecation/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/client-assets-custody-segregation-rehypothecation/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/client-assets-custody-segregation-rehypothecation/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/en/" data-main-home aria-label="51Invest"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">51Invest</span> <span class="brand-caption">WUYAO INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="Knowledge stations"> <a class="nav-link" href="https://51invest.com/en/" data-main-home> Home </a> <a class="nav-link" href="https://economics.51invest.com/en/"> Economics </a><a class="nav-link active" href="/en/" aria-current="page"> Finance </a><a class="nav-link" href="https://markets.51invest.com/en/"> Markets </a><a class="nav-link" href="https://invest.51invest.com/en/"> Investing </a><a class="nav-link" href="https://history.51invest.com/en/"> History </a><a class="nav-link" href="https://research.51invest.com/en/"> Research </a> <a class="nav-link" href="https://51invest.com/en/contents/"> Content map </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/learn/client-assets-custody-segregation-rehypothecation/" hreflang="zh-CN" lang="zh-CN" data-language-link="zh" aria-label="Switch to Chinese" title="Switch to Chinese"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="Theme: System" title="Theme: System" data-label-auto="Theme: System" data-label-light="Theme: Light" data-label-dark="Theme: Dark"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">System</span> <span class="theme-text" data-theme-text="light">Light</span> <span class="theme-text" data-theme-text="dark">Dark</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/en/" data-main-home>Home</a> <span class="sep">/</span> <a href="/en/">Finance</a> <span class="sep">/</span> <span aria-current="page">Client Asset Custody: Segregation, Rehypothecation and Institution Failure</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">Concept</span> <h1 class="article-title">Client Asset Custody: Segregation, Rehypothecation and Institution Failure</h1> <p class="article-summary">Client assets are not the institution&#39;s own assets; custody is about segregation and traceability. If client assets are commingled, rehypothecated or lent to counterparties, they become general claims in a failure. The longer the custody chain, the harder the recovery.</p>  <div class="meta-grid"> <div class="meta-item"><span>Module</span><strong>FIN-M18 · 监管法律与伦理</strong></div> <div class="meta-item"><span>Level</span><strong>Systematic</strong></div> <div class="meta-item"><span>Read</span><strong>7 min · 12 sections</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> This article has an interactive demo <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>Definition and intuition</h2>
+<p><strong>Client assets</strong> are cash and securities that clients entrust to an institution for safekeeping, trading or management; they are not the institution&#39;s own assets. <strong>Custody</strong> is the service of holding and recording client assets; <strong>segregation</strong> separates client assets from the institution&#39;s own assets and from other clients; <strong>rehypothecation</strong> reuses client assets as collateral.</p>
+<p>The purpose of segregation is not to prevent failure but to let clients recover their assets if the institution fails. If assets are commingled, clients become general creditors and queue with others.</p>
+<p>The custody chain usually runs client-adviser-broker-custodian bank-central securities depository. Longer chains complicate account control, reconciliation and legal recovery; cross-border custody adds local insolvency law[1][2].</p>
+<h2>Formal expression and worked example</h2>
+<p>Suppose client A gives 10 million yuan of securities to an adviser, who places them with a broker, who deposits them at a custodian bank. If the adviser commingles client assets with its own, A becomes a general creditor in the adviser&#39;s insolvency and may recover only 40%, or 4 million.</p>
+<p>If the assets are segregated in a client account with complete names and beneficial-owner records, A can claim the securities and recover close to 100%, though after insolvency proceedings, custody fees and legal costs.</p>
+<p>If the broker rehypothecates the securities to a counterparty, that counterparty can dispose of the collateral on default; A&#39;s claim ranks behind it. Deeper rehypothecation makes recovery harder. All numbers are teaching assumptions.</p>
+<h2>Three checks</h2>
+<p><strong>Check 1: account segregation.</strong> Are client assets in separate accounts, titled in the client&#39;s name or with beneficiary records, and separate from own assets?</p>
+<p><strong>Check 2: rehypothecation authority.</strong> Does the contract allow lending, pledging or reuse of client assets? What are the scope, counterparties and substitute-asset terms?</p>
+<p><strong>Check 3: custody chain and reconciliation.</strong> Do the custodian bank, sub-custodian and depository accounts reconcile? Is there an independent audit and client statement?</p>
+<p>Recovery in a failure depends on legal structure, account records and whether assets remain in the custody chain; not all &#39;client assets&#39; enjoy equal protection[3][4].</p>
+<h2>Figures</h2>
+<figure>
+<svg role="img" aria-labelledby="fig-client-assets-custody-segregation-rehypothecation-1-title fig-client-assets-custody-segregation-rehypothecation-1-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-client-assets-custody-segregation-rehypothecation-1-title">Custody chain and recovery</title>
+<desc id="fig-client-assets-custody-segregation-rehypothecation-1-desc">Five steps: client, adviser, broker, custodian bank, depository.</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">Client-asset custody chain</text>
+<text x="24" y="54" font-size="11" text-anchor="start">Client, adviser, broker, custodian</text>
+<text x="24" y="68" font-size="11" text-anchor="start"> bank and depository.</text>
+<rect x="14" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="69" y="140" font-size="12" text-anchor="middle">Client</text>
+<text x="69" y="184" font-size="12" text-anchor="middle" font-weight="700">Entrust</text>
+<rect x="136" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="191" y="140" font-size="12" text-anchor="middle">Adviser</text>
+<text x="191" y="184" font-size="12" text-anchor="middle" font-weight="700">Manage</text>
+<rect x="258" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="313" y="140" font-size="12" text-anchor="middle">Broker</text>
+<text x="313" y="184" font-size="12" text-anchor="middle" font-weight="700">Trade</text>
+<rect x="380" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="435" y="140" font-size="12" text-anchor="middle">Custodian</text>
+<text x="435" y="184" font-size="12" text-anchor="middle" font-weight="700">Safekeep</text>
+<rect x="502" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="557" y="140" font-size="12" text-anchor="middle">Depository</text>
+<text x="557" y="184" font-size="12" text-anchor="middle" font-weight="700">Record</text>
+<line x1="125" y1="160" x2="135" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="247" y1="160" x2="257" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="369" y1="160" x2="379" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="491" y1="160" x2="501" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<text x="24" y="246" font-size="11" text-anchor="start">Teaching diagram, no statistical data.</text>
+</g>
+</svg>
+<figcaption>Figure 1: custody chain and recovery; teaching diagram.</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-client-assets-custody-segregation-rehypothecation-2-title fig-client-assets-custody-segregation-rehypothecation-2-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-client-assets-custody-segregation-rehypothecation-2-title">Client-asset recovery rates</title>
+<desc id="fig-client-assets-custody-segregation-rehypothecation-2-desc">Recovery under two legal structures.</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">Recovery under segregation and commingling</text>
+<text x="24" y="54" font-size="11" text-anchor="start">Segregation close to 100%; comming</text>
+<text x="24" y="68" font-size="11" text-anchor="start">ling about 40%.</text>
+<line x1="178" y1="64" x2="178" y2="270" stroke="currentColor" stroke-width="1" opacity=".45"/>
+<text x="20" y="97" font-size="12">Segregated</text>
+<rect x="178" y="78" width="360" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="95" font-size="12" font-weight="700">100%</text>
+<text x="20" y="145" font-size="12">Commingled</text>
+<rect x="178" y="126" width="144" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="143" font-size="12" font-weight="700">40%</text>
+<text x="24" y="292" font-size="11" text-anchor="start">Teaching assumptions; unit: %.</text>
+</g>
+</svg>
+<figcaption>Figure 2: client-asset recovery rates; teaching assumptions.</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-client-assets-custody-segregation-rehypothecation-3-title fig-client-assets-custody-segregation-rehypothecation-3-desc" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-client-assets-custody-segregation-rehypothecation-3-title">Two-dimensional matrix of client assets</title>
+<desc id="fig-client-assets-custody-segregation-rehypothecation-3-desc">Axes: segregation and rehypothecation depth; quadrants map to safe, stressed, controllable and dangerous.</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">Four client-asset states by segregation and</text>
+<text x="24" y="49" font-size="16" text-anchor="start">rehypothecation</text>
+<text x="24" y="54" font-size="11" text-anchor="start">High segregation with shallow rehy</text>
+<text x="24" y="68" font-size="11" text-anchor="start">pothecation is safest; low segrega</text>
+<text x="24" y="82" font-size="11" text-anchor="start">tion with deep rehypothecation is </text>
+<text x="24" y="96" font-size="11" text-anchor="start">most dangerous.</text>
+<text x="40" y="68" font-size="11">High segregation</text>
+<text x="40" y="286" font-size="11">Low segregation</text>
+<text x="110" y="314" font-size="11" text-anchor="middle">Shallow rehypothecation</text>
+<text x="500" y="314" font-size="11" text-anchor="middle">Deep rehypothecation</text>
+<rect x="96" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="100" font-size="12" text-anchor="start">Safe</text>
+<text x="108" y="130" font-size="11" text-anchor="start">High segregation, shallow</text>
+<text x="108" y="144" font-size="11" text-anchor="start">pledge</text>
+<text x="108" y="170" font-size="11" font-weight="700">Recoverable</text>
+<rect x="338" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="100" font-size="12" text-anchor="start">Stressed</text>
+<text x="350" y="130" font-size="11" text-anchor="start">High segregation, deep pledge</text>
+<text x="350" y="170" font-size="11" font-weight="700">Subordinated</text>
+<rect x="96" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="214" font-size="12" text-anchor="start">Controllable</text>
+<text x="108" y="244" font-size="11" text-anchor="start">Low segregation, shallow</text>
+<text x="108" y="258" font-size="11" text-anchor="start">pledge</text>
+<text x="108" y="284" font-size="11" font-weight="700">General claim</text>
+<rect x="338" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="214" font-size="12" text-anchor="start">Dangerous</text>
+<text x="350" y="244" font-size="11" text-anchor="start">Low segregation, deep pledge</text>
+<text x="350" y="284" font-size="11" font-weight="700">Hard to recover</text>
+</g>
+</svg>
+<figcaption>Figure 3: two-dimensional matrix of client assets; comparison and classification diagram.</figcaption>
+</figure>
+
+<p>Figure 1 links client, adviser, broker, custodian bank and depository. Figure 2 compares recovery under segregation and commingling. Figure 3 uses segregation and rehypothecation axes to mark four client-asset states. All numbers are teaching assumptions.</p>
+<h2>Conditions, boundaries and common mistakes</h2>
+<p><strong>Boundary 1: segregation is not insurance.</strong> It protects ownership, not value; market risk stays with the client.</p>
+<p><strong>Boundary 2: cash and securities differ.</strong> Client cash may be deposited at a bank and limited by deposit insurance; securities custody follows different rules.</p>
+<p><strong>Boundary 3: cross-border custody follows local law.</strong> Sub-custodian insolvency, exchange controls and asset freezes affect recovery.</p>
+<p><strong>Mistake 1: a large custodian is safer.</strong> Size does not imply good segregation; the chain, rehypothecation and audit quality matter.</p>
+<p><strong>Mistake 2: client assets are always off the balance sheet.</strong> Segregated assets should not count as own assets; commingling or rehypothecation changes their legal status.</p>
+<h2>Deeper note: legal ownership, commingling and rehypothecation</h2>
+<p><strong>The core of client assets is not &#39;which account&#39; but &#39;who owns them in law&#39;.</strong> In custody, the client remains the owner and the custodian is only a keeper; if the custodian fails, client assets should not enter the insolvency estate. But that conclusion depends on local law, account structure and contract terms, and cannot be assumed.</p>
+<p><strong>Segregated versus omnibus</strong>: segregated accounts keep each client&#39;s assets apart and are easy to identify in insolvency; omnibus accounts pool several clients&#39; assets and require records to allocate, and if records are incomplete clients may recover pro rata or even be treated as general creditors. Institutional clients often use omnibus to cut costs but need stronger reconciliation and records.</p>
+<p><strong>Rehypothecation</strong> is the custodian or broker lending or pledging client assets onward. It adds market liquidity and exposes client assets to counterparty risk. Contracts often cap it (say 140% overcollateralisation), but under stress collateral values fall and clients may not get assets back in time.</p>
+<p><strong>Lessons from Lehman and MF Global</strong>: client assets can be frozen for years in insolvency and clients recover only part; commingling, rehypothecation and cross-border legal differences complicate claims. When choosing a custodian, check the legal opinion on bankruptcy remoteness, account structure, rehypothecation policy and insurance.</p>
+<p><strong>Operational controls</strong> include daily reconciliation, independent custody, asset identification, corporate-action handling, cash sweeps and cross-border transfers. When controls fail, client assets can be misused or returned late.</p>
+<p><strong>Regulation</strong> usually requires segregation, no commingling with proprietary assets, periodic reporting and independent audit; rehypothecation needs disclosure, limits and client consent. Cross-border custody also depends on whether local law recognises client-asset priority.</p>
+<p><strong>Common misuses</strong>: treating &#39;a large custodian&#39; as &#39;safe assets&#39;, ignoring bankruptcy remoteness; treating &#39;a balance in the account&#39; as &#39;legally the client&#39;s&#39;, ignoring commingling and rehypothecation; treating a licence as &#39;asset insurance&#39;, ignoring cross-border legal differences.</p>
+<p><strong>Finally</strong>, client-asset protection is a three-part arrangement of law, operations and contract. Investors should ask: whose books hold the assets, who owns them in law, can they be rehypothecated, and how are they allocated in insolvency. If the four answers are unclear, custody risk has not been managed.</p>
+<h2>Stress scenarios: what happens when the custodian fails</h2>
+<p><strong>Scenario one, custodian insolvency</strong>: if client assets are legally segregated and records are complete, they should be returned or transferred to a new custodian relatively quickly; if commingled or poorly recorded, clients may recover pro rata or be treated as general creditors. Return can take months or years.</p>
+<p><strong>Scenario two, rehypothecation counterparty defaults</strong>: client assets lent onward leave clients queuing as secured creditors; if collateral value is insufficient, recovery is partial. Contractual rehypothecation caps and overcollateralisation determine the loss.</p>
+<p><strong>Scenario three, cross-border custody</strong>: assets sit in another jurisdiction with different insolvency procedures, priorities and freezing rules; clients may need local counsel and more time. Confirm that local law recognises client-asset priority.</p>
+<p><strong>Response list</strong>: keep account structures and asset records, require independent custody and reconciliation, limit rehypothecation, buy insurance, prepare a backup custodian and rehearse transfers. Client-asset protection is ongoing operations, not a signed contract.</p>
+<p><strong>Due-diligence questions</strong>: whose books hold the assets, who owns them in law, can they be rehypothecated, and how are they allocated in insolvency. If the four answers are unclear, custody risk is not managed.</p>
+<h2>Key takeaways</h2>
+<ul>
+<li>Client-asset protection turns on legal ownership, not account location; bankruptcy remoteness depends on local law and contract.</li>
+<li>Segregated accounts are easy to identify and return; omnibus accounts rely on records, and incomplete records mean pro-rata recovery.</li>
+<li>Rehypothecation adds liquidity and exposes client assets to counterparty risk; caps and overcollateralisation determine losses.</li>
+<li>Lehman and MF Global show client assets can be frozen for years, with cross-border custody adding complexity.</li>
+<li>Operational controls include daily reconciliation, independent custody, asset tagging, corporate actions and cross-border transfers.</li>
+<li>Four due-diligence questions: whose books, legal owner, rehypothecation, insolvency allocation.</li>
+</ul>
+<h2>What would change the conclusion</h2>
+<p>Client-asset protection depends on effective legal segregation:</p>
+<ol>
+<li><strong>Segregation is legally enforceable.</strong> If client assets truly rank ahead and are not commingled in insolvency, custody protection holds.</li>
+<li><strong>Rehypothecation is disclosed.</strong> If reuse, pledging and securities lending are disclosed and priced, the risk can be borne.</li>
+<li><strong>The custodian is systemically important.</strong> If it is too big to fail, the resolution regime and bridge arrangements decide how fast assets move.</li>
+<li><strong>Cross-border custody.</strong> If assets sit in several jurisdictions, insolvency law and asset freezes affect return speed.</li>
+</ol>
+<p><strong>Practical implication:</strong> client-asset protection depends on legal segregation, rehypothecation disclosure and the custodian&#39;s resolution framework; a contract saying &#39;segregated&#39; does not guarantee quick return in insolvency.</p>
+<p><strong>Data note:</strong> check account title, legal jurisdiction and rehypothecation authority; master and sub-accounts are segregated to different degrees.</p>
+<p><strong>Scope note:</strong> stress-test custodian insolvency, cross-border freezes and rehypothecation chains; contractual segregation is only the first layer, and actual recovery depends on resolution speed and asset location.</p>
+<p><strong>Final note:</strong> legal title is not timely recovery; resolution speed, asset location and rehypothecation chains decide actual recovery.</p>
+<p><strong>Check:</strong> walk the insolvency waterfall and asset location before relying on the segregation clause.</p>
+<h2>Exercises</h2>
+<ol>
+<li><p>Distinguish client assets from own assets.</p>
+</li>
+<li><p>Client assets 10 million, 40% recovery after commingling: how much is recovered?</p>
+</li>
+<li><p>What recovery is typical in a segregated account?</p>
+</li>
+<li><p>How does rehypothecation change the claim order?</p>
+</li>
+<li><p>Why is recovery harder with a longer custody chain?</p>
+</li>
+<li><p>How do rules differ for client cash and securities?</p>
+</li>
+<li><p>True or false: a large custodian is always safer. Explain.</p>
+</li>
+<li><p>How do segregated and omnibus accounts differ in insolvency allocation?</p>
+</li>
+<li><p>Why does rehypothecation add liquidity while increasing client-asset risk?</p>
+</li>
+<li><p>Why are omnibus accounts harder to return than segregated accounts when a custodian fails?</p>
+</li>
+<li><p>In what order do clients recover when a rehypothecation counterparty defaults?</p>
+</li>
+<li><p>Why does client-asset protection depend on legal ownership rather than account location?</p>
+</li>
+<li><p>Why may clients recover pro rata from an omnibus account with incomplete records?</p>
+</li>
+</ol>
+<h2>Related</h2>
+<p>Prerequisite FIN-035; compare FIN-036; neighbours FIN-050 and FIN-049.</p>
+<h2>Sources</h2>
+<ol>
+<li>U.S. Securities and Exchange Commission, <em>17 CFR § 275.206(4)-2 — Custody of funds or securities of clients by investment advisers</em>. U.S. Government Publishing Office, Electronic Code of Federal Regulations, accessed 2026-10-30. <a href="https://www.ecfr.gov/current/title-17/chapter-II/part-275/subpart-A/section-275.206(4)-2">https://www.ecfr.gov/current/title-17/chapter-II/part-275/subpart-A/section-275.206(4)-2</a></li>
+<li>U.S. Securities and Exchange Commission, Division of Investment Management, <em>Staff Responses to Questions About the Custody Rule</em>. U.S. Securities and Exchange Commission, accessed 2026-11-03. <a href="https://www.sec.gov/divisions/investment/custody_faq_030510.htm">https://www.sec.gov/divisions/investment/custody_faq_030510.htm</a></li>
+<li>U.S. Securities and Exchange Commission, <em>Information for Newly-Registered Investment Advisers</em>. U.S. Securities and Exchange Commission, accessed 2026-11-21. <a href="https://www.sec.gov/divisions/investment/advoverview.htm">https://www.sec.gov/divisions/investment/advoverview.htm</a></li>
+<li>Financial Stability Board, <em>Regulation, Supervision and Oversight of Crypto-Asset Activities and Markets</em>. Financial Stability Board, accessed 2026-11-21. <a href="https://fsb.org/wp-content/uploads/P111022-3.pdf">https://fsb.org/wp-content/uploads/P111022-3.pdf</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="en" aria-labelledby="demo-check-title" data-check-done="All three are covered: the core of this article is in place." data-check-pending="One item is still open: go back to the matching section and retell it with a number or counterexample." data-check-count="Ticked"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">Worked demo</p> <button class="demo-reset" type="button" data-demo-reset>Reset</button> </div> <h2 id="demo-check-title">Read-through check: can you say three things?</h2> <p class="demo-intro">No recitation needed. Tick each sentence below and see whether you can explain the mechanism, one worked example and one boundary in your own words.</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>Distinguish client assets from own assets.</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>Explain segregation, custody and rehypothecation.</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>Name one condition under which the article’s conclusion does not hold</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> Ticked 0 / 3
+</p> </div> <p class="demo-footnote">The numbers are teaching assumptions that show relationships, not forecasts or investment advice.</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> This article has passed the current publication gate. Factual, calculation and translation revisions update both language versions together. </p> <p> <a class="button secondary" href="/en/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>Back to station </a> </p> </div> <aside class="article-aside" aria-label="Article information"> <section class="aside-card"> <h2>Learning objectives</h2> <ul> <li>Distinguish client assets from own assets.</li><li>Explain segregation, custody and rehypothecation.</li><li>Trace client-asset recovery in an institution failure.</li> </ul> </section> <section class="aside-card"> <h2>Required prerequisites</h2> <ul> <li> <a href="/en/learn/insurance-pricing-and-pension-liabilities/">FIN-035 · Insurance Pricing and Pension Liabilities: The Ledger of Risk Sharing</a> </li> </ul> </section> <section class="aside-card"> <h2>Recommended reading</h2> <ul> <li> <a href="/en/learn/cross-border-payments-and-reserve-currencies/">FIN-036 · Cross-Border Payments and Reserve Currencies: The Plumbing of International Finance</a> </li><li> <a href="/en/learn/wholesale-funding-run-lcr-nsfr-fire-sale/">FIN-050 · Wholesale Funding Runs: LCR, NSFR and Fire Sales</a> </li><li> <a href="/en/learn/stablecoin-reserve-peg-run-bank-analogy/">FIN-049 · Stablecoin Reserves, Pegs and Runs: Is It a Bank?</a> </li> </ul> </section> <section class="aside-card"> <h2>AI review record</h2> <p class="muted"> There is no human sign-off; these states come from the AI-only editorial review. </p> <ul> <li> Facts and calculations : AI review passed </li><li> Subject : AI review passed </li><li> English : AI review passed </li><li> Page : AI review passed </li> </ul> </section> <section class="aside-card"> <h2>Sources</h2> <div class="source"> <a href="https://www.ecfr.gov/current/title-17/chapter-II/part-275/subpart-A/section-275.206(4)-2" rel="noopener noreferrer" target="_blank">17 CFR § 275.206(4)-2 — Custody of funds or securities of clients by investment advisers</a> <p>U.S. Securities and Exchange Commission · U.S. Government Publishing Office, Electronic Code of Federal Regulations</p> <p>Accessed: 2026-10-30 · License: U.S. Government work (public domain), 17 U.S.C. §105</p> <p>Supports: Supports custody rules for client funds and securities of investment advisers.</p> </div><div class="source"> <a href="https://www.sec.gov/divisions/investment/custody_faq_030510.htm" rel="noopener noreferrer" target="_blank">Staff Responses to Questions About the Custody Rule</a> <p>U.S. Securities and Exchange Commission, Division of Investment Management · U.S. Securities and Exchange Commission</p> <p>Accessed: 2026-11-03 · License: U.S. public information; copying and further distribution allowed</p> <p>Supports: Supports custody-rule Q&amp;A, account and audit requirements.</p> </div><div class="source"> <a href="https://www.sec.gov/divisions/investment/advoverview.htm" rel="noopener noreferrer" target="_blank">Information for Newly-Registered Investment Advisers</a> <p>U.S. Securities and Exchange Commission · U.S. Securities and Exchange Commission</p> <p>Accessed: 2026-11-21 · License: U.S. federal government work; linked summary only</p> <p>Supports: Supports fiduciary duty, conflicts of interest and client-asset protection.</p> </div><div class="source"> <a href="https://fsb.org/wp-content/uploads/P111022-3.pdf" rel="noopener noreferrer" target="_blank">Regulation, Supervision and Oversight of Crypto-Asset Activities and Markets</a> <p>Financial Stability Board · Financial Stability Board</p> <p>Accessed: 2026-11-21 · License: © Financial Stability Board; linked summary only</p> <p>Supports: Supports crypto-asset custody, segregation and cross-border regulation.</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">A free, non-commercial knowledge site. Sources and definitions are labelled; nothing here is investment advice.</p> </div> </div> <nav class="footer-links" aria-label="Knowledge stations"> <a href="https://51invest.com/en/" data-main-home>Home</a> <a href="https://51invest.com/en/contents/">Content map</a> <a href="/en/glossary/">Glossary</a> <a href="/en/search/">Search</a> <a href="https://51invest.com/en/charts/" data-main-link>Charts</a> <a href="https://51invest.com/en/sources/" data-main-link>Data &amp; licences</a> <a href="/en/">Station home</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="Knowledge stations"> <a class="mobile-link" href="https://51invest.com/en/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>Home</span> </a> <a class="mobile-link" href="https://51invest.com/en/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>Knowledge stations</span> </a> <a class="mobile-link active" href="/en/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>Station home</span> </a> <a class="mobile-link" href="/learn/client-assets-custody-segregation-rehypothecation/" data-language-link="zh"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>挤兑、杠杆与传染：金融稳定的压力测试 · 巫妖投资</title><meta name="description" content="金融稳定不是“没有波动”，而是系统在冲击下仍能完成支付和融资。挤兑是流动性问题，杠杆放大损失，传染把单个机构的失败变成网络事件；压力测试要把这三层分开，再放回同一张资产负债表。"><link rel="canonical" href="https://finance.51invest.com/learn/bank-runs-leverage-and-contagion/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/bank-runs-leverage-and-contagion/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/bank-runs-leverage-and-contagion/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/bank-runs-leverage-and-contagion/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/bank-runs-leverage-and-contagion/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">挤兑、杠杆与传染：金融稳定的压力测试</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">挤兑、杠杆与传染：金融稳定的压力测试</h1> <p class="article-summary">金融稳定不是“没有波动”，而是系统在冲击下仍能完成支付和融资。挤兑是流动性问题，杠杆放大损失，传染把单个机构的失败变成网络事件；压力测试要把这三层分开，再放回同一张资产负债表。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M17 · 金融稳定</strong></div> <div class="meta-item"><span>层级</span><strong>系统</strong></div> <div class="meta-item"><span>阅读</span><strong>5 分钟 · 11 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义</h2>
+<p><strong>金融稳定</strong>（financial stability）是金融体系在冲击下仍能持续提供支付、信贷和风险转移的状态。<strong>挤兑</strong>是存款人或短期债权人同时撤资；<strong>杠杆</strong>是资产由债务融资的程度；<strong>传染</strong>是一家机构的损失通过资产负债表、共同资产或信心渠道传到其他机构[1]。</p>
+<p><strong>流动性覆盖比率</strong>（LCR）用高流动性资产除以 30 天压力净流出，衡量短期挤兑缓冲；<strong>资本缓冲</strong>吸收的是损失，不是流动性[2]。</p>
+<h2>直觉</h2>
+<p>银行像一座用短梯子撑起长桥的结构：存款是短梯，贷款是长桥。平时梯子够用，大家上下桥；一旦所有人同时抽走梯子，桥还在，但没人能过。杠杆则像把桥的支点拉高：资产跌一点，权益跌很多。</p>
+<p>传染不是“大家都变坏”，而是“大家的资产负债表连在一起”。一家机构折价卖资产，压低同类资产价格；价格下跌让其他机构资本受损；资本受损又迫使它们卖资产。这个循环比单次损失更危险。</p>
+<h2>正式表达</h2>
+<p>杠杆倍数：</p>
+<p>$$
+L=\frac{A}{E}
+$$</p>
+<p>(A) 是资产，(E) 是权益。若资产价格下跌 (x)，权益变化近似为：</p>
+<p>$$
+\frac{\Delta E}{E}=-L,x
+$$</p>
+<p>流动性覆盖：</p>
+<p>$$
+LCR=\frac{HQLA}{\text{30 天压力净流出}}
+$$</p>
+<p>折价抛售损失：</p>
+<p>$$
+\text{Loss}=h,A_{\text{sold}}
+$$</p>
+<p>(h) 是折价率。若 (LCR&lt;100%)，机构在压力下存在短期流动性缺口。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>作用</th>
+<th>本文口径</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>杠杆</td>
+<td>放大资产价格变化</td>
+<td>资产/权益</td>
+</tr>
+<tr>
+<td>LCR</td>
+<td>短期流动性缓冲</td>
+<td>HQLA/流出</td>
+</tr>
+<tr>
+<td>折价</td>
+<td>抛售损失</td>
+<td>折扣×卖出资产</td>
+</tr>
+<tr>
+<td>资本</td>
+<td>吸收损失</td>
+<td>权益/风险资产</td>
+</tr>
+</tbody></table>
+<h2>适用条件</h2>
+<ul>
+<li>LCR 的流出假设要覆盖无保险存款、同业融资和表外承诺；只算零售存款会低估压力。</li>
+<li>杠杆倍数要用风险加权或杠杆暴露口径，不同口径不能直接比较。</li>
+<li>折价抛售取决于市场深度和资产同质性；流动性好的资产折扣小，同质化资产在压力下折扣大。</li>
+<li>传染渠道包括同业拆借、衍生品、共同资产和信心；只盯单家机构会漏掉网络暴露。</li>
+<li>资本缓冲和流动性缓冲不能互相替代：资本吸收损失，流动性争取时间。</li>
+<li>压力测试情景要包含反馈循环，不能假设资产价格和融资条件同时不变。</li>
+</ul>
+<h2>例子与计算</h2>
+<p>某银行资产 100，权益 8，杠杆为 (100/8=12.5)。资产价格下跌 5%，权益损失约 (12.5×5%=62.5%)，权益从 8 降到 3；杠杆升到 (95/3=31.7)。若高流动性资产 15、30 天压力流出 20，LCR 为 (15/20=75%)，存在 5 的缺口。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>数值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>资产</td>
+<td>100</td>
+<td>期初</td>
+</tr>
+<tr>
+<td>权益</td>
+<td>8</td>
+<td>期初</td>
+</tr>
+<tr>
+<td>杠杆</td>
+<td>12.5</td>
+<td>100/8</td>
+</tr>
+<tr>
+<td>资产跌幅</td>
+<td>5%</td>
+<td>压力</td>
+</tr>
+<tr>
+<td>权益损失</td>
+<td>62.5%</td>
+<td>12.5×5%</td>
+</tr>
+<tr>
+<td>LCR</td>
+<td>75%</td>
+<td>15/20</td>
+</tr>
+</tbody></table>
+<p>若银行被迫卖出 60 的资产，折价 10%，损失 6，权益从 8 降到 2；此时杠杆为 (90/2=45)。若多家银行持有同类资产，第一家的抛售会压低第二家的估值，损失被放大。</p>
+<h2>图表</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-038-1-title fig-fin-038-1-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-038-1-title">挤兑、杠杆与传染的传导链</title>
+    <desc id="fig-fin-038-1-desc">挤兑 20 流出 20，杠杆 12.5 12.5，权益降至 2 2。LCR 75% 表示 5 的缺口；资产跌 5% 会让杠杆从 12.5 升到 31.7。单位：资金单位、倍数与百分比，数字为教学假设。 教学机制图。</desc>
+    <rect x="14" y="38" width="432" height="32" rx="7" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="28" y="59" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit">L=A/E；LCR=HQLA/outflow；Loss=h×A</text>
+    <rect x="14" y="82" width="132" height="92" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="26" y="104" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">挤兑 20 流出</text>
+    <text x="26" y="128" font-size="12" font-weight="700" fill="var(--accent)" font-family="inherit">20</text>
+    <text x="26" y="148" font-size="9.2" fill="var(--muted)" font-family="inherit">短期负债</text>
+    <text x="26" y="164" font-size="9.2" fill="var(--muted)" font-family="inherit">HQLA 15</text>
+    <rect x="164" y="82" width="132" height="92" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="176" y="104" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">杠杆 12.5</text>
+    <text x="176" y="128" font-size="12" font-weight="700" fill="var(--accent)" font-family="inherit">12.5</text>
+    <text x="176" y="148" font-size="9.2" fill="var(--muted)" font-family="inherit">资产 100</text>
+    <text x="176" y="164" font-size="9.2" fill="var(--muted)" font-family="inherit">权益 8</text>
+    <rect x="314" y="82" width="132" height="92" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="326" y="104" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">权益降至 2</text>
+    <text x="326" y="128" font-size="12" font-weight="700" fill="var(--accent)" font-family="inherit">2</text>
+    <text x="326" y="148" font-size="9.2" fill="var(--muted)" font-family="inherit">折价卖 60</text>
+    <text x="326" y="164" font-size="9.2" fill="var(--muted)" font-family="inherit">损失 6</text>
+    <line x1="146" y1="128" x2="164" y2="128" stroke="var(--border)" stroke-width="1.5"></line>
+    <line x1="296" y1="128" x2="314" y2="128" stroke="var(--border)" stroke-width="1.5"></line>
+    <rect x="14" y="190" width="432" height="82" rx="8" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="28" y="214" font-size="10" font-weight="650" fill="var(--text)" font-family="inherit">流动性缺口与资本损失会互相放大</text>
+    <text x="28" y="236" font-size="9.6" fill="var(--muted)" font-family="inherit">LCR 75% 表示 5 的缺口；资产跌 5% 会让杠杆从 12.5 升到 31.7</text>
+    <text x="28" y="256" font-size="9.6" fill="var(--muted)" font-family="inherit">单位：资金单位、倍数与百分比，数字为教学假设</text>
+  </svg>
+  <figcaption>图 1：挤兑 20 流出 20，杠杆 12.5 12.5，权益降至 2 2。LCR 75% 表示 5 的缺口；资产跌 5% 会让杠杆从 12.5 升到 31.7。单位：资金单位、倍数与百分比，数字为教学假设。 教学机制图。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-038-2-title fig-fin-038-2-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-038-2-title">杠杆与折价抛售算例</title>
+    <desc id="fig-fin-038-2-desc">杠杆与折价抛售算例。期初：资产 100，权益 8，杠杆 12.5；压力后：Assets 90，Equity 2，Leverage 45。卖出 60 资产、折价 10% 损失 6，权益从 8 降到 2，杠杆升到 45。单位：资金单位与倍数，数字为教学假设。 数字为教学假设。</desc>
+    <rect x="14" y="36" width="432" height="34" rx="7" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="28" y="57" font-size="10" font-weight="650" fill="var(--text)" font-family="inherit">100/8=12.5；90/2=45</text>
+    <rect x="14" y="86" width="204" height="132" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="28" y="109" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">期初</text>
+    <text x="26" y="135" font-size="9.4" fill="var(--muted)" font-family="inherit">资产</text>
+    <text x="206" y="135" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">100</text>
+    <text x="26" y="163" font-size="9.4" fill="var(--muted)" font-family="inherit">权益</text>
+    <text x="206" y="163" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">8</text>
+    <text x="26" y="191" font-size="9.4" fill="var(--muted)" font-family="inherit">杠杆</text>
+    <text x="206" y="191" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">12.5</text>
+    <rect x="242" y="86" width="204" height="132" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="256" y="109" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">压力后</text>
+    <text x="254" y="135" font-size="9.4" fill="var(--muted)" font-family="inherit">资产</text>
+    <text x="434" y="135" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">90</text>
+    <text x="254" y="163" font-size="9.4" fill="var(--muted)" font-family="inherit">权益</text>
+    <text x="434" y="163" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">2</text>
+    <text x="254" y="191" font-size="9.4" fill="var(--muted)" font-family="inherit">杠杆</text>
+    <text x="434" y="191" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">45</text>
+    <text x="28" y="240" font-size="9.6" fill="var(--muted)" font-family="inherit">卖出 60 资产、折价 10% 损失 6，权益从 8 降到 2，杠杆升到 45</text>
+    <text x="28" y="262" font-size="9.6" fill="var(--muted)" font-family="inherit">单位：资金单位与倍数，数字为教学假设</text>
+  </svg>
+  <figcaption>图 2：杠杆与折价抛售算例。期初：资产 100，权益 8，杠杆 12.5；压力后：Assets 90，Equity 2，Leverage 45。卖出 60 资产、折价 10% 损失 6，权益从 8 降到 2，杠杆升到 45。单位：资金单位与倍数，数字为教学假设。 数字为教学假设。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-038-3-title fig-fin-038-3-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-038-3-title">资本缓冲与流动性缓冲的分工对比</title>
+    <desc id="fig-fin-038-3-desc">资本缓冲与流动性缓冲的分工对比。资本缓冲：吸收什么 损失，时间 中长期，不足后果  insolvency；流动性缓冲：吸收什么 流出，时间 30 天，不足后果 illiquidity。资本吸收损失，流动性争取时间；两者不能互相替代。单位：定性对比，数字为教学假设。 教学对比图。</desc>
+    <rect x="14" y="38" width="204" height="172" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="28" y="61" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">资本缓冲</text>
+    <text x="26" y="88" font-size="9.4" fill="var(--muted)" font-family="inherit">吸收什么</text>
+    <text x="206" y="88" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">损失</text>
+    <text x="26" y="116" font-size="9.4" fill="var(--muted)" font-family="inherit">时间</text>
+    <text x="206" y="116" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">中长期</text>
+    <text x="26" y="144" font-size="9.4" fill="var(--muted)" font-family="inherit">不足后果</text>
+    <text x="206" y="144" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit"> insolvency</text>
+    <rect x="242" y="38" width="204" height="172" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="256" y="61" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">流动性缓冲</text>
+    <text x="254" y="88" font-size="9.4" fill="var(--muted)" font-family="inherit">吸收什么</text>
+    <text x="434" y="88" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">流出</text>
+    <text x="254" y="116" font-size="9.4" fill="var(--muted)" font-family="inherit">时间</text>
+    <text x="434" y="116" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">30 天</text>
+    <text x="254" y="144" font-size="9.4" fill="var(--muted)" font-family="inherit">不足后果</text>
+    <text x="434" y="144" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">illiquidity</text>
+    <text x="28" y="240" font-size="9.6" fill="var(--muted)" font-family="inherit">资本吸收损失，流动性争取时间；两者不能互相替代</text>
+    <text x="28" y="262" font-size="9.6" fill="var(--muted)" font-family="inherit">单位：定性对比，数字为教学假设</text>
+  </svg>
+  <figcaption>图 3：资本缓冲与流动性缓冲的分工对比。资本缓冲：吸收什么 损失，时间 中长期，不足后果  insolvency；流动性缓冲：吸收什么 流出，时间 30 天，不足后果 illiquidity。资本吸收损失，流动性争取时间；两者不能互相替代。单位：定性对比，数字为教学假设。 教学对比图。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-038-4-title fig-fin-038-4-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-038-4-title">金融稳定压力测试的6 个条件</title>
+    <desc id="fig-fin-038-4-desc">金融稳定压力测试的6 个条件。负债可撤离；资产可折价；杠杆口径一致；传染渠道清楚；反馈循环纳入；政策工具可用。6 项缺一，压力测试可能低估挤兑与传染；是否稳定取决于这些条件。单位：条件清单，数字为教学假设。 这些条件决定方法是否适用。</desc>
+    <text x="28" y="36" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit">先覆盖负债、资产、网络与反馈</text>
+    <rect x="14" y="52" width="204" height="52" rx="7" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="24" y="72" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">负债可撤离</text>
+    <text x="24" y="89" font-size="9.2" fill="var(--muted)" font-family="inherit">无保险存款与同业</text>
+    <rect x="242" y="52" width="204" height="52" rx="7" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="252" y="72" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">资产可折价</text>
+    <text x="252" y="89" font-size="9.2" fill="var(--muted)" font-family="inherit">市场深度与同质性</text>
+    <rect x="14" y="110" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="24" y="130" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">杠杆口径一致</text>
+    <text x="24" y="147" font-size="9.2" fill="var(--muted)" font-family="inherit">风险加权/暴露</text>
+    <rect x="242" y="110" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="252" y="130" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">传染渠道清楚</text>
+    <text x="252" y="147" font-size="9.2" fill="var(--muted)" font-family="inherit">同业、衍生品、共同资产</text>
+    <rect x="14" y="168" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="24" y="188" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">反馈循环纳入</text>
+    <text x="24" y="205" font-size="9.2" fill="var(--muted)" font-family="inherit">价格与资本互相作用</text>
+    <rect x="242" y="168" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="252" y="188" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">政策工具可用</text>
+    <text x="252" y="205" font-size="9.2" fill="var(--muted)" font-family="inherit">资本、流动性、拨备</text>
+    <text x="28" y="248" font-size="9.6" fill="var(--muted)" font-family="inherit">6 项缺一，压力测试可能低估挤兑与传染；是否稳定取决于这些条件</text>
+    <text x="28" y="270" font-size="9.6" fill="var(--muted)" font-family="inherit">单位：条件清单，数字为教学假设</text>
+  </svg>
+  <figcaption>图 4：金融稳定压力测试的6 个条件。负债可撤离；资产可折价；杠杆口径一致；传染渠道清楚；反馈循环纳入；政策工具可用。6 项缺一，压力测试可能低估挤兑与传染；是否稳定取决于这些条件。单位：条件清单，数字为教学假设。 这些条件决定方法是否适用。</figcaption>
+</figure>
+
+<h2>常见误解</h2>
+<p><strong>“资本充足就不会挤兑。”</strong> 资本是损失缓冲，不是现金；短期负债集中时，资本充足的机构也可能缺流动性[2]。</p>
+<p><strong>“LCR 高就安全。”</strong> LCR 依赖流出假设；无保险存款和同业融资在压力下可能比模型更快撤离。</p>
+<p><strong>“传染只发生在银行之间。”</strong> 共同资产、衍生品、货币基金和跨境链路都能传染；网络结构决定冲击路径[3]。</p>
+<h2>深化：挤兑的时间线与政策顺序</h2>
+<p>挤兑不是瞬间完成的，它有一条可观察的时间线。<strong>第一阶段</strong>是信息冲击：亏损公告、评级下调或同业违约让债权人重新评估；<strong>第二阶段</strong>是短期融资撤离：回购不续、存单不买、无保险存款转走；<strong>第三阶段</strong>是资产抛售：银行卖流动性最好的资产，价格下跌、折价扩大；<strong>第四阶段</strong>是传染：其他银行持有同类资产，资本受损，也被迫卖。</p>
+<p>政策工具对应不同阶段。<strong>存款保险</strong>降低零售存款的挤兑动机，但不覆盖批发融资和海外存款；<strong>央行最后贷款人</strong>提供流动性，缓解“资产好但暂时卖不掉”的问题，但不解决偿付能力；<strong>资本注入和有序清算</strong>处理资不抵债；<strong>暂停赎回和资本管制</strong>可以止血，但会损害信心和长期市场准入。</p>
+<p>杠杆放大每个阶段。同样 100 元资产、10 元权益，杠杆 10 倍；资产跌 5%，权益跌 50%。若杠杆 20 倍，资产跌 5% 就让权益归零。监管用资本充足率、杠杆率和 LCR 限制杠杆和期限错配，但无法消除挤兑动机；透明度和债务结构管理同样重要。</p>
+<p><strong>一个反直觉点</strong>：流动性越好的资产，越容易被首先卖出。银行在压力下卖国债而不是贷款，因为国债卖得快；但大量卖出会压低国债价格，让其他银行的高质量流动性资产也减值。这就是“流动性幻觉”：平时能卖，压力时一起卖就卖不动[3][4]。</p>
+<h2>关联</h2>
+<ul>
+<li>与 <strong>FIN-030 金融稳定</strong> 的关系：母文给出模块总框架；本文把「压力下流动性、杠杆与传染如何叠加」单独拆开，落到可计算的例子和适用条件上。</li>
+<li>与 <strong>FIN-031 监管法律与伦理</strong> 的关系：同站相邻主题，提供背景或对照；本文不重复它的重点，而聚焦「压力下流动性、杠杆与传染如何叠加」。</li>
+<li>与 <strong>FIN-028 国际金融体系</strong> 的关系：同站相邻主题，提供背景或对照；本文不重复它的重点，而聚焦「压力下流动性、杠杆与传染如何叠加」。</li>
+</ul>
+<h2>练习</h2>
+<ol>
+<li>杠杆题：资产 120，权益 10。杠杆是多少？资产跌 4% 时，权益损失约多少？</li>
+<li>LCR 题：HQLA 18，30 天压力流出 24。LCR 是多少？若流出升到 30，缺口多少？</li>
+<li>传染题：一家银行折价卖出同类资产，为什么会让另一家银行的资本也受损？列出两个反馈渠道。</li>
+<li>时间线题：挤兑的四个阶段分别是什么？存款保险和最后贷款人各在哪一阶段最有效？</li>
+<li>深化题：资产 100、权益 5，杠杆多少？资产跌 4% 时权益跌多少？这对监管资本意味着什么？</li>
+</ol>
+<h2>来源</h2>
+<ol>
+<li>Basel Committee on Banking Supervision, Bank for International Settlements, <em>Basel III: international regulatory framework for banks</em>, Bank for International Settlements. <a href="https://www.bis.org/bcbs/basel3.htm">https://www.bis.org/bcbs/basel3.htm</a></li>
+<li>Basel Committee on Banking Supervision, Bank for International Settlements, <em>Basel III: The Liquidity Coverage Ratio and liquidity risk monitoring tools</em>, Bank for International Settlements. <a href="https://www.bis.org/publ/bcbs238.htm">https://www.bis.org/publ/bcbs238.htm</a></li>
+<li>Bank of England, <em>Financial stability</em>, Bank of England. <a href="https://www.bankofengland.co.uk/financial-stability">https://www.bankofengland.co.uk/financial-stability</a></li>
+<li>Financial Stability Board, <em>Holistic Review of the March Market Turmoil</em>, Financial Stability Board. <a href="https://www.fsb.org/2020/11/holistic-review-of-the-march-market-turmoil/">https://www.fsb.org/2020/11/holistic-review-of-the-march-market-turmoil/</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>用资产/权益计算杠杆倍数，并解释资产价格下跌如何放大权益损失。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>用高流动性资产与压力流出计算 LCR，判断挤兑缺口。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>用资产/权益计算杠杆倍数，并解释资产价格下跌如何放大权益损失。</li><li>用高流动性资产与压力流出计算 LCR，判断挤兑缺口。</li><li>把折价抛售、同业传染和资本缓冲放在同一压力情景中，列出宏观审慎工具。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/financial-stability/">FIN-030 · 金融稳定</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/financial-stability/">FIN-030 · 金融稳定</a> </li><li> <a href="/learn/regulation-law-and-ethics/">FIN-031 · 监管法律与伦理</a> </li><li> <a href="/learn/international-financial-system/">FIN-028 · 国际金融体系</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.bis.org/bcbs/basel3.htm" rel="noopener noreferrer" target="_blank">Basel III: international regulatory framework for banks</a> <p>Basel Committee on Banking Supervision, Bank for International Settlements · Bank for International Settlements</p> <p>访问：2026-11-24 · 许可：BIS terms: non-commercial download, display and redistribution allowed with attribution</p> <p>支持论点：用于核对本文关于「挤兑、杠杆与传染」的公开概念、制度或历史背景；正文数字与算例为教学假设，不写成统计。</p> </div><div class="source"> <a href="https://www.bis.org/publ/bcbs238.htm" rel="noopener noreferrer" target="_blank">Basel III: The Liquidity Coverage Ratio and liquidity risk monitoring tools</a> <p>Basel Committee on Banking Supervision, Bank for International Settlements · Bank for International Settlements</p> <p>访问：2026-11-24 · 许可：BIS terms: non-commercial download, display and redistribution allowed with attribution</p> <p>支持论点：用于核对本文关于「挤兑、杠杆与传染」的公开概念、制度或历史背景；正文数字与算例为教学假设，不写成统计。</p> </div><div class="source"> <a href="https://www.bankofengland.co.uk/financial-stability" rel="noopener noreferrer" target="_blank">Financial stability</a> <p>Bank of England · Bank of England</p> <p>访问：2026-11-24 · 许可：© Bank of England; linked summary only</p> <p>支持论点：用于核对本文关于「挤兑、杠杆与传染」的公开概念、制度或历史背景；正文数字与算例为教学假设，不写成统计。</p> </div><div class="source"> <a href="https://www.fsb.org/2020/11/holistic-review-of-the-march-market-turmoil/" rel="noopener noreferrer" target="_blank">Holistic Review of the March Market Turmoil</a> <p>Financial Stability Board · Financial Stability Board</p> <p>访问：2026-11-25 · 许可：© Financial Stability Board; cited with attribution for non-commercial teaching</p> <p>支持论点：用于核对 2020 年 3 月市场压力下开放式基金与国债市场的“现金抢夺”、流动性错配和集中抛售记录；本文数字与算例仍为教学假设。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/bank-runs-leverage-and-contagion/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

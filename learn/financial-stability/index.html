@@ -1,0 +1,302 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>金融稳定 · 巫妖投资</title><meta name="description" content="金融稳定指系统在冲击下仍能完成支付、储蓄、借贷与投资，不发生连锁失败；没有波动并不等于稳定。"><link rel="canonical" href="https://finance.51invest.com/learn/financial-stability/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/financial-stability/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/financial-stability/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/financial-stability/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/financial-stability/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">金融稳定</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">金融稳定</h1> <p class="article-summary">金融稳定指系统在冲击下仍能完成支付、储蓄、借贷与投资，不发生连锁失败；没有波动并不等于稳定。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M17 · 金融稳定</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>6 分钟 · 12 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义</h2>
+<p><strong>金融稳定</strong>（financial stability）指金融体系在顺境与逆境中都能向家庭与企业提供支付、储蓄、借贷与投资等关键服务，而不会发生连锁失败[3]。本文把<strong>系统风险</strong>（systemic risk）界定为单个机构或市场故障通过资产负债表、抵押品、共同投资者或支付网络扩散，导致大范围服务中断的风险。稳定不等于没有波动；关键是波动不至于让系统停摆。</p>
+<h2>直觉</h2>
+<p>一家银行因为贷款亏损而资本不足，储户担心取不到钱，纷纷提款；银行为筹钱折价卖资产，价格下跌又让其他持有同类资产的银行亏损，更多储户开始挤兑。单家机构的问题通过共同资产与信心传导成系统问题。</p>
+<h2>正式表达</h2>
+<h3>系统风险</h3>
+<p><strong>系统风险</strong>来自规模、关联性、可替代性与共同暴露。一个机构“太大而不能倒”只是其中一种情形；支付系统、清算所、共同基金与抵押品市场也可能成为传导节点。</p>
+<h3>挤兑</h3>
+<p><strong>挤兑</strong>（bank run）是储户因担心银行偿付能力而集中提款。银行用短期负债支撑长期资产，天生对挤兑敏感；存款保险、央行流动性支持与资产折价会改变挤兑速度。</p>
+<h3>传染</h3>
+<p><strong>传染</strong>（contagion）可以通过直接敞口、共同抵押品、共同投资者、信息不对称与支付中断传播。评估传染要画出网络与共同暴露，而不是只看单家机构的资本比率。</p>
+<h3>杠杆</h3>
+<p><strong>杠杆</strong>（leverage）放大资产价格变动对资本的影响。高杠杆机构在压力下被迫卖资产，可能引发折价螺旋；杠杆水平、期限结构与抵押品折扣决定脆弱性。</p>
+<h3>监管资本与宏观审慎</h3>
+<p><strong>监管资本</strong>（regulatory capital）要求银行以自有资本吸收损失、降低破产概率[1]；<strong>流动性覆盖率</strong>（liquidity coverage ratio, LCR）要求银行持有足够高质量流动性资产应对短期压力[2]。<strong>宏观审慎</strong>（macroprudential）工具——逆周期资本缓冲、贷款收入比上限与压力测试——针对系统整体，而不是单家机构[4]。</p>
+<h2>适用条件</h2>
+<ol>
+<li>稳定性评估要区分偿付能力与流动性：资本充足但流动性枯竭的机构仍可能挤兑。</li>
+<li>压力测试依赖情景与相关性假设；假设过于温和会低估尾部损失。</li>
+<li>宏观审慎工具可能带来顺周期副作用；收紧时机与退出安排要预先设计。</li>
+<li>跨境机构的稳定责任分散在母国与东道国；协调失败本身就是风险。</li>
+</ol>
+<h2>例子与计算</h2>
+<p>假设一家银行资产 100 元、负债 95 元、资本 5 元；资本充足率为 5%。一笔 8 元贷款损失发生后，资产降至 92 元，负债仍为 95 元，资本变为 -3 元。数字为本文教学假设。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th align="right">冲击前</th>
+<th align="right">冲击后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>资产</td>
+<td align="right">100</td>
+<td align="right">92</td>
+</tr>
+<tr>
+<td>负债</td>
+<td align="right">95</td>
+<td align="right">95</td>
+</tr>
+<tr>
+<td>资本</td>
+<td align="right">5</td>
+<td align="right">-3</td>
+</tr>
+<tr>
+<td>资本/资产</td>
+<td align="right">5%</td>
+<td align="right">-3.3%</td>
+</tr>
+</tbody></table>
+<p>一笔相当于资产 8% 的损失，就把 5% 的资本全部吃掉并转为负值。若银行被迫出售资产，折价会进一步压低资本；若存款人同时提款，流动性压力可能先于偿付能力问题爆发。资本与流动性是两道不同的防线。</p>
+<h2>图表</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-030-chain-title fig-fin-030-chain-desc" viewBox="0 0 560 310" width="100%">
+    <title id="fig-fin-030-chain-title">金融稳定：三段判断链</title>
+    <desc id="fig-fin-030-chain-desc">单家机构损失：挤兑、共同资产抛售与杠杆放大；系统传染：损失穿过资产负债表与融资链；资本与流动性防线：微观审慎加宏观审慎共同约束</desc>
+    <rect x="0.5" y="0.5" width="559" height="309" rx="12" fill="var(--surface)" stroke="var(--border)"/>
+    <rect x="24" y="16" width="512" height="86" rx="10" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1"/>
+    <rect x="24" y="16" width="5" height="86" rx="2.5" fill="var(--accent)"/>
+    <text x="44" y="35" font-size="9.5" letter-spacing="1.1" fill="var(--accent)" font-family="inherit">起点</text>
+    <text x="44" y="56" font-size="13" font-weight="650" fill="var(--text)" font-family="inherit">单家机构损失</text>
+    <text x="44" y="76" font-size="10.5" fill="var(--secondary)" font-family="inherit">挤兑、共同资产抛售与杠杆放大</text>
+    <line x1="280" y1="102" x2="280" y2="108" stroke="var(--border)" stroke-width="1.5"/>
+    <path d="M276 106 L280 110 L284 106" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+    <rect x="24" y="112" width="512" height="86" rx="10" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1"/>
+    <rect x="24" y="112" width="5" height="86" rx="2.5" fill="var(--accent)"/>
+    <text x="44" y="131" font-size="9.5" letter-spacing="1.1" fill="var(--accent)" font-family="inherit">机制</text>
+    <text x="44" y="152" font-size="13" font-weight="650" fill="var(--text)" font-family="inherit">系统传染</text>
+    <text x="44" y="172" font-size="10.5" fill="var(--secondary)" font-family="inherit">损失穿过资产负债表与融资链</text>
+    <line x1="280" y1="198" x2="280" y2="204" stroke="var(--border)" stroke-width="1.5"/>
+    <path d="M276 202 L280 206 L284 202" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+    <rect x="24" y="208" width="512" height="86" rx="10" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1"/>
+    <rect x="24" y="208" width="5" height="86" rx="2.5" fill="var(--accent)"/>
+    <text x="44" y="227" font-size="9.5" letter-spacing="1.1" fill="var(--accent)" font-family="inherit">判断</text>
+    <text x="44" y="248" font-size="13" font-weight="650" fill="var(--text)" font-family="inherit">资本与流动性防线</text>
+    <text x="44" y="268" font-size="10.5" fill="var(--secondary)" font-family="inherit">微观审慎加宏观审慎共同约束</text>
+  </svg>
+  <figcaption>图 1：金融稳定的三段判断链——单家机构损失 → 系统传染 → 资本与流动性防线。三段是判断链，不是唯一路径；图中文字取自本文正文，不含统计数据。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<h2>常见误解</h2>
+<p><strong>金融稳定就是市场不波动。</strong> 稳定指系统服务不中断；价格波动是市场正常功能，关键是有没有连锁失败。</p>
+<p><strong>资本充足就等于安全。</strong> 资本吸收损失，流动性应对挤兑；两者缺一不可，且都与资产质量与期限结构有关。</p>
+<!-- kp-supplement:start -->
+<h2>知识点精读</h2>
+<h3>系统风险</h3>
+<p><strong>定义</strong>：系统风险是冲击通过金融机构、市场和基础设施传导、威胁整个金融体系功能的危险。</p>
+<p><strong>机制</strong>：规模、关联、可替代性和复杂性决定机构系统重要性；杠杆、期限错配和共同暴露放大冲击。</p>
+<p><strong>例子</strong>：例如一家大型清算银行失败可能使无数支付和交易无法完成，影响实体经济。</p>
+<p><strong>边界</strong>：系统风险不是单个机构风险之和；相互关联和信心反馈会非线性放大，预警指标也可能滞后。</p>
+<h3>挤兑</h3>
+<p><strong>定义</strong>：挤兑是大量存款人或投资者同时提取资金，因担心机构偿付能力而自我实现。</p>
+<p><strong>机制</strong>：挤兑通过折价抛售资产、挤占流动性和传染信心扩散；存款保险、最后贷款人和流动性规则可阻断。</p>
+<p><strong>例子</strong>：例如传言某银行亏损，储户排队取款，银行被迫卖债，损失扩大并引发更多取款。</p>
+<p><strong>边界</strong>：挤兑不限于银行；货币基金、影子银行和稳定币也可能遭遇赎回，保险和救助会带来道德风险。</p>
+<h3>传染</h3>
+<p><strong>定义</strong>：传染是风险从一个机构、市场或国家扩散到其他部分，超出直接暴露的范围。</p>
+<p><strong>机制</strong>：传染通过资产负债表、共同资产、信息不对称和信心传播；跨境和衍生品链条会加速。</p>
+<p><strong>例子</strong>：例如一家基金被迫抛售资产，价格下跌使持有同类资产的机构亏损，形成连锁去杠杆。</p>
+<p><strong>边界</strong>：传染不是必然；防火墙、资本缓冲和分散化可限制，但相关性和流动性在压力下会突然上升。</p>
+<h3>杠杆</h3>
+<p><strong>定义</strong>：杠杆是用借入资金或衍生品放大资产暴露，收益和损失都按倍数放大。</p>
+<p><strong>机制</strong>：杠杆通过债务、回购、保证金和表外结构形成；抵押品折价和追保会在压力下强制去杠杆。</p>
+<p><strong>例子</strong>：例如自有资金 10 元借 90 元投资 100 元资产，资产跌 10% 就损失全部资本。</p>
+<p><strong>边界</strong>：杠杆不是单纯冒险；适度杠杆提高资本回报和流动性，但顺周期去杠杆会放大系统风险，会计杠杆也可能低估衍生暴露。</p>
+<h3>监管资本与宏观审慎原理</h3>
+<p><strong>定义</strong>：监管资本是监管要求银行持有的损失吸收能力；宏观审慎政策用资本缓冲、贷款价值比和流动性工具抑制系统风险。</p>
+<p><strong>机制</strong>：资本按风险加权计量，逆周期缓冲在繁荣时积累、压力时释放；宏观审慎关注整体信贷和资产价格。</p>
+<p><strong>例子</strong>：例如房市过热时提高贷款价值比和逆周期资本缓冲，降低杠杆和泡沫风险。</p>
+<p><strong>边界</strong>：监管不是越严越好；风险权重、模型和跨境协调可能失效，资本要求也可能把风险挤到影子银行。</p>
+<!-- kp-supplement:end -->
+
+<h2>关联</h2>
+<table>
+<thead>
+<tr>
+<th>知识 ID</th>
+<th>标题</th>
+<th>关系</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>FIN-006</td>
+<td>准备金与流动性</td>
+<td>先修</td>
+</tr>
+<tr>
+<td>FIN-003</td>
+<td>银行资产负债表</td>
+<td>建议阅读</td>
+</tr>
+<tr>
+<td>FIN-013</td>
+<td>风险溢价</td>
+<td>建议阅读</td>
+</tr>
+<tr>
+<td>FIN-024</td>
+<td>公司治理与利益冲突</td>
+<td>建议阅读</td>
+</tr>
+</tbody></table>
+<h2>图解</h2>
+<p>下面三张图分别检查本文的机制、边界与对照；图内文字取自本文小节，不是新数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">金融稳定：机制链</title>
+    <desc id="fig-batch-chain-desc">金融稳定 的三段结构：问题、机制、判断。图内文字取自本文小节，不是新的数据估计。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">金融稳定：机制链</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图内文字取自本文小节；三段缺一不可。</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">金融稳定指系统在冲击</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">下仍能完成支付、储蓄…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">金融稳定指系统在冲</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">击下仍能完成支付、</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">储蓄、借贷与投资，</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">不发生连锁失败；没</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">有波动并不等于稳定…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">定义</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">定义：金融稳定（finan</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">cial stability）指…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">定义：金融稳定（fin</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">ancial stability</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">）指金融体系在顺境</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">与逆境中都能向家庭</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">与企业提供支付、储…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">例子与计算</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">假设一家银行资产</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">100 元、负债 95…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">假设一家银行资产</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">100 元、负债 95</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">元、资本 5</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">元；资本充足率为</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">5%。一笔 8…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">读法：先看问题能否成立，再看机制能否连通，最后看判断会不会越界。</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">若中间一步缺证据，后面的结论只能当假设，不能当事实。</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为结构示意，不是新的数据图；样本为本文论证。</text>
+  </svg>
+  <figcaption>图 2：金融稳定的机制链：从问题、机制到判断。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">金融稳定：适用边界</title>
+    <desc id="fig-batch-boundary-desc">把成立条件与失效条件分开；局部例子不能自动推广到所有情形。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">金融稳定：什么情况下成立？</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">先检查条件，再看结论</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">条件、口径或样本一变，结论可能要重算</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成立</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">稳定性评估要区分偿付能力与流动性</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">：资本充足但流动性枯竭的机构仍可</text>
+      <text x="24" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">能挤兑。</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不成立 / 需改写</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">金融稳定就是市场不波动。</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">图为边界示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 3：金融稳定的边界：哪些条件成立，哪些条件失效。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">金融稳定：对象、前提与常见误区</title>
+    <desc id="fig-batch-compare-desc">三行比较本文概念、成立条件与常见误区；比较不等于等价，也不能替代定义。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">金融稳定：一张表看对象、前提与误区</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">本篇</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">容易混淆</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">对象</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">金融稳定指系统在冲击下仍</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">能完成支付、储蓄、借贷与…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相邻概念/常见说法</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">前提</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">稳定性评估要区分偿付能力</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">与流动性：资本充足但流动…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">金融稳定就是市场不波动。</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">检查</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">先定义，再比较；不能只看</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">名称</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相关不等于因果，局部不等于普遍</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为比较示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 4：金融稳定的对象、前提与常见误区比较。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<h2>练习</h2>
+<ol>
+<li>概念辨别：区分偿付能力风险与流动性风险，各举一个触发情形。</li>
+<li>计算或推理：在上例中，若损失为 3 元，资本与资本充足率变为多少？</li>
+<li>适用条件：说明宏观审慎工具在什么时点收紧可能加剧顺周期下行。</li>
+</ol>
+<h2>来源</h2>
+<ol>
+<li>Basel Committee on Banking Supervision, Bank for International Settlements. <em>Basel III: international regulatory framework for banks</em>. Bank for International Settlements. <a href="https://www.bis.org/bcbs/basel3.htm%EF%BC%88%E8%AE%BF%E9%97%AE%E6%97%A5%E6%9C%9F%EF%BC%9A2026-10-30%EF%BC%89">https://www.bis.org/bcbs/basel3.htm（访问日期：2026-10-30）</a></li>
+<li>Basel Committee on Banking Supervision, Bank for International Settlements. <em>Basel III: The Liquidity Coverage Ratio and liquidity risk monitoring tools</em>. Bank for International Settlements. <a href="https://www.bis.org/publ/bcbs238.htm%EF%BC%88%E8%AE%BF%E9%97%AE%E6%97%A5%E6%9C%9F%EF%BC%9A2026-10-30%EF%BC%89">https://www.bis.org/publ/bcbs238.htm（访问日期：2026-10-30）</a></li>
+<li>Bank of England. <em>Financial stability</em>. Bank of England. <a href="https://www.bankofengland.co.uk/financial-stability%EF%BC%88%E8%AE%BF%E9%97%AE%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-21%EF%BC%89">https://www.bankofengland.co.uk/financial-stability（访问日期：2026-11-21）</a></li>
+<li>Bank of England. <em>The Financial Policy Committee’s medium-term priorities (2023–2026)</em>. Bank of England. <a href="https://www.bankofengland.co.uk/about/people/financial-policy-committee/priorities%EF%BC%88%E8%AE%BF%E9%97%AE%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-21%EF%BC%89">https://www.bankofengland.co.uk/about/people/financial-policy-committee/priorities（访问日期：2026-11-21）</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>能区分个体机构的偿付风险与系统性的传染风险，并各举一个触发机制</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>能用资本比率与流动性覆盖率说明监管资本和流动性要求分别在防什么</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>能区分个体机构的偿付风险与系统性的传染风险，并各举一个触发机制</li><li>能用资本比率与流动性覆盖率说明监管资本和流动性要求分别在防什么</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/reserves-and-liquidity/">FIN-006 · 准备金与流动性</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/bank-balance-sheets/">FIN-003 · 银行资产负债表</a> </li><li> <a href="/learn/risk-premium/">FIN-013 · 风险溢价</a> </li><li> <a href="/learn/corporate-governance-and-conflicts/">FIN-024 · 公司治理与利益冲突</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.bis.org/bcbs/basel3.htm" rel="noopener noreferrer" target="_blank">Basel III: international regulatory framework for banks</a> <p>Basel Committee on Banking Supervision, Bank for International Settlements · Bank for International Settlements</p> <p>访问：2026-10-30 · 许可：BIS terms: non-commercial download, display and redistribution allowed with attribution</p> <p>支持论点：Basel III 对银行提出最低资本标准，并要求银行相对于表内与表外活动维持稳定的资金来源。</p> </div><div class="source"> <a href="https://www.bis.org/publ/bcbs238.htm" rel="noopener noreferrer" target="_blank">Basel III: The Liquidity Coverage Ratio and liquidity risk monitoring tools</a> <p>Basel Committee on Banking Supervision, Bank for International Settlements · Bank for International Settlements</p> <p>访问：2026-10-30 · 许可：BIS terms: non-commercial download, display and redistribution allowed with attribution</p> <p>支持论点：流动性覆盖率要求银行持有足够无负担高质量流动资产，以覆盖 30 天压力情景下的净现金流出，提升短期流动性韧性。</p> </div><div class="source"> <a href="https://www.bankofengland.co.uk/financial-stability" rel="noopener noreferrer" target="_blank">Financial stability</a> <p>Bank of England · Bank of England</p> <p>访问：2026-11-21 · 许可：© Bank of England; linked summary only</p> <p>支持论点：金融稳定指金融体系在顺境与逆境中都能向家庭与企业提供关键服务；人们用金融体系支付、储蓄、借贷与投资；金融政策委员会识别、监测并采取行动降低系统性风险。</p> </div><div class="source"> <a href="https://www.bankofengland.co.uk/about/people/financial-policy-committee/priorities" rel="noopener noreferrer" target="_blank">The Financial Policy Committee’s medium-term priorities (2023–2026)</a> <p>Bank of England · Bank of England</p> <p>访问：2026-11-21 · 许可：© Bank of England; linked summary only</p> <p>支持论点：金融政策委员会按季设定英国逆周期资本缓冲率，在风险累积时提高、在压力时释放；对英国银行业开展年度压力测试；并保留按揭市场的贷款收入比等宏观审慎措施。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/financial-stability/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

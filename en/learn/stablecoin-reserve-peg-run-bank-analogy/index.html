@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>Stablecoin Reserves, Pegs and Runs: Is It a Bank? · 51Invest</title><meta name="description" content="A stablecoin promises one coin for one dollar and holds reserves to defend the peg. It compresses deposit-reserve-redemption into an on-chain liability but lacks deposit insurance and a lender of last resort; reserve quality, maturity mismatch and redemption speed decide whether it runs."><link rel="canonical" href="https://finance.51invest.com/en/learn/stablecoin-reserve-peg-run-bank-analogy/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/stablecoin-reserve-peg-run-bank-analogy/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/stablecoin-reserve-peg-run-bank-analogy/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/stablecoin-reserve-peg-run-bank-analogy/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/en/" data-main-home aria-label="51Invest"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">51Invest</span> <span class="brand-caption">WUYAO INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="Knowledge stations"> <a class="nav-link" href="https://51invest.com/en/" data-main-home> Home </a> <a class="nav-link" href="https://economics.51invest.com/en/"> Economics </a><a class="nav-link active" href="/en/" aria-current="page"> Finance </a><a class="nav-link" href="https://markets.51invest.com/en/"> Markets </a><a class="nav-link" href="https://invest.51invest.com/en/"> Investing </a><a class="nav-link" href="https://history.51invest.com/en/"> History </a><a class="nav-link" href="https://research.51invest.com/en/"> Research </a> <a class="nav-link" href="https://51invest.com/en/contents/"> Content map </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/learn/stablecoin-reserve-peg-run-bank-analogy/" hreflang="zh-CN" lang="zh-CN" data-language-link="zh" aria-label="Switch to Chinese" title="Switch to Chinese"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="Theme: System" title="Theme: System" data-label-auto="Theme: System" data-label-light="Theme: Light" data-label-dark="Theme: Dark"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">System</span> <span class="theme-text" data-theme-text="light">Light</span> <span class="theme-text" data-theme-text="dark">Dark</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/en/" data-main-home>Home</a> <span class="sep">/</span> <a href="/en/">Finance</a> <span class="sep">/</span> <span aria-current="page">Stablecoin Reserves, Pegs and Runs: Is It a Bank?</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">Concept</span> <h1 class="article-title">Stablecoin Reserves, Pegs and Runs: Is It a Bank?</h1> <p class="article-summary">A stablecoin promises one coin for one dollar and holds reserves to defend the peg. It compresses deposit-reserve-redemption into an on-chain liability but lacks deposit insurance and a lender of last resort; reserve quality, maturity mismatch and redemption speed decide whether it runs.</p>  <div class="meta-grid"> <div class="meta-item"><span>Module</span><strong>FIN-M16 · 数字金融基础</strong></div> <div class="meta-item"><span>Level</span><strong>Systematic</strong></div> <div class="meta-item"><span>Read</span><strong>7 min · 12 sections</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> This article has an interactive demo <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>Definition and intuition</h2>
+<p>A <strong>stablecoin</strong> is a crypto token that tries to peg to a fiat currency, usually the dollar. It promises one token for one dollar and holds reserves to defend the peg. Reserves can be bank deposits, short Treasuries, commercial paper, repos or crypto assets.</p>
+<p>Its balance sheet resembles a bank: liabilities are redeemable tokens, assets are reserves. But it usually lacks deposit insurance, a discount window and a lender of last resort; capital and liquidity requirements are also weaker.</p>
+<p>The peg relies on three designs: <strong>full reserves</strong> (1:1 assets), <strong>over-collateralisation</strong> (assets exceed liabilities), and <strong>algorithmic adjustment</strong> (protocol and token incentives). Full reserves are the most stable; algorithmic stablecoins de-peg most easily under stress[1][2].</p>
+<h2>Formal expression and worked example</h2>
+<p>Suppose a stablecoin issues 10 billion dollars, backed by 6 billion of short Treasuries, 3 billion of bank deposits and 1 billion of commercial paper. If confidence breaks and 3 billion is redeemed in one day, the issuer must convert assets quickly.</p>
+<p>Treasuries can settle T+1 but may face a 1% haircut; bank deposits can be withdrawn immediately; commercial paper may be unsellable or discounted 5% under stress. If the reserves realise only 2.97 billion, coverage falls from 100% to 99.7% and the peg starts to slip.</p>
+<p>If 6 billion is redeemed, the issuer must sell longer assets, discounts widen and a self-reinforcing run may start. The &#39;1:1&#39; promise holds only in normal markets; under stress, reserve liquidity and maturity set the discount. All numbers are teaching assumptions.</p>
+<h2>Bank analogy</h2>
+<p><strong>Like a bank</strong>: short liabilities, long assets, redeemable, confidence-driven; asset discounts transmit runs.</p>
+<p><strong>Unlike a bank</strong>: no deposit insurance, no central-bank lender of last resort, inconsistent reserve disclosure and audits, and fragmented cross-border regulation.</p>
+<p><strong>Like a money-market fund</strong>: a 1-dollar peg, short assets and redemption-driven liquidity risk; but money funds face SEC rules while stablecoin regulation is still forming.</p>
+<p>Stablecoin risk is not only &#39;code bugs&#39;; reserve quality, maturity mismatch, redemption rights and regulatory coverage matter equally[3][4].</p>
+<h2>Figures</h2>
+<figure>
+<svg role="img" aria-labelledby="fig-stablecoin-reserve-peg-run-bank-analogy-1-title fig-stablecoin-reserve-peg-run-bank-analogy-1-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-stablecoin-reserve-peg-run-bank-analogy-1-title">Stablecoin liabilities and reserves</title>
+<desc id="fig-stablecoin-reserve-peg-run-bank-analogy-1-desc">Four steps: token issuance, reserve assets, redemption, peg.</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">Stablecoin peg chain</text>
+<text x="24" y="54" font-size="11" text-anchor="start">Tokens, reserves, redemption and t</text>
+<text x="24" y="68" font-size="11" text-anchor="start">he peg.</text>
+<rect x="14" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="69" y="140" font-size="12" text-anchor="middle">Tokens</text>
+<text x="69" y="184" font-size="12" text-anchor="middle" font-weight="700">10bn</text>
+<rect x="136" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="191" y="140" font-size="12" text-anchor="middle">Reserves</text>
+<text x="191" y="184" font-size="12" text-anchor="middle" font-weight="700">10bn</text>
+<rect x="258" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="313" y="140" font-size="12" text-anchor="middle">Redemption</text>
+<text x="313" y="184" font-size="12" text-anchor="middle" font-weight="700">3bn</text>
+<rect x="380" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="435" y="140" font-size="12" text-anchor="middle">Peg</text>
+<text x="435" y="184" font-size="12" text-anchor="middle" font-weight="700">1:1</text>
+<line x1="125" y1="160" x2="135" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="247" y1="160" x2="257" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="369" y1="160" x2="379" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<text x="24" y="246" font-size="11" text-anchor="start">Teaching diagram, no statistical data.</text>
+</g>
+</svg>
+<figcaption>Figure 1: stablecoin liabilities and reserves; teaching diagram.</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-stablecoin-reserve-peg-run-bank-analogy-2-title fig-stablecoin-reserve-peg-run-bank-analogy-2-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-stablecoin-reserve-peg-run-bank-analogy-2-title">Redemption and reserve coverage</title>
+<desc id="fig-stablecoin-reserve-peg-run-bank-analogy-2-desc">Three redemption ratios map to three coverage levels.</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">Coverage under redemption ratios</text>
+<text x="24" y="54" font-size="11" text-anchor="start">0%, 30% and 60% redemption map to </text>
+<text x="24" y="68" font-size="11" text-anchor="start">100%, 99.7% and about 98% coverage</text>
+<text x="24" y="82" font-size="11" text-anchor="start">.</text>
+<line x1="178" y1="64" x2="178" y2="270" stroke="currentColor" stroke-width="1" opacity=".45"/>
+<text x="20" y="97" font-size="12">0%</text>
+<rect x="178" y="78" width="360" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="95" font-size="12" font-weight="700">100%</text>
+<text x="20" y="145" font-size="12">30%</text>
+<rect x="178" y="126" width="358.92" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="143" font-size="12" font-weight="700">99.7%</text>
+<text x="20" y="193" font-size="12">60%</text>
+<rect x="178" y="174" width="352.8" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="191" font-size="12" font-weight="700">98%</text>
+<text x="24" y="292" font-size="11" text-anchor="start">Teaching assumptions; unit: %.</text>
+</g>
+</svg>
+<figcaption>Figure 2: redemption and reserve coverage; teaching assumptions.</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-stablecoin-reserve-peg-run-bank-analogy-3-title fig-stablecoin-reserve-peg-run-bank-analogy-3-desc" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-stablecoin-reserve-peg-run-bank-analogy-3-title">Two-dimensional matrix of stablecoins</title>
+<desc id="fig-stablecoin-reserve-peg-run-bank-analogy-3-desc">Axes: reserve quality and redemption pressure; quadrants map to stable, stressed, buffered and dangerous.</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">Four stablecoin states by reserve quality</text>
+<text x="24" y="49" font-size="16" text-anchor="start">and redemption pressure</text>
+<text x="24" y="54" font-size="11" text-anchor="start">High-quality reserves with low pre</text>
+<text x="24" y="68" font-size="11" text-anchor="start">ssure is safest; low quality with </text>
+<text x="24" y="82" font-size="11" text-anchor="start">high pressure de-pegs most easily.</text>
+<text x="40" y="68" font-size="11">High-quality reserves</text>
+<text x="40" y="286" font-size="11">Low-quality reserves</text>
+<text x="110" y="314" font-size="11" text-anchor="middle">Low redemption pressure</text>
+<text x="500" y="314" font-size="11" text-anchor="middle">High redemption pressure</text>
+<rect x="96" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="100" font-size="12" text-anchor="start">Stable</text>
+<text x="108" y="130" font-size="11" text-anchor="start">High quality, low pressure</text>
+<text x="108" y="170" font-size="11" font-weight="700">Peg holds</text>
+<rect x="338" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="100" font-size="12" text-anchor="start">Stressed</text>
+<text x="350" y="130" font-size="11" text-anchor="start">High quality, high pressure</text>
+<text x="350" y="170" font-size="11" font-weight="700">Discount</text>
+<rect x="96" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="214" font-size="12" text-anchor="start">Buffered</text>
+<text x="108" y="244" font-size="11" text-anchor="start">Low quality, low pressure</text>
+<text x="108" y="284" font-size="11" font-weight="700">Watch</text>
+<rect x="338" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="214" font-size="12" text-anchor="start">Dangerous</text>
+<text x="350" y="244" font-size="11" text-anchor="start">Low quality, high pressure</text>
+<text x="350" y="284" font-size="11" font-weight="700">De-peg</text>
+</g>
+</svg>
+<figcaption>Figure 3: two-dimensional matrix of stablecoins; comparison and classification diagram.</figcaption>
+</figure>
+
+<p>Figure 1 links tokens, reserves, redemption and the peg. Figure 2 shows reserve coverage under different redemption ratios. Figure 3 uses reserve quality and redemption pressure axes to mark four stablecoin states. All numbers are teaching assumptions.</p>
+<h2>Conditions, boundaries and common mistakes</h2>
+<p><strong>Boundary 1: a peg is not risk-free.</strong> The 1:1 promise depends on reserve authenticity and liquidity; audits, disclosure and custody determine credibility.</p>
+<p><strong>Boundary 2: algorithmic stablecoins are not deposits.</strong> They rely on arbitrage and incentives, not full reserves; stress can trigger a death spiral.</p>
+<p><strong>Boundary 3: regulation differs widely.</strong> Reserve, redemption and licensing rules vary by jurisdiction; cross-border use creates arbitrage.</p>
+<p><strong>Mistake 1: a stablecoin is a digital dollar.</strong> It is private liability, not a Fed liability; credit and liquidity risk remain.</p>
+<p><strong>Mistake 2: enough reserves prevent runs.</strong> Runs depend on redemption speed and asset liquidity; ample but slow reserves can still de-peg.</p>
+<h2>Deeper note: reserve structure, runs and the quasi-bank boundary</h2>
+<p><strong>A stablecoin issuer&#39;s balance sheet</strong> resembles a narrow bank: liabilities are tokens in circulation, assets are reserves (cash, short Treasuries, repo, bank deposits). Whether the peg holds depends on whether reserve value, liquidity and maturity match redemption speed. If reserves include long bonds or low-rated commercial paper, rate rises cut market value and redemption pressure forces sales at a discount.</p>
+<p><strong>Run triggers</strong> are not only a price de-peg. When users doubt reserves, they redeem at once; if the issuer sets thresholds, delays or limits, doubt becomes self-fulfilling. Algorithmic stablecoins have no hard reserves and rely on arbitrage and confidence; once confidence breaks, the death spiral is faster than a bank run.</p>
+<p><strong>Key differences from bank deposits</strong>: stablecoins usually have no deposit insurance and no lender of last resort; issuers are not subject to bank-style capital and liquidity rules, and reserve disclosure and audit scope are limited. It is not a deposit, yet performs deposit-like liquidity functions - the quasi-bank risk.</p>
+<p><strong>Reserve quality has four dimensions</strong>: the share of cash and overnight assets, Treasury duration, repo counterparties, and concentration of bank deposits. Short Treasuries are stable in value but still subject to haircuts; repo may not roll under stress; bank deposits can fail with the bank. &#39;Diversified&#39; reserves are not automatically &#39;safe&#39;.</p>
+<p><strong>Redemption mechanics</strong> are the core stress test. T+0, no threshold and no fee sounds user-friendly but leaves the issuer no buffer; T+1, limits or fees slow runs but weaken peg credibility. Design trades off stability against redeemability.</p>
+<p><strong>Regulatory trends</strong> require reserve assets, disclosure, capital buffers and redemption rules; regulation cannot eliminate runs, only reduce probability. Issuers also need liquidity backstops, stress tests and recovery plans.</p>
+<p><strong>Common misuses</strong>: equating &#39;pegged to the dollar&#39; with &#39;equal to the dollar&#39;, ignoring issuer and reserve risk; equating &#39;100% reserved&#39; with &#39;absolutely safe&#39;, ignoring duration and liquidity; treating algorithmic arbitrage as &#39;risk-free&#39;, ignoring tail risk.</p>
+<p><strong>Finally</strong>, stablecoin stability is the joint result of promise, reserves and redemption mechanics, not code or slogans. Reserve composition, duration, redemption terms and governance matter more than the daily peg price.</p>
+<h2>Stress scenarios: three stages of a de-peg</h2>
+<p><strong>Stage one, discount appears</strong>: the market sees long reserve duration or a fall in some asset value and tokens trade at a 1-2% discount. Arbitrageurs should buy the discount and redeem, but if redemption has thresholds or delays the chain breaks and the discount widens.</p>
+<p><strong>Stage two, redemption queue</strong>: users redeem en masse and the issuer sells reserves. Short Treasuries suffer limited haircuts; long bonds or commercial paper realise losses and weaken reserves further. Redemption limits or fees may then amplify panic.</p>
+<p><strong>Stage three, confidence collapse</strong>: the peg breaks 5%, payment venues refuse the token and a death spiral begins. Without deposit insurance, a lender of last resort or outside capital, the issuer restructures or fails. Algorithmic stablecoins usually move faster because arbitrage depends on collateral value.</p>
+<p><strong>Buffer design</strong>: short reserves, overcollateralisation, liquidity backstops, transparent disclosure and tiered redemption. Buffers reduce probability, not eliminate runs; the key is market confidence that reserves cover stress redemptions.</p>
+<p><strong>Regulatory stress tests</strong> should assume rates up 200 basis points, 20% of tokens redeemed in one day and a 10% haircut on one reserve asset. If the issuer cannot answer whether the peg survives all three, it should not call itself stable.</p>
+<h2>Key takeaways</h2>
+<ul>
+<li>A stablecoin issuer is a narrow bank: tokens are liabilities, reserves are assets, and the peg depends on reserve value, liquidity and maturity matching.</li>
+<li>Runs do not start only at a price de-peg; redemption thresholds, delays and limits make doubt self-fulfilling.</li>
+<li>The key differences from bank deposits are no deposit insurance, no lender of last resort and weaker capital and liquidity rules.</li>
+<li>Reserve quality depends on cash share, Treasury duration, repo counterparties and bank-deposit concentration; &#39;100% reserved&#39; is not absolute safety.</li>
+<li>Redemption mechanics trade stability against redeemability; T+0 with no threshold amplifies runs.</li>
+<li>Regulation reduces probability, not eliminates runs; issuers still need liquidity backstops and recovery plans.</li>
+</ul>
+<h2>What would change the conclusion</h2>
+<p>The stablecoin-as-bank analogy depends on reserves and redemption rules:</p>
+<ol>
+<li><strong>Reserves are short-term Treasuries.</strong> Credit risk is low, but discounts and liquidity can still gap in stress.</li>
+<li><strong>Redemption gates.</strong> If limits or delays are imposed, runs slow but confidence discounts rise.</li>
+<li><strong>Bank-like regulation.</strong> If stablecoins face bank capital and liquidity rules, disintermediation and run transmission change.</li>
+<li><strong>Payments use expands.</strong> If stablecoins become daily payment tools, deposit substitution and money velocity affect bank funding.</li>
+<li><strong>Algorithmic designs.</strong> If reserves are insufficient and rely on algorithms, death-spiral risk in stress is far higher than full reserve.</li>
+</ol>
+<p><strong>Practical implication:</strong> stablecoin stability depends on reserve composition, redemption rules and the regulator; full reserve lowers credit risk but does not remove discounts, runs or settlement breaks. Treating it as a bank deposit misses the absence of a lender of last resort and deposit insurance.</p>
+<p><strong>Data note:</strong> check reserve maturity, custodian and valuation frequency; short Treasuries are not instant cash, and discounts and settlement delays count.</p>
+<p><strong>Scope note:</strong> disclose reserve composition, maturity and custodian daily; otherwise holders cannot verify the peg and discounts widen in an information vacuum. Distinguish redemption suspension from insolvency, which allocate losses differently.</p>
+<p><strong>Final note:</strong> a peg is a promise about reserves, not the price itself; disclosure frequency and reserve quality decide whether the promise can be verified.</p>
+<p><strong>Check:</strong> verify reserve composition and redemption terms every day; the peg is a promise, not a price.</p>
+<h2>Exercises</h2>
+<ol>
+<li><p>Explain the three stablecoin peg designs.</p>
+</li>
+<li><p>Issue 10 billion, reserves 10 billion: what is coverage?</p>
+</li>
+<li><p>Redeem 3 billion with a 1% haircut: what reserves remain?</p>
+</li>
+<li><p>Why does commercial paper face larger discounts under stress?</p>
+</li>
+<li><p>How are stablecoins like banks and money funds?</p>
+</li>
+<li><p>Why are algorithmic stablecoins prone to death spirals?</p>
+</li>
+<li><p>True or false: ample reserves prevent runs. Explain.</p>
+</li>
+<li><p>Why does a stablecoin issuer&#39;s balance sheet resemble a narrow bank?</p>
+</li>
+<li><p>Why can T+0, no-threshold redemption amplify run risk?</p>
+</li>
+<li><p>What characterises each of the three stages of a stablecoin de-peg?</p>
+</li>
+<li><p>Which three conditions should a regulatory stress test assume together?</p>
+</li>
+<li><p>Why is &#39;100% reserved&#39; not absolute safety?</p>
+</li>
+<li><p>What are the three key safety-net differences between stablecoins and bank deposits?</p>
+</li>
+</ol>
+<h2>Related</h2>
+<p>Prerequisite FIN-034; compare FIN-035; neighbours FIN-050 and ECO-054.</p>
+<h2>Sources</h2>
+<ol>
+<li>Financial Stability Board, <em>Crypto-assets and Global Stablecoins</em>. Financial Stability Board, accessed 2026-11-05. <a href="https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/crypto-assets-and-global-stablecoins/">https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/crypto-assets-and-global-stablecoins/</a></li>
+<li>Financial Stability Board, <em>Regulation, Supervision and Oversight of Crypto-Asset Activities and Markets</em>. Financial Stability Board, accessed 2026-11-21. <a href="https://fsb.org/wp-content/uploads/P111022-3.pdf">https://fsb.org/wp-content/uploads/P111022-3.pdf</a></li>
+<li>Ravi Menon, <em>Making Sense of Crypto</em>. International Monetary Fund, Finance &amp; Development, accessed 2026-11-22. <a href="https://www.imf.org/en/Publications/fandd/issues/2022/09/Making-sense-of-crypto-Ravi-Menon">https://www.imf.org/en/Publications/fandd/issues/2022/09/Making-sense-of-crypto-Ravi-Menon</a></li>
+<li>U.S. Securities and Exchange Commission, <em>Crypto Assets</em>. U.S. Securities and Exchange Commission, accessed 2026-10-30. <a href="https://www.sec.gov/securities-topics/crypto-assets">https://www.sec.gov/securities-topics/crypto-assets</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="en" aria-labelledby="demo-check-title" data-check-done="All three are covered: the core of this article is in place." data-check-pending="One item is still open: go back to the matching section and retell it with a number or counterexample." data-check-count="Ticked"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">Worked demo</p> <button class="demo-reset" type="button" data-demo-reset>Reset</button> </div> <h2 id="demo-check-title">Read-through check: can you say three things?</h2> <p class="demo-intro">No recitation needed. Tick each sentence below and see whether you can explain the mechanism, one worked example and one boundary in your own words.</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>Explain stablecoin reserve structures and peg mechanisms.</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>Use reserve coverage to calculate discounts and run thresholds.</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>Name one condition under which the article’s conclusion does not hold</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> Ticked 0 / 3
+</p> </div> <p class="demo-footnote">The numbers are teaching assumptions that show relationships, not forecasts or investment advice.</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> This article has passed the current publication gate. Factual, calculation and translation revisions update both language versions together. </p> <p> <a class="button secondary" href="/en/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>Back to station </a> </p> </div> <aside class="article-aside" aria-label="Article information"> <section class="aside-card"> <h2>Learning objectives</h2> <ul> <li>Explain stablecoin reserve structures and peg mechanisms.</li><li>Use reserve coverage to calculate discounts and run thresholds.</li><li>Compare stablecoins with banks and money-market funds.</li> </ul> </section> <section class="aside-card"> <h2>Required prerequisites</h2> <ul> <li> <a href="/en/learn/rate-conventions-and-credit-spreads/">FIN-034 · Rate Conventions and Credit Spreads: Different Labels for the Same Price of Money</a> </li> </ul> </section> <section class="aside-card"> <h2>Recommended reading</h2> <ul> <li> <a href="/en/learn/insurance-pricing-and-pension-liabilities/">FIN-035 · Insurance Pricing and Pension Liabilities: The Ledger of Risk Sharing</a> </li><li> <a href="/en/learn/wholesale-funding-run-lcr-nsfr-fire-sale/">FIN-050 · Wholesale Funding Runs: LCR, NSFR and Fire Sales</a> </li><li> <a href="https://economics.51invest.com/en/learn/platform-entry-barriers-data-network-effects-interoperability/">ECO-054 · Platform Entry Barriers: Data, Network Effects and Interoperability</a> </li> </ul> </section> <section class="aside-card"> <h2>AI review record</h2> <p class="muted"> There is no human sign-off; these states come from the AI-only editorial review. </p> <ul> <li> Facts and calculations : AI review passed </li><li> Subject : AI review passed </li><li> English : AI review passed </li><li> Page : AI review passed </li> </ul> </section> <section class="aside-card"> <h2>Sources</h2> <div class="source"> <a href="https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/crypto-assets-and-global-stablecoins/" rel="noopener noreferrer" target="_blank">Crypto-assets and Global Stablecoins</a> <p>Financial Stability Board · Financial Stability Board</p> <p>Accessed: 2026-11-05 · License: FSB terms; linked summary only</p> <p>Supports: Supports the risks, reserves and regulatory framework of global stablecoins.</p> </div><div class="source"> <a href="https://fsb.org/wp-content/uploads/P111022-3.pdf" rel="noopener noreferrer" target="_blank">Regulation, Supervision and Oversight of Crypto-Asset Activities and Markets</a> <p>Financial Stability Board · Financial Stability Board</p> <p>Accessed: 2026-11-21 · License: © Financial Stability Board; linked summary only</p> <p>Supports: Supports regulation, supervision and cross-border cooperation for crypto-asset activities.</p> </div><div class="source"> <a href="https://www.imf.org/en/Publications/fandd/issues/2022/09/Making-sense-of-crypto-Ravi-Menon" rel="noopener noreferrer" target="_blank">Making Sense of Crypto</a> <p>Ravi Menon · International Monetary Fund, Finance &amp; Development</p> <p>Accessed: 2026-11-22 · License: IMF copyright; cite-only, attributed summary; no full-text republication</p> <p>Supports: Supports crypto-asset definitions, risks and macro effects.</p> </div><div class="source"> <a href="https://www.sec.gov/securities-topics/crypto-assets" rel="noopener noreferrer" target="_blank">Crypto Assets</a> <p>U.S. Securities and Exchange Commission · U.S. Securities and Exchange Commission</p> <p>Accessed: 2026-10-30 · License: U.S. public information; copying and further distribution allowed</p> <p>Supports: Supports U.S. securities regulation and investor warnings on crypto assets.</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">A free, non-commercial knowledge site. Sources and definitions are labelled; nothing here is investment advice.</p> </div> </div> <nav class="footer-links" aria-label="Knowledge stations"> <a href="https://51invest.com/en/" data-main-home>Home</a> <a href="https://51invest.com/en/contents/">Content map</a> <a href="/en/glossary/">Glossary</a> <a href="/en/search/">Search</a> <a href="https://51invest.com/en/charts/" data-main-link>Charts</a> <a href="https://51invest.com/en/sources/" data-main-link>Data &amp; licences</a> <a href="/en/">Station home</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="Knowledge stations"> <a class="mobile-link" href="https://51invest.com/en/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>Home</span> </a> <a class="mobile-link" href="https://51invest.com/en/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>Knowledge stations</span> </a> <a class="mobile-link active" href="/en/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>Station home</span> </a> <a class="mobile-link" href="/learn/stablecoin-reserve-peg-run-bank-analogy/" data-language-link="zh"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

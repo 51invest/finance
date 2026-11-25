@@ -1,0 +1,268 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>代币化存款与稳定币：支付基础设施的账 · 巫妖投资</title><meta name="description" content="稳定币和代币化存款都把“存款”搬到可编程账本上，但责任主体、储备资产和赎回权完全不同。判断它们是否安全，不能只看链上价格，而要看储备覆盖、赎回顺序、结算最终性和谁来承担挤兑。"><link rel="canonical" href="https://finance.51invest.com/learn/tokenized-deposits-and-stablecoin-infrastructure/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/tokenized-deposits-and-stablecoin-infrastructure/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/tokenized-deposits-and-stablecoin-infrastructure/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/tokenized-deposits-and-stablecoin-infrastructure/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/tokenized-deposits-and-stablecoin-infrastructure/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">代币化存款与稳定币：支付基础设施的账</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">代币化存款与稳定币：支付基础设施的账</h1> <p class="article-summary">稳定币和代币化存款都把“存款”搬到可编程账本上，但责任主体、储备资产和赎回权完全不同。判断它们是否安全，不能只看链上价格，而要看储备覆盖、赎回顺序、结算最终性和谁来承担挤兑。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M16 · 数字金融基础</strong></div> <div class="meta-item"><span>层级</span><strong>系统</strong></div> <div class="meta-item"><span>阅读</span><strong>4 分钟 · 10 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义</h2>
+<p><strong>稳定币</strong>（stablecoin）通常由私人发行人承诺按面值赎回，并用储备资产支持；<strong>代币化存款</strong>（tokenized deposit）是银行存款在分布式账本上的代表，负债仍属于银行；<strong>央行数字货币</strong>（CBDC）是央行直接负债。三者都可能用同样的密码学，但法律责任不同[1]。</p>
+<p><strong>储备覆盖</strong>是储备资产市值与流通代币之比；<strong>结算最终性</strong>是一笔转账何时不可撤销。链上确认不等于法律最终性，发行人、托管人和银行仍可能失败[3]。</p>
+<h2>直觉</h2>
+<p>把稳定币想成一张“可兑换的储物柜票据”：票据在市场上流通，背后是柜子里的现金和短期债券。如果所有人同时来取，柜子里的资产能不能按面值、按顺序变现，决定了票据是不是真的稳定。代币化存款更像“银行账户的电子钥匙”，钥匙可以转手，但账户责任仍在银行。</p>
+<p>技术改变的是记账和转移方式，不改变三个老问题：谁欠你钱、资产能不能变现、出事后谁排在前面。</p>
+<h2>正式表达</h2>
+<p>设流通代币为 (T)，储备资产为 (R)，储备覆盖率为：</p>
+<p>$$
+C=\frac{R}{T}
+$$</p>
+<p>若发生规模为 (r) 的赎回，且流动资产按折扣 (h) 变现，则剩余覆盖率为：</p>
+<p>$$
+C&#39;=\frac{R(1-h)-r}{T-r}
+$$</p>
+<p>结算成本可以写成：</p>
+<p>$$
+\text{Cost}=F+v,Q
+$$</p>
+<p>(F) 是固定接入成本，(v) 是每笔变动成本，(Q) 是笔数。链上转账降低了某些变动成本，但合规、托管和流动性成本仍在。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>稳定币</th>
+<th>代币化存款</th>
+<th>CBDC</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>负债主体</td>
+<td>私人发行人</td>
+<td>银行</td>
+<td>央行</td>
+</tr>
+<tr>
+<td>储备</td>
+<td>发行人资产</td>
+<td>银行资产负债表</td>
+<td>央行负债</td>
+</tr>
+<tr>
+<td>赎回权</td>
+<td>对发行人</td>
+<td>对银行</td>
+<td>对央行</td>
+</tr>
+<tr>
+<td>主要风险</td>
+<td>储备与挤兑</td>
+<td>银行信用</td>
+<td>隐私与政策</td>
+</tr>
+</tbody></table>
+<h2>适用条件</h2>
+<ul>
+<li>储备资产必须足够流动、透明、可审计；短期债券在压力时也可能打折。</li>
+<li>赎回顺序和法律优先权要清楚；相同代币在不同司法辖区可能被视为不同权利。</li>
+<li>结算最终性要由法律和系统共同保证，不能只看区块确认数。</li>
+<li>发行人、托管人、银行和钱包提供者之间的责任要能追溯；技术故障不是免责理由。</li>
+<li>跨境支付还要处理外汇、制裁合规和本地牌照，链上速度不等于跨境合法。</li>
+<li>隐私与反洗钱要求要和支付效率一起设计，不能先上线再补。</li>
+</ul>
+<h2>例子与计算</h2>
+<p>某稳定币流通 100 单位，储备 100 单位，其中 102 单位是可快速变现资产，覆盖率 102%。若发生 30 单位赎回，剩余储备 72，剩余代币 70，覆盖率约 102.9%。若流动资产在压力下打 10% 折扣，可兑现 64.8，对 70 的覆盖率降到 92.6%。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>数值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>流通代币</td>
+<td>100</td>
+<td>负债</td>
+</tr>
+<tr>
+<td>储备资产</td>
+<td>102</td>
+<td>可快速变现</td>
+</tr>
+<tr>
+<td>初始覆盖</td>
+<td>102%</td>
+<td>102/100</td>
+</tr>
+<tr>
+<td>赎回规模</td>
+<td>30</td>
+<td>压力情景</td>
+</tr>
+<tr>
+<td>压力后覆盖</td>
+<td>92.6%</td>
+<td>64.8/70</td>
+</tr>
+</tbody></table>
+<p>若发行人有 20% 的储备是三个月以上才能变现的资产，初始覆盖率看似 102%，压力下可能低于 90%。这就是“账面足额”和“压力可兑付”的差别。</p>
+<h2>图表</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-037-1-title fig-fin-037-1-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-037-1-title">稳定币储备到赎回覆盖的传导链</title>
+    <desc id="fig-fin-037-1-desc">发行代币 100 100，储备资产 102 102，压力覆盖 92.6% 92.6%。初始覆盖 102%，赎回 30 且资产打 10% 折扣后降到 92.6%。单位：代币单位与百分比，数字为教学假设。 教学机制图。</desc>
+    <rect x="14" y="38" width="432" height="32" rx="7" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="28" y="59" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit">C=R/T；C’=(R(1-h)-r)/(T-r)</text>
+    <rect x="14" y="82" width="132" height="92" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="26" y="104" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">发行代币 100</text>
+    <text x="26" y="128" font-size="12" font-weight="700" fill="var(--accent)" font-family="inherit">100</text>
+    <text x="26" y="148" font-size="9.2" fill="var(--muted)" font-family="inherit">私人负债</text>
+    <text x="26" y="164" font-size="9.2" fill="var(--muted)" font-family="inherit">链上流通</text>
+    <rect x="164" y="82" width="132" height="92" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="176" y="104" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">储备资产 102</text>
+    <text x="176" y="128" font-size="12" font-weight="700" fill="var(--accent)" font-family="inherit">102</text>
+    <text x="176" y="148" font-size="9.2" fill="var(--muted)" font-family="inherit">现金与短债</text>
+    <text x="176" y="164" font-size="9.2" fill="var(--muted)" font-family="inherit">可审计</text>
+    <rect x="314" y="82" width="132" height="92" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="326" y="104" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">压力覆盖 92.6%</text>
+    <text x="326" y="128" font-size="12" font-weight="700" fill="var(--accent)" font-family="inherit">92.6%</text>
+    <text x="326" y="148" font-size="9.2" fill="var(--muted)" font-family="inherit">赎回 30</text>
+    <text x="326" y="164" font-size="9.2" fill="var(--muted)" font-family="inherit">折扣 10%</text>
+    <line x1="146" y1="128" x2="164" y2="128" stroke="var(--border)" stroke-width="1.5"></line>
+    <line x1="296" y1="128" x2="314" y2="128" stroke="var(--border)" stroke-width="1.5"></line>
+    <rect x="14" y="190" width="432" height="82" rx="8" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="28" y="214" font-size="10" font-weight="650" fill="var(--text)" font-family="inherit">账面足额不等于压力可兑付</text>
+    <text x="28" y="236" font-size="9.6" fill="var(--muted)" font-family="inherit">初始覆盖 102%，赎回 30 且资产打 10% 折扣后降到 92.6%</text>
+    <text x="28" y="256" font-size="9.6" fill="var(--muted)" font-family="inherit">单位：代币单位与百分比，数字为教学假设</text>
+  </svg>
+  <figcaption>图 1：发行代币 100 100，储备资产 102 102，压力覆盖 92.6% 92.6%。初始覆盖 102%，赎回 30 且资产打 10% 折扣后降到 92.6%。单位：代币单位与百分比，数字为教学假设。 教学机制图。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-037-2-title fig-fin-037-2-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-037-2-title">稳定币赎回压力算例</title>
+    <desc id="fig-fin-037-2-desc">稳定币赎回压力算例。初始状态：代币 100，储备 102，覆盖 102%；压力之后：Tokens 70，Reserves 64.8，Cover 92.6%。赎回 30、流动资产折扣 10% 后，代币剩 70、可兑现储备 64.8。单位：代币单位与百分比，数字为教学假设。 数字为教学假设。</desc>
+    <rect x="14" y="36" width="432" height="34" rx="7" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="28" y="57" font-size="10" font-weight="650" fill="var(--text)" font-family="inherit">C=102/100；C’=64.8/70=92.6%</text>
+    <rect x="14" y="86" width="204" height="132" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="28" y="109" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">初始状态</text>
+    <text x="26" y="135" font-size="9.4" fill="var(--muted)" font-family="inherit">代币</text>
+    <text x="206" y="135" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">100</text>
+    <text x="26" y="163" font-size="9.4" fill="var(--muted)" font-family="inherit">储备</text>
+    <text x="206" y="163" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">102</text>
+    <text x="26" y="191" font-size="9.4" fill="var(--muted)" font-family="inherit">覆盖</text>
+    <text x="206" y="191" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">102%</text>
+    <rect x="242" y="86" width="204" height="132" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="256" y="109" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">压力之后</text>
+    <text x="254" y="135" font-size="9.4" fill="var(--muted)" font-family="inherit">代币</text>
+    <text x="434" y="135" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">70</text>
+    <text x="254" y="163" font-size="9.4" fill="var(--muted)" font-family="inherit">储备</text>
+    <text x="434" y="163" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">64.8</text>
+    <text x="254" y="191" font-size="9.4" fill="var(--muted)" font-family="inherit">覆盖</text>
+    <text x="434" y="191" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">92.6%</text>
+    <text x="28" y="240" font-size="9.6" fill="var(--muted)" font-family="inherit">赎回 30、流动资产折扣 10% 后，代币剩 70、可兑现储备 64.8</text>
+    <text x="28" y="262" font-size="9.6" fill="var(--muted)" font-family="inherit">单位：代币单位与百分比，数字为教学假设</text>
+  </svg>
+  <figcaption>图 2：稳定币赎回压力算例。初始状态：代币 100，储备 102，覆盖 102%；压力之后：Tokens 70，Reserves 64.8，Cover 92.6%。赎回 30、流动资产折扣 10% 后，代币剩 70、可兑现储备 64.8。单位：代币单位与百分比，数字为教学假设。 数字为教学假设。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-037-3-title fig-fin-037-3-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-037-3-title">稳定币与代币化存款的权利对比</title>
+    <desc id="fig-fin-037-3-desc">稳定币与代币化存款的权利对比。稳定币：负债主体 发行人，保障 储备资产，失败顺序 发行人债权人；代币化存款：负债主体 银行，保障 存款保险，失败顺序 银行债权人。两者都能上链，但求偿对象和保障机制不同；链上价格不能替代法律权利。单位：定性对比，数字为教学假设。 教学对比图。</desc>
+    <rect x="14" y="38" width="204" height="172" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="28" y="61" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">稳定币</text>
+    <text x="26" y="88" font-size="9.4" fill="var(--muted)" font-family="inherit">负债主体</text>
+    <text x="206" y="88" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">发行人</text>
+    <text x="26" y="116" font-size="9.4" fill="var(--muted)" font-family="inherit">保障</text>
+    <text x="206" y="116" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">储备资产</text>
+    <text x="26" y="144" font-size="9.4" fill="var(--muted)" font-family="inherit">失败顺序</text>
+    <text x="206" y="144" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">发行人债权人</text>
+    <rect x="242" y="38" width="204" height="172" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="256" y="61" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">代币化存款</text>
+    <text x="254" y="88" font-size="9.4" fill="var(--muted)" font-family="inherit">负债主体</text>
+    <text x="434" y="88" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">银行</text>
+    <text x="254" y="116" font-size="9.4" fill="var(--muted)" font-family="inherit">保障</text>
+    <text x="434" y="116" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">存款保险</text>
+    <text x="254" y="144" font-size="9.4" fill="var(--muted)" font-family="inherit">失败顺序</text>
+    <text x="434" y="144" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">银行债权人</text>
+    <text x="28" y="240" font-size="9.6" fill="var(--muted)" font-family="inherit">两者都能上链，但求偿对象和保障机制不同；链上价格不能替代法律权利</text>
+    <text x="28" y="262" font-size="9.6" fill="var(--muted)" font-family="inherit">单位：定性对比，数字为教学假设</text>
+  </svg>
+  <figcaption>图 3：稳定币与代币化存款的权利对比。稳定币：负债主体 发行人，保障 储备资产，失败顺序 发行人债权人；代币化存款：负债主体 银行，保障 存款保险，失败顺序 银行债权人。两者都能上链，但求偿对象和保障机制不同；链上价格不能替代法律权利。单位：定性对比，数字为教学假设。 教学对比图。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-037-4-title fig-fin-037-4-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-037-4-title">支付基础设施选型的6 个条件</title>
+    <desc id="fig-fin-037-4-desc">支付基础设施选型的6 个条件。储备可审计；赎回权清楚；结算有最终性；责任可追溯；跨境合规可行；隐私可接受。6 项缺一，支付效率可能以法律或信用风险为代价；是否上链取决于这些条件。单位：条件清单，数字为教学假设。 这些条件决定方法是否适用。</desc>
+    <text x="28" y="36" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit">先核对储备、赎回、最终性与合规</text>
+    <rect x="14" y="52" width="204" height="52" rx="7" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="24" y="72" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">储备可审计</text>
+    <text x="24" y="89" font-size="9.2" fill="var(--muted)" font-family="inherit">透明与独立验证</text>
+    <rect x="242" y="52" width="204" height="52" rx="7" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="252" y="72" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">赎回权清楚</text>
+    <text x="252" y="89" font-size="9.2" fill="var(--muted)" font-family="inherit">顺序与限额</text>
+    <rect x="14" y="110" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="24" y="130" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">结算有最终性</text>
+    <text x="24" y="147" font-size="9.2" fill="var(--muted)" font-family="inherit">法律与系统</text>
+    <rect x="242" y="110" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="252" y="130" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">责任可追溯</text>
+    <text x="252" y="147" font-size="9.2" fill="var(--muted)" font-family="inherit">发行人/托管/银行</text>
+    <rect x="14" y="168" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="24" y="188" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">跨境合规可行</text>
+    <text x="24" y="205" font-size="9.2" fill="var(--muted)" font-family="inherit">牌照与制裁</text>
+    <rect x="242" y="168" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="252" y="188" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">隐私可接受</text>
+    <text x="252" y="205" font-size="9.2" fill="var(--muted)" font-family="inherit">反洗钱与数据</text>
+    <text x="28" y="248" font-size="9.6" fill="var(--muted)" font-family="inherit">6 项缺一，支付效率可能以法律或信用风险为代价；是否上链取决于这些条件</text>
+    <text x="28" y="270" font-size="9.6" fill="var(--muted)" font-family="inherit">单位：条件清单，数字为教学假设</text>
+  </svg>
+  <figcaption>图 4：支付基础设施选型的6 个条件。储备可审计；赎回权清楚；结算有最终性；责任可追溯；跨境合规可行；隐私可接受。6 项缺一，支付效率可能以法律或信用风险为代价；是否上链取决于这些条件。单位：条件清单，数字为教学假设。 这些条件决定方法是否适用。</figcaption>
+</figure>
+
+<h2>常见误解</h2>
+<p><strong>“链上价格 1:1 就说明安全。”</strong> 市场价格只反映边际交易，不反映大额赎回时的储备流动性和法律顺序[2]。</p>
+<p><strong>“稳定币就是数字版存款。”</strong> 存款有存款保险和银行监管，稳定币是私人负债；两者的求偿对象不同[1]。</p>
+<p><strong>“上链就能消除跨境成本。”</strong> 链上结算快，但外汇、合规、牌照和托管仍要成本；总成本要看整条链路[3]。</p>
+<h2>关联</h2>
+<ul>
+<li>与 <strong>FIN-029 数字金融基础</strong> 的关系：母文给出模块总框架；本文把「链上存款的储备、赎回与结算最终性」单独拆开，落到可计算的例子和适用条件上。</li>
+<li>与 <strong>FIN-028 国际金融体系</strong> 的关系：同站相邻主题，提供背景或对照；本文不重复它的重点，而聚焦「链上存款的储备、赎回与结算最终性」。</li>
+<li>与 <strong>MKT-024 数字资产与数字金融分类</strong> 的关系：同站相邻主题，提供背景或对照；本文不重复它的重点，而聚焦「链上存款的储备、赎回与结算最终性」。</li>
+</ul>
+<h2>练习</h2>
+<ol>
+<li>结构题：稳定币、代币化存款和 CBDC 的负债主体分别是谁？如果发行人破产，持有人向谁求偿？</li>
+<li>覆盖题：流通代币 120，储备 126，流动资产折扣 8%，赎回 40。压力后覆盖率是多少？</li>
+<li>条件题：一家公司要用稳定币做跨境付款。列出三项必须核对的储备与法律条件，并说明为什么“链上确认”不等于“法律最终性”。</li>
+</ol>
+<h2>来源</h2>
+<ol>
+<li>Bank for International Settlements, <em>Central bank digital currencies: foundational principles and core features</em>, Bank for International Settlements. <a href="https://www.bis.org/publ/othp33.htm">https://www.bis.org/publ/othp33.htm</a></li>
+<li>U.S. Securities and Exchange Commission, <em>Crypto Assets</em>, U.S. Securities and Exchange Commission. <a href="https://www.sec.gov/securities-topics/crypto-assets">https://www.sec.gov/securities-topics/crypto-assets</a></li>
+<li>Financial Stability Board, <em>Regulation, Supervision and Oversight of Crypto-Asset Activities and Markets</em>, Financial Stability Board. <a href="https://fsb.org/wp-content/uploads/P111022-3.pdf">https://fsb.org/wp-content/uploads/P111022-3.pdf</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>区分稳定币、代币化存款和 CBDC 的发行主体、负债与赎回权。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>用储备覆盖率与流动资产折扣计算稳定币挤兑后的剩余覆盖率。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>区分稳定币、代币化存款和 CBDC 的发行主体、负债与赎回权。</li><li>用储备覆盖率与流动资产折扣计算稳定币挤兑后的剩余覆盖率。</li><li>列出支付基础设施选型的6 个条件，说明“上链”不等于消除信用风险。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/foundations-of-digital-finance/">FIN-029 · 数字金融基础</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/foundations-of-digital-finance/">FIN-029 · 数字金融基础</a> </li><li> <a href="/learn/international-financial-system/">FIN-028 · 国际金融体系</a> </li><li> <a href="https://markets.51invest.com/learn/digital-assets-and-digital-finance/">MKT-024 · 数字资产与数字金融分类</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.bis.org/publ/othp33.htm" rel="noopener noreferrer" target="_blank">Central bank digital currencies: foundational principles and core features</a> <p>Bank for International Settlements · Bank for International Settlements</p> <p>访问：2026-11-24 · 许可：BIS terms: non-commercial download, display and redistribution allowed with attribution</p> <p>支持论点：用于核对本文关于「代币化存款与稳定币」的公开概念、制度或历史背景；正文数字与算例为教学假设，不写成统计。</p> </div><div class="source"> <a href="https://www.sec.gov/securities-topics/crypto-assets" rel="noopener noreferrer" target="_blank">Crypto Assets</a> <p>U.S. Securities and Exchange Commission · U.S. Securities and Exchange Commission</p> <p>访问：2026-11-24 · 许可：U.S. public information; copying and further distribution allowed</p> <p>支持论点：用于核对本文关于「代币化存款与稳定币」的公开概念、制度或历史背景；正文数字与算例为教学假设，不写成统计。</p> </div><div class="source"> <a href="https://fsb.org/wp-content/uploads/P111022-3.pdf" rel="noopener noreferrer" target="_blank">Regulation, Supervision and Oversight of Crypto-Asset Activities and Markets</a> <p>Financial Stability Board · Financial Stability Board</p> <p>访问：2026-11-24 · 许可：© Financial Stability Board; linked summary only</p> <p>支持论点：用于核对本文关于「代币化存款与稳定币」的公开概念、制度或历史背景；正文数字与算例为教学假设，不写成统计。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/tokenized-deposits-and-stablecoin-infrastructure/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

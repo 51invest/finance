@@ -1,0 +1,313 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>Payment, Clearing and Settlement · 51Invest</title><meta name="description" content="Payment starts a transfer of value, clearing reconciles instructions and calculates what participants owe, and settlement completes the transfer with central bank money or eligible assets; netting saves liquidity but concentrates credit and liquidity risk in the clearing arrangement."><link rel="canonical" href="https://finance.51invest.com/en/learn/payment-clearing-and-settlement/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/payment-clearing-and-settlement/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/payment-clearing-and-settlement/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/payment-clearing-and-settlement/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/en/" data-main-home aria-label="51Invest"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">51Invest</span> <span class="brand-caption">WUYAO INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="Knowledge stations"> <a class="nav-link" href="https://51invest.com/en/" data-main-home> Home </a> <a class="nav-link" href="https://economics.51invest.com/en/"> Economics </a><a class="nav-link active" href="/en/" aria-current="page"> Finance </a><a class="nav-link" href="https://markets.51invest.com/en/"> Markets </a><a class="nav-link" href="https://invest.51invest.com/en/"> Investing </a><a class="nav-link" href="https://history.51invest.com/en/"> History </a><a class="nav-link" href="https://research.51invest.com/en/"> Research </a> <a class="nav-link" href="https://51invest.com/en/contents/"> Content map </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/learn/payment-clearing-and-settlement/" hreflang="zh-CN" lang="zh-CN" data-language-link="zh" aria-label="Switch to Chinese" title="Switch to Chinese"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="Theme: System" title="Theme: System" data-label-auto="Theme: System" data-label-light="Theme: Light" data-label-dark="Theme: Dark"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">System</span> <span class="theme-text" data-theme-text="light">Light</span> <span class="theme-text" data-theme-text="dark">Dark</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/en/" data-main-home>Home</a> <span class="sep">/</span> <a href="/en/">Finance</a> <span class="sep">/</span> <span aria-current="page">Payment, Clearing and Settlement</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">Concept</span> <h1 class="article-title">Payment, Clearing and Settlement</h1> <p class="article-summary">Payment starts a transfer of value, clearing reconciles instructions and calculates what participants owe, and settlement completes the transfer with central bank money or eligible assets; netting saves liquidity but concentrates credit and liquidity risk in the clearing arrangement.</p>  <div class="meta-grid"> <div class="meta-item"><span>Module</span><strong>FIN-M05 · 支付清算与托管</strong></div> <div class="meta-item"><span>Level</span><strong>Foundation</strong></div> <div class="meta-item"><span>Read</span><strong>8 min · 12 sections</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> This article has an interactive demo <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>Definition</h2>
+<p>Payment is the transfer of value from payer to payee. Clearing is the pre-settlement process of transmitting, reconciling and confirming instructions, calculating amounts due between participants and establishing final positions for settlement [1]. Settlement is the actual transfer of funds or securities using central bank money or eligible assets to discharge obligations; completed settlement reaches settlement finality: it is irrevocable and unconditional [1].</p>
+<h2>Intuition</h2>
+<p>Amounts below are in yuan (assumed CNY; teaching assumptions). A owes B 100 yuan, B owes C 90 yuan, and C owes A 70 yuan. Gross payments total 260 yuan; after multilateral netting A pays 30 yuan, B receives 10 yuan and C receives 20 yuan, so only 30 yuan has to be settled. Clearing computes the net positions; settlement moves the money. Netting offsets receivables against payables and cuts both the number and the value of payments to be settled, which saves liquidity but concentrates credit and liquidity risk in the clearing and settlement arrangement and in participants&#39; credit [1].</p>
+<h2>Formal expression</h2>
+<p>Table 1: Receivables, payables and net positions in a three-party example (units: yuan, assumed CNY; teaching assumptions)</p>
+<table>
+<thead>
+<tr>
+<th>Participant</th>
+<th align="right">Receivable</th>
+<th align="right">Payable</th>
+<th align="right">Net position</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td align="right">70</td>
+<td align="right">100</td>
+<td align="right">-30</td>
+</tr>
+<tr>
+<td>B</td>
+<td align="right">100</td>
+<td align="right">90</td>
+<td align="right">+10</td>
+</tr>
+<tr>
+<td>C</td>
+<td align="right">90</td>
+<td align="right">70</td>
+<td align="right">+20</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td align="right"><strong>260</strong></td>
+<td align="right"><strong>260</strong></td>
+<td align="right"><strong>0</strong></td>
+</tr>
+</tbody></table>
+<p>Net positions equal receivables minus payables and sum to zero across participants. Gross payments are 260 yuan, net debits total 30 yuan, and the funds needed to settle fall by 230 yuan, or <code>230 ÷ 260 ≈ 88.5%</code>.</p>
+<p>Payment systems usually settle in one of two ways. Real-time gross settlement (RTGS) settles each payment individually, in full, in real time, and needs intraday liquidity. Deferred net settlement (DNS) settles net amounts at the end of a predefined settlement cycle, often at end of day or in several intraday batches, which saves liquidity but defers settlement and concentrates credit and liquidity risk at that point [1]. PFMI words the classification verbatim: &quot;Payment systems can be categorised generally into real-time gross settlement (RTGS) systems, deferred (or designated-time) net settlement (DNS) systems&quot; (a third hybrid category follows), and defines the first verbatim as &quot;RTGS is the real-time settlement of payments, transfer instructions, or other obligations individually on a transaction-by-transaction basis.&quot;; the risk side is also quoted verbatim: &quot;Multiple-batch settlement based on a DNS mechanism, for example, may expose participants to settlement risks for the period during which settlement is deferred.&quot; [1]</p>
+<h2>Conditions and limits</h2>
+<ol>
+<li><strong>Netting depends on law.</strong> A netting or set-off arrangement must remain enforceable when a participant becomes insolvent; otherwise courts or liquidators can challenge the net positions and participants fall back on gross obligations [1]. Cross-border netting may not be recognized everywhere. What netting buys is also stated verbatim: &quot;netting reduces the number and value of deliveries and payments needed to settle a given set of trades, thereby reducing liquidity risks and transaction costs&quot; [1].</li>
+<li><strong>Finality depends on law and rules.</strong> Principle 8 requires verbatim: &quot;An FMI should provide clear and certain final settlement, at a minimum by the end of the value date. Where necessary or preferable, an FMI should provide final settlement intraday or in real time.&quot; and its explanatory note defines verbatim that &quot;Final settlement is defined as the irrevocable and unconditional transfer of an asset or financial instrument, or the discharge of an obligation by the FMI or its participants in accordance with the terms of the underlying contract.&quot; together with &quot;The value date is the day on which the payment, transfer instruction, or other obligation is due and the associated funds and securities are typically available to the receiving participant.&quot; [1]; RTGS is usually final payment by payment, DNS only at the agreed settlement point; receipt of funds and authorization are not settlement, because the same text states verbatim that &quot;A payment is final at the point in time when it becomes irrevocable and unconditional. This precise moment typically depends on the underlying legal regime and the rules of the payment system itself.&quot; [1]</li>
+<li><strong>Securities and FX use special arrangements.</strong> Securities use delivery versus payment (DvP), where the final transfer of securities and of funds are conditioned on each other, which eliminates principal risk; FX uses payment versus payment (PvP), where the final transfer of a payment in one currency occurs if and only if the final transfer in another currency takes place, which addresses cross-currency and cross-time-zone mismatches [1].</li>
+<li><strong>Liquidity and default arrangements differ.</strong> RTGS needs intraday liquidity and collateral; DNS concentrates exposures at the settlement point and needs pre-agreed default handling and loss-sharing arrangements [1].</li>
+<li><strong>Coverage differs.</strong> Fedwire is an RTGS for depository institutions whose transfers are immediate, final and irrevocable once processed [2]; the Eurosystem&#39;s T2 is an RTGS, T2S settles securities and TIPS settles instant payments in central bank money [3]. Cross-border payments also involve correspondents, time zones and compliance.</li>
+</ol>
+<h2>Example and calculation</h2>
+<p>Using Table 1 (teaching assumptions, amounts in yuan): if A must pay B 100 before receiving C&#39;s 70, A&#39;s intraday liquidity need under RTGS is 100, not the net 30; at the end of the settlement cycle A&#39;s net position is still -30. If C defaults before paying, the outcome depends on the settlement mode. Under RTGS, A has already settled its 100 payment to B and simply loses the 70 receivable from C, so the loss is its 70 exposure to C. Under DNS, the netting can be revoked and positions recalculated, so A settles the gross 100 it owes B — 70 more than the net 30 it expected — and again does not receive the 70 from C.</p>
+<h2>Figure</h2>
+<p>Table 2: Division of labor among payment, clearing and settlement (teaching schematic)</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>What happens</th>
+<th>Key risk or condition</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Payment instruction</td>
+<td>Initiated and transmitted</td>
+<td>Fraud, operational error</td>
+</tr>
+<tr>
+<td>Clearing</td>
+<td>Instructions reconciled, net amounts calculated</td>
+<td>Counterparty credit, enforceability of netting</td>
+</tr>
+<tr>
+<td>Settlement</td>
+<td>Funds transferred or DvP completed</td>
+<td>Liquidity, settlement failure</td>
+</tr>
+</tbody></table>
+<p>Table 2 is a process schematic, not a specific system; access, hours and guarantees differ.</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-net-title fig-net-desc" viewBox="0 0 420 215" width="100%">
+    <title id="fig-net-title">Net positions after multilateral netting</title>
+    <desc id="fig-net-desc">Bars measured from a zero line at two pixels per unit. Participant A is owed 70 and owes 100, a net of minus 30 drawn 60 pixels downward; B is owed 100 and owes 90, a net of plus 10 drawn 20 pixels upward; C is owed 90 and owes 70, a net of plus 20 drawn 40 pixels upward. The three nets sum to zero.</desc>
+    <line x1="60" y1="110" x2="380" y2="110" stroke="var(--border)" stroke-width="2"></line>
+    <rect x="100" y="110" width="56" height="60" fill="var(--gold)" opacity="0.9"></rect>
+    <rect x="190" y="90" width="56" height="20" fill="var(--accent)" opacity="0.85"></rect>
+    <rect x="280" y="70" width="56" height="40" fill="var(--accent)" opacity="0.7"></rect>
+    <g fill="var(--muted)" font-size="11" font-family="inherit">
+      <text x="60" y="20">Net amount (same unit as the table, zero line, 2 px per unit)</text>
+      <text x="102" y="184">A −30 (owed 70 / owes 100)</text>
+      <text x="196" y="84">B +10</text>
+      <text x="286" y="64">C +20</text>
+      <text x="192" y="146">owed 100 / owes 90</text>
+      <text x="282" y="130">owed 90 / owes 70</text>
+      <text x="60" y="200">nets sum to 0; gross receivables and payables are both 260</text>
+    </g>
+  </svg>
+  <figcaption>Figure 1: positions after netting three participants (zero-line basis, two pixels per unit): A owes a net 30, B is owed 10, C is owed 20, summing to zero, so settlement moves net amounts rather than the gross 260 in each direction. Amounts use the table's own unit and are teaching assumptions; whether netting is legally enforceable depends on the clearing and settlement arrangement.</figcaption>
+</figure>
+
+<h2>Common mistakes</h2>
+<ul>
+<li><strong>A completed payment is a completed settlement.</strong> Authorization and &quot;sent&quot; status may be unsettled; only an irrevocable and unconditional final transfer discharges the debt, and that moment is set by the legal regime and the system&#39;s rules [1].</li>
+<li><strong>Clearing equals settlement.</strong> Clearing calculates obligations, settlement transfers value; different institutions may perform each.</li>
+<li><strong>Netting is always safer.</strong> It saves liquidity but concentrates risk at the settlement point; RTGS reduces delay but needs more intraday funds.</li>
+<li><strong>Central bank systems have no risk.</strong> Central bank money has no domestic credit risk, but operational, liquidity and legal risks remain.</li>
+</ul>
+<!-- kp-supplement:start -->
+<h2>Knowledge-point review</h2>
+<h3>payment instruction</h3>
+<p><strong>Definition</strong>: A payment instruction authorises a bank or payment provider to debit an account, specifying amount, payee and conditions.</p>
+<p><strong>Mechanism</strong>: It passes authentication, balance or limit checks and fraud screening before clearing; error, duplicate and revocation rules shape final risk.</p>
+<p><strong>Example</strong>: For example, a corporate online payment is checked against signatures, limits and sanctions lists before processing.</p>
+<p><strong>Boundary</strong>: An instruction is not completion; delays, returns, freezes and fraud can stop it, and authorisation must be separated from execution.</p>
+<h3>clearing</h3>
+<p><strong>Definition</strong>: Clearing calculates participants&#39; obligations, matches instructions and prepares settlement after a payment or securities trade.</p>
+<p><strong>Mechanism</strong>: It uses netting or gross methods, central counterparties and margin to manage counterparty risk; membership, collateral and default rules shape efficiency.</p>
+<p><strong>Example</strong>: For example, banks net thousands of daily transfers and settle only the net difference, reducing funding needs.</p>
+<p><strong>Boundary</strong>: Clearing is not settlement; netting saves liquidity but accumulates counterparty risk, and central clearing reduces contagion yet can create systemic nodes.</p>
+<h3>settlement</h3>
+<p><strong>Definition</strong>: Settlement is the actual transfer of funds or securities that discharges cleared obligations and produces final legal effect.</p>
+<p><strong>Mechanism</strong>: Timing, finality and irrevocability determine credit risk; central-bank money, commercial-bank money and securities depositories are main channels.</p>
+<p><strong>Example</strong>: For example, a securities trade uses delivery-versus-payment so the buyer pays and receives the security simultaneously.</p>
+<p><strong>Boundary</strong>: Settlement is not clearing; delayed settlement, intraday overdrafts and legal uncertainty create Herstatt risk, and cross-border settlement faces time-zone and legal gaps.</p>
+<h3>finality</h3>
+<p><strong>Definition</strong>: Finality means a completed payment or securities transfer is irrevocable and legally recognised.</p>
+<p><strong>Mechanism</strong>: It depends on settlement-system rules, insolvency law and timing; real-time gross systems finalise each item, while net systems may finalise at day-end.</p>
+<p><strong>Example</strong>: For example, once a large-value transfer settles, the receiving bank can use the funds and the payer cannot unilaterally reverse it.</p>
+<p><strong>Boundary</strong>: Finality is not a technical acknowledgement; outages, fraud, insolvency clawbacks and cross-border conflicts can challenge it, and delayed finality widens exposure.</p>
+<h3>securities settlement</h3>
+<p><strong>Definition</strong>: Securities settlement transfers ownership and payment together or in an agreed sequence, usually through a central depository and delivery-versus-payment.</p>
+<p><strong>Mechanism</strong>: DVP reduces principal risk, while net settlement saves liquidity but adds replacement risk; cycle length, fail handling and collateral matter.</p>
+<p><strong>Example</strong>: For example, a stock trade settles T+2, with buyer funds and seller securities exchanged in the depository.</p>
+<p><strong>Boundary</strong>: Settlement is not trade execution; a completed trade can fail to settle, and fails, short positions and cross-border custody gaps create default and contagion.</p>
+<h3>custody and asset segregation</h3>
+<p><strong>Definition</strong>: Custody safekeeps securities, records ownership and handles corporate actions; asset segregation separates client assets from the institution&#39;s own assets.</p>
+<p><strong>Mechanism</strong>: Segregation protects clients if the institution fails, and independent custody, reconciliation and audit improve verifiability.</p>
+<p><strong>Example</strong>: For example, a fund keeps securities at an independent custodian, and the manager can trade but cannot divert the assets.</p>
+<p><strong>Boundary</strong>: Segregation is not absolute safety; sub-custody, cross-border law, collateral reuse and fraud can pierce it, and nominee structures may hide risk.</p>
+<!-- kp-supplement:end -->
+
+<h2>Related</h2>
+<ul>
+<li>Prerequisite: Credit Relationships (FIN-002).</li>
+<li>Related: Bank Balance Sheets (FIN-003); Central Bank Balance Sheets (FIN-005); Reserves and Liquidity (FIN-006); Cash and Money-Market Instruments (MKT-002).</li>
+</ul>
+<h2>Figures in plain language</h2>
+<p>The three figures below check the mechanism, boundary and comparison in this article; labels come from its own sections, not new data.</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">Payment, Clearing and Settlement: mechanism chain</title>
+    <desc id="fig-batch-chain-desc">Payment, Clearing and Settlement — three-step structure: problem, mechanism, judgment. Labels come from the article's sections, not new data.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Payment, Clearing and Settlement: mechanism chain</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Labels come from the article's sections; all three steps matter.</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Problem</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Payment starts a</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">transfer of…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Payment starts</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">a transfer of</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">value, clearing</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">reconciles</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">instructions…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Definition</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Definition:</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Payment is the…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Definition:</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Payment is the</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">transfer of</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">value from</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">payer to payee.…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Example and calculation</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Using Table 1</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">(teaching assumpt…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Using Table 1</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">(teaching</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">assumptions,</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">amounts in</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">yuan): if A…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Reading order: test the problem, then the mechanism, then whether the judgment overreaches.</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">If a middle step lacks evidence, later conclusions are hypotheses, not facts.</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Structural illustration, not a new data chart; sample is the article's own argument.</text>
+  </svg>
+  <figcaption>Figure 2: Payment, Clearing and Settlement — mechanism chain: problem, mechanism, judgment. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">Payment, Clearing and Settlement: boundary</title>
+    <desc id="fig-batch-boundary-desc">Separates conditions where the claim holds from those where it fails; a local example is not universal.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Payment, Clearing and Settlement: when does it hold?</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">Check the conditions before the conclusion</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">If conditions, definitions or samples change, recompute the conclusion</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Holds</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Netting depends on law.</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Fails / rewrite</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">A completed payment is a</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">completed settlement.</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">Boundary illustration; sample is the article's own argument; units as stated in the text.</text>
+  </svg>
+  <figcaption>Figure 3: Payment, Clearing and Settlement — boundary: when the claim holds, and when it fails. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">Payment, Clearing and Settlement: object, conditions and common mistakes</title>
+    <desc id="fig-batch-compare-desc">Three rows compare the concept, its conditions and common mistakes; comparison is not equivalence and does not replace a definition.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Payment, Clearing and Settlement: object, conditions and common mistakes at a glance</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">This article</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Commonly confused</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Object</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Payment starts a</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">transfer of value…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Adjacent concepts / common claims</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Conditions</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Netting depends on</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">law.…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">A completed payment is a</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">completed settlement.…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Check</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Define first, then compare; never judge</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">labels only</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Correlation is not causation; a local case is not universal</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Comparison illustration; sample is the article's own argument; units as stated in the text.</text>
+  </svg>
+  <figcaption>Figure 4: Payment, Clearing and Settlement — comparison of object, conditions and common mistakes. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<h2>Exercises</h2>
+<ol>
+<li><strong>Concept check.</strong> At which stage does multilateral netting occur? A. Payment instruction; B. Clearing; C. Settlement; D. Custody.</li>
+<li><strong>Calculation.</strong> A pays B 120 yuan, B pays C 80 yuan, C pays A 50 yuan. What are the net positions, and how much less funding is needed than gross (all amounts in yuan)?</li>
+<li><strong>Conditions.</strong> A system settles net amounts at end of day and participants send instructions in the morning. What risk does the payee face before end of day?</li>
+</ol>
+<details>
+<summary>Suggested answers</summary>
+
+<ol>
+<li>B. Clearing reconciles instructions and calculates net amounts; settlement moves the funds.</li>
+<li>A: 50 - 120 = -70; B: 120 - 80 = +40; C: 80 - 50 = +30 (yuan). Gross is 250 yuan, net debits total 70 yuan, so 180 yuan less is needed, a <code>180 ÷ 250 = 72%</code> reduction.</li>
+<li>Intraday liquidity and credit risk: funds are usable only at end of day; if a payer defaults, net settlement may fail or be recalculated, with guarantees and loss sharing determining the loss.</li>
+</ol>
+</details>
+
+<h2>Sources</h2>
+<p>The bracketed numbers in the text refer to the sources below.</p>
+<ol>
+<li>Committee on Payment and Settlement Systems and IOSCO. &quot;Principles for financial market infrastructures.&quot; Bank for International Settlements, 2012. License: BIS terms (attribution, non-commercial). <a href="https://www.bis.org/cpmi/publ/d101.htm">https://www.bis.org/cpmi/publ/d101.htm</a> (accessed 2026-10-30)</li>
+<li>Board of Governors of the Federal Reserve System. &quot;Fedwire Funds Service - About.&quot; License: public domain. <a href="https://www.federalreserve.gov/paymentsystems/fedfunds_about.htm">https://www.federalreserve.gov/paymentsystems/fedfunds_about.htm</a> (accessed 2026-10-30)</li>
+<li>European Central Bank. &quot;TARGET Services.&quot; License: ECB statistics terms (attribution). <a href="https://www.ecb.europa.eu/paym/target/html/index.en.html">https://www.ecb.europa.eu/paym/target/html/index.en.html</a> (accessed 2026-10-30)</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="en" aria-labelledby="demo-check-title" data-check-done="All three are covered: the core of this article is in place." data-check-pending="One item is still open: go back to the matching section and retell it with a number or counterexample." data-check-count="Ticked"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">Worked demo</p> <button class="demo-reset" type="button" data-demo-reset>Reset</button> </div> <h2 id="demo-check-title">Read-through check: can you say three things?</h2> <p class="demo-intro">No recitation needed. Tick each sentence below and see whether you can explain the mechanism, one worked example and one boundary in your own words.</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>Walk through payment, clearing and settlement, naming what each completes and where risk sits</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>Explain how multilateral netting saves liquidity while concentrating credit and liquidity risk in clearing</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>Name one condition under which the article’s conclusion does not hold</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> Ticked 0 / 3
+</p> </div> <p class="demo-footnote">The numbers are teaching assumptions that show relationships, not forecasts or investment advice.</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> This article has passed the current publication gate. Factual, calculation and translation revisions update both language versions together. </p> <p> <a class="button secondary" href="/en/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>Back to station </a> </p> </div> <aside class="article-aside" aria-label="Article information"> <section class="aside-card"> <h2>Learning objectives</h2> <ul> <li>Walk through payment, clearing and settlement, naming what each completes and where risk sits</li><li>Explain how multilateral netting saves liquidity while concentrating credit and liquidity risk in clearing</li> </ul> </section> <section class="aside-card"> <h2>Required prerequisites</h2> <ul> <li> <a href="/en/learn/credit-relationships/">FIN-002 · Credit Relationships</a> </li> </ul> </section> <section class="aside-card"> <h2>Recommended reading</h2> <ul> <li> <a href="/en/learn/bank-balance-sheets/">FIN-003 · Bank Balance Sheets</a> </li><li> <a href="/en/learn/central-bank-balance-sheets/">FIN-005 · Central Bank Balance Sheets</a> </li><li> <a href="https://markets.51invest.com/en/learn/cash-and-money-market-instruments/">MKT-002 · Cash and Money-Market Instruments</a> </li><li> <a href="/en/learn/reserves-and-liquidity/">FIN-006 · Reserves and Liquidity</a> </li><li> <a href="/en/learn/credit-relationships/">FIN-002 · Credit Relationships</a> </li> </ul> </section> <section class="aside-card"> <h2>AI review record</h2> <p class="muted"> There is no human sign-off; these states come from the AI-only editorial review. </p> <ul> <li> Facts and calculations : AI review passed </li><li> Subject : AI review passed </li><li> English : AI review passed </li><li> Page : AI review passed </li> </ul> </section> <section class="aside-card"> <h2>Sources</h2> <div class="source"> <a href="https://www.bis.org/cpmi/publ/d101.htm" rel="noopener noreferrer" target="_blank">Principles for financial market infrastructures</a> <p>Committee on Payment and Settlement Systems; Technical Committee of the International Organization of Securities Commissions · Bank for International Settlements</p> <p>Accessed: 2026-11-03 · License: BIS terms: non-commercial download, display and redistribution allowed with attribution</p> <p>Supports: Four claims in this article are now carried verbatim by the PFMI text (Principle 8 and its explanatory note, the Institutional designs section, the netting passage, and the exchange-of-value paragraph of Principle 12): settlement finality &quot;An FMI should provide clear and certain final settlement, at a minimum by the end of the value date. Where necessary or preferable, an FMI should provide final settlement intraday or in real time.&quot; and &quot;Final settlement is defined as the irrevocable and unconditional transfer of an asset or financial instrument, or the discharge of an obligation by the FMI or its participants in accordance with the terms of the underlying contract.&quot; and &quot;The value date is the day on which the payment, transfer instruction, or other obligation is due and the associated funds and securities are typically available to the receiving participant.&quot; and &quot;A payment is final at the point in time when it becomes irrevocable and unconditional. This precise moment typically depends on the underlying legal regime and the rules of the payment system itself.&quot;; settlement modes &quot;Payment systems can be categorised generally into real-time gross settlement (RTGS) systems, deferred (or designated-time) net settlement (DNS) systems&quot; and &quot;RTGS is the real-time settlement of payments, transfer instructions, or other obligations individually on a transaction-by-transaction basis.&quot; and &quot;Multiple-batch settlement based on a DNS mechanism, for example, may expose participants to settlement risks for the period during which settlement is deferred.&quot;; the benefit of netting &quot;netting reduces the number and value of deliveries and payments needed to settle a given set of trades, thereby reducing liquidity risks and transaction costs&quot;; conditional settlement of linked obligations &quot;If an FMI settles transactions that involve the settlement of two linked obligations (for example, securities or foreign exchange transactions), it should eliminate principal risk by conditioning the final settlement of one obligation upon the final settlement of the other.&quot;. The scope statement remains as recorded: the principles apply to systems with systemic importance - payment systems, central securities depositories, securities settlement systems, central counterparties and trade repositories. Retrieval method (2026-11-03): the registered d101.htm landing page returns 200 and links bis.org/publications/principles-financial-market-infrastructures.pdf (CPSS-IOSCO, April 2012, 1,117,912 bytes, %PDF-1.3), extracted with pdftotext in both -layout and -raw modes and checked paragraph by paragraph. **Only complete sentences from continuous numbered or body paragraphs are quoted**: Annex H is a two-column glossary whose term/definition row alignment drifts across page breaks (page 175 visibly misaligns delivery versus payment / dematerialisation / derivative against three definitions), so no glossary row is cited here.</p> </div><div class="source"> <a href="https://www.federalreserve.gov/paymentsystems/fedfunds_about.htm" rel="noopener noreferrer" target="_blank">Fedwire Funds Service - About</a> <p>Board of Governors of the Federal Reserve System · Board of Governors of the Federal Reserve System</p> <p>Accessed: 2026-10-30 · License: U.S. Government work (public domain), 17 U.S.C. §105</p> <p>Supports: The Fedwire Funds Service is a real-time gross settlement system for depository institutions whose transfers are immediate, final and irrevocable.</p> </div><div class="source"> <a href="https://www.ecb.europa.eu/paym/target/html/index.en.html" rel="noopener noreferrer" target="_blank">TARGET Services</a> <p>European Central Bank · European Central Bank</p> <p>Accessed: 2026-10-30 · License: ECB statistics terms; attribution required</p> <p>Supports: TARGET Services include T2, the Eurosystem&#39;s real-time gross settlement system, T2S for securities settlement and TIPS for instant payments.</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">A free, non-commercial knowledge site. Sources and definitions are labelled; nothing here is investment advice.</p> </div> </div> <nav class="footer-links" aria-label="Knowledge stations"> <a href="https://51invest.com/en/" data-main-home>Home</a> <a href="https://51invest.com/en/contents/">Content map</a> <a href="/en/glossary/">Glossary</a> <a href="/en/search/">Search</a> <a href="https://51invest.com/en/charts/" data-main-link>Charts</a> <a href="https://51invest.com/en/sources/" data-main-link>Data &amp; licences</a> <a href="/en/">Station home</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="Knowledge stations"> <a class="mobile-link" href="https://51invest.com/en/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>Home</span> </a> <a class="mobile-link" href="https://51invest.com/en/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>Knowledge stations</span> </a> <a class="mobile-link active" href="/en/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>Station home</span> </a> <a class="mobile-link" href="/learn/payment-clearing-and-settlement/" data-language-link="zh"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

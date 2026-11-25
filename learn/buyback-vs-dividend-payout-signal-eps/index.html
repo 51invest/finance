@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>回购与分红：同是返还现金，信号不同 · 巫妖投资</title><meta name="description" content="分红是稳定的现金承诺，回购是灵活的资本配置；两者都减少公司现金，但回购还能改变股本和每股指标。看回购不能只看 EPS 增厚，要看回购价格、资金来源和是否掩盖了股权激励的稀释。"><link rel="canonical" href="https://finance.51invest.com/learn/buyback-vs-dividend-payout-signal-eps/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/buyback-vs-dividend-payout-signal-eps/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/buyback-vs-dividend-payout-signal-eps/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/buyback-vs-dividend-payout-signal-eps/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/buyback-vs-dividend-payout-signal-eps/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">回购与分红：同是返还现金，信号不同</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">回购与分红：同是返还现金，信号不同</h1> <p class="article-summary">分红是稳定的现金承诺，回购是灵活的资本配置；两者都减少公司现金，但回购还能改变股本和每股指标。看回购不能只看 EPS 增厚，要看回购价格、资金来源和是否掩盖了股权激励的稀释。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M13 · 分配与企业变动</strong></div> <div class="meta-item"><span>层级</span><strong>系统</strong></div> <div class="meta-item"><span>阅读</span><strong>8 分钟 · 12 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义与直觉</h2>
+<p>**分红（dividend）**是公司按股数向股东支付现金，通常按季度或年度进行，市场把它视为稳定承诺；减少分红往往被解读为现金流恶化。<strong>回购</strong>是公司在二级市场买回自己的股票，买回的股票成为库存股，流通股本减少。</p>
+<p>两者都返还现金，但信号不同：分红是“持续支付能力”的信号，回购是“股价相对内在价值”的信号。回购更灵活，可以随时开始或停止；分红一旦削减，市场反应通常更负面。</p>
+<p>回购还会改变每股指标：净利润不变、股本减少，EPS 上升。但 EPS 上升不等于价值创造；如果回购价格高于内在价值，剩余股东的每股价值反而下降[1][2]。</p>
+<h2>正式表达与示例</h2>
+<p>某公司净利润 1,000 万元，流通股 1,000 万股，EPS 1 元，股价 20 元，市值 2 亿元。公司用 2,000 万元回购 100 万股，股本降到 900 万股，EPS 变为 <code>1,000/900=1.11 元</code>，增厚 11%。</p>
+<p>若回购价 20 元等于内在价值，剩余股东没有损失；若内在价值只有 15 元，公司用 20 元买回高估股票，剩余股东每股价值从 20 元降到约 19.4 元，回购摧毁价值。</p>
+<p>若公司同时每年给员工 50 万股股权激励，回购 100 万股中有 50 万股只是抵消稀释，真实净减少只有 50 万股；看回购要看“净股本变化”，不是回购公告金额。以上数字均为教学假设。</p>
+<h2>三个判断</h2>
+<p><strong>判断一：回购价格。</strong> 低于内在价值的回购创造价值，高于内在价值的回购摧毁价值；要比较回购均价与估值区间。</p>
+<p><strong>判断二：资金来源。</strong> 用自由现金流回购是健康的；用发债或消耗现金缓冲回购，会增加财务风险，尤其在利率上升期。</p>
+<p><strong>判断三：稀释抵消。</strong> 回购是否只是抵消股权激励？若净股本没有下降，EPS 增厚有限，回购的信号意义也弱。</p>
+<p>回购公告的规模不等于实际执行；要看实际回购股数、均价、剩余授权和后续注销安排[3][4]。</p>
+<h2>图表</h2>
+<figure>
+<svg role="img" aria-labelledby="fig-buyback-vs-dividend-payout-signal-eps-1-title fig-buyback-vs-dividend-payout-signal-eps-1-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-buyback-vs-dividend-payout-signal-eps-1-title">回购如何改变每股指标</title>
+<desc id="fig-buyback-vs-dividend-payout-signal-eps-1-desc">四步：净利润、回购金额、股本、EPS。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">回购的传导链</text>
+<text x="24" y="54" font-size="11" text-anchor="start">净利润、回购、股本、EPS 四步。</text>
+<rect x="14" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="69" y="140" font-size="12" text-anchor="middle">净利润</text>
+<text x="69" y="184" font-size="12" text-anchor="middle" font-weight="700">1000 万</text>
+<rect x="136" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="191" y="140" font-size="12" text-anchor="middle">回购</text>
+<text x="191" y="184" font-size="12" text-anchor="middle" font-weight="700">2000 万</text>
+<rect x="258" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="313" y="140" font-size="12" text-anchor="middle">股本</text>
+<text x="313" y="184" font-size="12" text-anchor="middle" font-weight="700">900 万股</text>
+<rect x="380" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="435" y="140" font-size="12" text-anchor="middle">EPS</text>
+<text x="435" y="184" font-size="12" text-anchor="middle" font-weight="700">1.11 元</text>
+<line x1="125" y1="160" x2="135" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="247" y1="160" x2="257" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="369" y1="160" x2="379" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<text x="24" y="246" font-size="11" text-anchor="start">教学示意，不含统计数据。</text>
+</g>
+</svg>
+<figcaption>图 1：回购如何改变每股指标；教学示意。</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-buyback-vs-dividend-payout-signal-eps-2-title fig-buyback-vs-dividend-payout-signal-eps-2-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-buyback-vs-dividend-payout-signal-eps-2-title">EPS 与股本变化</title>
+<desc id="fig-buyback-vs-dividend-payout-signal-eps-2-desc">回购前后对比 EPS 与股本两项。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">回购前后的 EPS 与股本</text>
+<text x="24" y="54" font-size="11" text-anchor="start">回购前 EPS 1.00、股本 1000 万；回购后 EPS 1.1</text>
+<text x="24" y="68" font-size="11" text-anchor="start">1、股本 900 万。</text>
+<line x1="178" y1="64" x2="178" y2="270" stroke="currentColor" stroke-width="1" opacity=".45"/>
+<text x="20" y="97" font-size="12">EPS 前</text>
+<rect x="178" y="78" width="8" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="95" font-size="12" font-weight="700">1.00</text>
+<text x="20" y="145" font-size="12">EPS 后</text>
+<rect x="178" y="126" width="8" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="143" font-size="12" font-weight="700">1.11</text>
+<text x="20" y="193" font-size="12">股本 前</text>
+<rect x="178" y="174" width="360" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="191" font-size="12" font-weight="700">1000</text>
+<text x="20" y="241" font-size="12">股本 后</text>
+<rect x="178" y="222" width="324" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="239" font-size="12" font-weight="700">900</text>
+<text x="24" y="292" font-size="11" text-anchor="start">教学假设；单位：元与万股。</text>
+</g>
+</svg>
+<figcaption>图 2：EPS 与股本变化；教学假设。</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-buyback-vs-dividend-payout-signal-eps-3-title fig-buyback-vs-dividend-payout-signal-eps-3-desc" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-buyback-vs-dividend-payout-signal-eps-3-title">回购的资本配置矩阵</title>
+<desc id="fig-buyback-vs-dividend-payout-signal-eps-3-desc">两轴：回购价格高低、内在价值高低；四象限对应创造、中性、摧毁和观望。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">回购价格与内在价值的四类组合</text>
+<text x="24" y="54" font-size="11" text-anchor="start">低于内在价值回购创造价值；高于内在价值回购摧毁价值。</text>
+<text x="40" y="68" font-size="11">价格高</text>
+<text x="40" y="286" font-size="11">价格低</text>
+<text x="110" y="314" font-size="11" text-anchor="middle">内在价值低</text>
+<text x="500" y="314" font-size="11" text-anchor="middle">内在价值高</text>
+<rect x="96" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="100" font-size="12" text-anchor="start">摧毁价值</text>
+<text x="108" y="130" font-size="11" text-anchor="start">价格高、价值低</text>
+<text x="108" y="170" font-size="11" font-weight="700">避免</text>
+<rect x="338" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="100" font-size="12" text-anchor="start">中性</text>
+<text x="350" y="130" font-size="11" text-anchor="start">价格高、价值高</text>
+<text x="350" y="170" font-size="11" font-weight="700">合理</text>
+<rect x="96" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="214" font-size="12" text-anchor="start">观望</text>
+<text x="108" y="244" font-size="11" text-anchor="start">价格低、价值低</text>
+<text x="108" y="284" font-size="11" font-weight="700">不回购</text>
+<rect x="338" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="214" font-size="12" text-anchor="start">创造价值</text>
+<text x="350" y="244" font-size="11" text-anchor="start">价格低、价值高</text>
+<text x="350" y="284" font-size="11" font-weight="700">最佳</text>
+</g>
+</svg>
+<figcaption>图 3：回购的资本配置矩阵；对比分类示意。</figcaption>
+</figure>
+
+<p>图 1 把净利润、回购、股本和 EPS 串成一条链；图 2 比较回购前后 EPS 与净股本；图 3 用“回购价格—内在价值”两轴划出四类资本配置。图中数字均为教学假设。</p>
+<h2>适用条件、边界与常见误区</h2>
+<p><strong>边界一：回购不保证股价上涨。</strong> 回购减少供给，但股价由盈利、利率和风险偏好决定；回购只是资本配置工具。</p>
+<p><strong>边界二：库存股不等于注销。</strong> 回购后股票可能用于股权激励或可转债，未必减少长期股本；要看注销和净股本变化。</p>
+<p><strong>边界三：税制影响。</strong> 分红和回购的税务处理不同，投资者结构会影响公司选择；不能只看税前回报。</p>
+<p><strong>误解一：EPS 增厚就是价值创造。</strong> EPS 是每股净利润，不是每股价值；高估时回购会降低剩余股东价值。</p>
+<p><strong>误解二：回购一定比分红好。</strong> 回购灵活但信号弱，分红稳定但承诺强；选择取决于现金流稳定性和估值。</p>
+<h2>深化：回购的EPS账、税与信号</h2>
+<p><strong>回购的 EPS 增厚不是线性的</strong>。假设公司市值 100 亿元、净利润 6 亿元、股本 10 亿股，EPS 0.6 元，P/E 约 16.7 倍。回购 5 亿元、按市价买回 5,000 万股，股本降到 9.5 亿股，净利润不变时 EPS 升到 0.632 元，增厚约 5.3%。但若回购靠 5% 利率的债务融资，税后成本约 3.5%，利息支出增加 1,750 万元，净利润降到 5.825 亿元，EPS 约 0.613 元，增厚只剩 2.2%。</p>
+<p><strong>估值的数学</strong>：回购收益率（回购金额/市值）为 5%，盈利收益率为 6%，EPS 增厚约 <code>5%×6%/(1−5%)≈0.32%</code> 的近似并不准确；更直接的是股本减少比例 5%，净利润因利息下降，增厚取决于回购资金成本与盈利收益率的比较。若资金成本高于盈利收益率，回购反而稀释 EPS。</p>
+<p><strong>税</strong>：股利通常按股息所得税纳税，回购带来的资本利得在卖出时才纳税，且许多市场对长期资本利得有优惠。对应税投资者，回购的税后优势明显；对免税机构，两者差异缩小。税收是回购流行的重要原因，但不是唯一原因。</p>
+<p><strong>信号</strong>：股利是“粘性”承诺，削减股利会被视为负面；回购更灵活，可以按年调整，因此回购公告的信号强度通常弱于同等金额的股利。真正强的信号是“在估值低位、用自由现金流、持续回购并注销”，而不是“借债回购托股价”。</p>
+<p><strong>会计与股本</strong>：回购的股票可以注销（减少股本）或作为库存股（减少权益但不减少股本）。注销提高 EPS；库存股在后续再发行时可能重新稀释。看 EPS 增厚要区分“股本减少”与“净利润变化”，不能只看每股数字。</p>
+<p><strong>风险</strong>：高位借债回购会削弱资产负债表；若回购只是为了抵消股票薪酬稀释，净效果可能是股本不变；若公司同时削减资本开支和研发，回购可能是“投资不足”的伪装。</p>
+<p><strong>监管与披露</strong>：美国 SEC 的 Rule 10b-18 对回购的时间、价格和数量设有限制；许多市场要求披露回购计划、执行进度和注销情况。投资者应看实际执行，而不是只看公告。</p>
+<p><strong>比较框架</strong>：先看自由现金流是否覆盖股利和回购；再看回购资金来自现金、债务还是资产出售；最后看回购后的股本变化和每股指标。三步都过关，回购才是真正的股东回报，而不是财务工程。</p>
+<h2>算例：借债回购的临界点</h2>
+<p>假设公司市值 100 亿元、净利润 6 亿元、股本 10 亿股，P/E 16.7 倍，盈利收益率 6%。回购 5 亿元。若用自有现金（假设现金收益 2%），放弃的利息收入 1,000 万元，净利润降到 5.9 亿元，股本降到 9.5 亿股，EPS 从 0.60 升到 0.621，增厚 3.5%。</p>
+<p>若用 5% 债务，税后成本 3.5%，利息增加 1,750 万元，净利润 5.825 亿元，EPS 0.613，增厚 2.2%。若债务成本升到 7%，税后 4.9%，利息 2,450 万元，净利润 5.755 亿元，EPS 0.606，增厚只剩 1%。<strong>临界点</strong>是税后债务成本等于盈利收益率 6%：低于 6% 增厚，高于 6% 稀释。</p>
+<p><strong>但 EPS 增厚不等于价值创造</strong>。若回购价格高于内在价值，留下来的股东用 1 元买回价值 0.8 元的股票，EPS 上升但每股价值下降。判断标准是回购收益率与投资回报率的比较，而不是 EPS 数字。</p>
+<p><strong>股利算例</strong>：同样 5 亿元，若做股利，股本不变，EPS 仍 0.60；股东拿到现金后自行再投资。对税负高的投资者，股利当场纳税；回购的资本利得可递延。税后差异可能达到 10—20 个百分点。</p>
+<p><strong>结论</strong>：回购的吸引力来自税、灵活性和信号，但只有在价格合理、现金流覆盖、不削弱投资能力时才创造价值。借债回购的 EPS 增厚有临界点，超过就是财务工程。</p>
+<h2>回购判读清单</h2>
+<p>看到“回购提升 EPS”或“回购返还股东”，先按六项拆：</p>
+<ol>
+<li><strong>回购资金来自哪里？</strong> 自由现金流、借债、资产出售还是减少投资；借债回购在利率上升时会反噬。</li>
+<li><strong>回购价格相对内在价值如何？</strong> 低于内在价值的回购增厚剩余股东价值；高于内在价值则摧毁价值，EPS 上升只是股本缩水。</li>
+<li><strong>税负差异有多大？</strong> 分红通常按股息征税，回购通过资本利得和股本减少实现；不同投资者税档决定偏好。</li>
+<li><strong>信号是否被夸大？</strong> 管理层可以在短期用回购支撑股价；要看回购授权、实际执行和后续取消。</li>
+<li><strong>是否牺牲了投资或缓冲？</strong> 回购提高杠杆、压缩研发或降低流动性缓冲，长期风险可能上升。</li>
+<li><strong>每股指标是否可比？</strong> EPS 上升可能来自股本减少、一次性收益或会计变化；要同时看净利润、ROIC 和每股现金流。</li>
+</ol>
+<p>回购不是“返还股东的免费午餐”，而是一项资本配置决策；价格、资金成本和替代用途决定它是否创造价值。</p>
+<h2>反证条件</h2>
+<p>回购与分红的判断依赖资金来源和信号可信度：</p>
+<ol>
+<li><strong>回购靠资产出售。</strong> 若回购由一次性资产出售支撑，EPS 增厚不可持续。</li>
+<li><strong>税制变化。</strong> 若股息税或资本利得税调整，投资者对回购的偏好会改变。</li>
+<li><strong>管理层薪酬挂钩 EPS。</strong> 若奖金以 EPS 为目标，回购可能被用来管理指标而非创造价值。</li>
+<li><strong>回购授权未执行。</strong> 若公告授权但实际不买，信号意义大于现金返还。</li>
+</ol>
+<p><strong>实践含义：</strong> 判断回购是否创造价值，要同时看价格、资金来源和替代投资；EPS 增厚只是股本缩水的算术结果。</p>
+<h2>练习</h2>
+<ol>
+<li><p>区分分红与回购的现金流和信号。</p>
+</li>
+<li><p>净利润 1,000 万元、股本 1,000 万股，EPS 多少？</p>
+</li>
+<li><p>回购 100 万股后 EPS 多少？</p>
+</li>
+<li><p>回购价 20 元、内在价值 15 元，剩余股东价值如何变化？</p>
+</li>
+<li><p>股权激励 50 万股如何影响回购的净效果？</p>
+</li>
+<li><p>为什么发债回购会增加风险？</p>
+</li>
+<li><p>判断：EPS 增厚一定创造价值吗？说明理由。</p>
+</li>
+<li><p>回购 5% 股本、用 5% 债务融资，EPS 增厚为什么会小于股本降幅？</p>
+</li>
+<li><p>为什么同等金额下，回购的信号通常弱于股利？</p>
+</li>
+<li><p>借债回购的 EPS 临界点由什么决定？</p>
+</li>
+<li><p>为什么 EPS 增厚不等于股东价值增加？</p>
+</li>
+</ol>
+<h2>关联</h2>
+<p>先修 FIN-022；对照 FIN-023；相邻 FIN-026、FIN-036。</p>
+<h2>来源</h2>
+<ol>
+<li>U.S. Securities and Exchange Commission, Investor.gov, <em>Dividend</em>. U.S. Securities and Exchange Commission, accessed 2026-10-30. <a href="https://www.investor.gov/introduction-investing/investing-basics/glossary/dividend">https://www.investor.gov/introduction-investing/investing-basics/glossary/dividend</a></li>
+<li>Julie Dahlquist; Rainford Knight, <em>Principles of Finance 2e, 2.2 Relationship between Shareholders and Company Management</em>. OpenStax, accessed 2026-10-30. <a href="https://openstax.org/books/principles-finance-2e/pages/2-2-relationship-between-shareholders-and-company-management">https://openstax.org/books/principles-finance-2e/pages/2-2-relationship-between-shareholders-and-company-management</a></li>
+<li>OpenStax, <em>Principles of Finance 2e, 11.2 Dividend Discount Models (DDMs)</em>. OpenStax, accessed 2026-10-30. <a href="https://openstax.org/books/principles-finance-2e/pages/11-2-dividend-discount-models-ddms">https://openstax.org/books/principles-finance-2e/pages/11-2-dividend-discount-models-ddms</a></li>
+<li>U.S. Securities and Exchange Commission, <em>SEC Adopts Amendments to Modernize Share Repurchase Disclosure</em>. SEC, accessed 2026-11-24. <a href="https://www.sec.gov/newsroom/press-releases/2023-85">https://www.sec.gov/newsroom/press-releases/2023-85</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>区分分红与回购的现金流和信号。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>算回购对 EPS 和股本的影响。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>区分分红与回购的现金流和信号。</li><li>算回购对 EPS 和股本的影响。</li><li>识别回购抬高 EPS、掩盖稀释的情形。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/capital-structure/">FIN-022 · 资本结构</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/dividends-and-buybacks/">FIN-023 · 分红与回购</a> </li><li> <a href="/learn/financial-institutions/">FIN-026 · 金融机构</a> </li><li> <a href="/learn/cross-border-payments-and-reserve-currencies/">FIN-036 · 跨境支付与储备货币：国际金融的管道</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.investor.gov/introduction-investing/investing-basics/glossary/dividend" rel="noopener noreferrer" target="_blank">Dividend</a> <p>U.S. Securities and Exchange Commission, Investor.gov · U.S. Securities and Exchange Commission</p> <p>访问：2026-10-30 · 许可：FINRA-operated site for the SEC; © FINRA — cite and link only, no reproduction</p> <p>支持论点：支持分红定义、支付流程与投资者关系。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/2-2-relationship-between-shareholders-and-company-management" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 2.2 Relationship between Shareholders and Company Management</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-10-30 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：支持股东与管理层关系、股东权利与资本返还。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/11-2-dividend-discount-models-ddms" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 11.2 Dividend Discount Models (DDMs)</a> <p>OpenStax · OpenStax</p> <p>访问：2026-10-30 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：支持股利折现模型与分红估值。</p> </div><div class="source"> <a href="https://www.sec.gov/newsroom/press-releases/2023-85" rel="noopener noreferrer" target="_blank">SEC Adopts Amendments to Modernize Share Repurchase Disclosure</a> <p>U.S. Securities and Exchange Commission · SEC</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：支持美国回购披露规则与回购规模、价格信息。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/buyback-vs-dividend-payout-signal-eps/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

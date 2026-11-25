@@ -1,0 +1,294 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>货币的时间价值 · 巫妖投资</title><meta name="description" content="不同时点的现金流不能直接相加；复利把今天的价值推向未来，贴现把未来价值拉回今天。"><link rel="canonical" href="https://finance.51invest.com/learn/time-value-of-money/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/time-value-of-money/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/time-value-of-money/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/time-value-of-money/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/time-value-of-money/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">货币的时间价值</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">方法</span> <h1 class="article-title">货币的时间价值</h1> <p class="article-summary">不同时点的现金流不能直接相加；复利把今天的价值推向未来，贴现把未来价值拉回今天。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M08 · 时间价值</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>8 分钟 · 13 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>问题与输出</h2>
+<p>今天的 1,000 元和三年后的 1,000 元不是同一件事。前者可以立即投资、消费或保留选择权；后者要等待，并承担不确定性。货币的时间价值方法把不同时点的现金流换算到同一时点，用于比较投资、贷款、储蓄和项目。输出通常是一个现值、终值、年金现值或净现值（NPV），而不是一个没有期限和利率背景的“总回报”。</p>
+<h2>输入与数据要求</h2>
+<ul>
+<li>每笔现金流的金额、方向和发生时点；</li>
+<li>利率或贴现率，以及它是年利率、月利率还是有效年利率；</li>
+<li>计息频率和复利方式；</li>
+<li>期限、币种和现金流是否确定；</li>
+<li>现金流是否有税收、费用、通胀或信用风险调整。</li>
+</ul>
+<p>利率必须和现金流频率匹配：年利率配年度现金流，月利率配月度现金流。名义年利率与有效年利率不同，不能混用。</p>
+<p>复利使资金在前期已赚利息上继续增长，贴现把未来现金流换算为现值；本文把两者作为同一时间价值关系的两个方向。OpenStax 1.8 分别说明更长时间会带来更多复利、市场价值可用预期未来现金流折现到今天来理解[1]。</p>
+<h2>假设</h2>
+<p>基础公式假设：利率在期限内不变；现金流按约定时点发生；可以按该利率再投资；没有税收、费用、通胀或违约差异；现金流确定。现实比较中，这些假设需要逐项检查。</p>
+<h2>步骤与公式</h2>
+<p>终值（future value）：</p>
+<div class="formula" role="math" aria-label="终值等于现值乘以一加利率的n次方">FV = PV × (1 + r)^n</div>
+
+<p>现值（present value）：</p>
+<div class="formula" role="math" aria-label="现值等于终值除以一加利率的n次方">PV = FV / (1 + r)^n</div>
+
+<p>普通年金现值（每期期末支付 <code>C</code>，共 <code>n</code> 期）：</p>
+<div class="formula" role="math" aria-label="年金现值等于每期现金流乘以一减一加利率的负n次方再除以利率">PV = C × [1 - (1 + r)^(-n)] / r</div>
+
+<p>净现值：</p>
+<div class="formula" role="math" aria-label="净现值等于各期现金流现值之和减去初始投资">NPV = Σ_{t=1..n} CF_t / (1 + r)^t - CF_0（初始投资 CF_0 发生在 t = 0）</div>
+
+<p>如果年名义利率为 <code>r</code>、每年复利 <code>m</code> 次，有效年利率为：</p>
+<div class="formula" role="math" aria-label="有效年利率等于一加名义利率除以复利次数的m次方减一">EAR = (1 + r/m)^m - 1</div>
+
+<h2>例子与计算</h2>
+<p><strong>单笔现金流。</strong> 本文所有金额一律以人民币元计（下同），利率除注明外均为年利率。今天投入 1,000 元，年利率 5%，按年复利三年：</p>
+<p><code>FV = 1,000 × 1.05³ = 1,157.63</code> 元。</p>
+<p>反过来，三年后的 1,157.63 元按 5% 贴现，现值 <code>1,157.63 / 1.05³ ≈ 1,000.00</code> 元（实算 1,000.0043）。若先用未取整的终值 1,157.625 反算，则恰好回到 1,000 元；此处的约等号只来自终值已四舍五入到分，不是公式误差。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-tvm-title fig-tvm-desc" viewBox="0 0 520 200" width="100%">
+    <title id="fig-tvm-title">一千元按百分之五复利三年的终值</title>
+    <desc id="fig-tvm-desc">时间轴从第零年到第三年，金额依次为一千元、一千零五十元、一千一百零二点五零元和一千一百五十七点六三元。</desc>
+    <line x1="60" y1="140" x2="470" y2="140" stroke="var(--border)" stroke-width="2"></line>
+    <g fill="var(--muted)" font-size="11" font-family="inherit">
+      <text x="55" y="165">0</text>
+      <text x="180" y="165">1</text>
+      <text x="305" y="165">2</text>
+      <text x="430" y="165">3 年</text>
+    </g>
+    <g stroke="var(--accent)" stroke-width="2">
+      <line x1="60" y1="135" x2="60" y2="100"></line>
+      <line x1="185" y1="135" x2="185" y2="100"></line>
+      <line x1="310" y1="135" x2="310" y2="100"></line>
+      <line x1="435" y1="135" x2="435" y2="100"></line>
+    </g>
+    <g fill="var(--accent)" font-size="11" font-family="inherit">
+      <text x="30" y="88">1,000.00</text>
+      <text x="155" y="88">1,050.00</text>
+      <text x="280" y="88">1,102.50</text>
+      <text x="405" y="88">1,157.63</text>
+    </g>
+  </svg>
+  <figcaption>图 1：1,000 元按 5% 年复利三年的增长路径。时间轴上的数额单位为人民币元。图只表示复利假设，不表示实际投资收益或通胀。</figcaption>
+</figure>
+
+<p><strong>年金。</strong> 每年年末收到 100 元，连续三年，贴现率 5%：</p>
+<p><code>PV = 100 × [1 - 1.05⁻³] / 0.05 ≈ 272.32</code> 元。也就是说，未来三年每年年末收到的 100 元，在 5% 贴现率下相当于今天 272.32 元；名义总额 300 元与现值 272.32 元的差额 27.68 元就是等待的贴现成本。</p>
+<p><strong>净现值。</strong> 初始投入 1,000 元，之后三年每年年末收到 400 元，贴现率 5%：</p>
+<p><code>NPV = -1,000 + 400/1.05 + 400/1.05² + 400/1.05³ ≈ 89.30</code> 元（本文统一以支出为负、收入为正的记号；下文“支付”指流出、“收到”指流入，不表示两套口径）。</p>
+<p>正的 NPV 表示按 5% 的要求回报率，项目带来的现值超过初始成本；这不等于项目没有风险，也不等于实际收益一定是 5%。</p>
+<p><strong>计息频率。</strong> 名义年利率 12%、按月复利，有效年利率为 <code>(1 + 0.12/12)^12 - 1 ≈ 12.68%</code>，高于名义 12%。比较产品时必须统一口径；不同计息频率的完整对照见利率种类与口径主文（FIN-012）。</p>
+<p>本文把计算当作工具而非答案：OpenStax 说明财务工具帮助人们做一致且可重复的决策[2]；把这一工具用于时间、风险与价值的比较，是本文的框架。</p>
+<h2>结果解读</h2>
+<ul>
+<li>现值随贴现率上升而下降；期限越长，对贴现率越敏感。</li>
+<li>终值随利率和期限上升；复利频率越高，有效年利率通常越高。</li>
+<li>NPV 为正表示在给定贴现率和现金流假设下，项目增加价值；NPV 为负表示不满足要求回报率。</li>
+<li>不能只比较名义现金流总和；必须把时点、风险和融资成本纳入。</li>
+</ul>
+<h2>失败条件</h2>
+<ul>
+<li>现金流不确定或依赖未来决策时，单一贴现率可能掩盖风险差异；教材给出的做法是把用于贴现的利率按项目现金流的风险上下调整[3]。</li>
+<li>贴现率与现金流风险不匹配，会高估或低估价值。</li>
+<li>比较期限、规模或风险不同的项目时，只看 NPV 绝对值可能误导；需要补充收益率、回收期或风险调整。</li>
+<li>内部收益率（IRR）可能没有唯一解：教材的条件是负现金流出现在不止一期，此时 NPV 曲线两次穿过横轴、对应两个使 NPV 为零的利率[4]；IRR 又把现金流化成百分比、忽略项目规模差异，所以不能直接据此比较规模不同的项目[4]。</li>
+<li>负利率下公式仍可计算，但“钱随时间必然增长”的直觉不成立。</li>
+<li>忽略税收、费用、通胀、流动性和再投资风险，会改变结论。</li>
+</ul>
+<h2>验证与复现</h2>
+<ol>
+<li>写出每笔现金流的时点和符号。</li>
+<li>统一利率和现金流频率，明确名义/有效口径。</li>
+<li>用公式计算，并用时间轴或表格核对。</li>
+<li>改变贴现率、期限或增长率，检查结论是否稳健。</li>
+<li>报告假设、单位、币种和不确定性；不要只给最终数字。</li>
+</ol>
+<!-- kp-supplement:start -->
+<h2>知识点精读</h2>
+<h3>单利复利</h3>
+<p><strong>定义</strong>：单利只对本金计息，复利把已产生利息并入本金继续计息。</p>
+<p><strong>机制</strong>：复利下终值按本金乘以 1 加利率的期数次方增长；频率越高，实际年利率越高。</p>
+<p><strong>例子</strong>：例如 100 元按 5% 单利两年得 110 元，按年复利得 110.25 元；期限越长差距越大。</p>
+<p><strong>边界</strong>：复利不是自然法则；负利率、税收、费用和现金流时点会改变结果，高频复利在短期限内的增量有限。</p>
+<h3>现值终值</h3>
+<p><strong>定义</strong>：现值把未来现金流按贴现率折算到今天，终值把今天资金按复利推到未来。</p>
+<p><strong>机制</strong>：现值和终值互为逆运算；贴现率反映机会成本、风险和通胀，现金流时点必须与利率口径匹配。</p>
+<p><strong>例子</strong>：例如 105 元一年后、贴现率 5%，现值约 100 元；若风险更高，贴现率上升、现值下降。</p>
+<p><strong>边界</strong>：现值不是确定价格；贴现率选择含主观风险判断，远期现金流对贴现率高度敏感，税收和流动性也会改变。</p>
+<h3>年金</h3>
+<p><strong>定义</strong>：年金是一系列等额、等间隔的现金流，分为普通年金、先付年金、永续年金和增长年金。</p>
+<p><strong>机制</strong>：普通年金现值等于每期现金流乘以年金因子；永续年金现值为现金流除以贴现率，增长永续再加增长率。</p>
+<p><strong>例子</strong>：例如每年末收 100 元、持续 3 年、贴现率 5%，现值约 272.32 元。</p>
+<p><strong>边界</strong>：年金公式假设现金流固定、间隔规则且贴现率不变；增长永续假设增长率低于贴现率，否则现值发散。</p>
+<h3>现金流贴现和利率转换</h3>
+<p><strong>定义</strong>：现金流贴现是把不同时点的现金流按统一利率折现并加总，用于估值和资本预算。</p>
+<p><strong>机制</strong>：利率转换把名义、实际、有效和连续利率统一口径；净现值等于现值减初始投资，内部收益率使净现值为零。</p>
+<p><strong>例子</strong>：例如项目投入 100 元、一年后回收 110 元，贴现率 8%，净现值约 1.85 元。</p>
+<p><strong>边界</strong>：DCF 对预测期、终值和贴现率敏感；内部收益率有再投资假设和多解问题，利率转换也要匹配现金流频率。</p>
+<!-- kp-supplement:end -->
+
+<h2>关联</h2>
+<p>现值与现金流贴现的基础公式见《现值与现金流贴现》（FIN-011）；名义利率与实际利率的换算见《单利与复利》（FIN-010）；利率的名义与实际、税前与税后、年化与计息频率口径见《利率种类与口径》（FIN-012）。三篇与本文共用同一组教学假设口径。</p>
+<h2>图解</h2>
+<p>下面三张图分别检查本文的机制、边界与对照；图内文字取自本文小节，不是新数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">货币的时间价值：机制链</title>
+    <desc id="fig-batch-chain-desc">货币的时间价值 的三段结构：问题、机制、判断。图内文字取自本文小节，不是新的数据估计。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">货币的时间价值：机制链</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图内文字取自本文小节；三段缺一不可。</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不同时点的现金流不能</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">直接相加；复利把今天…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">不同时点的现金流不</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">能直接相加；复利把</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">今天的价值推向未来</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">，贴现把未来价值拉</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">回今天。</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题与输出</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">问题与输出：今天的</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">1,000 元和三年后的…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">问题与输出：今天的</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start"> 1,000 元和三年后</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">的 1,000</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">元不是同一件事。前</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">者可以立即投资、消…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">输入与数据要求</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">每笔现金流的金额、方</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">向和发生时点…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">每笔现金流的金额、</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">方向和发生时点；</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">利率或贴现率，以及</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">它是年利率、月利率</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">还是有效年利率…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">读法：先看问题能否成立，再看机制能否连通，最后看判断会不会越界。</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">若中间一步缺证据，后面的结论只能当假设，不能当事实。</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为结构示意，不是新的数据图；样本为本文论证。</text>
+  </svg>
+  <figcaption>图 2：货币的时间价值的机制链：从问题、机制到判断。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">货币的时间价值：适用边界</title>
+    <desc id="fig-batch-boundary-desc">把成立条件与失效条件分开；局部例子不能自动推广到所有情形。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">货币的时间价值：什么情况下成立？</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">先检查条件，再看结论</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">条件、口径或样本一变，结论可能要重算</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成立</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">现金流不确定或依赖未来决策时，单</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">一贴现率可能掩盖风险差异；教材给</text>
+      <text x="24" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">出的做法是把用于贴现的利率按项目</text>
+      <text x="24" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">现金流的风险上下调整。</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不成立 / 需改写</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">现值与现金流贴现的基础公式见《现</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">值与现金流贴现》（FIN-011）；名义</text>
+      <text x="188" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">利率与实际利率的换算见《单利与复</text>
+      <text x="188" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">利》（FIN-010）；利率的名义与实际…</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">图为边界示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 3：货币的时间价值的边界：哪些条件成立，哪些条件失效。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">货币的时间价值：对象、前提与常见误区</title>
+    <desc id="fig-batch-compare-desc">三行比较本文概念、成立条件与常见误区；比较不等于等价，也不能替代定义。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">货币的时间价值：一张表看对象、前提与误区</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">本篇</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">容易混淆</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">对象</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">不同时点的现金流不能直接</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相加；复利把今天的价值推…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相邻概念/常见说法</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">前提</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">现金流不确定或依赖未来决</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">策时，单一贴现率可能掩盖…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">现值与现金流贴现的基础公式见《现值与</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">现金流贴现》（FIN-011）；名义利率与实…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">检查</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">先定义，再比较；不能只看</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">名称</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相关不等于因果，局部不等于普遍</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为比较示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 4：货币的时间价值的对象、前提与常见误区比较。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<h2>练习</h2>
+<ol>
+<li><strong>现值。</strong> 三年后的 1,157.63 元，按 5% 年贴现率，现值是多少？</li>
+<li><strong>频率。</strong> 名义年利率 12%、按月复利，有效年利率约为多少？为什么高于 12%？</li>
+<li><strong>项目比较。</strong> 两个项目初始投入相同，NPV 分别为 100 元和 200 元，但后者风险更高。能否直接选择后者？还需要什么信息？</li>
+</ol>
+<details>
+<summary>参考答案</summary>
+
+<ol>
+<li><code>1,157.63 / 1.05³ ≈ 1,000.00</code> 元；用未取整的 1,157.625 反算得 1,000 元。</li>
+<li><code>(1 + 0.12/12)^12 - 1 ≈ 12.68%</code>。月复利使利息在年内继续生息，因此有效年利率高于名义利率。</li>
+<li>不能只看 NPV。还要比较风险、现金流不确定性、期限、融资条件和资本约束；必要时按现金流风险调整贴现率[3]。情景分析是本文补的做法，16.2 与 16.3 均未使用该名。</li>
+</ol>
+</details>
+
+<h2>来源</h2>
+<ol>
+<li><p>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “1.8 Concepts of Time and Value.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/1-8-concepts-of-time-and-value">https://openstax.org/books/principles-finance-2e/pages/1-8-concepts-of-time-and-value</a>（访问日期：2026-10-30）</p>
+</li>
+<li><p>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “1 Why It Matters.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/1-why-it-matters">https://openstax.org/books/principles-finance-2e/pages/1-why-it-matters</a>（访问日期：2026-10-30）</p>
+</li>
+<li><p>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “16.2 The Net Present Value (NPV) Method.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/16-2-net-present-value-npv-method">https://openstax.org/books/principles-finance-2e/pages/16-2-net-present-value-npv-method</a>（访问日期：2026-11-03）</p>
+</li>
+<li><p>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “16.3 The Internal Rate of Return (IRR) Method.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/16-3-internal-rate-of-return-irr-method">https://openstax.org/books/principles-finance-2e/pages/16-3-internal-rate-of-return-irr-method</a>（访问日期：2026-11-03）</p>
+</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>用复利和贴现公式比较不同时点的现金流。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>在给定现金流、利率和期限下计算终值、现值、年金现值与净现值。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>用复利和贴现公式比较不同时点的现金流。</li><li>在给定现金流、利率和期限下计算终值、现值、年金现值与净现值。</li><li>说明利率口径、现金流不确定性和项目比较中的失败条件。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <p class="muted"> 无必需先修。 </p> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/simple-and-compound-interest/">FIN-010 · 单利与复利</a> </li><li> <a href="/learn/present-value-and-discounted-cash-flows/">FIN-011 · 现值与现金流贴现</a> </li><li> <a href="/learn/interest-rate-types-and-conventions/">FIN-012 · 利率种类与口径</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/1-8-concepts-of-time-and-value" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 1.8 Concepts of Time and Value</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-10-30 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：1.8 节说明更长的投资时间会带来更多复利、提高未来价值，并说明市场价值可用预期未来现金流折现到今天来理解；该页没有给出“复利与贴现互为逆运算”的公式化表述，这一层是本文的概括。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/1-why-it-matters" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 1 Why It Matters</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-10-30 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：该页说明财务工具帮助人们做一致且可重复的决策；它没有把这一作用限定为“时间、风险与价值”三维，该三维框架是本文的概括。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/16-2-net-present-value-npv-method" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 16.2 The Net Present Value (NPV) Method</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-11-03 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：NPV 判据与风险调整：逐字&quot;the discount rate used to discount future cash flows to the present can be increased or decreased to adjust for the riskiness of the project’s cash flows.&quot;；正 NPV 接受、负 NPV 拒绝。该页不出现 risk-adjusted 这一形容词，也不讨论 IRR 的多解或情景分析（scenario）。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/16-3-internal-rate-of-return-irr-method" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 16.3 The Internal Rate of Return (IRR) Method</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-11-03 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：IRR 的两项限制：逐字&quot;Another disadvantage of using the IRR method is that there may not be a single mathematical solution to an IRR problem. This can happen when negative cash flows occur in more than one period in the project.&quot;，并以 (−350, 950, −620) 百万的算例说明&quot;Because the NPV profile line crosses the horizontal axis twice, there are two IRRs. In other words, there are two interest rates at which NPV equals zero.&quot;；规模问题逐字&quot;The IRR converts the cash flows to percentages and ignores differences in the size or scale of projects.&quot;。该页不出现 risk-adjusted 字样。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/time-value-of-money/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>信用创造的约束：资本、流动性与贷款需求 · 巫妖投资</title><meta name="description" content="银行不是“吸收存款再贷款”，而是在资本、流动性和贷款需求三重约束下创造信用。本文用一张 T 型账户和一个资本充足率算例，说明为什么同样一笔存款，有的银行能放出 90 元贷款，有的只能放 60 元。"><link rel="canonical" href="https://finance.51invest.com/learn/credit-creation-constraints-capital-liquidity-loan-demand/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/credit-creation-constraints-capital-liquidity-loan-demand/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/credit-creation-constraints-capital-liquidity-loan-demand/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/credit-creation-constraints-capital-liquidity-loan-demand/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/credit-creation-constraints-capital-liquidity-loan-demand/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">信用创造的约束：资本、流动性与贷款需求</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">信用创造的约束：资本、流动性与贷款需求</h1> <p class="article-summary">银行不是“吸收存款再贷款”，而是在资本、流动性和贷款需求三重约束下创造信用。本文用一张 T 型账户和一个资本充足率算例，说明为什么同样一笔存款，有的银行能放出 90 元贷款，有的只能放 60 元。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M03 · 银行原理</strong></div> <div class="meta-item"><span>层级</span><strong>系统</strong></div> <div class="meta-item"><span>阅读</span><strong>8 分钟 · 13 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义与直觉</h2>
+<p><strong>信用创造</strong>指银行通过放贷同时创造存款。银行发放 100 元贷款时，借款人的存款账户增加 100 元，银行资产端多了一笔贷款、负债端多了一笔存款；整个过程不需要先有 100 元存款。</p>
+<p>但银行不能无限创造信用。它受三重约束：<strong>资本</strong>（吸收损失，资本充足率要求）、<strong>流动性</strong>（应对提款和结算，流动性覆盖率）、<strong>贷款需求</strong>（企业和家庭愿不愿意借）。资本和流动性是供给约束，贷款需求是需求约束；两者同时紧时，信贷缺口最大[1][2]。</p>
+<p><strong>资本充足率</strong> = 资本 / 风险加权资产。贷款风险权重越高，同样资本能支持的贷款越少。<strong>流动性覆盖率</strong> = 高质量流动性资产 / 30 天净流出；它约束银行在压力下能否撑住提款。</p>
+<h2>T 型账户</h2>
+<p>假设银行初始有资本 10 元、存款 90 元，资产是现金 100 元。现在发放 80 元贷款：资产端贷款 +80、现金 −80；负债端存款 +80。资产负债表变为贷款 80、现金 20、存款 170、资本 10。</p>
+<p>若风险权重为 100%，资本充足率 = 10/80 = 12.5%，高于 10% 要求，银行还能放款。若再放 20 元，贷款 100，资本充足率降到 10%，刚好触线；再放就不足。</p>
+<p>流动性覆盖率也要看：若 30 天净流出为 20 元，高质量流动性资产至少 20 元；银行现金 20 元刚好覆盖。资本和流动性两个约束，哪个先绑住，放款上限就由哪个决定。以上数字均为教学假设。</p>
+<h2>正式表达与示例</h2>
+<p>两家银行都有 100 元存款、10 元资本。A 银行风险权重 50%，资本要求 10%，理论贷款上限为 <code>10/(0.10×0.50)=200 元</code>；B 银行风险权重 100%，上限为 <code>10/(0.10×1.00)=100 元</code>。同样资本，A 能放更多低风险贷款。</p>
+<p>若 A 的贷款需求只有 80 元，供给上限 200 元也用不上；若 B 的贷款需求 150 元，但资本只支持 100 元，缺口 50 元是供给约束。判断信贷缺口，要先看需求曲线，再看资本和流动性。</p>
+<p>若经济下行，银行预期违约上升，会主动收紧标准；即使资本充足，贷款供给也下降。这就是“资本约束”和“风险偏好”的区别：前者是监管底线，后者是银行自己的选择[3][4]。</p>
+<h2>图表</h2>
+<figure>
+<svg role="img" aria-labelledby="fig-credit-creation-constraints-capital-liquidity-loan-demand-1-title fig-credit-creation-constraints-capital-liquidity-loan-demand-1-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-credit-creation-constraints-capital-liquidity-loan-demand-1-title">银行信用创造的约束链</title>
+<desc id="fig-credit-creation-constraints-capital-liquidity-loan-demand-1-desc">四步：存款、贷款、资本约束、流动性约束。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">信用创造的三重约束</text>
+<text x="24" y="54" font-size="11" text-anchor="start">存款、贷款、资本、流动性四步；资本和流动性决定供给上限。</text>
+<rect x="14" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="69" y="140" font-size="12" text-anchor="middle">存款</text>
+<text x="69" y="184" font-size="12" text-anchor="middle" font-weight="700">90 元</text>
+<rect x="136" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="191" y="140" font-size="12" text-anchor="middle">贷款</text>
+<text x="191" y="184" font-size="12" text-anchor="middle" font-weight="700">80 元</text>
+<rect x="258" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="313" y="140" font-size="12" text-anchor="middle">资本</text>
+<text x="313" y="184" font-size="12" text-anchor="middle" font-weight="700">10 元</text>
+<rect x="380" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="435" y="140" font-size="12" text-anchor="middle">流动性</text>
+<text x="435" y="184" font-size="12" text-anchor="middle" font-weight="700">20 元</text>
+<line x1="125" y1="160" x2="135" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="247" y1="160" x2="257" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="369" y1="160" x2="379" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<text x="24" y="246" font-size="11" text-anchor="start">教学示意，不含统计数据。</text>
+</g>
+</svg>
+<figcaption>图 1：银行信用创造的约束链；教学示意。</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-credit-creation-constraints-capital-liquidity-loan-demand-2-title fig-credit-creation-constraints-capital-liquidity-loan-demand-2-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-credit-creation-constraints-capital-liquidity-loan-demand-2-title">资本与风险权重决定上限</title>
+<desc id="fig-credit-creation-constraints-capital-liquidity-loan-demand-2-desc">同样 10 元资本，50% 与 100% 风险权重给出 200 与 100 元上限。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">两家银行的贷款上限</text>
+<text x="24" y="54" font-size="11" text-anchor="start">A 银行风险权重 50%，上限 200 元；B 银行 100%，上限</text>
+<text x="24" y="68" font-size="11" text-anchor="start"> 100 元。</text>
+<line x1="178" y1="64" x2="178" y2="270" stroke="currentColor" stroke-width="1" opacity=".45"/>
+<text x="20" y="97" font-size="12">A 上限</text>
+<rect x="178" y="78" width="360" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="95" font-size="12" font-weight="700">200</text>
+<text x="20" y="145" font-size="12">A 需求</text>
+<rect x="178" y="126" width="144" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="143" font-size="12" font-weight="700">80</text>
+<text x="20" y="193" font-size="12">B 上限</text>
+<rect x="178" y="174" width="180" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="191" font-size="12" font-weight="700">100</text>
+<text x="20" y="241" font-size="12">B 需求</text>
+<rect x="178" y="222" width="270" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="239" font-size="12" font-weight="700">150</text>
+<text x="24" y="292" font-size="11" text-anchor="start">教学假设；单位：元。</text>
+</g>
+</svg>
+<figcaption>图 2：资本与风险权重决定上限；教学假设，单位元。</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-credit-creation-constraints-capital-liquidity-loan-demand-3-title fig-credit-creation-constraints-capital-liquidity-loan-demand-3-desc" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-credit-creation-constraints-capital-liquidity-loan-demand-3-title">信贷状态的二维矩阵</title>
+<desc id="fig-credit-creation-constraints-capital-liquidity-loan-demand-3-desc">两轴：资本充足高低、贷款需求强弱；四象限对应资产荒、正常、供给缺口和需求缺口。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">资本充足与贷款需求的四类状态</text>
+<text x="24" y="54" font-size="11" text-anchor="start">资本足、需求弱是“资产荒”；资本紧、需求强是“信贷缺口”。</text>
+<text x="40" y="68" font-size="11">资本充足</text>
+<text x="40" y="286" font-size="11">资本紧张</text>
+<text x="110" y="314" font-size="11" text-anchor="middle">需求弱</text>
+<text x="500" y="314" font-size="11" text-anchor="middle">需求强</text>
+<rect x="96" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="100" font-size="12" text-anchor="start">资产荒</text>
+<text x="108" y="130" font-size="11" text-anchor="start">资本足、需求弱</text>
+<text x="108" y="170" font-size="11" font-weight="700">放不出去</text>
+<rect x="338" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="100" font-size="12" text-anchor="start">正常</text>
+<text x="350" y="130" font-size="11" text-anchor="start">资本足、需求强</text>
+<text x="350" y="170" font-size="11" font-weight="700">均衡</text>
+<rect x="96" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="214" font-size="12" text-anchor="start">供给缺口</text>
+<text x="108" y="244" font-size="11" text-anchor="start">资本紧、需求强</text>
+<text x="108" y="284" font-size="11" font-weight="700">信贷配给</text>
+<rect x="338" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="214" font-size="12" text-anchor="start">需求缺口</text>
+<text x="350" y="244" font-size="11" text-anchor="start">资本紧、需求弱</text>
+<text x="350" y="284" font-size="11" font-weight="700">双冷</text>
+</g>
+</svg>
+<figcaption>图 3：信贷状态的二维矩阵；对比分类示意。</figcaption>
+</figure>
+
+<p>图 1 把存款、贷款、资本和流动性串成信用创造链；图 2 比较两家银行在相同资本下的贷款上限；图 3 用“资本充足—贷款需求”两轴划出四类信贷状态。图中数字均为教学假设。</p>
+<h2>适用条件与边界</h2>
+<p><strong>边界一：资本不是唯一约束。</strong> 流动性覆盖率、杠杆率、大额风险暴露和拨备都限制放款；不同银行绑定的约束不同。</p>
+<p><strong>边界二：贷款需求可以消失。</strong> 企业不投资、家庭不买房时，银行再有钱也放不出去；货币宽松不能强迫借贷。</p>
+<p><strong>边界三：影子银行会绕过部分约束。</strong> 表外工具、理财和联邦 Home Loan 银行等渠道可以改变信用创造的所在地，但也带来新的期限和流动性风险。</p>
+<p><strong>边界四：资本定义有口径差异。</strong> 核心一级资本、其他一级资本和二级资本的损失吸收能力不同；比较银行不能只看资本充足率一个数。</p>
+<h2>常见误解</h2>
+<p><strong>误解一：存款先于贷款。</strong> 银行放贷同时创造存款；存款不是放贷的前提，资本和流动性才是。</p>
+<p><strong>误解二：资本充足率越高，放贷越多。</strong> 资本充足率高但贷款需求弱，放贷不一定多；风险权重和流动性也限制放款。</p>
+<p><strong>误解三：央行放水，银行一定放贷。</strong> 央行提供准备金，但银行受资本、流动性和风险偏好约束；货币宽松不等于信贷宽松。</p>
+<h2>深化：三重约束叠加时，哪一条先绑住</h2>
+<p>资本、流动性和贷款需求不是并列的三条线，它们在不同状态下轮流成为紧约束。经济扩张时，贷款需求旺、违约率低，资本最可能先绑住；压力时，流动性先紧，银行即使资本充足也不敢放款；衰退时，需求消失，供给上限再高也没用。分析信贷缺口，要先判断当前是哪一条线在起作用。</p>
+<p><strong>资本约束有分母和分子两条路</strong>。分母是风险加权资产：同样的资本，低风险权重资产能支持更多贷款；银行可以通过调整资产结构“省”资本，比如把贷款证券化或转向低风险权重资产。分子是资本充足率：利润留存、增发或减少分红能补充资本，但速度慢。危机时分子和分母同时恶化，银行会收缩资产负债表。</p>
+<p><strong>流动性约束看的是期限错配</strong>。LCR 要求高质量流动性资产覆盖 30 天净流出；NSFR 要求一年内稳定资金支持资产。存款流失、批发性融资展期困难或表外承诺触发时，流动性约束会突然收紧。2023 年地区银行的问题不是资本不足，而是未保险存款外流和债券浮亏让流动性瞬间恶化。</p>
+<p><strong>贷款需求是常被忽略的约束</strong>。银行调查显示“标准收紧”与“需求下降”经常同时出现；若需求下降是主因，放松资本和流动性也未必能恢复信贷。日本 1990 年代和欧元区 2010 年代都出现过“银行有钱、企业不借”的局面。</p>
+<p><strong>政策含义</strong>：资本工具适合修复偿付能力，流动性工具适合争取时间，需求侧工具（财政转移、担保、降息）适合恢复借款意愿。三者错配，会变成“投放了流动性、信贷仍不增长”。</p>
+<h2>测量与政策排序</h2>
+<p><strong>信贷缺口</strong>可以用三个指标交叉判断：信贷与 GDP 的缺口、银行贷款标准调查、以及企业债与贷款利率的相对变化。若信贷增速低于名义 GDP、标准收紧、且债券市场对低评级发行人关闭，说明供给约束在起作用；若标准未收紧、利率下降但信贷仍弱，可能是需求问题。</p>
+<p><strong>资本充足率要看分子质量</strong>。核心一级资本、其他一级资本和二级资本的损失吸收能力不同；同样的资本充足率，若分子里大量是递延税资产或商誉，真实吸收损失能力更弱。比较银行时，要看核心一级资本充足率和杠杆率，而不只是总资本充足率。</p>
+<p><strong>流动性指标有期限盲区</strong>。LCR 覆盖 30 天，NSFR 覆盖一年，但挤兑可能在几小时内发生；若负债高度集中、未保险存款占比高，LCR 达标也可能在压力下迅速恶化。流动性管理需要看集中度、抵押品可用性和日间流动性。</p>
+<p><strong>政策排序</strong>：先修复偿付能力（资本注入、重组），再提供流动性（贴现窗口、回购便利），最后处理需求（财政转移、担保、降息）。顺序颠倒会让流动性流入偿付能力不足的机构，或让需求政策面对不愿放款的银行。</p>
+<p><strong>常见误用</strong>是把“降准”等同于“信贷扩张”。降准释放准备金，但若资本、风险偏好或需求受限，信贷不会同步增长；降准更多是降低资金成本，不是直接创造贷款。</p>
+<h2>延伸阅读</h2>
+<p>伯南克（Ben Bernanke）在 1983 年的论文中把“金融摩擦”引入信贷收缩分析：银行资产质量恶化会提高外部融资成本，放大投资下降。卡沙普（Anil Kashyap）与斯坦（Jeremy Stein）关于银行资本与信贷的研究，则把资本约束从“监管要求”扩展到“市场融资条件”：资本不足时，银行即使想放款也会被融资市场约束。</p>
+<p>伯南克与吉尔克里斯（Ben Bernanke and Mark Gertler）的金融加速器模型进一步说明：企业抵押品价值下降会提高风险溢价，信贷收缩又压低抵押品价值，形成负反馈。读这些文献时，把“资本、流动性、需求”三条约束代入，就能看清每条渠道在危机中如何放大。</p>
+<h2>反证条件</h2>
+<p>信用创造约束的结论依赖哪条约束先绑住：</p>
+<ol>
+<li><strong>资本约束先绑。</strong> 若银行资本不足，即使准备金充裕也无法扩张信贷；此时约束是资本，不是准备金。</li>
+<li><strong>流动性约束先绑。</strong> 若 LCR/NSFR 收紧，银行会优先持有高质量流动性资产，贷款供给下降。</li>
+<li><strong>影子银行绕开。</strong> 若信贷通过非银和表外工具创造，存款准备金要求不直接约束，监测口径要扩大。</li>
+</ol>
+<h2>练习</h2>
+<ol>
+<li><p>用 T 型账户画出 80 元贷款发放后的资产负债表。</p>
+</li>
+<li><p>资本 10、风险权重 50%、资本要求 10%，贷款上限是多少？</p>
+</li>
+<li><p>若风险权重升到 100%，重算上题上限。</p>
+</li>
+<li><p>区分资本约束、流动性约束和贷款需求约束。</p>
+</li>
+<li><p>为什么央行提供准备金不等于银行会放贷？</p>
+</li>
+<li><p>影子银行如何绕过部分约束？带来什么新风险？</p>
+</li>
+<li><p>判断：资本充足率 15% 的银行一定比 12% 的银行放贷多吗？写出两个条件。</p>
+</li>
+<li><p>经济扩张、压力、衰退三种状态下，哪一条约束最可能先绑住？</p>
+</li>
+<li><p>资本约束的分子和分母各指什么？银行可以通过哪些方式放松分母？</p>
+</li>
+<li><p>判断信贷缺口时，信贷增速、贷款标准调查和债券市场各提供什么信息？</p>
+</li>
+<li><p>为什么“降准”不一定带来信贷扩张？</p>
+</li>
+<li><p>金融加速器如何通过抵押品价值形成负反馈？</p>
+</li>
+<li><p>为什么资本约束不仅是监管要求，也包括市场融资条件？</p>
+</li>
+</ol>
+<h2>关联</h2>
+<p>先修 FIN-003；对照 FIN-004；相邻 FIN-034、FIN-033。</p>
+<h2>来源</h2>
+<ol>
+<li>Steven A. Greenlaw; David Shapiro; Daniel MacDonald, <em>Principles of Economics 3e, 27.3 The Role of Banks</em>. OpenStax, accessed 2026-10-30. <a href="https://openstax.org/books/principles-economics-3e/pages/27-3-the-role-of-banks">https://openstax.org/books/principles-economics-3e/pages/27-3-the-role-of-banks</a></li>
+<li>Board of Governors of the Federal Reserve System, <em>Assets and Liabilities of Commercial Banks in the United States (H.8)</em>. Board of Governors of the Federal Reserve System, accessed 2026-10-30. <a href="https://www.federalreserve.gov/releases/h8/current/default.htm">https://www.federalreserve.gov/releases/h8/current/default.htm</a></li>
+<li>Basel Committee on Banking Supervision, Bank for International Settlements, <em>Basel III: international regulatory framework for banks</em>. Bank for International Settlements, accessed 2026-10-30. <a href="https://www.bis.org/bcbs/basel3.htm">https://www.bis.org/bcbs/basel3.htm</a></li>
+<li>European Central Bank, <em>Bank Lending Survey</em>. European Central Bank, accessed 2026-10-30. <a href="https://www.ecb.europa.eu/stats/ecb_surveys/bank_lending_survey/html/index.en.html">https://www.ecb.europa.eu/stats/ecb_surveys/bank_lending_survey/html/index.en.html</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>用 T 型账户说明贷款创造存款的过程。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>用资本充足率和流动性覆盖率判断放款上限。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>用 T 型账户说明贷款创造存款的过程。</li><li>用资本充足率和流动性覆盖率判断放款上限。</li><li>区分供给约束与需求约束，解释信贷缺口。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/bank-balance-sheets/">FIN-003 · 银行资产负债表</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/deposits-lending-and-credit-creation/">FIN-004 · 存款贷款与信用创造</a> </li><li> <a href="/learn/rate-conventions-and-credit-spreads/">FIN-034 · 利率口径与利差：同一笔资金价格的不同标签</a> </li><li> <a href="/learn/financial-intermediation-and-funding-flows/">FIN-033 · 金融中介与直接融资：储蓄如何变成投资</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://openstax.org/books/principles-economics-3e/pages/27-3-the-role-of-banks" rel="noopener noreferrer" target="_blank">Principles of Economics 3e, 27.3 The Role of Banks</a> <p>Steven A. Greenlaw; David Shapiro; Daniel MacDonald · OpenStax</p> <p>访问：2026-10-30 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：支持银行资产负债表、存贷款与信用创造的基础机制。</p> </div><div class="source"> <a href="https://www.federalreserve.gov/releases/h8/current/default.htm" rel="noopener noreferrer" target="_blank">Assets and Liabilities of Commercial Banks in the United States (H.8)</a> <p>Board of Governors of the Federal Reserve System · Board of Governors of the Federal Reserve System</p> <p>访问：2026-10-30 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：支持美国银行资产、负债与贷款项目的统计口径。</p> </div><div class="source"> <a href="https://www.bis.org/bcbs/basel3.htm" rel="noopener noreferrer" target="_blank">Basel III: international regulatory framework for banks</a> <p>Basel Committee on Banking Supervision, Bank for International Settlements · Bank for International Settlements</p> <p>访问：2026-10-30 · 许可：BIS terms: non-commercial download, display and redistribution allowed with attribution</p> <p>支持论点：支持资本充足率、杠杆率和流动性监管的国际框架。</p> </div><div class="source"> <a href="https://www.ecb.europa.eu/stats/ecb_surveys/bank_lending_survey/html/index.en.html" rel="noopener noreferrer" target="_blank">Bank Lending Survey</a> <p>European Central Bank · European Central Bank</p> <p>访问：2026-10-30 · 许可：ECB statistics terms; attribution required</p> <p>支持论点：支持欧元区银行放贷调查与贷款供需变化的证据。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/credit-creation-constraints-capital-liquidity-loan-demand/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

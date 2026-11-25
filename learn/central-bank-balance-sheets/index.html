@@ -1,0 +1,338 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>中央银行资产负债表 · 巫妖投资</title><meta name="description" content="中央银行资产负债表把证券、放款和外汇储备列为资产，把流通中现金与银行准备金列为负债；它记录基础货币如何投放，也说明央行扩表并不需要先有存款。"><link rel="canonical" href="https://finance.51invest.com/learn/central-bank-balance-sheets/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/central-bank-balance-sheets/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/central-bank-balance-sheets/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/central-bank-balance-sheets/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/central-bank-balance-sheets/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">中央银行资产负债表</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">中央银行资产负债表</h1> <p class="article-summary">中央银行资产负债表把证券、放款和外汇储备列为资产，把流通中现金与银行准备金列为负债；它记录基础货币如何投放，也说明央行扩表并不需要先有存款。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M04 · 中央银行业务</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>7 分钟 · 12 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义</h2>
+<p>中央银行资产负债表（central bank balance sheet）记录中央银行在某一时点的资产、负债和资本，遵循 <code>资产 = 负债 + 资本</code>。负债侧主要是流通中现金和银行准备金，合称基础货币；资产侧主要是证券、放款和外汇储备。</p>
+<h2>直觉</h2>
+<p>商业银行要用存款等负债为资产融资，中央银行却不必先吸收存款才能买入资产。它买入证券时，只需给卖方银行记一笔准备金，资产和负债同时增加；公开市场操作正是通过买卖证券来调节准备金供给[2]。准备金是央行开出的负债，扩表因此不受“手头现金”限制；约束是通胀、汇率和可信度。</p>
+<h2>正式表达</h2>
+<p>表 1：简化中央银行资产负债表（单位：亿元人民币，教学假设）</p>
+<table>
+<thead>
+<tr>
+<th>资产</th>
+<th align="right">金额</th>
+<th>负债与资本</th>
+<th align="right">金额</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>证券</td>
+<td align="right">4,200</td>
+<td>流通中现金</td>
+<td align="right">2,300</td>
+</tr>
+<tr>
+<td>对银行放款</td>
+<td align="right">600</td>
+<td>银行准备金</td>
+<td align="right">3,200</td>
+</tr>
+<tr>
+<td>外汇储备</td>
+<td align="right">800</td>
+<td>政府存款</td>
+<td align="right">300</td>
+</tr>
+<tr>
+<td>其他资产</td>
+<td align="right">400</td>
+<td>其他负债</td>
+<td align="right">100</td>
+</tr>
+<tr>
+<td></td>
+<td align="right"></td>
+<td><strong>负债合计</strong></td>
+<td align="right"><strong>5,900</strong></td>
+</tr>
+<tr>
+<td></td>
+<td align="right"></td>
+<td><strong>资本</strong></td>
+<td align="right"><strong>100</strong></td>
+</tr>
+<tr>
+<td><strong>资产合计</strong></td>
+<td align="right"><strong>6,000</strong></td>
+<td><strong>负债与资本合计</strong></td>
+<td align="right"><strong>6,000</strong></td>
+</tr>
+</tbody></table>
+<p>资产 <code>6,000 = 负债 5,900 + 资本 100</code>（单位：亿元人民币）。基础货币为现金 2,300 + 准备金 3,200 = 5,500 亿元，占资产 <code>5,500 ÷ 6,000 = 91.7%</code>。买入 100 亿元证券时，证券和准备金各增 100 亿元；卖出则相反。 本文的“资本”就是 FIN-017 定义的“权益”（资产减负债的差额），只是央行资产负债表沿用“资本”一词；这是本文在 2026-11-03 作出的术语裁定，不声称各辖区披露用语一致，也不用于判断任何具体央行的资本是否充足。</p>
+<h2>适用条件与边界</h2>
+<ol>
+<li><strong>本币与外币不对称。</strong> 本币可以创造，外汇储备不能；固定汇率下持续干预会耗尽外汇。</li>
+<li><strong>资本为负不等于立即停摆。</strong> 本币央行仍可创造负债运作，但长期亏损会损害独立性与政策可信度。</li>
+<li><strong>账面价值不是市值。</strong> 证券按摊余成本或公允价值计量，利率上升会造成未实现亏损；资本很薄时，亏损容易吞掉全部缓冲。</li>
+<li><strong>统计口径不同。</strong> 美联储 H.4.1 表 1 每周列示证券持有和准备金余额[1]；欧洲央行年度资产负债表合并欧元体系各央行与欧央行在年末对第三方的资产和负债[3]，两者不能直接比较。</li>
+<li><strong>扩表原因不同。</strong> 公开市场购买[2]、再贷款和外汇干预都扩表，但政策含义不同，不能只看总资产。</li>
+</ol>
+<h2>例子与计算</h2>
+<p>沿用表 1（教学假设，金额单位为亿元人民币）。央行从银行买入 100 亿元证券：资产从 6,000 亿元增至 6,100 亿元，负债从 5,900 亿元增至 6,000 亿元，资本仍为 100 亿元；基础货币从 5,500 亿元增至 5,600 亿元（现金 2,300 亿元加准备金 3,300 亿元）。变化只发生在银行与央行之间，非银行部门存款未增加。</p>
+<p>若证券市值下跌 5%，且按市值重估，<code>4,200 × 5% = 210</code> 亿元减值直接落在资本上：资本从 100 亿元降为 <code>100 - 210 = -110</code> 亿元，资产变为 5,790 亿元，负债仍为 5,900 亿元，<code>5,790 - 5,900 = -110</code> 亿元即资本。减值前资本 100 亿元只占资产 6,000 亿元的 <code>100 ÷ 6,000 ≈ 1.7%</code>。</p>
+<h2>图表</h2>
+<p>表 2：买入 100 亿元证券的账面变化（单位：亿元人民币，教学假设）</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th align="right">买入前</th>
+<th align="right">买入后</th>
+<th align="right">变化</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>证券</td>
+<td align="right">4,200</td>
+<td align="right">4,300</td>
+<td align="right">+100</td>
+</tr>
+<tr>
+<td>银行准备金</td>
+<td align="right">3,200</td>
+<td align="right">3,300</td>
+<td align="right">+100</td>
+</tr>
+<tr>
+<td>资产合计</td>
+<td align="right">6,000</td>
+<td align="right">6,100</td>
+<td align="right">+100</td>
+</tr>
+<tr>
+<td>资本</td>
+<td align="right">100</td>
+<td align="right">100</td>
+<td align="right">0</td>
+</tr>
+</tbody></table>
+<p>表 2 是教学模型：资产与负债同增 100 亿元，资本不变，因此负债率上升、资本占资产的比重从 1.7% 降到约 1.6%。它不是任何真实央行的数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-cbs-title fig-cbs-desc" viewBox="0 0 420 220" width="100%">
+    <title id="fig-cbs-title">央行资产负债表的两侧堆叠</title>
+    <desc id="fig-cbs-desc">两根等高堆叠柱，均为一百五十像素，代表六千亿元。左柱资产：证券四千二百、对银行放款六百、外汇储备八百、其他资产四百。右柱负债与资本：流通中现金两千三百、银行准备金三千二百、政府存款三百、其他负债一百、资本一百。两侧合计相等。</desc>
+    <line x1="60" y1="190" x2="380" y2="190" stroke="var(--border)" stroke-width="2"></line>
+    <rect x="110" y="85" width="80" height="105" fill="var(--accent)" opacity="0.8"></rect>
+    <rect x="110" y="70" width="80" height="15" fill="var(--accent)" opacity="0.6"></rect>
+    <rect x="110" y="50" width="80" height="20" fill="var(--accent)" opacity="0.45"></rect>
+    <rect x="110" y="40" width="80" height="10" fill="var(--accent)" opacity="0.3"></rect>
+    <rect x="250" y="132.5" width="80" height="57.5" fill="var(--gold)" opacity="0.7"></rect>
+    <rect x="250" y="52.5" width="80" height="80" fill="var(--gold)" opacity="0.95"></rect>
+    <rect x="250" y="45" width="80" height="7.5" fill="var(--gold)" opacity="0.55"></rect>
+    <rect x="250" y="40" width="80" height="5" fill="var(--muted)" opacity="0.55"></rect>
+    <g fill="var(--muted)" font-size="11" font-family="inherit">
+      <text x="60" y="20">亿元（零基线，每 1 亿元 = 0.025 像素，两侧等高）</text>
+      <text x="116" y="140">证券 4,200</text>
+      <text x="116" y="84">放款 600</text>
+      <text x="256" y="92">准备金 3,200</text>
+      <text x="256" y="164">现金 2,300</text>
+      <text x="104" y="208">资产合计 6,000</text>
+      <text x="244" y="208">负债 5,900 + 资本 100</text>
+    </g>
+  </svg>
+  <figcaption>图 1：示例央行资产负债表两侧堆叠（亿元，零基线，每亿元 0.025 像素）：资产为证券 4,200、对银行放款 600、外汇储备 800、其他 400；负债与资本为流通中现金 2,300、准备金 3,200、政府存款 300、其他负债 100、资本 100。两柱同为 150 像素高即合计 6,000 亿元相等；政府存款与较薄段未按文字标注。金额为教学假设。</figcaption>
+</figure>
+
+<h2>常见误解</h2>
+<ul>
+<li><strong>扩表等于印钞。</strong> 扩表增加准备金，但它变成广义货币取决于银行放贷和公众持币。</li>
+<li><strong>央行可以无限扩张。</strong> 名义约束很弱，但通胀、汇率和信誉是实际约束。</li>
+<li><strong>资产负债表越大越宽松。</strong> 规模还受经济规模、现金需求和制度影响，还要看资产结构与利率工具。</li>
+</ul>
+<!-- kp-supplement:start -->
+<h2>知识点精读</h2>
+<h3>央行资产负债表</h3>
+<p><strong>定义</strong>：央行资产负债表列出资产（国债、贷款、外汇）和负债（现金、准备金、央行票据），反映货币操作。</p>
+<p><strong>机制</strong>：资产购买扩张负债和基础货币，出售或到期收缩；外汇占款、财政存款和利率工具改变结构。</p>
+<p><strong>例子</strong>：例如央行买入国债，资产端增加、银行准备金负债端增加，基础货币上升。</p>
+<p><strong>边界</strong>：央行资产负债表不是企业报表；资本可为负仍能运作，资产质量与政治约束重要，扩表不等于通胀必然上升。</p>
+<h3>准备金</h3>
+<p><strong>定义</strong>：准备金是银行在央行的存款和库存现金，用于结算、满足法定要求和流动性缓冲。</p>
+<p><strong>机制</strong>：准备金分为法定和超额；央行通过公开市场、准备金率和利率走廊调节数量和价格。</p>
+<p><strong>例子</strong>：例如银行需按存款一定比例缴存准备金，超出部分可放在央行赚取利息或用于支付。</p>
+<p><strong>边界</strong>：准备金不是银行可自由放贷的现金；资本、信贷需求和监管同样约束，法定准备金率变化的影响取决于制度和流动性环境。</p>
+<h3>结算</h3>
+<p><strong>定义</strong>：结算是交易双方最终完成资金或证券转移、解除债务的过程，通常通过央行账户或中央证券登记系统。</p>
+<p><strong>机制</strong>：结算的最终性、时点和对手方风险影响支付系统稳定；实时全额、净额和日间透支是不同安排。</p>
+<p><strong>例子</strong>：例如银行间大额转账通过央行实时全额系统逐笔结算，完成后不可撤销。</p>
+<p><strong>边界</strong>：结算不是清算；清算只计算应收应付，结算才转移资产，系统故障、流动性不足和法律最终性会造成连锁风险。</p>
+<h3>公开市场</h3>
+<p><strong>定义</strong>：公开市场操作是央行在金融市场买卖证券或进行回购，以调节准备金、短期利率和流动性。</p>
+<p><strong>机制</strong>：买入或逆回购注入资金，卖出或正回购回收；期限、抵押品和交易对手决定传导范围。</p>
+<p><strong>例子</strong>：例如央行开展 7 天逆回购，向一级交易商注入短期资金，压低货币市场利率。</p>
+<p><strong>边界</strong>：公开市场不是万能微调；抵押品短缺、市场分割和利率走廊会限制传导，央行也可能被动对冲财政和外汇流。</p>
+<h3>常备工具和政策操作框架</h3>
+<p><strong>定义</strong>：常备工具是金融机构可主动使用的央行贷款或存款便利，政策框架则组合利率走廊、准备金和公开市场操作。</p>
+<p><strong>机制</strong>：利率走廊用贷款便利利率设上限、存款便利利率设下限，公开市场操作调节稀缺性；框架决定短端利率稳定度。</p>
+<p><strong>例子</strong>：例如银行缺流动性可向央行贷款便利借款，多余资金可存回央行，货币市场利率被夹在走廊内。</p>
+<p><strong>边界</strong>：框架不是单一工具；抵押品、对手方范围、财政账户和外汇干预会改变走廊，危机时工具可能从价格型转向数量型。</p>
+<!-- kp-supplement:end -->
+
+<h2>关联</h2>
+<ul>
+<li>先修：银行资产负债表（FIN-003）。</li>
+<li>后续：准备金与流动性（FIN-006）、支付清算与结算（FIN-007）。</li>
+<li>工具：资产负债权益等式（FIN-017）；本主题连接利率、债券价格与宏观政策分析。</li>
+<li>另见：存款贷款与信用创造（FIN-004）。</li>
+</ul>
+<h2>图解</h2>
+<p>下面三张图分别检查本文的机制、边界与对照；图内文字取自本文小节，不是新数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">中央银行资产负债表：机制链</title>
+    <desc id="fig-batch-chain-desc">中央银行资产负债表 的三段结构：问题、机制、判断。图内文字取自本文小节，不是新的数据估计。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">中央银行资产负债表：机制链</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图内文字取自本文小节；三段缺一不可。</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">中央银行资产负债表把</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">证券、放款和外汇储备…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">中央银行资产负债表</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">把证券、放款和外汇</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">储备列为资产，把流</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">通中现金与银行准备</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">金列为负债；它记录…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">定义</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">定义：中央银行资产负</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">债表（central bank…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">定义：中央银行资产</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">负债表（central</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">bank balance</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">sheet）记录中央银</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">行在某一时点的资产…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">例子与计算</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">沿用表 1（教学假设，</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">金额单位为亿元人民币…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">沿用表 1（教学假设</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">，金额单位为亿元人</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">民币）。央行从银行</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">买入 100 亿元证券</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">：资产从 6,000…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">读法：先看问题能否成立，再看机制能否连通，最后看判断会不会越界。</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">若中间一步缺证据，后面的结论只能当假设，不能当事实。</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为结构示意，不是新的数据图；样本为本文论证。</text>
+  </svg>
+  <figcaption>图 2：中央银行资产负债表的机制链：从问题、机制到判断。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">中央银行资产负债表：适用边界</title>
+    <desc id="fig-batch-boundary-desc">把成立条件与失效条件分开；局部例子不能自动推广到所有情形。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">中央银行资产负债表：什么情况下成立？</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">先检查条件，再看结论</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">条件、口径或样本一变，结论可能要重算</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成立</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">本币与外币不对称。</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不成立 / 需改写</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">扩表等于印钞。</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">图为边界示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 3：中央银行资产负债表的边界：哪些条件成立，哪些条件失效。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">中央银行资产负债表：对象、前提与常见误区</title>
+    <desc id="fig-batch-compare-desc">三行比较本文概念、成立条件与常见误区；比较不等于等价，也不能替代定义。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">中央银行资产负债表：一张表看对象、前提与误区</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">本篇</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">容易混淆</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">对象</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">中央银行资产负债表把证券</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">、放款和外汇储备列为资产…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相邻概念/常见说法</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">前提</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">本币与外币不对称。</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">扩表等于印钞。</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">检查</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">先定义，再比较；不能只看</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">名称</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相关不等于因果，局部不等于普遍</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为比较示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 4：中央银行资产负债表的对象、前提与常见误区比较。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<h2>练习</h2>
+<ol>
+<li><strong>概念辨别。</strong> 央行买入证券后，哪项同时增加？A. 流通中现金；B. 银行准备金；C. 政府存款；D. 银行资本。</li>
+<li><strong>计算。</strong> 某央行资产 8,000 亿元、负债 7,700 亿元、资本 300 亿元。卖出 200 亿元证券、准备金相应减少 200 亿元后，资产和负债各变为多少？基础货币怎么变？</li>
+<li><strong>适用条件。</strong> 某国维持固定汇率，央行持续买入本币、卖出外汇，扩表受什么约束？</li>
+</ol>
+<details>
+<summary>参考答案</summary>
+
+<ol>
+<li>B。资产侧证券增加，负债侧准备金增加；现金、政府存款和资本不变。</li>
+<li>资产 <code>8,000 - 200 = 7,800</code> 亿元；负债 <code>7,700 - 200 = 7,500</code> 亿元；资本仍为 300 亿元（<code>7,500 + 300 = 7,800</code>）。基础货币因准备金减少而减少 200 亿元；题目未给流通中现金，算不出基础货币的绝对水平。</li>
+<li>受外汇储备约束。本币可创造，但可售外汇有限；固定汇率承诺会限制干预，并可能引发贬值预期和资本外流。</li>
+</ol>
+</details>
+
+<h2>来源</h2>
+<ol>
+<li>Board of Governors of the Federal Reserve System. “H.4.1 Factors Affecting Reserve Balances.” 许可：Public domain。 <a href="https://www.federalreserve.gov/releases/h41/current/default.htm">https://www.federalreserve.gov/releases/h41/current/default.htm</a>（访问日期：2026-10-30）</li>
+<li>Board of Governors of the Federal Reserve System. “Open Market Operations.” 许可：Public domain。 <a href="https://www.federalreserve.gov/monetarypolicy/openmarket.htm">https://www.federalreserve.gov/monetarypolicy/openmarket.htm</a>（访问日期：2026-10-30）</li>
+<li>European Central Bank. “Eurosystem balance sheet.” 许可：ECB statistics terms (attribution)。 <a href="https://www.ecb.europa.eu/pub/annual/balance/html/index.en.html">https://www.ecb.europa.eu/pub/annual/balance/html/index.en.html</a>（访问日期：2026-10-30）</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>能按资产与负债两侧说明央行资产负债表如何记录基础货币投放</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>能区分扩表所需的技术前提与“先有存款”这一商业银行约束</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>能按资产与负债两侧说明央行资产负债表如何记录基础货币投放</li><li>能区分扩表所需的技术前提与“先有存款”这一商业银行约束</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/bank-balance-sheets/">FIN-003 · 银行资产负债表</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/deposits-lending-and-credit-creation/">FIN-004 · 存款贷款与信用创造</a> </li><li> <a href="/learn/reserves-and-liquidity/">FIN-006 · 准备金与流动性</a> </li><li> <a href="/learn/payment-clearing-and-settlement/">FIN-007 · 支付清算与结算</a> </li><li> <a href="/learn/bank-balance-sheets/">FIN-003 · 银行资产负债表</a> </li><li> <a href="/learn/accounting-equation/">FIN-017 · 资产负债权益等式</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.federalreserve.gov/releases/h41/current/default.htm" rel="noopener noreferrer" target="_blank">H.4.1 Factors Affecting Reserve Balances</a> <p>Board of Governors of the Federal Reserve System · Board of Governors of the Federal Reserve System</p> <p>访问：2026-10-30 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：美联储 H.4.1 每周发布，表 1 为“影响存款机构准备金余额的因素”，列示证券持有、准备金余额、流通中货币和存款等项目。</p> </div><div class="source"> <a href="https://www.federalreserve.gov/monetarypolicy/openmarket.htm" rel="noopener noreferrer" target="_blank">Open Market Operations</a> <p>Board of Governors of the Federal Reserve System · Board of Governors of the Federal Reserve System</p> <p>访问：2026-10-30 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：公开市场操作通过买卖证券调整准备金供给；2019 年以来美联储以回购操作支持充足准备金框架。</p> </div><div class="source"> <a href="https://www.ecb.europa.eu/pub/annual/balance/html/index.en.html" rel="noopener noreferrer" target="_blank">Eurosystem balance sheet</a> <p>European Central Bank · European Central Bank</p> <p>访问：2026-10-30 · 许可：ECB statistics terms; attribution required</p> <p>支持论点：欧洲央行年度资产负债表合并欧元体系各国央行与 ECB 在年末对第三方的资产和负债。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/central-bank-balance-sheets/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

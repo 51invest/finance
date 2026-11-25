@@ -1,0 +1,213 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>金融功能失灵：当中介成本高于协调收益 · 巫妖投资</title><meta name="description" content="金融体系的存在理由，是降低储蓄者与投资者之间的搜寻、评估、监督和清算成本。当地缘分割、信息不对称或监管摩擦让中介成本高于协调收益时，金融功能会失灵：资金闲在账上，项目却借不到钱。本文用一笔贷款的中介成本账，拆开六项金融功能各自的失败点。"><link rel="canonical" href="https://finance.51invest.com/learn/financial-function-failure-intermediation-cost-coordination-benefit/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/financial-function-failure-intermediation-cost-coordination-benefit/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/financial-function-failure-intermediation-cost-coordination-benefit/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/financial-function-failure-intermediation-cost-coordination-benefit/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/financial-function-failure-intermediation-cost-coordination-benefit/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">金融功能失灵：当中介成本高于协调收益</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">金融功能失灵：当中介成本高于协调收益</h1> <p class="article-summary">金融体系的存在理由，是降低储蓄者与投资者之间的搜寻、评估、监督和清算成本。当地缘分割、信息不对称或监管摩擦让中介成本高于协调收益时，金融功能会失灵：资金闲在账上，项目却借不到钱。本文用一笔贷款的中介成本账，拆开六项金融功能各自的失败点。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M01 · 金融导论</strong></div> <div class="meta-item"><span>层级</span><strong>系统</strong></div> <div class="meta-item"><span>阅读</span><strong>9 分钟 · 13 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义与直觉</h2>
+<p>金融体系通常被归纳为六项功能[2]：支付清算、资金池、跨期配置、风险管理、信息发现和治理监督。每一项都对应一个成本：支付要清算成本，资金池要搜寻成本，跨期配置要期限错配成本，风险管理要定价成本，信息发现要评估成本，治理监督要代理成本。</p>
+<p><strong>金融功能失灵</strong>不是“市场没有价格”，而是中介成本高于协调收益：储蓄者和投资者明明有互补需求，却因为搜寻、评估、监督或合规成本太高而无法成交。失灵可以是局部的（中小企业贷不到款），也可以是系统的（银行互相不信任、回购市场冻结）。</p>
+<p>判断失灵，要看“直接匹配成本”与“通过中介的成本”哪个更低。中介不是天然有效率；它只有在规模、专业化和风险分担上省下的成本，超过它自己的运营和代理成本时，才创造价值[1][2]。</p>
+<h2>正式表达：成本账</h2>
+<p>假设一笔 100 万元的一年期贷款。银行资金来源成本 2%，贷款运营和人工成本 1%，预期违约损失 1.5%，资本占用成本 0.8%，监管合规成本 0.5%。银行贷款利率至少要为 <code>2+1+1.5+0.8+0.5 = 5.8%</code>，才覆盖成本并留下薄利。</p>
+<p>如果借款企业只能承受 4% 的利率，银行不会放款；企业转向亲友或供应链融资，后者可能要求抵押、担保或更高隐性成本。若直接发债，承销、评级、法律和路演成本可能占 2%—4%，对小额发行不划算。</p>
+<p>中介成本高于协调收益时，市场会出现“有储蓄、有项目、没有交易”。这不是利率不够低，而是风险定价和合规成本让利差无法覆盖。降低成本的办法包括：标准化信息、提高抵押品可执行性、扩大资金池、用技术降低评估成本，或让政府分担部分风险。以上数字均为教学假设。</p>
+<h2>失灵来源</h2>
+<p><strong>信息不对称</strong>：借款者比贷款者更了解项目风险，导致逆向选择和道德风险；评估成本越高，利率越高，低风险借款者越可能退出。</p>
+<p><strong>期限错配</strong>：储蓄者要短期流动性，投资者要长期资金；银行借短贷长，赚期限溢价，也承担挤兑风险。</p>
+<p><strong>监管摩擦</strong>：资本、流动性、合规和牌照要求提高安全性，也提高单位贷款成本；对小额、普惠贷款影响更大。</p>
+<p><strong>地缘与市场分割</strong>：跨境支付、制裁、资本管制和本地牌照会把一个市场切成多个池子，降低规模经济，抬高搜寻和清算成本。</p>
+<p>四类失灵可以叠加。信息不对称让风险溢价上升，期限错配让银行更谨慎，监管摩擦让成本更高，市场分割让资金池更小；结果是中小企业最先被挤出[3][4]。</p>
+<h2>图表</h2>
+<figure>
+<svg role="img" aria-labelledby="fig-financial-function-failure-intermediation-cost-coordination-benefit-1-title fig-financial-function-failure-intermediation-cost-coordination-benefit-1-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-financial-function-failure-intermediation-cost-coordination-benefit-1-title">金融功能与中介成本链</title>
+<desc id="fig-financial-function-failure-intermediation-cost-coordination-benefit-1-desc">六步：支付清算、资金池、跨期配置、风险管理、信息发现、治理监督。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">六项金融功能与成本</text>
+<text x="24" y="54" font-size="11" text-anchor="start">支付、资金池、跨期、风险、信息、治理六步，每一步都有对应成本。</text>
+<rect x="14" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="69" y="140" font-size="12" text-anchor="middle">支付</text>
+<text x="69" y="184" font-size="12" text-anchor="middle" font-weight="700">清算</text>
+<rect x="136" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="191" y="140" font-size="12" text-anchor="middle">资金池</text>
+<text x="191" y="184" font-size="12" text-anchor="middle" font-weight="700">搜寻</text>
+<rect x="258" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="313" y="140" font-size="12" text-anchor="middle">跨期</text>
+<text x="313" y="184" font-size="12" text-anchor="middle" font-weight="700">错配</text>
+<rect x="380" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="435" y="140" font-size="12" text-anchor="middle">风险</text>
+<text x="435" y="184" font-size="12" text-anchor="middle" font-weight="700">定价</text>
+<rect x="502" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="557" y="140" font-size="12" text-anchor="middle">信息</text>
+<text x="557" y="184" font-size="12" text-anchor="middle" font-weight="700">评估</text>
+<rect x="624" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="679" y="140" font-size="12" text-anchor="middle">治理</text>
+<text x="679" y="184" font-size="12" text-anchor="middle" font-weight="700">代理</text>
+<line x1="125" y1="160" x2="135" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="247" y1="160" x2="257" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="369" y1="160" x2="379" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="491" y1="160" x2="501" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="613" y1="160" x2="623" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<text x="24" y="246" font-size="11" text-anchor="start">教学示意，不含统计数据。</text>
+</g>
+</svg>
+<figcaption>图 1：金融功能与中介成本链；教学示意。</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-financial-function-failure-intermediation-cost-coordination-benefit-2-title fig-financial-function-failure-intermediation-cost-coordination-benefit-2-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-financial-function-failure-intermediation-cost-coordination-benefit-2-title">贷款中介成本的拆分</title>
+<desc id="fig-financial-function-failure-intermediation-cost-coordination-benefit-2-desc">五项成本合计 5.8%，构成最低贷款利率。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">一笔贷款的五个成本项</text>
+<text x="24" y="54" font-size="11" text-anchor="start">资金 2%、运营 1%、违约 1.5%、资本 0.8%、合规 0.5</text>
+<text x="24" y="68" font-size="11" text-anchor="start">%，合计 5.8%。</text>
+<line x1="178" y1="64" x2="178" y2="270" stroke="currentColor" stroke-width="1" opacity=".45"/>
+<text x="20" y="97" font-size="12">资金</text>
+<rect x="178" y="78" width="360" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="95" font-size="12" font-weight="700">2.0%</text>
+<text x="20" y="145" font-size="12">运营</text>
+<rect x="178" y="126" width="180" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="143" font-size="12" font-weight="700">1.0%</text>
+<text x="20" y="193" font-size="12">违约</text>
+<rect x="178" y="174" width="270" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="191" font-size="12" font-weight="700">1.5%</text>
+<text x="20" y="241" font-size="12">资本</text>
+<rect x="178" y="222" width="144" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="239" font-size="12" font-weight="700">0.8%</text>
+<text x="20" y="289" font-size="12">合规</text>
+<rect x="178" y="270" width="90" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="287" font-size="12" font-weight="700">0.5%</text>
+<text x="24" y="292" font-size="11" text-anchor="start">教学假设；单位：%。</text>
+</g>
+</svg>
+<figcaption>图 2：贷款中介成本的拆分；教学假设，单位 %。</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-financial-function-failure-intermediation-cost-coordination-benefit-3-title fig-financial-function-failure-intermediation-cost-coordination-benefit-3-desc" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-financial-function-failure-intermediation-cost-coordination-benefit-3-title">金融失灵的四象限</title>
+<desc id="fig-financial-function-failure-intermediation-cost-coordination-benefit-3-desc">两轴：信息不对称高低、期限错配高低；四象限对应局部摩擦、期限危机、信息危机和系统失灵。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">信息不对称与期限错配的四类失灵</text>
+<text x="24" y="54" font-size="11" text-anchor="start">双高是系统失灵；双低是局部摩擦。</text>
+<text x="40" y="68" font-size="11">信息不对称高</text>
+<text x="40" y="286" font-size="11">信息不对称低</text>
+<text x="110" y="314" font-size="11" text-anchor="middle">错配低</text>
+<text x="500" y="314" font-size="11" text-anchor="middle">错配高</text>
+<rect x="96" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="100" font-size="12" text-anchor="start">信息危机</text>
+<text x="108" y="130" font-size="11" text-anchor="start">信息高、错配低</text>
+<text x="108" y="170" font-size="11" font-weight="700">信贷配给</text>
+<rect x="338" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="100" font-size="12" text-anchor="start">系统失灵</text>
+<text x="350" y="130" font-size="11" text-anchor="start">双高</text>
+<text x="350" y="170" font-size="11" font-weight="700">挤兑/冻结</text>
+<rect x="96" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="214" font-size="12" text-anchor="start">局部摩擦</text>
+<text x="108" y="244" font-size="11" text-anchor="start">双低</text>
+<text x="108" y="284" font-size="11" font-weight="700">小额不经济</text>
+<rect x="338" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="214" font-size="12" text-anchor="start">期限危机</text>
+<text x="350" y="244" font-size="11" text-anchor="start">信息低、错配高</text>
+<text x="350" y="284" font-size="11" font-weight="700">流动性紧张</text>
+</g>
+</svg>
+<figcaption>图 3：金融失灵的四象限；对比分类示意。</figcaption>
+</figure>
+
+<p>图 1 把六项金融功能与对应成本串成一条链；图 2 拆开一笔贷款的五个成本项；图 3 用“信息不对称—期限错配”两轴划出四类失灵。图中数字均为教学假设。</p>
+<h2>适用条件与边界</h2>
+<p><strong>边界一：中介成本不全是坏事。</strong> 评估、监督和合规成本是风险定价的必要投入；把成本压到零，可能带来更高的违约和危机。</p>
+<p><strong>边界二：直接融资也有成本。</strong> 发债、上市和众筹都要承销、评级、法律和信息披露成本；直接融资并不天然比银行便宜。</p>
+<p><strong>边界三：政策分担风险有道德风险。</strong> 政府担保或补贴可以降低中介成本，也可能鼓励过度冒险；设计要绑定损失分担和监管。</p>
+<p><strong>边界四：功能失灵可能是周期性的。</strong> 危机时银行互不信任，回购市场冻结；平时有效的成本账，在压力下会突然恶化。</p>
+<h2>常见误解</h2>
+<p><strong>误解一：金融中介越少越好。</strong> 中介降低搜寻和监督成本；没有中介，储蓄者和投资者可能根本无法匹配。</p>
+<p><strong>误解二：利率高就是银行贪婪。</strong> 利率包含资金、风险、资本和合规成本；成本高于收益时，银行不放款是理性反应。</p>
+<p><strong>误解三：技术一定能降低中介成本。</strong> 技术降低评估和支付成本，也带来网络安全、数据隐私和模型风险；净效果取决于制度配套。</p>
+<h2>深化：从局部成本到系统冻结</h2>
+<p>局部失灵和系统失灵不是程度差异，而是机制差异。局部失灵时，某个细分市场的中介成本高于协调收益，比如中小企业贷款、微型保险或跨境小额支付；资金还在体系内，只是绕开了这个市场。系统失灵时，支付、抵押品和融资同时中断，参与者连“对手方是否安全”都无法判断，交易从价格问题变成信任问题。</p>
+<p>2008 年的商业票据和回购市场是典型案例：货币基金不愿买期限超过一天的票据，回购交易要求更高的折扣，银行囤积流动性；即使借款人有抵押品，也不愿成交。2023 年硅谷银行倒闭后，存款外流和未保险存款的恐慌让地区银行融资成本骤升，中介成本在几天内从“利差问题”变成“生存问题”。</p>
+<p><strong>逆向选择螺旋</strong>会让失灵自我强化。利率上升本应筛掉高风险借款人，但低风险借款人先退出，留下的池子风险更高，银行再提价，池子进一步恶化。最终市场只剩“必须借”的借款人，利率无法反映平均风险，成交量萎缩。</p>
+<p><strong>政策介入的边界</strong>：公共担保和流动性便利能降低“信任成本”，但不能替代偿付能力；标准化信息能降低评估成本，但需要可信的数据基础设施；监管容忍能降低合规成本，但会积累风险。判断政策是否有效，要看它降低的是哪一项成本，而不是看投放了多少钱。</p>
+<p><strong>测量失灵</strong>可以用三个指标：相对无风险利率的信用利差、银行贷款标准调查、以及从申请到放款的时间。三者同时恶化，说明不是单一价格波动，而是中介功能在收缩。</p>
+<h2>测量与常见误用</h2>
+<p><strong>测量中介成本</strong>不能只看贷款利率。更完整的口径是“借款人支付的全程成本减去无风险利率”：包括利率、安排费、担保费、抵押品折扣、等待时间和合规成本。两个名义利率相同的贷款，若一个要求 30% 抵押品、另一个信用贷款，真实中介成本差别很大。</p>
+<p><strong>信用利差要分解</strong>。利差扩大可能来自预期违约、流动性溢价或税收和监管成本；若只把利差当“风险上升”，会误判政策空间。把利差与违约率、回收率、CDS 和发行量一起看，才能区分“风险重定价”与“市场冻结”。</p>
+<p><strong>常见误用</strong>有三：第一，把“金融深化”等同于“金融功能更好”，其实规模扩张可能只是抬高中介链条；第二，把“利率低”等同于“融资易”，低利率可能伴随抵押品要求上升；第三，把“政府担保”当成免费午餐，担保降低信任成本，也转移了风险。</p>
+<p>判断金融功能是否改善，最终要看：同一风险等级的借款人，是否以更低的全程成本、更短的时间获得资金；而不是看金融机构资产规模或交易量。</p>
+<h2>延伸阅读</h2>
+<p>默顿（Robert Merton）与博迪（Zvi Bodie）的“金融功能观”主张：分析金融体系应从功能出发，而不是从机构出发；同一功能可以由银行、市场或基金承担，机构形式会变，功能需求相对稳定。莱文（Ross Levine）的金融发展研究则强调，金融结构（银行主导还是市场主导）不如金融功能质量重要。戴蒙德与迪布维格（Diamond and Dybvig）的银行挤兑模型说明，期限转换本身就会产生流动性风险，存款保险和最后贷款人是功能失灵时的兜底。</p>
+<p>读这些文献时，带着本文的成本账：每项功能对应哪种成本、哪种失灵、哪种政策工具。这样就不会把“金融创新”自动当成“功能改善”，也不会把“机构扩张”当成“服务实体”。最后提醒：功能分析是分层工具，不是否定机构差异；同一功能由不同机构承担时，成本、风险和监管边界仍要逐项比较。</p>
+<h2>反证条件</h2>
+<p>金融功能失灵的判断依赖中介结构和监管边界：</p>
+<ol>
+<li><strong>非银替代银行。</strong> 若货币基金、私募信贷和保险承担了大部分中介功能，只盯银行的成本账会漏掉新的失灵点。</li>
+<li><strong>监管补贴小机构。</strong> 若存款保险、最后贷款人或牌照保护让小机构继续生存，失灵来自政策而非功能本身。</li>
+<li><strong>信息成本下降。</strong> 若数字登记、征信和抵押品估值降低协调成本，金融的中介收益上升，失灵判断要重算。</li>
+</ol>
+<h2>练习</h2>
+<ol>
+<li><p>列出六项金融功能，各写一个失败形态。</p>
+</li>
+<li><p>资金成本 2%、运营 1%、违约 1.5%、资本 0.8%、合规 0.5%，最低利率是多少？</p>
+</li>
+<li><p>若违约损失升到 3%，重算最低利率，并解释为什么低风险借款者退出。</p>
+</li>
+<li><p>区分信息不对称、期限错配和监管摩擦三类失灵。</p>
+</li>
+<li><p>直接发债与银行贷款，各适合什么规模的企业？</p>
+</li>
+<li><p>政府担保降低中介成本，可能带来什么道德风险？</p>
+</li>
+<li><p>判断：金融中介越少，资金配置越有效率吗？写出两个反例。</p>
+</li>
+<li><p>局部失灵与系统失灵在机制上有什么不同？各举一个例子。</p>
+</li>
+<li><p>什么是逆向选择螺旋？为什么提高利率可能让借款池的风险更高？</p>
+</li>
+<li><p>为什么两个名义利率相同的贷款，真实中介成本可能差别很大？</p>
+</li>
+<li><p>信用利差扩大时，如何区分“风险重定价”与“市场冻结”？</p>
+</li>
+<li><p>“金融功能观”为什么不以机构类型作为分析起点？</p>
+</li>
+<li><p>戴蒙德—迪布维格模型如何解释存款保险和最后贷款人的必要性？</p>
+</li>
+</ol>
+<h2>关联</h2>
+<p>先修 FIN-025；对照 FIN-033；相邻 FIN-037、ECO-031。</p>
+<h2>来源</h2>
+<ol>
+<li>Julie Dahlquist; Rainford Knight, <em>Principles of Finance 2e, 1 Why It Matters</em>. OpenStax, accessed 2026-10-30. <a href="https://openstax.org/books/principles-finance-2e/pages/1-why-it-matters">https://openstax.org/books/principles-finance-2e/pages/1-why-it-matters</a></li>
+<li>European Central Bank, <em>What is money?</em>. European Central Bank, accessed 2026-10-30. <a href="https://www.ecb.europa.eu/explainers/tell-me-more/html/what_is_money.en.html">https://www.ecb.europa.eu/explainers/tell-me-more/html/what_is_money.en.html</a></li>
+<li>Bank of England, <em>The Bank’s Financial Stability Strategy</em>. Bank of England, accessed 2026-11-21. <a href="https://www.bankofengland.co.uk/financial-stability/financial-stability-strategy">https://www.bankofengland.co.uk/financial-stability/financial-stability-strategy</a></li>
+<li>Julie Dahlquist; Rainford Knight, <em>Principles of Finance 2e, 1.5 Markets and Participants</em>. OpenStax, accessed 2026-11-21. <a href="https://openstax.org/books/principles-finance-2e/pages/1-5-markets-and-participants">https://openstax.org/books/principles-finance-2e/pages/1-5-markets-and-participants</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>列出金融体系的六项核心功能及其失败形态。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>用一笔贷款的成本账判断中介是否值得。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>列出金融体系的六项核心功能及其失败形态。</li><li>用一笔贷款的成本账判断中介是否值得。</li><li>区分信息不对称、期限错配和监管摩擦三类失灵来源。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/introduction-to-finance/">FIN-025 · 金融导论</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/financial-intermediation-and-funding-flows/">FIN-033 · 金融中介与直接融资：储蓄如何变成投资</a> </li><li> <a href="/learn/tokenized-deposits-and-stablecoin-infrastructure/">FIN-037 · 代币化存款与稳定币：支付基础设施的账</a> </li><li> <a href="https://economics.51invest.com/learn/law-organizations-and-comparative-economies/">ECO-031 · 法律组织与比较经济</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/1-why-it-matters" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 1 Why It Matters</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-10-30 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：支持金融体系为什么重要、储蓄如何转化为投资的功能框架。</p> </div><div class="source"> <a href="https://www.ecb.europa.eu/explainers/tell-me-more/html/what_is_money.en.html" rel="noopener noreferrer" target="_blank">What is money?</a> <p>European Central Bank · European Central Bank</p> <p>访问：2026-10-30 · 许可：ECB statistics terms; attribution required</p> <p>支持论点：支持货币、支付与清算的基础功能定义。</p> </div><div class="source"> <a href="https://www.bankofengland.co.uk/financial-stability/financial-stability-strategy" rel="noopener noreferrer" target="_blank">The Bank’s Financial Stability Strategy</a> <p>Bank of England · Bank of England</p> <p>访问：2026-11-21 · 许可：© Bank of England; linked summary only</p> <p>支持论点：支持金融稳定、中介链条与系统性风险的政策框架。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/1-5-markets-and-participants" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 1.5 Markets and Participants</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-11-21 · 许可：CC BY 4.0</p> <p>支持论点：支持金融市场参与者、直接融资与间接融资的分类。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/financial-function-failure-intermediation-cost-coordination-benefit/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

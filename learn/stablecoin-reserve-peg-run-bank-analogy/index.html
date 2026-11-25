@@ -1,0 +1,213 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>稳定币的储备、锚定与挤兑：它像不像银行 · 巫妖投资</title><meta name="description" content="稳定币承诺 1 枚换 1 美元，靠储备资产维持锚定。它把“存款—储备—赎回”压缩成一套链上负债，但没有存款保险和最后贷款人；储备质量、期限错配和赎回速度决定它会不会发生挤兑。"><link rel="canonical" href="https://finance.51invest.com/learn/stablecoin-reserve-peg-run-bank-analogy/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/stablecoin-reserve-peg-run-bank-analogy/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/stablecoin-reserve-peg-run-bank-analogy/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/stablecoin-reserve-peg-run-bank-analogy/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/stablecoin-reserve-peg-run-bank-analogy/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">稳定币的储备、锚定与挤兑：它像不像银行</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">稳定币的储备、锚定与挤兑：它像不像银行</h1> <p class="article-summary">稳定币承诺 1 枚换 1 美元，靠储备资产维持锚定。它把“存款—储备—赎回”压缩成一套链上负债，但没有存款保险和最后贷款人；储备质量、期限错配和赎回速度决定它会不会发生挤兑。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M16 · 数字金融基础</strong></div> <div class="meta-item"><span>层级</span><strong>系统</strong></div> <div class="meta-item"><span>阅读</span><strong>9 分钟 · 12 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义与直觉</h2>
+<p>**稳定币（stablecoin）**是试图锚定法币（通常是美元）的加密代币。它承诺 1 枚代币可赎回 1 美元，靠储备资产维持锚定。储备可以是银行存款、短期国债、商业票据、回购或加密资产。</p>
+<p>稳定币的资产负债表很像银行：负债是用户可赎回的代币，资产是储备。但它通常没有存款保险、贴现窗口和最后贷款人；监管资本和流动性要求也 weaker。</p>
+<p>锚定靠三种机制：<strong>全额储备</strong>（1:1 资产）、<strong>超额抵押</strong>（储备大于负债）、<strong>算法调节</strong>（用协议和代币激励维持价格）。全额储备最稳，算法稳定币在压力下最容易脱锚[1][2]。</p>
+<h2>正式表达与示例</h2>
+<p>假设稳定币发行 100 亿美元，储备包括 60 亿美元短期国债、30 亿美元银行存款、10 亿美元商业票据。若市场信心崩塌，一天内有 30 亿美元赎回，发行方需要快速变现。</p>
+<p>国债可以 T+1 卖出，但价差和折扣可能 1%；银行存款可即时提取；商业票据在压力下可能卖不掉或折价 5%。若储备变现后只收回 29.7 亿美元，覆盖率从 100% 降到 99.7%，锚定开始松动。</p>
+<p>若赎回 60 亿美元，发行方必须卖长期资产，折价扩大，可能触发自我强化的挤兑。稳定币的“1:1”只在正常市场成立；压力下，储备的流动性和期限决定折价。以上数字均为教学假设。</p>
+<h2>银行类比</h2>
+<p><strong>像银行的地方</strong>：短负债、长资产、可赎回、靠信心；挤兑时资产折价会传染。</p>
+<p><strong>不像银行的地方</strong>：没有存款保险，没有央行最后贷款人，储备披露和审计不统一，跨境监管碎片化。</p>
+<p><strong>像货币基金的地方</strong>：按 1 美元锚定、持有短期资产、赎回可能触发流动性问题；但货币基金受 SEC 规则约束，稳定币监管仍在形成。</p>
+<p>稳定币的风险不是“代码漏洞”一个维度；储备质量、期限错配、赎回权和监管覆盖同样关键[3][4]。</p>
+<h2>图表</h2>
+<figure>
+<svg role="img" aria-labelledby="fig-stablecoin-reserve-peg-run-bank-analogy-1-title fig-stablecoin-reserve-peg-run-bank-analogy-1-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-stablecoin-reserve-peg-run-bank-analogy-1-title">稳定币的负债与储备</title>
+<desc id="fig-stablecoin-reserve-peg-run-bank-analogy-1-desc">四步：代币发行、储备资产、赎回、锚定。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">稳定币的锚定链</text>
+<text x="24" y="54" font-size="11" text-anchor="start">代币、储备、赎回、锚定四步。</text>
+<rect x="14" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="69" y="140" font-size="12" text-anchor="middle">代币</text>
+<text x="69" y="184" font-size="12" text-anchor="middle" font-weight="700">100 亿</text>
+<rect x="136" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="191" y="140" font-size="12" text-anchor="middle">储备</text>
+<text x="191" y="184" font-size="12" text-anchor="middle" font-weight="700">100 亿</text>
+<rect x="258" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="313" y="140" font-size="12" text-anchor="middle">赎回</text>
+<text x="313" y="184" font-size="12" text-anchor="middle" font-weight="700">30 亿</text>
+<rect x="380" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="435" y="140" font-size="12" text-anchor="middle">锚定</text>
+<text x="435" y="184" font-size="12" text-anchor="middle" font-weight="700">1:1</text>
+<line x1="125" y1="160" x2="135" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="247" y1="160" x2="257" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="369" y1="160" x2="379" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<text x="24" y="246" font-size="11" text-anchor="start">教学示意，不含统计数据。</text>
+</g>
+</svg>
+<figcaption>图 1：稳定币的负债与储备；教学示意。</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-stablecoin-reserve-peg-run-bank-analogy-2-title fig-stablecoin-reserve-peg-run-bank-analogy-2-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-stablecoin-reserve-peg-run-bank-analogy-2-title">赎回与储备覆盖率</title>
+<desc id="fig-stablecoin-reserve-peg-run-bank-analogy-2-desc">三个赎回比例对应三个覆盖率。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">不同赎回比例下的覆盖率</text>
+<text x="24" y="54" font-size="11" text-anchor="start">赎回 0%、30%、60% 对应覆盖率 100%、99.7%、约 9</text>
+<text x="24" y="68" font-size="11" text-anchor="start">8%。</text>
+<line x1="178" y1="64" x2="178" y2="270" stroke="currentColor" stroke-width="1" opacity=".45"/>
+<text x="20" y="97" font-size="12">0%</text>
+<rect x="178" y="78" width="360" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="95" font-size="12" font-weight="700">100%</text>
+<text x="20" y="145" font-size="12">30%</text>
+<rect x="178" y="126" width="358.92" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="143" font-size="12" font-weight="700">99.7%</text>
+<text x="20" y="193" font-size="12">60%</text>
+<rect x="178" y="174" width="352.8" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="191" font-size="12" font-weight="700">98%</text>
+<text x="24" y="292" font-size="11" text-anchor="start">教学假设；单位：%。</text>
+</g>
+</svg>
+<figcaption>图 2：赎回与储备覆盖率；教学假设。</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-stablecoin-reserve-peg-run-bank-analogy-3-title fig-stablecoin-reserve-peg-run-bank-analogy-3-desc" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-stablecoin-reserve-peg-run-bank-analogy-3-title">稳定币的二维矩阵</title>
+<desc id="fig-stablecoin-reserve-peg-run-bank-analogy-3-desc">两轴：储备质量、赎回压力；四象限对应稳健、承压、缓冲和危险。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">储备质量与赎回压力的四类状态</text>
+<text x="24" y="54" font-size="11" text-anchor="start">储备高质量、赎回压力低最稳；低质量、高压力最容易脱锚。</text>
+<text x="40" y="68" font-size="11">储备高质量</text>
+<text x="40" y="286" font-size="11">储备低质量</text>
+<text x="110" y="314" font-size="11" text-anchor="middle">赎回压力低</text>
+<text x="500" y="314" font-size="11" text-anchor="middle">赎回压力高</text>
+<rect x="96" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="100" font-size="12" text-anchor="start">稳健</text>
+<text x="108" y="130" font-size="11" text-anchor="start">高质量、低压力</text>
+<text x="108" y="170" font-size="11" font-weight="700">锚定稳</text>
+<rect x="338" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="100" font-size="12" text-anchor="start">承压</text>
+<text x="350" y="130" font-size="11" text-anchor="start">高质量、高压力</text>
+<text x="350" y="170" font-size="11" font-weight="700">折价</text>
+<rect x="96" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="214" font-size="12" text-anchor="start">缓冲</text>
+<text x="108" y="244" font-size="11" text-anchor="start">低质量、低压力</text>
+<text x="108" y="284" font-size="11" font-weight="700">观察</text>
+<rect x="338" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="214" font-size="12" text-anchor="start">危险</text>
+<text x="350" y="244" font-size="11" text-anchor="start">低质量、高压力</text>
+<text x="350" y="284" font-size="11" font-weight="700">脱锚</text>
+</g>
+</svg>
+<figcaption>图 3：稳定币的二维矩阵；对比分类示意。</figcaption>
+</figure>
+
+<p>图 1 把代币、储备、赎回和锚定串成一条链；图 2 展示不同赎回比例下的储备覆盖率；图 3 用“储备质量—赎回压力”两轴划出四类稳定币状态。图中数字均为教学假设。</p>
+<h2>适用条件、边界与常见误区</h2>
+<p><strong>边界一：锚定不等于无风险。</strong> 1:1 承诺依赖储备真实性和变现能力；审计、披露和托管安排决定可信度。</p>
+<p><strong>边界二：算法稳定币不是存款。</strong> 它靠套利和激励维持价格，没有全额储备；压力下可能进入死亡螺旋。</p>
+<p><strong>边界三：监管差异大。</strong> 各司法辖区对储备、赎回和牌照要求不同；跨境使用会带来监管套利。</p>
+<p><strong>误解一：稳定币就是数字美元。</strong> 它是私人负债，不是美联储负债；信用和流动性风险仍存在。</p>
+<p><strong>误解二：储备足够多就不会挤兑。</strong> 挤兑取决于赎回速度和资产变现能力；储备充足但变现慢，仍可能脱锚。</p>
+<h2>深化：储备结构、挤兑与“准银行”边界</h2>
+<p><strong>稳定币发行人的资产负债表</strong>很像一个窄银行：负债是流通中的代币，资产是储备（现金、短期国债、回购、银行存款）。 peg 能不能守住，取决于储备的市值、流动性和期限是否匹配赎回速度。若储备里有长期债券或低评级商业票据，利率上升时市值下跌，赎回压力会让发行人被迫折价出售。</p>
+<p><strong>挤兑的触发点</strong>不只是“价格脱锚”。当用户怀疑储备不足，会同时赎回；若发行人设置赎回门槛、延迟或限额，怀疑会自我实现。算法稳定币没有硬储备，依靠套利和信心维持 peg，一旦信心崩溃，死亡螺旋比银行挤兑更快。</p>
+<p><strong>与银行存款的关键差异</strong>：稳定币通常没有存款保险，也没有最后贷款人；发行人不受银行式资本和流动性监管，储备披露频率和审计范围也有限。它不是存款，却承担了类似存款的流动性功能，这就是“准银行”风险。</p>
+<p><strong>储备质量要看四件事</strong>：现金和隔夜资产占比、国债久期、回购对手方、银行存款的集中度。短期国债市值稳定但仍有折扣；回购在压力时可能不被展期；银行存款在银行倒闭时也有风险。储备“多元化”不等于“安全”。</p>
+<p><strong>赎回机制</strong>是压力测试的核心。T+0 赎回、无门槛、无费用，听起来对用户友好，却让发行人没有缓冲；T+1、限额或费用能减缓挤兑，但会削弱 peg 的可信度。设计要在“稳定”和“可兑”之间权衡。</p>
+<p><strong>监管趋势</strong>要求储备资产、披露、资本缓冲和赎回规则；但监管不能消除挤兑，只能降低概率。发行人还需要流动性后备、压力测试和恢复计划。</p>
+<p><strong>常见误用</strong>：把“锚定美元”当成“等同于美元”，忽略发行人和储备风险；把“储备 100%”当成“绝对安全”，忽略储备的久期和流动性；把算法稳定币的套利机制当成“无风险套利”，忽略尾部风险。</p>
+<p><strong>最后</strong>，稳定币的稳定性是“承诺+储备+赎回机制”的联合结果，不是代码或口号。看储备构成、久期、赎回条款和发行人治理，比看 peg 的日常价格更重要。</p>
+<h2>压力情景：脱锚的三个阶段</h2>
+<p><strong>第一阶段，折价出现</strong>：市场发现储备久期偏长或某类资产价值下跌，代币在二级市场出现 1%—2% 折价。套利者本应买入折价代币并赎回获利，但如果赎回有门槛或延迟，套利链条断开，折价扩大。</p>
+<p><strong>第二阶段，赎回排队</strong>：用户集中赎回，发行人被迫出售储备。若储备是短期国债，折扣有限；若是长期债券或商业票据，出售会实现亏损，进一步削弱储备。此时发行人可能启用赎回限额或费用，反而加剧恐慌。</p>
+<p><strong>第三阶段，信心崩溃</strong>：peg 跌破 5%，支付场景拒绝接受，代币进入死亡螺旋。若没有存款保险、最后贷款人或外部资本，发行人只能破产或重组。算法稳定币在这个阶段通常更快，因为套利机制依赖抵押品价值。</p>
+<p><strong>缓冲设计</strong>：短期储备、超额抵押、流动性后备、透明披露、赎回分级。缓冲只能降低概率，不能消除挤兑；关键是让市场相信储备足以覆盖压力赎回。</p>
+<p><strong>监管压力测试</strong>应假设：利率上升 200 个基点、20% 代币在一天内赎回、某类储备资产折价 10%。三个假设同时成立，发行人是否还能维持 peg？答不清，就不应宣称“稳定”。</p>
+<h2>要点回顾</h2>
+<ul>
+<li>稳定币发行人是“窄银行”：负债是代币，资产是储备，peg 取决于储备市值、流动性和期限匹配。</li>
+<li>挤兑不只在价格脱锚时发生；赎回门槛、延迟和限额会让怀疑自我实现。</li>
+<li>与银行存款的关键差异是没有存款保险、没有最后贷款人、监管资本和流动性要求更弱。</li>
+<li>储备质量看现金占比、国债久期、回购对手方和银行存款集中度，“100% 储备”不等于绝对安全。</li>
+<li>赎回机制要在稳定与可兑之间权衡；T+0 无门槛会放大挤兑。</li>
+<li>监管能降低概率，不能消除挤兑；发行人还需要流动性后备和恢复计划。</li>
+<li>发行人治理、审计独立性和信息披露频率同样决定市场信心。</li>
+</ul>
+<h2>反证条件</h2>
+<p>稳定币的银行类比依赖储备和赎回规则：</p>
+<ol>
+<li><strong>储备是短期国债。</strong> 若储备主要是短期国债，信用风险低，但折价和流动性在压力期仍会跳变。</li>
+<li><strong>赎回有门槛。</strong> 若设置赎回限额或延迟，挤兑速度放慢，但信心折价上升。</li>
+<li><strong>按银行监管。</strong> 若稳定币被纳入银行式资本和流动性要求，脱媒和挤兑的传导会改变。</li>
+<li><strong>支付场景扩大。</strong> 若稳定币成为日常支付工具，存款替代和货币流通速度会影响银行负债结构。</li>
+<li><strong>算法稳定币。</strong> 若储备不足、靠算法调节，压力下的死亡螺旋风险远高于全额储备。</li>
+</ol>
+<p><strong>实践含义：</strong> 稳定币的稳定性要看储备构成、赎回规则和监管归属；全额储备降低信用风险，但不自动消除折价、挤兑和结算中断。把它当银行存款，会漏掉最后贷款人和存款保险的缺失。</p>
+<p><strong>数据附注：</strong> 核对储备的期限、托管人和估值频率；短期国债不等于即时可变现，折价和结算延迟要计入。</p>
+<p><strong>范围说明：</strong> 逐日披露储备构成、期限和托管人；否则持有人无法验证锚定，折价会在信息真空中扩大。还要区分赎回暂停和破产，两者的损失分配不同。</p>
+<p><strong>最后：</strong> 锚定是对储备的承诺，不是价格本身；披露频率和储备质量决定承诺能否被验证。</p>
+<p><strong>核对：</strong> 每天验证储备构成和赎回条款；锚定是承诺，不是价格。</p>
+<h2>练习</h2>
+<ol>
+<li><p>说明稳定币的三种锚定机制。</p>
+</li>
+<li><p>发行 100 亿美元、储备 100 亿美元，覆盖率多少？</p>
+</li>
+<li><p>赎回 30 亿美元、变现折价 1%，储备剩多少？</p>
+</li>
+<li><p>为什么商业票据在压力下折价更大？</p>
+</li>
+<li><p>稳定币与银行、货币基金各像在哪里？</p>
+</li>
+<li><p>算法稳定币为什么容易死亡螺旋？</p>
+</li>
+<li><p>判断：储备充足就不会挤兑吗？说明理由。</p>
+</li>
+<li><p>稳定币发行人的资产负债表为什么像“窄银行”？</p>
+</li>
+<li><p>T+0 无门槛赎回为什么会放大挤兑风险？</p>
+</li>
+<li><p>稳定币脱锚的三个阶段各有什么特征？</p>
+</li>
+<li><p>监管压力测试应假设哪三个条件同时成立？</p>
+</li>
+<li><p>为什么“100% 储备”不等于绝对安全？</p>
+</li>
+<li><p>稳定币与银行存款在安全网上的三个关键差异是什么？</p>
+</li>
+</ol>
+<h2>关联</h2>
+<p>先修 FIN-034；对照 FIN-035；相邻 FIN-050、ECO-054。</p>
+<h2>来源</h2>
+<ol>
+<li>Financial Stability Board, <em>Crypto-assets and Global Stablecoins</em>. Financial Stability Board, accessed 2026-11-05. <a href="https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/crypto-assets-and-global-stablecoins/">https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/crypto-assets-and-global-stablecoins/</a></li>
+<li>Financial Stability Board, <em>Regulation, Supervision and Oversight of Crypto-Asset Activities and Markets</em>. Financial Stability Board, accessed 2026-11-21. <a href="https://fsb.org/wp-content/uploads/P111022-3.pdf">https://fsb.org/wp-content/uploads/P111022-3.pdf</a></li>
+<li>Ravi Menon, <em>Making Sense of Crypto</em>. International Monetary Fund, Finance &amp; Development, accessed 2026-11-22. <a href="https://www.imf.org/en/Publications/fandd/issues/2022/09/Making-sense-of-crypto-Ravi-Menon">https://www.imf.org/en/Publications/fandd/issues/2022/09/Making-sense-of-crypto-Ravi-Menon</a></li>
+<li>U.S. Securities and Exchange Commission, <em>Crypto Assets</em>. U.S. Securities and Exchange Commission, accessed 2026-10-30. <a href="https://www.sec.gov/securities-topics/crypto-assets">https://www.sec.gov/securities-topics/crypto-assets</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>说明稳定币的储备结构与锚定机制。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>用储备覆盖率算折价与挤兑阈值。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>说明稳定币的储备结构与锚定机制。</li><li>用储备覆盖率算折价与挤兑阈值。</li><li>比较稳定币与银行、货币基金的相似与不同。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/rate-conventions-and-credit-spreads/">FIN-034 · 利率口径与利差：同一笔资金价格的不同标签</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/insurance-pricing-and-pension-liabilities/">FIN-035 · 保险定价与养老金负债：风险共担的账</a> </li><li> <a href="/learn/wholesale-funding-run-lcr-nsfr-fire-sale/">FIN-050 · 批发融资挤兑：LCR、NSFR 与火售</a> </li><li> <a href="https://economics.51invest.com/learn/platform-entry-barriers-data-network-effects-interoperability/">ECO-054 · 平台进入壁垒：数据、网络效应与互操作</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/crypto-assets-and-global-stablecoins/" rel="noopener noreferrer" target="_blank">Crypto-assets and Global Stablecoins</a> <p>Financial Stability Board · Financial Stability Board</p> <p>访问：2026-11-05 · 许可：FSB terms; linked summary only</p> <p>支持论点：支持全球稳定币的风险、储备与监管框架。</p> </div><div class="source"> <a href="https://fsb.org/wp-content/uploads/P111022-3.pdf" rel="noopener noreferrer" target="_blank">Regulation, Supervision and Oversight of Crypto-Asset Activities and Markets</a> <p>Financial Stability Board · Financial Stability Board</p> <p>访问：2026-11-21 · 许可：© Financial Stability Board; linked summary only</p> <p>支持论点：支持加密资产活动的监管、监督与跨境协作。</p> </div><div class="source"> <a href="https://www.imf.org/en/Publications/fandd/issues/2022/09/Making-sense-of-crypto-Ravi-Menon" rel="noopener noreferrer" target="_blank">Making Sense of Crypto</a> <p>Ravi Menon · International Monetary Fund, Finance &amp; Development</p> <p>访问：2026-11-22 · 许可：IMF copyright; cite-only, attributed summary; no full-text republication</p> <p>支持论点：支持加密资产的定义、风险与宏观影响。</p> </div><div class="source"> <a href="https://www.sec.gov/securities-topics/crypto-assets" rel="noopener noreferrer" target="_blank">Crypto Assets</a> <p>U.S. Securities and Exchange Commission · U.S. Securities and Exchange Commission</p> <p>访问：2026-10-30 · 许可：U.S. public information; copying and further distribution allowed</p> <p>支持论点：支持美国对加密资产的证券监管与投资者提示。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/stablecoin-reserve-peg-run-bank-analogy/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

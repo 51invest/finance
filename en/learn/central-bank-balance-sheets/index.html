@@ -1,0 +1,342 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>Central Bank Balance Sheets · 51Invest</title><meta name="description" content="A central bank balance sheet lists securities, lending and foreign reserves as assets and currency in circulation and bank reserves as liabilities; it records how the monetary base is created and shows why a central bank does not need deposits before expanding."><link rel="canonical" href="https://finance.51invest.com/en/learn/central-bank-balance-sheets/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/central-bank-balance-sheets/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/central-bank-balance-sheets/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/central-bank-balance-sheets/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/en/" data-main-home aria-label="51Invest"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">51Invest</span> <span class="brand-caption">WUYAO INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="Knowledge stations"> <a class="nav-link" href="https://51invest.com/en/" data-main-home> Home </a> <a class="nav-link" href="https://economics.51invest.com/en/"> Economics </a><a class="nav-link active" href="/en/" aria-current="page"> Finance </a><a class="nav-link" href="https://markets.51invest.com/en/"> Markets </a><a class="nav-link" href="https://invest.51invest.com/en/"> Investing </a><a class="nav-link" href="https://history.51invest.com/en/"> History </a><a class="nav-link" href="https://research.51invest.com/en/"> Research </a> <a class="nav-link" href="https://51invest.com/en/contents/"> Content map </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/learn/central-bank-balance-sheets/" hreflang="zh-CN" lang="zh-CN" data-language-link="zh" aria-label="Switch to Chinese" title="Switch to Chinese"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="Theme: System" title="Theme: System" data-label-auto="Theme: System" data-label-light="Theme: Light" data-label-dark="Theme: Dark"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">System</span> <span class="theme-text" data-theme-text="light">Light</span> <span class="theme-text" data-theme-text="dark">Dark</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/en/" data-main-home>Home</a> <span class="sep">/</span> <a href="/en/">Finance</a> <span class="sep">/</span> <span aria-current="page">Central Bank Balance Sheets</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">Concept</span> <h1 class="article-title">Central Bank Balance Sheets</h1> <p class="article-summary">A central bank balance sheet lists securities, lending and foreign reserves as assets and currency in circulation and bank reserves as liabilities; it records how the monetary base is created and shows why a central bank does not need deposits before expanding.</p>  <div class="meta-grid"> <div class="meta-item"><span>Module</span><strong>FIN-M04 · 中央银行业务</strong></div> <div class="meta-item"><span>Level</span><strong>Foundation</strong></div> <div class="meta-item"><span>Read</span><strong>6 min · 12 sections</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> This article has an interactive demo <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>Definition</h2>
+<p>A central bank balance sheet records its assets, liabilities and capital at a point in time and follows <code>assets = liabilities + capital</code>. The liability side is mainly currency in circulation and bank reserves, which together make the monetary base; the asset side is mainly securities, lending to banks and foreign reserves.</p>
+<h2>Intuition</h2>
+<p>A commercial bank must fund its assets with deposits and other liabilities; a central bank does not need deposits before buying assets. When it buys a security, it simply credits the selling bank&#39;s reserve account, so assets and liabilities rise together; open market operations adjust the supply of reserve balances exactly this way[2]. Reserves are the central bank&#39;s own liability, so expansion is not limited by &quot;cash on hand&quot;; the real constraints are inflation, the exchange rate and credibility.</p>
+<h2>Formal expression</h2>
+<p>Table 1: Simplified central bank balance sheet (units: RMB 100 million, teaching assumptions)</p>
+<table>
+<thead>
+<tr>
+<th>Assets</th>
+<th align="right">Amount</th>
+<th>Liabilities and capital</th>
+<th align="right">Amount</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Securities</td>
+<td align="right">4,200</td>
+<td>Currency in circulation</td>
+<td align="right">2,300</td>
+</tr>
+<tr>
+<td>Lending to banks</td>
+<td align="right">600</td>
+<td>Bank reserves</td>
+<td align="right">3,200</td>
+</tr>
+<tr>
+<td>Foreign reserves</td>
+<td align="right">800</td>
+<td>Government deposits</td>
+<td align="right">300</td>
+</tr>
+<tr>
+<td>Other assets</td>
+<td align="right">400</td>
+<td>Other liabilities</td>
+<td align="right">100</td>
+</tr>
+<tr>
+<td></td>
+<td align="right"></td>
+<td><strong>Total liabilities</strong></td>
+<td align="right"><strong>5,900</strong></td>
+</tr>
+<tr>
+<td></td>
+<td align="right"></td>
+<td><strong>Capital</strong></td>
+<td align="right"><strong>100</strong></td>
+</tr>
+<tr>
+<td><strong>Total assets</strong></td>
+<td align="right"><strong>6,000</strong></td>
+<td><strong>Total liabilities and capital</strong></td>
+<td align="right"><strong>6,000</strong></td>
+</tr>
+</tbody></table>
+<p>Assets are <code>6,000 = liabilities 5,900 + capital 100</code>, all in RMB 100 million. The monetary base is currency 2,300 + reserves 3,200 = 5,500, or <code>5,500 ÷ 6,000 = 91.7%</code> of assets. Buying 100 of securities raises securities and reserves by 100 each; selling has the opposite effect. The &quot;capital&quot; used here is the item FIN-017 defines as equity - assets minus liabilities - keeping the word customary on a central bank balance sheet. That is this article&#39;s terminology ruling dated 3 November 2026; it does not claim jurisdictions use the same disclosure wording, and it is not a judgement on whether any specific central bank is adequately capitalised.</p>
+<h2>Conditions and limits</h2>
+<ol>
+<li><strong>Domestic liabilities versus foreign assets.</strong> Domestic currency can be created, but foreign reserves cannot; sustained intervention at a fixed exchange rate can exhaust them.</li>
+<li><strong>Negative capital does not stop operations at once.</strong> A domestic-currency central bank can still create liabilities, but persistent losses damage independence and credibility.</li>
+<li><strong>Book value is not market value.</strong> Securities are carried at amortized cost or fair value; rising rates create unrealized losses that can exceed thin capital.</li>
+<li><strong>Measurement differs.</strong> The Fed&#39;s H.4.1 Table 1 reports securities held and reserve balances weekly[1]; the ECB&#39;s annual balance sheet consolidates the Eurosystem national central banks and the ECB vis-à-vis third parties at year-end[3]. The two are not directly comparable.</li>
+<li><strong>Reasons for expansion differ.</strong> Open market purchases[2], lending and FX intervention all enlarge the sheet, but their policy meanings differ; size alone does not reveal the stance.</li>
+</ol>
+<h2>Example and calculation</h2>
+<p>Using Table 1 (teaching assumptions, amounts in RMB 100 million), the central bank buys 100 of securities from a bank: assets rise from 6,000 to 6,100, liabilities from 5,900 to 6,000, and capital stays at 100; the monetary base rises from 5,500 to 5,600 (currency 2,300 plus reserves 3,300). The transaction is between the bank and the central bank; non-bank deposits do not rise.</p>
+<p>If securities fall 5% in market value and are revalued to market, the loss is <code>4,200 × 5% = 210</code> and it falls on capital: capital drops from 100 to <code>100 - 210 = -110</code>, assets become 5,790 while liabilities stay at 5,900, and <code>5,790 - 5,900 = -110</code> is capital. Before the loss, capital of 100 was only <code>100 ÷ 6,000 ≈ 1.7%</code> of assets.</p>
+<h2>Figure</h2>
+<p>Table 2: Book-value effect of buying 100 of securities (units: RMB 100 million, teaching assumptions)</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th align="right">Before</th>
+<th align="right">After</th>
+<th align="right">Change</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Securities</td>
+<td align="right">4,200</td>
+<td align="right">4,300</td>
+<td align="right">+100</td>
+</tr>
+<tr>
+<td>Bank reserves</td>
+<td align="right">3,200</td>
+<td align="right">3,300</td>
+<td align="right">+100</td>
+</tr>
+<tr>
+<td>Total assets</td>
+<td align="right">6,000</td>
+<td align="right">6,100</td>
+<td align="right">+100</td>
+</tr>
+<tr>
+<td>Capital</td>
+<td align="right">100</td>
+<td align="right">100</td>
+<td align="right">0</td>
+</tr>
+</tbody></table>
+<p>Table 2 is a teaching model: assets and liabilities rise by 100 while capital is unchanged, so leverage rises and capital falls from about 1.7% to 1.6% of assets; it is not real data.</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-cbs-title fig-cbs-desc" viewBox="0 0 420 220" width="100%">
+    <title id="fig-cbs-title">Both sides of a central bank balance sheet stacked</title>
+    <desc id="fig-cbs-desc">Two equally tall stacked bars, 150 pixels each, representing 600 billion yuan. Left, assets: securities 420, loans to banks 60, foreign reserves 80, other 40 billion. Right, liabilities and capital: currency in circulation 230, bank reserves 320, government deposits 30, other liabilities 10 and capital 10 billion. The two totals match.</desc>
+    <line x1="60" y1="190" x2="380" y2="190" stroke="var(--border)" stroke-width="2"></line>
+    <rect x="110" y="85" width="80" height="105" fill="var(--accent)" opacity="0.8"></rect>
+    <rect x="110" y="70" width="80" height="15" fill="var(--accent)" opacity="0.6"></rect>
+    <rect x="110" y="50" width="80" height="20" fill="var(--accent)" opacity="0.45"></rect>
+    <rect x="110" y="40" width="80" height="10" fill="var(--accent)" opacity="0.3"></rect>
+    <rect x="250" y="132.5" width="80" height="57.5" fill="var(--gold)" opacity="0.7"></rect>
+    <rect x="250" y="52.5" width="80" height="80" fill="var(--gold)" opacity="0.95"></rect>
+    <rect x="250" y="45" width="80" height="7.5" fill="var(--gold)" opacity="0.55"></rect>
+    <rect x="250" y="40" width="80" height="5" fill="var(--muted)" opacity="0.55"></rect>
+    <g fill="var(--muted)" font-size="11" font-family="inherit">
+      <text x="60" y="20">Billion yuan (zero baseline, 0.025 px each, equal totals)</text>
+      <text x="116" y="140">securities 420</text>
+      <text x="116" y="84">loans 60</text>
+      <text x="256" y="92">reserves 320</text>
+      <text x="256" y="164">currency 230</text>
+      <text x="100" y="208">assets 600</text>
+      <text x="238" y="208">liabilities 590 + capital 10</text>
+    </g>
+  </svg>
+  <figcaption>Figure 1: the example central bank balance sheet stacked on both sides (billion yuan, zero baseline, 0.025 pixels per billion): assets of securities 420, loans to banks 60, foreign reserves 80 and other 40; liabilities and capital of currency 230, reserves 320, government deposits 30, other liabilities 10 and capital 10. Both bars are 150 pixels tall because both sides total 600; the thinnest segments are left unlabelled. Amounts are teaching assumptions.</figcaption>
+</figure>
+
+<h2>Common mistakes</h2>
+<ul>
+<li><strong>Expanding the balance sheet is printing money.</strong> It creates reserves, but whether they become broad money depends on bank lending and public cash holdings.</li>
+<li><strong>A central bank can expand without limit.</strong> The nominal constraint is weak, but inflation, the exchange rate and credibility bind.</li>
+<li><strong>A larger balance sheet means looser policy.</strong> Size also reflects the economy, cash demand and institutions; asset composition and interest rates matter.</li>
+</ul>
+<!-- kp-supplement:start -->
+<h2>Knowledge-point review</h2>
+<h3>central bank balance sheet</h3>
+<p><strong>Definition</strong>: A central bank balance sheet lists assets such as government bonds, loans and foreign exchange, and liabilities such as currency, reserves and central-bank bills.</p>
+<p><strong>Mechanism</strong>: Asset purchases expand liabilities and base money, while sales or maturities contract them; foreign-exchange inflows, Treasury balances and rate tools change composition.</p>
+<p><strong>Example</strong>: For example, buying government bonds raises assets and banks&#39; reserve liabilities, expanding base money.</p>
+<p><strong>Boundary</strong>: A central bank sheet is not a corporate one; it can operate with negative capital, asset quality and political constraints matter, and expansion does not guarantee inflation.</p>
+<h3>reserves</h3>
+<p><strong>Definition</strong>: Reserves are banks&#39; deposits at the central bank plus vault cash, used for settlement, reserve requirements and liquidity buffers.</p>
+<p><strong>Mechanism</strong>: They split into required and excess reserves; open-market operations, reserve ratios and rate corridors adjust quantity and price.</p>
+<p><strong>Example</strong>: For example, a bank must hold a fraction of deposits as reserves and can keep excess reserves at the central bank for interest or payments.</p>
+<p><strong>Boundary</strong>: Reserves are not free cash for lending; capital, credit demand and regulation also constrain, and reserve-ratio changes depend on the regime and liquidity environment.</p>
+<h3>settlement</h3>
+<p><strong>Definition</strong>: Settlement is the final transfer of funds or securities that discharges obligations, usually through central-bank accounts or a central securities depository.</p>
+<p><strong>Mechanism</strong>: Finality, timing and counterparty risk shape payment-system stability; real-time gross, netting and intraday overdrafts are different arrangements.</p>
+<p><strong>Example</strong>: For example, a large interbank transfer settles individually in a central-bank real-time gross system and becomes irrevocable.</p>
+<p><strong>Boundary</strong>: Settlement is not clearing; clearing computes obligations while settlement moves assets, and outages, liquidity shortfalls and legal finality can cascade.</p>
+<h3>open-market operations</h3>
+<p><strong>Definition</strong>: Open-market operations are central-bank purchases or sales of securities and repos to adjust reserves, short-term rates and liquidity.</p>
+<p><strong>Mechanism</strong>: Purchases or reverse repos inject funds, while sales or repos withdraw them; maturity, collateral and counterparties shape transmission.</p>
+<p><strong>Example</strong>: For example, a seven-day reverse repo injects short-term funds to primary dealers and lowers money-market rates.</p>
+<p><strong>Boundary</strong>: Open-market operations are not a universal fine-tuner; collateral scarcity, market segmentation and rate corridors limit transmission, and central banks may be forced to offset fiscal or FX flows.</p>
+<h3>standing facilities and operating framework</h3>
+<p><strong>Definition</strong>: Standing facilities are central-bank lending or deposit windows that financial institutions may use actively, while the operating framework combines rate corridors, reserves and open-market operations.</p>
+<p><strong>Mechanism</strong>: A corridor sets a lending ceiling and deposit floor, with open-market operations managing scarcity; the framework determines short-rate stability.</p>
+<p><strong>Example</strong>: For example, a bank short of liquidity can borrow at the standing lending facility and park excess cash at the deposit facility, keeping market rates inside the corridor.</p>
+<p><strong>Boundary</strong>: The framework is not one tool; collateral, counterparties, Treasury accounts and FX intervention shift the corridor, and crises can move from price to quantity tools.</p>
+<!-- kp-supplement:end -->
+
+<h2>Related</h2>
+<ul>
+<li>Prerequisite: Bank balance sheets (FIN-003).</li>
+<li>Follow-up: Reserves and liquidity (FIN-006); Payment, clearing and settlement (FIN-007).</li>
+<li>Tool: The accounting equation (FIN-017); the topic connects to interest rates, bond prices and macroeconomic policy analysis.</li>
+<li>See also: Deposits, Lending and Credit Creation (FIN-004).</li>
+</ul>
+<h2>Figures in plain language</h2>
+<p>The three figures below check the mechanism, boundary and comparison in this article; labels come from its own sections, not new data.</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">Central Bank Balance Sheets: mechanism chain</title>
+    <desc id="fig-batch-chain-desc">Central Bank Balance Sheets — three-step structure: problem, mechanism, judgment. Labels come from the article's sections, not new data.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Central Bank Balance Sheets: mechanism chain</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Labels come from the article's sections; all three steps matter.</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Problem</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">A central bank</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">balance sheet…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">A central bank</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">balance sheet</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">lists securities</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">, lending and</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">foreign reserves…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Definition</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Definition: A</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">central bank…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Definition: A</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">central bank</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">balance sheet</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">records its</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">assets, liabilit…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Example and calculation</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Using Table 1</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">(teaching assumpt…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Using Table 1</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">(teaching</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">assumptions,</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">amounts in RMB</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">100 million)…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Reading order: test the problem, then the mechanism, then whether the judgment overreaches.</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">If a middle step lacks evidence, later conclusions are hypotheses, not facts.</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Structural illustration, not a new data chart; sample is the article's own argument.</text>
+  </svg>
+  <figcaption>Figure 2: Central Bank Balance Sheets — mechanism chain: problem, mechanism, judgment. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">Central Bank Balance Sheets: boundary</title>
+    <desc id="fig-batch-boundary-desc">Separates conditions where the claim holds from those where it fails; a local example is not universal.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Central Bank Balance Sheets: when does it hold?</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">Check the conditions before the conclusion</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">If conditions, definitions or samples change, recompute the conclusion</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Holds</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Domestic liabilities versus</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">foreign assets.</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Fails / rewrite</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Expanding the balance sheet</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">is printing money.</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">Boundary illustration; sample is the article's own argument; units as stated in the text.</text>
+  </svg>
+  <figcaption>Figure 3: Central Bank Balance Sheets — boundary: when the claim holds, and when it fails. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">Central Bank Balance Sheets: object, conditions and common mistakes</title>
+    <desc id="fig-batch-compare-desc">Three rows compare the concept, its conditions and common mistakes; comparison is not equivalence and does not replace a definition.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Central Bank Balance Sheets: object, conditions and common mistakes at a glance</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">This article</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Commonly confused</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Object</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">A central bank</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">balance sheet lists…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Adjacent concepts / common claims</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Conditions</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Domestic liabilities</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">versus foreign…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Expanding the balance sheet is</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">printing money.…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Check</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Define first, then compare; never judge</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">labels only</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Correlation is not causation; a local case is not universal</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Comparison illustration; sample is the article's own argument; units as stated in the text.</text>
+  </svg>
+  <figcaption>Figure 4: Central Bank Balance Sheets — comparison of object, conditions and common mistakes. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<h2>Exercises</h2>
+<ol>
+<li><strong>Concept check.</strong> After the central bank buys securities, which item rises at the same time? A. Currency in circulation; B. Bank reserves; C. Government deposits; D. Bank capital.</li>
+<li><strong>Calculation.</strong> A central bank has assets of 8,000, liabilities of 7,700 and capital of 300 (RMB 100 million). It sells 200 of securities and reserves fall by 200. What do assets and liabilities become, and what happens to the monetary base?</li>
+<li><strong>Conditions.</strong> A country fixes its exchange rate and the central bank keeps buying domestic currency and selling foreign exchange. What limits its balance-sheet expansion?</li>
+</ol>
+<details>
+<summary>Suggested answers</summary>
+
+<ol>
+<li>B. Securities and reserves both rise; currency, government deposits and capital do not.</li>
+<li>Assets <code>8,000 - 200 = 7,800</code>; liabilities <code>7,700 - 200 = 7,500</code>; capital remains 300 (<code>7,500 + 300 = 7,800</code>). The monetary base falls by 200 because reserves do; the exercise gives no currency figure, so the level of the base cannot be computed.</li>
+<li>Foreign reserves. Domestic currency can be created, but sellable foreign exchange is limited; a fixed exchange rate commitment restricts intervention and can feed depreciation expectations.</li>
+</ol>
+</details>
+
+<h2>Sources</h2>
+<ol>
+<li>Board of Governors of the Federal Reserve System. &quot;H.4.1 Factors Affecting Reserve Balances.&quot; U.S. Government work (public domain), 17 U.S.C. §105. <a href="https://www.federalreserve.gov/releases/h41/current/default.htm">https://www.federalreserve.gov/releases/h41/current/default.htm</a> (accessed 2026-10-30)</li>
+<li>Board of Governors of the Federal Reserve System. &quot;Open Market Operations.&quot; U.S. Government work (public domain), 17 U.S.C. §105. <a href="https://www.federalreserve.gov/monetarypolicy/openmarket.htm">https://www.federalreserve.gov/monetarypolicy/openmarket.htm</a> (accessed 2026-10-30)</li>
+<li>European Central Bank. &quot;Eurosystem balance sheet.&quot; ECB statistics terms; attribution required. <a href="https://www.ecb.europa.eu/pub/annual/balance/html/index.en.html">https://www.ecb.europa.eu/pub/annual/balance/html/index.en.html</a> (accessed 2026-10-30)</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="en" aria-labelledby="demo-check-title" data-check-done="All three are covered: the core of this article is in place." data-check-pending="One item is still open: go back to the matching section and retell it with a number or counterexample." data-check-count="Ticked"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">Worked demo</p> <button class="demo-reset" type="button" data-demo-reset>Reset</button> </div> <h2 id="demo-check-title">Read-through check: can you say three things?</h2> <p class="demo-intro">No recitation needed. Tick each sentence below and see whether you can explain the mechanism, one worked example and one boundary in your own words.</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>Read both sides of a central bank balance sheet to see how base money is recorded</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>Separate the technical precondition of balance-sheet expansion from the deposit constraint facing commercial banks</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>Name one condition under which the article’s conclusion does not hold</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> Ticked 0 / 3
+</p> </div> <p class="demo-footnote">The numbers are teaching assumptions that show relationships, not forecasts or investment advice.</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> This article has passed the current publication gate. Factual, calculation and translation revisions update both language versions together. </p> <p> <a class="button secondary" href="/en/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>Back to station </a> </p> </div> <aside class="article-aside" aria-label="Article information"> <section class="aside-card"> <h2>Learning objectives</h2> <ul> <li>Read both sides of a central bank balance sheet to see how base money is recorded</li><li>Separate the technical precondition of balance-sheet expansion from the deposit constraint facing commercial banks</li> </ul> </section> <section class="aside-card"> <h2>Required prerequisites</h2> <ul> <li> <a href="/en/learn/bank-balance-sheets/">FIN-003 · Bank Balance Sheets</a> </li> </ul> </section> <section class="aside-card"> <h2>Recommended reading</h2> <ul> <li> <a href="/en/learn/deposits-lending-and-credit-creation/">FIN-004 · Deposits, Lending and Credit Creation</a> </li><li> <a href="/en/learn/reserves-and-liquidity/">FIN-006 · Reserves and Liquidity</a> </li><li> <a href="/en/learn/payment-clearing-and-settlement/">FIN-007 · Payment, Clearing and Settlement</a> </li><li> <a href="/en/learn/bank-balance-sheets/">FIN-003 · Bank Balance Sheets</a> </li><li> <a href="/en/learn/accounting-equation/">FIN-017 · The Accounting Equation</a> </li> </ul> </section> <section class="aside-card"> <h2>AI review record</h2> <p class="muted"> There is no human sign-off; these states come from the AI-only editorial review. </p> <ul> <li> Facts and calculations : AI review passed </li><li> Subject : AI review passed </li><li> English : AI review passed </li><li> Page : AI review passed </li> </ul> </section> <section class="aside-card"> <h2>Sources</h2> <div class="source"> <a href="https://www.federalreserve.gov/releases/h41/current/default.htm" rel="noopener noreferrer" target="_blank">H.4.1 Factors Affecting Reserve Balances</a> <p>Board of Governors of the Federal Reserve System · Board of Governors of the Federal Reserve System</p> <p>Accessed: 2026-10-30 · License: U.S. Government work (public domain), 17 U.S.C. §105</p> <p>Supports: The Federal Reserve&#39;s H.4.1 release is published weekly, and its Table 1, &quot;Factors Affecting Reserve Balances of Depository Institutions,&quot; shows items such as securities held outright, reserve balances, currency in circulation and deposits.</p> </div><div class="source"> <a href="https://www.federalreserve.gov/monetarypolicy/openmarket.htm" rel="noopener noreferrer" target="_blank">Open Market Operations</a> <p>Board of Governors of the Federal Reserve System · Board of Governors of the Federal Reserve System</p> <p>Accessed: 2026-10-30 · License: U.S. Government work (public domain), 17 U.S.C. §105</p> <p>Supports: Open market operations adjust the supply of reserve balances through purchases and sales of securities, and since 2019 the Federal Reserve has used repo operations to support an ample reserves framework.</p> </div><div class="source"> <a href="https://www.ecb.europa.eu/pub/annual/balance/html/index.en.html" rel="noopener noreferrer" target="_blank">Eurosystem balance sheet</a> <p>European Central Bank · European Central Bank</p> <p>Accessed: 2026-10-30 · License: ECB statistics terms; attribution required</p> <p>Supports: The ECB&#39;s annual balance sheet consolidates the assets and liabilities of the Eurosystem national central banks and the ECB vis-à-vis third parties at year-end.</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">A free, non-commercial knowledge site. Sources and definitions are labelled; nothing here is investment advice.</p> </div> </div> <nav class="footer-links" aria-label="Knowledge stations"> <a href="https://51invest.com/en/" data-main-home>Home</a> <a href="https://51invest.com/en/contents/">Content map</a> <a href="/en/glossary/">Glossary</a> <a href="/en/search/">Search</a> <a href="https://51invest.com/en/charts/" data-main-link>Charts</a> <a href="https://51invest.com/en/sources/" data-main-link>Data &amp; licences</a> <a href="/en/">Station home</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="Knowledge stations"> <a class="mobile-link" href="https://51invest.com/en/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>Home</span> </a> <a class="mobile-link" href="https://51invest.com/en/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>Knowledge stations</span> </a> <a class="mobile-link active" href="/en/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>Station home</span> </a> <a class="mobile-link" href="/learn/central-bank-balance-sheets/" data-language-link="zh"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

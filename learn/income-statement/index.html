@@ -1,0 +1,317 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>利润表 · 巫妖投资</title><meta name="description" content="利润表汇总一段期间内的收入、费用和利润，按权责发生制确认；净利润不等于现金流，阅读时要区分毛利、营业利润和一次性项目。"><link rel="canonical" href="https://finance.51invest.com/learn/income-statement/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/income-statement/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/income-statement/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/income-statement/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/income-statement/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">利润表</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">利润表</h1> <p class="article-summary">利润表汇总一段期间内的收入、费用和利润，按权责发生制确认；净利润不等于现金流，阅读时要区分毛利、营业利润和一次性项目。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M11 · 三张报表</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>6 分钟 · 11 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义</h2>
+<p>利润表（income statement）汇总企业在一段期间内的收入、费用、利得和损失，得出净利润或净亏损。它回答“这段期间经营是否盈利”，而不是“期末有多少现金”。[1][2]</p>
+<h2>直觉</h2>
+<p>企业先卖商品或服务取得收入，再扣除为取得收入发生的成本费用。毛利、营业利润和净利润是三个层次：毛利只扣产品成本，营业利润再扣经营费用，净利润再扣利息和税。不同层次回答不同问题。</p>
+<h2>正式表达</h2>
+<p>基本关系为：</p>
+<div class="formula" role="math" aria-label="收入减费用等于净利润">收入 - 费用 = 净利润（或净亏损）</div>
+
+<p>严格说，利得和损失也参与净利润；上式是简写：把利得并入收入、损失并入费用，或在下文单列[2]。</p>
+<p>多步式列报为：收入 - 销货成本 = 毛利；毛利 - 营业费用 = 营业利润；营业利润 - 利息费用 = 税前利润；税前利润 - 所得税 = 净利润。多步式列示本身也是本文表述：2-1 与 2-3 两页剥标签正文中 gross profit、operating income、multi-step、cost of goods sold 词面命中均为 0。收入与费用按权责发生制确认，该页逐字写道 &quot;In contrast, under accrual accounting the transactions are recorded when the transaction occurs, regardless of when the cash is received or paid.&quot;[2]。2-1 与 2-3 两页剥标签正文中 matching principle、unearned、performance obligation 词面命中为 0，故「与收入配比的期间确认」是本文措辞而非该页原话。</p>
+<h2>适用条件</h2>
+<ol>
+<li>期间报表：利润表覆盖一段期间，资产负债表是时点报表——该向导逐字写 &quot;Balance sheets show what a company owns and what it owes at a fixed point in time&quot;[1]。</li>
+<li>权责发生制：现金收付时间不影响确认时点——该页逐字为 &quot;In contrast, under accrual accounting the transactions are recorded when the transaction occurs, regardless of when the cash is received or paid.&quot;[2]；写成「收入在赚取时确认、费用在发生或配比时确认」是本文的表述（2-1 与 2-3 两页剥标签正文中 matching principle、unearned、performance obligation 词面命中为 0）。</li>
+<li>估计与判断：折旧年限、坏账准备、存货计价和保修准备都会改变利润。</li>
+<li>列报口径：该页逐字写 &quot;Both IFRS and US GAAP have the same elements as components of financial statements: assets, liabilities, equity, income, and expenses.&quot;，随后逐字写 &quot;The definition of each of these elements is similar between IFRS and US GAAP, but there are some differences that can influence the value of the account or the placement of the account on the financial statements.&quot;[3]。因此本条只到「要素定义相似，但个别差异会影响账户价值与列报位置，比较前先统一所采用的准则」；旧句所称的「最低列报要求不同」超出该页表述，已删除而非保留。</li>
+<li>一次性项目：资产处置、重组和减值可能扭曲当期利润，应区分经常性利润与一次性项目。</li>
+<li>净利润不是现金流，也不是可分配现金；还要看现金流量表和营运资金需求。</li>
+</ol>
+<h2>例子与计算</h2>
+<p>以下为教学假设（单位：元），不代表任何真实公司：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th align="right">金额</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>营业收入</td>
+<td align="right">1,000,000</td>
+</tr>
+<tr>
+<td>销货成本</td>
+<td align="right">600,000</td>
+</tr>
+<tr>
+<td><strong>毛利</strong></td>
+<td align="right"><strong>400,000</strong></td>
+</tr>
+<tr>
+<td>销售费用</td>
+<td align="right">60,000</td>
+</tr>
+<tr>
+<td>管理费用</td>
+<td align="right">50,000</td>
+</tr>
+<tr>
+<td>折旧</td>
+<td align="right">40,000</td>
+</tr>
+<tr>
+<td>营业费用合计</td>
+<td align="right">150,000</td>
+</tr>
+<tr>
+<td><strong>营业利润</strong></td>
+<td align="right"><strong>250,000</strong></td>
+</tr>
+<tr>
+<td>利息费用</td>
+<td align="right">30,000</td>
+</tr>
+<tr>
+<td><strong>税前利润</strong></td>
+<td align="right"><strong>220,000</strong></td>
+</tr>
+<tr>
+<td>所得税（25%）</td>
+<td align="right">55,000</td>
+</tr>
+<tr>
+<td><strong>净利润</strong></td>
+<td align="right"><strong>165,000</strong></td>
+</tr>
+<tr>
+<td>流通股</td>
+<td align="right">100,000 股</td>
+</tr>
+<tr>
+<td>每股收益</td>
+<td align="right">1.65 元</td>
+</tr>
+</tbody></table>
+<p>计算：1,000,000 - 600,000 = 400,000；400,000 - 150,000 = 250,000；250,000 - 30,000 = 220,000；220,000 - 55,000 = 165,000；165,000 ÷ 100,000 = 1.65。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-pnl-title fig-pnl-desc" viewBox="0 0 420 215" width="100%">
+    <title id="fig-pnl-title">利润表五个层次的金额柱状图</title>
+    <desc id="fig-pnl-desc">零基线柱状图，单位千元：营业收入一千、毛利四百、营业利润二百五十、税前利润二百二十、净利润一百六十五。柱高与金额严格成比例。</desc>
+    <line x1="60" y1="180" x2="402" y2="180" stroke="var(--border)" stroke-width="2"></line>
+    <rect x="70" y="30" width="52" height="150" fill="var(--accent)" opacity="0.45"></rect>
+    <rect x="140" y="120" width="52" height="60" fill="var(--accent)" opacity="0.6"></rect>
+    <rect x="210" y="142.5" width="52" height="37.5" fill="var(--accent)" opacity="0.7"></rect>
+    <rect x="280" y="147" width="52" height="33" fill="var(--accent)" opacity="0.8"></rect>
+    <rect x="350" y="155.25" width="52" height="24.75" fill="var(--gold)" opacity="0.9"></rect>
+    <g fill="var(--muted)" font-size="10" font-family="inherit">
+      <text x="60" y="13">金额（千元，零基线）</text>
+      <text x="78" y="26">1,000</text>
+      <text x="148" y="116">400</text>
+      <text x="218" y="138">250</text>
+      <text x="288" y="143">220</text>
+      <text x="358" y="151">165</text>
+      <text x="66" y="198">营业收入</text>
+      <text x="142" y="198">毛利</text>
+      <text x="206" y="198">营业利润</text>
+      <text x="276" y="198">税前利润</text>
+      <text x="346" y="198">净利润</text>
+    </g>
+  </svg>
+  <figcaption>图 1：示例利润表的五个层次（千元；1,000 千元即 1,000,000 元），柱自零基线起、高度与金额严格成比例。金额为教学假设，不属于任何真实公司。</figcaption>
+</figure>
+
+<h2>常见误解</h2>
+<p><strong>收入就是收到的现金。</strong> 赊销在赚取时确认收入，现金可能以后才收到。</p>
+<p><strong>毛利就是净利润。</strong> 毛利还没扣营业费用、利息和税。</p>
+<p><strong>净利润高就一定有现金。</strong> 应计收入、存货和资本开支都会使利润与现金流背离。</p>
+<p><strong>息税折旧摊销前利润（EBITDA）等于现金流。</strong> 它仍忽略营运资金、资本开支、利息和税。</p>
+<p><strong>每股收益可直接跨公司比较。</strong> 股本结构和稀释工具不同，需调整。</p>
+<!-- kp-supplement:start -->
+<h2>知识点精读</h2>
+<h3>资产负债表</h3>
+<p><strong>定义</strong>：资产负债表在某一时点列示资产、负债和权益，反映企业资源、融资结构和偿债能力。</p>
+<p><strong>机制</strong>：资产按流动性排列，负债按到期排列；流动比率、杠杆和净资产反映短期与长期财务状态。</p>
+<p><strong>例子</strong>：例如企业拥有现金、应收账款、存货和厂房，同时有短期借款、应付账款和股东权益。</p>
+<p><strong>边界</strong>：资产负债表是时点快照；账面价值受历史成本、减值和表外项目影响，不能直接等于市场价值。</p>
+<h3>利润表</h3>
+<p><strong>定义</strong>：利润表列示一定期间收入、成本、费用和利润，反映经营成果和盈利能力。</p>
+<p><strong>机制</strong>：收入减成本费用得营业利润，再扣利息税得净利润；毛利率、营业利润率和净利率反映不同层级。</p>
+<p><strong>例子</strong>：例如企业收入 1000 万元、成本 600 万元、费用 250 万元，营业利润约 150 万元。</p>
+<p><strong>边界</strong>：利润不等于现金流；应计、一次性项目和会计估计会影响利润质量，收入确认时点也可能提前或延后。</p>
+<h3>现金流</h3>
+<p><strong>定义</strong>：现金流量表把经营、投资和筹资现金流分开，解释现金余额变化并检验利润质量。</p>
+<p><strong>机制</strong>：经营现金流从净利润调整非现金项目和营运资本；投资反映资本支出和并购，筹资反映借款、股权和分红。</p>
+<p><strong>例子</strong>：例如企业利润增长但应收账款激增，经营现金流可能下降，说明回款变差。</p>
+<p><strong>边界</strong>：现金流不是越多越好；经营现金流可能靠延迟付款或一次性处置，投资和筹资流出也反映战略，分类差异会改变表象。</p>
+<h3>报表连接</h3>
+<p><strong>定义</strong>：报表连接指利润表净利润进入资产负债表权益、现金流量表期初现金加净流量等于期末现金。</p>
+<p><strong>机制</strong>：三表通过留存收益、营运资本、折旧和融资活动相互校验；连接错误会暴露记账或模型问题。</p>
+<p><strong>例子</strong>：例如净利润增加留存收益，存货增加占用经营现金流，资本支出进入投资现金流并增加固定资产。</p>
+<p><strong>边界</strong>：连接不是机械加总；并购、汇率折算、会计政策变更和非控制权益会使简单勾稽失效，模型需显式处理。</p>
+<h3>合并与附注</h3>
+<p><strong>定义</strong>：合并报表把母子公司作为单一经济实体列示，抵销内部交易和投资，附注解释范围、政策和风险。</p>
+<p><strong>机制</strong>：控制判断决定是否合并，少数股东权益、商誉和内部利润抵销影响集团数字；附注补充分部、关联方和或有事项。</p>
+<p><strong>例子</strong>：例如母公司卖给子公司存货，合并时需抵销未实现利润，否则集团收入和存货虚增。</p>
+<p><strong>边界</strong>：合并不是简单加总；控制边界、合资、特殊目的实体和跨境准则差异会留下表外风险，附注可读性也影响判断。</p>
+<!-- kp-supplement:end -->
+
+<h2>关联</h2>
+<p>先修：资产负债权益等式（FIN-017）。后续：现金流量表（FIN-019）、权责发生制（FIN-020）、盈利质量分析（INV-008）。</p>
+<h2>图解</h2>
+<p>下面三张图分别检查本文的机制、边界与对照；图内文字取自本文小节，不是新数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">利润表：机制链</title>
+    <desc id="fig-batch-chain-desc">利润表 的三段结构：问题、机制、判断。图内文字取自本文小节，不是新的数据估计。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">利润表：机制链</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图内文字取自本文小节；三段缺一不可。</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">利润表汇总一段期间内</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">的收入、费用和利润…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">利润表汇总一段期间</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">内的收入、费用和利</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">润，按权责发生制确</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">认；净利润不等于现</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">金流，阅读时要区分…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">定义</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">定义：利润表（income</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start"> statement）汇总企…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">定义：利润表（incom</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">e statement）汇总</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">企业在一段期间内的</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">收入、费用、利得和</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">损失，得出净利润或…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">例子与计算</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">以下为教学假设（单位</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">：元），不代表任何真实…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">以下为教学假设（单</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">位：元），不代表任何</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">真实公司： | 项目</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">| 金额 | | ---</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">| ---: | |…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">读法：先看问题能否成立，再看机制能否连通，最后看判断会不会越界。</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">若中间一步缺证据，后面的结论只能当假设，不能当事实。</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为结构示意，不是新的数据图；样本为本文论证。</text>
+  </svg>
+  <figcaption>图 2：利润表的机制链：从问题、机制到判断。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">利润表：适用边界</title>
+    <desc id="fig-batch-boundary-desc">把成立条件与失效条件分开；局部例子不能自动推广到所有情形。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">利润表：什么情况下成立？</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">先检查条件，再看结论</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">条件、口径或样本一变，结论可能要重算</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成立</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">期间报表：利润表覆盖一段期间，资</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">产负债表是时点报表——该向导逐字</text>
+      <text x="24" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">写 &quot;Balance sheets show</text>
+      <text x="24" y="186" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">what a company owns and w…</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不成立 / 需改写</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">收入就是收到的现金。</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">图为边界示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 3：利润表的边界：哪些条件成立，哪些条件失效。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">利润表：对象、前提与常见误区</title>
+    <desc id="fig-batch-compare-desc">三行比较本文概念、成立条件与常见误区；比较不等于等价，也不能替代定义。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">利润表：一张表看对象、前提与误区</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">本篇</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">容易混淆</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">对象</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">利润表汇总一段期间内的收</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">入、费用和利润，按权责发…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相邻概念/常见说法</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">前提</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">期间报表：利润表覆盖一段</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">期间，资产负债表是时点报…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">收入就是收到的现金。</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">检查</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">先定义，再比较；不能只看</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">名称</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相关不等于因果，局部不等于普遍</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为比较示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 4：利润表的对象、前提与常见误区比较。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<h2>练习</h2>
+<ol>
+<li><strong>概念辨别。</strong> 利润表是时点报表还是期间报表？</li>
+<li><strong>计算。</strong> 收入 500,000 元，销货成本 300,000 元，营业费用 100,000 元，利息费用 20,000 元，税率 20%，求营业利润、税前利润和净利润。</li>
+<li><strong>适用条件。</strong> 公司 12 月收到 1,000,000 元现金，服务将在下一年提供。12 月能否确认收入？为什么？</li>
+</ol>
+<details>
+<summary>参考答案</summary>
+
+<ol>
+<li>期间报表。</li>
+<li>营业利润 = 500,000 - 300,000 - 100,000 = 100,000；税前利润 = 100,000 - 20,000 = 80,000；所得税 = 16,000；净利润 = 64,000。</li>
+<li>不能。按权责发生制，收入在交易发生（服务已提供）时确认，与该页逐字所述一致：&quot;In contrast, under accrual accounting the transactions are recorded when the transaction occurs, regardless of when the cash is received or paid.&quot;[2]。至于把预收现金先记为负债、待日后确认收入，是本文对常用新收入准则说法的运用（2-1 与 2-3 两页剥标签正文中 matching principle、unearned、performance obligation 词面命中为 0），该术语不挂这两页。现金流入出现在现金流量表，不出现在本期利润表。</li>
+</ol>
+</details>
+
+<h2>来源</h2>
+<ol>
+<li>U.S. Securities and Exchange Commission. “Beginners&#39; Guide to Financial Statements.” <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsbegfinstmtguide">https://www.sec.gov/reportspubs/investor-publications/investorpubsbegfinstmtguide</a>（访问日期：2026-11-03）</li>
+<li>Franklin, Mitchell, Patty Graybeal, and Dixon Cooper. <em>Principles of Accounting, Volume 1: Financial Accounting</em>, “2.1 Describe the Income Statement, Statement of Owner&#39;s Equity, Balance Sheet, and Statement of Cash Flows, and How They Interrelate.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-financial-accounting/pages/2-1-describe-the-income-statement-statement-of-owners-equity-balance-sheet-and-statement-of-cash-flows-and-how-they-interrelate">https://openstax.org/books/principles-financial-accounting/pages/2-1-describe-the-income-statement-statement-of-owners-equity-balance-sheet-and-statement-of-cash-flows-and-how-they-interrelate</a>（访问日期：2026-11-03）</li>
+<li>Franklin, Mitchell, Patty Graybeal, and Dixon Cooper. <em>Principles of Accounting, Volume 1: Financial Accounting</em>, “2.3 Prepare an Income Statement, Statement of Owner&#39;s Equity, and Balance Sheet.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-financial-accounting/pages/2-3-prepare-an-income-statement-statement-of-owners-equity-and-balance-sheet">https://openstax.org/books/principles-financial-accounting/pages/2-3-prepare-an-income-statement-statement-of-owners-equity-and-balance-sheet</a>（访问日期：2026-11-03）</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>能按收入、销货成本、营业费用、利息与税逐项复算到净利润与每股收益</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>能区分毛利、营业利润与一次性项目，并说明净利润与现金的差别</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>能按收入、销货成本、营业费用、利息与税逐项复算到净利润与每股收益</li><li>能区分毛利、营业利润与一次性项目，并说明净利润与现金的差别</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/accounting-equation/">FIN-017 · 资产负债权益等式</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/cash-flow-statement/">FIN-019 · 现金流量表</a> </li><li> <a href="/learn/accrual-accounting/">FIN-020 · 权责发生制</a> </li><li> <a href="https://invest.51invest.com/learn/earnings-quality-analysis/">INV-008 · 盈利质量分析</a> </li><li> <a href="/learn/accounting-equation/">FIN-017 · 资产负债权益等式</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsbegfinstmtguide" rel="noopener noreferrer" target="_blank">Beginners&#39; Guide to Financial Statements</a> <p>U.S. Securities and Exchange Commission · U.S. Securities and Exchange Commission</p> <p>访问：2026-11-03 · 许可：U.S. public information; copying and further distribution allowed</p> <p>支持论点：向导（2026-11-03 渲染页面取回，正文 18,647 字符）逐字写明：Income statements show how much money a company made and spent over a period of time；An income statement is a report that shows how much revenue a company earned over a specific time period (usually for a year or some portion of a year)；While an income statement can tell you whether a company made a profit, a cash flow statement can tell you whether the company generated cash.；Balance sheets show what a company owns and what it owes at a fixed point in time。原记录把首句写作 &quot;An income statement shows…&quot;，页面实际是复数 &quot;Income statements show…&quot;，已按原文修正；该向导不使用 accrual 一词来定义利润表，权责发生制的逐字支撑来自 OpenStax 2-1（见来源 2）。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-financial-accounting/pages/2-1-describe-the-income-statement-statement-of-owners-equity-balance-sheet-and-statement-of-cash-flows-and-how-they-interrelate" rel="noopener noreferrer" target="_blank">Principles of Accounting, Volume 1: Financial Accounting, 2.1 Describe the Income Statement, Statement of Owner&#39;s Equity, Balance Sheet, and Statement of Cash Flows, and How They Interrelate</a> <p>Mitchell Franklin; Patty Graybeal; Dixon Cooper · OpenStax</p> <p>访问：2026-11-03 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：利润表反映组织在某一期间的财务表现；基本关系为收入减费用等于净利润或净亏损。 2026-11-03 复取（curl 200，373,986 字节）逐字一句：In contrast, under accrual accounting the transactions are recorded when the transaction occurs, regardless of when the cash is received or paid. 权责发生制的确认时点由此承担；同页不出现 matching principle、unearned、performance obligation 词面，正文中「配比」「预收款项」等措辞标为本文表述。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-financial-accounting/pages/2-3-prepare-an-income-statement-statement-of-owners-equity-and-balance-sheet" rel="noopener noreferrer" target="_blank">Principles of Accounting, Volume 1: Financial Accounting, 2.3 Prepare an Income Statement, Statement of Owner&#39;s Equity, and Balance Sheet</a> <p>Mitchell Franklin; Patty Graybeal; Dixon Cooper · OpenStax</p> <p>访问：2026-11-03 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：利润表列示收入、费用、利得和损失；净利润由收入减费用得出，利得和损失与边缘或偶发活动相关；报表标题标明期间。 2026-11-03 复取（curl 200，361,717 字节）「IFRS Connection」一节逐字两句：Both IFRS and US GAAP have the same elements as components of financial statements: assets, liabilities, equity, income, and expenses. The definition of each of these elements is similar between IFRS and US GAAP, but there are some differences that can influence the value of the account or the placement of the account on the financial statements. 正文条件 4 据此收窄为「定义相似、个别差异影响账户价值与列报位置」，并删去原句所称「最低列报要求不同」这一超出该页的说法。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/income-statement/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>现金流量表 · 巫妖投资</title><meta name="description" content="现金流量表按经营、投资和筹资活动列示一段期间内的现金收支，并通过间接法将净利润调节为经营现金流；它补充利润表，但不能单独说明公司的全部价值。"><link rel="canonical" href="https://finance.51invest.com/learn/cash-flow-statement/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/cash-flow-statement/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/cash-flow-statement/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/cash-flow-statement/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/cash-flow-statement/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">现金流量表</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">现金流量表</h1> <p class="article-summary">现金流量表按经营、投资和筹资活动列示一段期间内的现金收支，并通过间接法将净利润调节为经营现金流；它补充利润表，但不能单独说明公司的全部价值。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M11 · 三张报表</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>4 分钟 · 10 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义</h2>
+<p>现金流量表（cash-flow statement）列示企业在一段期间内现金的流入和流出，按经营、投资和筹资三类活动归类，并解释期初到期末现金余额的变化。[1][2]</p>
+<h2>直觉</h2>
+<p>利润表按权责发生制确认收入和费用，现金却可能晚收或早付。现金流量表把利润“翻译”成实际现金变化：从净利润出发，剔除折旧等非现金项目，再调整应收、存货、应付等营运资金的变化。</p>
+<h2>正式表达</h2>
+<div class="formula" role="math" aria-label="期末现金等于期初现金加经营投资筹资三类现金流">期末现金 = 期初现金 + 经营现金流 + 投资现金流 + 筹资现金流</div>
+
+<p>间接法下，经营现金流 = 净利润 + 非现金费用 - 营运资金增加（+ 营运资金减少），并剔除处置长期资产的利得和损失（这部分现金归入投资活动）。投资现金流主要包括购买或出售长期资产；筹资现金流主要包括借入和偿还债务、发行股票及支付股利。[2][3]</p>
+<h2>适用条件</h2>
+<ol>
+<li>期间报表：反映一段期间的现金收支，不表示期末财务状况的全貌。</li>
+<li>分类口径：OpenStax 16.2 的分类示例把利息与股利收入、利息费用列入经营活动，把股利分配列入筹资活动[2]；该页没有比较 GAAP 与 IFRS。<strong>跨准则的具体差异是本文提示</strong>：比较报表前要先统一利息和股利的分类口径。</li>
+<li>非现金交易：以股份购买资产、债务转股权等不进入表内现金收支。16.3 逐字说明这类交易可在现金流量表底部注记，或在财务报表附注披露：&quot;... either as a notation at the bottom of the statement of cash flow, or in the notes to the financial statements.&quot;[3]；16.2 的决策案例则写该示例公司的政策是另表列示、排在现金流量表之后[2]。</li>
+<li>间接法从净利润调节，便于与利润表对照；直接法直接列示现金收付。</li>
+<li>现金定义：受限现金、外币现金和汇率变动影响需要单独考虑。<strong>本条为本文所列</strong>：16.2 与 16.3 两页均未讨论受限现金、外币现金或汇率变动对现金等价物的影响。</li>
+<li>经营现金流不等于自由现金流；该页逐字给出算法：&quot;Free cash flow is calculated as cash flow from operating activities, reduced by capital expenditures, the value for which is normally obtained from the investing section of the statement of cash flows.&quot;[2]，与本文「扣除资本开支」的说法一致。</li>
+</ol>
+<h2>例子与计算</h2>
+<p>沿用利润表例子（教学假设，单位：元，非真实公司）：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th align="right">金额（元）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>净利润</td>
+<td align="right">165,000</td>
+</tr>
+<tr>
+<td>加：折旧</td>
+<td align="right">40,000</td>
+</tr>
+<tr>
+<td>应收账款增加</td>
+<td align="right">(20,000)</td>
+</tr>
+<tr>
+<td>存货增加</td>
+<td align="right">(15,000)</td>
+</tr>
+<tr>
+<td>应付账款增加</td>
+<td align="right">10,000</td>
+</tr>
+<tr>
+<td><strong>经营活动现金流</strong></td>
+<td align="right"><strong>180,000</strong></td>
+</tr>
+<tr>
+<td>购买设备</td>
+<td align="right">(70,000)</td>
+</tr>
+<tr>
+<td><strong>投资活动现金流</strong></td>
+<td align="right"><strong>(70,000)</strong></td>
+</tr>
+<tr>
+<td>偿还借款</td>
+<td align="right">(30,000)</td>
+</tr>
+<tr>
+<td>支付股利</td>
+<td align="right">(50,000)</td>
+</tr>
+<tr>
+<td><strong>筹资活动现金流</strong></td>
+<td align="right"><strong>(80,000)</strong></td>
+</tr>
+<tr>
+<td><strong>现金净增加</strong></td>
+<td align="right"><strong>30,000</strong></td>
+</tr>
+<tr>
+<td>期初现金</td>
+<td align="right">50,000</td>
+</tr>
+<tr>
+<td><strong>期末现金</strong></td>
+<td align="right"><strong>80,000</strong></td>
+</tr>
+</tbody></table>
+<p>计算：165,000 + 40,000 - 20,000 - 15,000 + 10,000 = 180,000；180,000 - 70,000 = 110,000；110,000 - 30,000 - 50,000 = 30,000；50,000 + 30,000 = 80,000。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-cf-title fig-cf-desc" viewBox="0 0 420 220" width="100%">
+    <title id="fig-cf-title">经营、投资与筹资三类现金流及现金净增加</title>
+    <desc id="fig-cf-desc">以零线为基准的正负柱图，单位千元，比例每千元零点六像素：经营活动现金流正一百八十，投资活动现金流负七十，筹资活动现金流负八十，现金净增加正三十。</desc>
+    <g transform="translate(0 10)">
+    <line x1="60" y1="120" x2="400" y2="120" stroke="var(--border)" stroke-width="2"></line>
+    <rect x="75" y="12" width="56" height="108" fill="var(--accent)" opacity="0.85"></rect>
+    <rect x="155" y="120" width="56" height="42" fill="var(--gold)" opacity="0.85"></rect>
+    <rect x="235" y="120" width="56" height="48" fill="var(--gold)" opacity="0.85"></rect>
+    <rect x="315" y="102" width="56" height="18" fill="var(--accent)" opacity="0.6"></rect>
+    <g fill="var(--muted)" font-size="11" font-family="inherit">
+      <text x="80" y="8">+180</text>
+      <text x="160" y="176">−70</text>
+      <text x="240" y="182">−80</text>
+      <text x="320" y="98">+30</text>
+      <text x="72" y="136">经营</text>
+      <text x="152" y="112">投资</text>
+      <text x="232" y="112">筹资</text>
+      <text x="312" y="84">净增加</text>
+    </g>
+    </g>
+  </svg>
+  <figcaption>图 1：示例现金流量表汇总（千元，教学假设）：经营 +180、投资 −70、筹资 −80，净增加 +30，即 180 - 70 - 80 = 30；加期初现金 50 得期末 80，与表内一致。柱以零线为基准、长度与金额严格成比例（每千元 0.6 像素）。</figcaption>
+</figure>
+
+<h2>常见误解</h2>
+<p><strong>经营现金流为正说明盈利。</strong> 营运资金释放、延迟付款也能提高经营现金流，未必来自持续经营改善。</p>
+<p><strong>资本开支可以忽略。</strong> 维持现有产能的资本开支是持续经营的必要支出。</p>
+<p><strong>经营现金流就是自由现金流。</strong> 该页对自由现金流的定义逐字为经营现金流减去资本开支，资本开支数额通常取自投资活动部分[2]。</p>
+<p><strong>现金流量表不能被操纵。</strong> 付款时点、分类选择和一次性交易都会影响当期现金流。</p>
+<p><strong>现金流可以替代利润表。</strong> 两者互补：利润表看期间业绩，现金流量表看现金生成与用途。</p>
+<h2>关联</h2>
+<p>先修：资产负债权益等式（FIN-017）、利润表（FIN-018）。后续：权责发生制（FIN-020）、现金流估值的研究流程（INV-009）、盈利质量分析（INV-008）。</p>
+<h2>图解</h2>
+<p>下面三张图分别检查本文的机制、边界与对照；图内文字取自本文小节，不是新数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">现金流量表：机制链</title>
+    <desc id="fig-batch-chain-desc">现金流量表 的三段结构：问题、机制、判断。图内文字取自本文小节，不是新的数据估计。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">现金流量表：机制链</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图内文字取自本文小节；三段缺一不可。</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">现金流量表按经营、投</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">资和筹资活动列示一段…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">现金流量表按经营、</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">投资和筹资活动列示</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">一段期间内的现金收</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">支，并通过间接法将</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">净利润调节为经营现…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">定义</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">定义：现金流量表（cas</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">h-flow statement）…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">定义：现金流量表（c</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">ash-flow stateme</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">nt）列示企业在一段</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">期间内现金的流入和</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">流出，按经营、投资…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">例子与计算</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">沿用利润表例子（教学</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">假设，单位：元，非真实…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">沿用利润表例子（教</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">学假设，单位：元，非</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">真实公司）： |</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">项目 | 金额（元）</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">| | --- | ---…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">读法：先看问题能否成立，再看机制能否连通，最后看判断会不会越界。</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">若中间一步缺证据，后面的结论只能当假设，不能当事实。</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为结构示意，不是新的数据图；样本为本文论证。</text>
+  </svg>
+  <figcaption>图 2：现金流量表的机制链：从问题、机制到判断。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">现金流量表：适用边界</title>
+    <desc id="fig-batch-boundary-desc">把成立条件与失效条件分开；局部例子不能自动推广到所有情形。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">现金流量表：什么情况下成立？</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">先检查条件，再看结论</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">条件、口径或样本一变，结论可能要重算</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成立</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">期间报表：反映一段期间的现金收支</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">，不表示期末财务状况的全貌。</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不成立 / 需改写</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">经营现金流为正说明盈利。</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">图为边界示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 3：现金流量表的边界：哪些条件成立，哪些条件失效。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">现金流量表：对象、前提与常见误区</title>
+    <desc id="fig-batch-compare-desc">三行比较本文概念、成立条件与常见误区；比较不等于等价，也不能替代定义。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">现金流量表：一张表看对象、前提与误区</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">本篇</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">容易混淆</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">对象</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">现金流量表按经营、投资和</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">筹资活动列示一段期间内的…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相邻概念/常见说法</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">前提</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">期间报表：反映一段期间的</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">现金收支，不表示期末财务…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">经营现金流为正说明盈利。</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">检查</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">先定义，再比较；不能只看</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">名称</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相关不等于因果，局部不等于普遍</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为比较示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 4：现金流量表的对象、前提与常见误区比较。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<h2>练习</h2>
+<ol>
+<li><strong>概念辨别。</strong> 购买设备属于哪一类活动？</li>
+<li><strong>计算。</strong> 净利润 80,000，折旧 20,000，应收账款增加 10,000，应付账款增加 5,000，求经营现金流。</li>
+<li><strong>适用条件。</strong> 公司把应付账款付款期延长 30 天，经营现金流上升。能否据此判断经营改善？</li>
+</ol>
+<details>
+<summary>参考答案</summary>
+
+<ol>
+<li>投资活动。</li>
+<li>80,000 + 20,000 - 10,000 + 5,000 = 95,000。</li>
+<li>不能。延长付款只是一次性占用供应商资金，未来可能反转；还要看经营利润、应收和存货趋势。</li>
+</ol>
+</details>
+
+<h2>来源</h2>
+<ol>
+<li>U.S. Securities and Exchange Commission. “Beginners&#39; Guide to Financial Statements.” <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsbegfinstmtguide">https://www.sec.gov/reportspubs/investor-publications/investorpubsbegfinstmtguide</a>（访问日期：2026-11-03）</li>
+<li>Franklin, Mitchell, Patty Graybeal, and Dixon Cooper. <em>Principles of Accounting, Volume 1: Financial Accounting</em>, “16.2 Differentiate between Operating, Investing, and Financing Activities.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-financial-accounting/pages/16-2-differentiate-between-operating-investing-and-financing-activities">https://openstax.org/books/principles-financial-accounting/pages/16-2-differentiate-between-operating-investing-and-financing-activities</a>（访问日期：2026-11-03）</li>
+<li>Franklin, Mitchell, Patty Graybeal, and Dixon Cooper. <em>Principles of Accounting, Volume 1: Financial Accounting</em>, “16.3 Prepare the Statement of Cash Flows Using the Indirect Method.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-financial-accounting/pages/16-3-prepare-the-statement-of-cash-flows-using-the-indirect-method">https://openstax.org/books/principles-financial-accounting/pages/16-3-prepare-the-statement-of-cash-flows-using-the-indirect-method</a>（访问日期：2026-11-03）</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>能用间接法从净利润调节出经营现金流，并核对三类活动之和等于现金净增加</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>能说明现金流量表补了什么、不能说明什么</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>能用间接法从净利润调节出经营现金流，并核对三类活动之和等于现金净增加</li><li>能说明现金流量表补了什么、不能说明什么</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/accounting-equation/">FIN-017 · 资产负债权益等式</a> </li><li> <a href="/learn/income-statement/">FIN-018 · 利润表</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/accrual-accounting/">FIN-020 · 权责发生制</a> </li><li> <a href="https://invest.51invest.com/learn/cash-flow-valuation-research-process/">INV-009 · 现金流估值的研究流程</a> </li><li> <a href="https://invest.51invest.com/learn/earnings-quality-analysis/">INV-008 · 盈利质量分析</a> </li><li> <a href="/learn/accounting-equation/">FIN-017 · 资产负债权益等式</a> </li><li> <a href="/learn/income-statement/">FIN-018 · 利润表</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsbegfinstmtguide" rel="noopener noreferrer" target="_blank">Beginners&#39; Guide to Financial Statements</a> <p>U.S. Securities and Exchange Commission · U.S. Securities and Exchange Commission</p> <p>访问：2026-10-30 · 许可：U.S. public information; copying and further distribution allowed</p> <p>支持论点：现金流量表列示公司与外部之间的资金交换，覆盖一段期间；利润表说明是否盈利，现金流量表说明是否产生现金。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-financial-accounting/pages/16-2-differentiate-between-operating-investing-and-financing-activities" rel="noopener noreferrer" target="_blank">Principles of Accounting, Volume 1: Financial Accounting, 16.2 Differentiate between Operating, Investing, and Financing Activities</a> <p>Mitchell Franklin; Patty Graybeal; Dixon Cooper · OpenStax</p> <p>访问：2026-11-03 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：经营现金流来自产生净利润的活动；投资现金流涉及长期资产；筹资现金流涉及债务和权益的筹集与偿还。2026-11-22 复取页面正文，逐字：Operating cash flows also include cash flows from interest and dividend revenue, interest expense, and income tax.；筹资示例逐字 cash payments for dividend distributions；自由现金流逐字 Free cash flow is calculated as cash flow from operating activities, reduced by capital expenditures, the value for which is normally obtained from the investing section of the statement of cash flows.；非现金交易案例逐字 The company’s policy is to report noncash investing and financing activities in a separate statement, after the presentation of the statement of cash flows.。该页没有比较 GAAP 与 IFRS 的利息/股利分类，正文把跨准则差异标为本文提示。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-financial-accounting/pages/16-3-prepare-the-statement-of-cash-flows-using-the-indirect-method" rel="noopener noreferrer" target="_blank">Principles of Accounting, Volume 1: Financial Accounting, 16.3 Prepare the Statement of Cash Flows Using the Indirect Method</a> <p>Mitchell Franklin; Patty Graybeal; Dixon Cooper · OpenStax</p> <p>访问：2026-10-30 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：间接法从净利润出发，加回折旧等非现金费用，剔除处置长期资产的利得损失，并调整流动资产和负债变化；非现金投资与筹资交易可在表底注记或附注披露。2026-11-22 复取逐字：Add back noncash expenses, such as depreciation, amortization, and depletion.；Remove the effect of gains and/or losses from disposal of long-term assets, as cash from the disposal of long-term assets is shown under investing cash flows.；Transactions that do not affect cash but do affect long-term assets, long-term debt, and/or equity are disclosed, either as a notation at the bottom of the statement of cash flow, or in the notes to the financial statements.。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/cash-flow-statement/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>数字金融基础 · 巫妖投资</title><meta name="description" content="数字金融改变支付与结算的技术层，但货币的负债归属、信用风险与法律权利仍要逐项辨认。"><link rel="canonical" href="https://finance.51invest.com/learn/foundations-of-digital-finance/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/foundations-of-digital-finance/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/foundations-of-digital-finance/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/foundations-of-digital-finance/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/foundations-of-digital-finance/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">数字金融基础</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">数字金融基础</h1> <p class="article-summary">数字金融改变支付与结算的技术层，但货币的负债归属、信用风险与法律权利仍要逐项辨认。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M16 · 数字金融基础</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>7 分钟 · 12 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义</h2>
+<p>本文把<strong>数字金融</strong>（digital finance）界定为以数字技术提供支付、信贷、投资、保险与结算等金融服务。为区分负债归属，本文使用三个工作定义：<strong>央行数字货币</strong>（central bank digital currency, CBDC）是央行直接负债的数字形式[4]；<strong>代币化存款</strong>（tokenised deposits）是商业银行存款在分布式账本上的表示；<strong>稳定币</strong>（stablecoin）通常由私人发行并声称以储备资产维持价格稳定[3][4]。三者的发行主体、负债归属与结算层级不同，不能混为一谈。</p>
+<h2>直觉</h2>
+<p>用手机扫码付款时，变化的是支付指令的传递方式；钱从哪家银行、谁承担信用风险、最终怎样结算，仍然是另一层问题。技术可以让前端更快，但不能自动消除银行的信用风险、支付系统的结算风险或用户的法律权利。</p>
+<h2>正式表达</h2>
+<h3>支付创新</h3>
+<p><strong>支付创新</strong>（payment innovation）缩短授权、清算与结算时间，降低成本并扩大覆盖。评价一项支付创新要分开看：前端体验、后端清算、最终结算与争议处理；任何一层失败，用户都会感到“钱没到”。</p>
+<h3>电子货币</h3>
+<p><strong>电子货币</strong>（e-money）通常是发行人对持有人的负债，按面值赎回；它依赖发行人的信用与备付金安排，不是央行负债。电子货币的监管重点是客户资金保护、赎回权与反洗钱。</p>
+<h3>央行数字货币</h3>
+<p><strong>CBDC</strong> 是央行直接负债，可能用于零售或批发场景。BIS 组织的央行报告强调，CBDC 设计需不损害货币与金融稳定，并涉及运营、准入、隐私与跨境安排[1]。零售 CBDC 涉及隐私、离线支付、商业银行脱媒与运营架构；批发 CBDC 更多用于跨境与结算实验。设计选择会改变货币体系的风险分布。</p>
+<h3>代币化存款</h3>
+<p><strong>代币化存款</strong>把银行存款搬到可编程账本，负债仍是商业银行存款。它可能提高结算效率与可组合性，但信用风险、存款保险与监管边界通常仍按存款处理。</p>
+<h3>金融科技与基础设施</h3>
+<p><strong>金融科技</strong>（fintech）把技术能力嵌入金融流程；真正决定成败的往往是<strong>基础设施</strong>（infrastructure）：身份认证、支付清算、数据标准、网络安全与法律确定性。技术只是其中一层。加密资产还可能涉及证券法、托管、披露与欺诈风险，监管适用取决于具体结构与事实[2]。</p>
+<h2>适用条件</h2>
+<ol>
+<li>讨论数字货币要先写清发行主体、负债归属、赎回权与结算最终性；只谈“币”会混淆风险。</li>
+<li>支付创新的效率提升依赖后端清算与结算；前端快不等于资金到账快。</li>
+<li>CBDC 的设计涉及隐私、可编程性与商业银行角色；不同设计不能互相替代。</li>
+<li>稳定币的稳定性依赖储备质量、审计与赎回机制；FSB 原则要求对同类活动、同类风险实施同类监管，稳定币安排还需满足储备与赎回要求[3]。“稳定”是承诺，不是价值保证；持有者仍承担发行人、储备与赎回风险。</li>
+</ol>
+<h2>例子与计算</h2>
+<p>假设一笔 1,000 元的商户付款，流程如下，数字为本文教学假设。</p>
+<table>
+<thead>
+<tr>
+<th>环节</th>
+<th>参与方</th>
+<th>发生什么</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>付款人</td>
+<td>在钱包或银行 App 发起 1,000 元支付</td>
+</tr>
+<tr>
+<td>2</td>
+<td>支付服务商</td>
+<td>验证身份、扣减付款人余额</td>
+</tr>
+<tr>
+<td>3</td>
+<td>收款行</td>
+<td>贷记商户账户（可能即时或次日）</td>
+</tr>
+<tr>
+<td>4</td>
+<td>清算系统</td>
+<td>银行之间净额清算</td>
+</tr>
+<tr>
+<td>5</td>
+<td>结算</td>
+<td>最终资金转移与对账</td>
+</tr>
+</tbody></table>
+<p>前端在第 2 步就显示“支付成功”，但银行间第 4—5 步可能尚未完成。若支付服务商破产或清算失败，商户可能面临回滚或延迟。数字金融的评估必须把用户体验与最终结算分开。</p>
+<h2>图表</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-029-chain-title fig-fin-029-chain-desc" viewBox="0 0 560 310" width="100%">
+    <title id="fig-fin-029-chain-title">数字金融基础：三段判断链</title>
+    <desc id="fig-fin-029-chain-desc">支付前端：钱包与接口改变用户体验；货币形态：谁发行、谁负债决定结算层级；基础设施：后台能否实时清算决定成本与风险</desc>
+    <rect x="0.5" y="0.5" width="559" height="309" rx="12" fill="var(--surface)" stroke="var(--border)"/>
+    <rect x="24" y="16" width="512" height="86" rx="10" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1"/>
+    <rect x="24" y="16" width="5" height="86" rx="2.5" fill="var(--accent)"/>
+    <text x="44" y="35" font-size="9.5" letter-spacing="1.1" fill="var(--accent)" font-family="inherit">起点</text>
+    <text x="44" y="56" font-size="13" font-weight="650" fill="var(--text)" font-family="inherit">支付前端</text>
+    <text x="44" y="76" font-size="10.5" fill="var(--secondary)" font-family="inherit">钱包与接口改变用户体验</text>
+    <line x1="280" y1="102" x2="280" y2="108" stroke="var(--border)" stroke-width="1.5"/>
+    <path d="M276 106 L280 110 L284 106" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+    <rect x="24" y="112" width="512" height="86" rx="10" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1"/>
+    <rect x="24" y="112" width="5" height="86" rx="2.5" fill="var(--accent)"/>
+    <text x="44" y="131" font-size="9.5" letter-spacing="1.1" fill="var(--accent)" font-family="inherit">机制</text>
+    <text x="44" y="152" font-size="13" font-weight="650" fill="var(--text)" font-family="inherit">货币形态</text>
+    <text x="44" y="172" font-size="10.5" fill="var(--secondary)" font-family="inherit">谁发行、谁负债决定结算层级</text>
+    <line x1="280" y1="198" x2="280" y2="204" stroke="var(--border)" stroke-width="1.5"/>
+    <path d="M276 202 L280 206 L284 202" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+    <rect x="24" y="208" width="512" height="86" rx="10" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1"/>
+    <rect x="24" y="208" width="5" height="86" rx="2.5" fill="var(--accent)"/>
+    <text x="44" y="227" font-size="9.5" letter-spacing="1.1" fill="var(--accent)" font-family="inherit">判断</text>
+    <text x="44" y="248" font-size="13" font-weight="650" fill="var(--text)" font-family="inherit">基础设施</text>
+    <text x="44" y="268" font-size="10.5" fill="var(--secondary)" font-family="inherit">后台能否实时清算决定成本与风险</text>
+  </svg>
+  <figcaption>图 1：数字金融基础的三段判断链——支付前端 → 货币形态 → 基础设施。三段是判断链，不是唯一路径；图中文字取自本文正文，不含统计数据。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<h2>常见误解</h2>
+<p><strong>CBDC 就是加密货币。</strong> CBDC 是央行负债[4]，由国家信用支撑；大多数加密资产没有同一发行主体与赎回承诺。</p>
+<p><strong>稳定币等于银行存款。</strong> 稳定币通常是私人负债，依赖储备与赎回机制；它不自动享有存款保险或央行最后贷款人支持。</p>
+<!-- kp-supplement:start -->
+<h2>知识点精读</h2>
+<h3>支付创新</h3>
+<p><strong>定义</strong>：支付创新是新技术、新渠道和新商业模式改变发起、清算和结算的方式，如移动支付、快速支付和开放银行。</p>
+<p><strong>机制</strong>：创新降低摩擦、扩大金融覆盖，也带来欺诈、数据隐私、操作风险和监管套利；互操作性和最终性关键。</p>
+<p><strong>例子</strong>：例如手机扫码支付让小商户低成本收款，但账户盗用和退款纠纷需要规则。</p>
+<p><strong>边界</strong>：创新不是必然普惠；数字鸿沟、费用和网络效应会排斥弱势群体，快速到账也可能便利诈骗。</p>
+<h3>电子货币</h3>
+<p><strong>定义</strong>：电子货币是储存在电子载体、代表对发行人的货币债权、可用于支付的余额，通常与银行存款分离。</p>
+<p><strong>机制</strong>：发行人以备付金或银行存款支持负债，需牌照、客户资金隔离和赎回保障；技术和商户网络决定使用。</p>
+<p><strong>例子</strong>：例如预付卡或电子钱包余额可购物，发行人须持有等额安全资产并允许赎回。</p>
+<p><strong>边界</strong>：电子货币不是银行存款或央行货币；发行人信用、备付金质量和破产隔离决定安全，匿名性和跨境使用也带来合规风险。</p>
+<h3>CBDC</h3>
+<p><strong>定义</strong>：CBDC 是央行直接对公众或机构发行的数字负债，是法定货币的数字形式，不等同于商业银行存款。</p>
+<p><strong>机制</strong>：零售 CBDC 可提高支付效率和普惠，批发 CBDC 用于银行间结算；设计需权衡隐私、离线、利率和金融稳定。</p>
+<p><strong>例子</strong>：例如零售 CBDC 钱包由央行记账，转账不经过商业银行，但可能引发存款搬家。</p>
+<p><strong>边界</strong>：CBDC 不是加密货币；中心化发行、法律地位和可编程性由政策决定，计息、限额和隐私保护会影响采用和银行中介。</p>
+<h3>代币化存款</h3>
+<p><strong>定义</strong>：代币化存款是把商业银行存款记录在分布式账本上、仍由银行负债支持的数字化形式。</p>
+<p><strong>机制</strong>：它保留存款的信用和监管属性，可用于可编程支付和原子结算，但需银行记账、客户身份和最终性法律支持。</p>
+<p><strong>例子</strong>：例如企业把存款代币化，在供应链平台按条件自动付款，银行仍承担兑付和合规责任。</p>
+<p><strong>边界</strong>：代币化不是发行新货币；技术故障、双重支付、隐私和跨链互操作会带来风险，法律确定性比技术标签更重要。</p>
+<h3>金融科技与基础设施</h3>
+<p><strong>定义</strong>：金融科技是用数据、算法、云和分布式账本改造支付、信贷、投资和保险；基础设施是支撑这些活动的系统与规则。</p>
+<p><strong>机制</strong>：科技降低成本和门槛，也集中数据、算法和云服务风险；牌照、网络安全、互操作和消费者保护决定可持续。</p>
+<p><strong>例子</strong>：例如信贷平台用替代数据给小企业评分，扩大贷款覆盖，但模型偏差和数据来源需审查。</p>
+<p><strong>边界</strong>：金融科技不是监管真空；技术中性、系统重要性和外包责任仍需监管，创新与稳定之间要权衡。</p>
+<!-- kp-supplement:end -->
+
+<h2>关联</h2>
+<table>
+<thead>
+<tr>
+<th>知识 ID</th>
+<th>标题</th>
+<th>关系</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>FIN-007</td>
+<td>支付清算与结算</td>
+<td>先修</td>
+</tr>
+<tr>
+<td>FIN-001</td>
+<td>货币的职能</td>
+<td>建议阅读</td>
+</tr>
+<tr>
+<td>FIN-002</td>
+<td>信用关系</td>
+<td>建议阅读</td>
+</tr>
+<tr>
+<td>FIN-024</td>
+<td>公司治理与利益冲突</td>
+<td>建议阅读</td>
+</tr>
+</tbody></table>
+<h2>图解</h2>
+<p>下面三张图分别检查本文的机制、边界与对照；图内文字取自本文小节，不是新数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">数字金融基础：机制链</title>
+    <desc id="fig-batch-chain-desc">数字金融基础 的三段结构：问题、机制、判断。图内文字取自本文小节，不是新的数据估计。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">数字金融基础：机制链</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图内文字取自本文小节；三段缺一不可。</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">数字金融改变支付与结</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">算的技术层，但货币的…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">数字金融改变支付与</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">结算的技术层，但货</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">币的负债归属、信用</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">风险与法律权利仍要</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">逐项辨认。</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">定义</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">定义：本文把数字金融</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">（digital finance）…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">定义：本文把数字金</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">融（digital</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">finance）界定为以</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">数字技术提供支付、</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">信贷、投资、保险与…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">例子与计算</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">假设一笔 1,000</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">元的商户付款，流程如…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">假设一笔 1,000</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">元的商户付款，流程</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">如下，数字为本文教</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">学假设。</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">读法：先看问题能否成立，再看机制能否连通，最后看判断会不会越界。</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">若中间一步缺证据，后面的结论只能当假设，不能当事实。</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为结构示意，不是新的数据图；样本为本文论证。</text>
+  </svg>
+  <figcaption>图 2：数字金融基础的机制链：从问题、机制到判断。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">数字金融基础：适用边界</title>
+    <desc id="fig-batch-boundary-desc">把成立条件与失效条件分开；局部例子不能自动推广到所有情形。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">数字金融基础：什么情况下成立？</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">先检查条件，再看结论</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">条件、口径或样本一变，结论可能要重算</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成立</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">讨论数字货币要先写清发行主体、负</text>
+      <text x="24" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">债归属、赎回权与结算最终性；只谈</text>
+      <text x="24" y="170" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">“币”会混淆风险。</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不成立 / 需改写</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">CBDC 就是加密货币。</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">图为边界示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 3：数字金融基础的边界：哪些条件成立，哪些条件失效。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">数字金融基础：对象、前提与常见误区</title>
+    <desc id="fig-batch-compare-desc">三行比较本文概念、成立条件与常见误区；比较不等于等价，也不能替代定义。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">数字金融基础：一张表看对象、前提与误区</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">本篇</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">容易混淆</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">对象</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">数字金融改变支付与结算的</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">技术层，但货币的负债归属…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相邻概念/常见说法</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">前提</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">讨论数字货币要先写清发行</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">主体、负债归属、赎回权与…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">CBDC 就是加密货币。</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">检查</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">先定义，再比较；不能只看</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">名称</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相关不等于因果，局部不等于普遍</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为比较示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 4：数字金融基础的对象、前提与常见误区比较。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<h2>练习</h2>
+<ol>
+<li>概念辨别：按发行主体与负债归属区分 CBDC、代币化存款与稳定币。</li>
+<li>计算或推理：在上例中，若收款行次日才贷记，商户的流动性风险如何变化？</li>
+<li>适用条件：说明零售 CBDC 在什么设计下可能引起商业银行脱媒。</li>
+</ol>
+<h2>来源</h2>
+<ol>
+<li>Bank for International Settlements. <em>Central bank digital currencies: foundational principles and core features</em>. Bank for International Settlements. <a href="https://www.bis.org/publ/othp33.htm%EF%BC%88%E8%AE%BF%E9%97%AE%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-05%EF%BC%89">https://www.bis.org/publ/othp33.htm（访问日期：2026-11-05）</a></li>
+<li>U.S. Securities and Exchange Commission. <em>Crypto Assets</em>. U.S. Securities and Exchange Commission. <a href="https://www.sec.gov/securities-topics/crypto-assets%EF%BC%88%E8%AE%BF%E9%97%AE%E6%97%A5%E6%9C%9F%EF%BC%9A2026-10-30%EF%BC%89">https://www.sec.gov/securities-topics/crypto-assets（访问日期：2026-10-30）</a></li>
+<li>Financial Stability Board. <em>Regulation, Supervision and Oversight of Crypto-Asset Activities and Markets</em>. Financial Stability Board. <a href="https://fsb.org/wp-content/uploads/P111022-3.pdf%EF%BC%88%E8%AE%BF%E9%97%AE%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-21%EF%BC%89">https://fsb.org/wp-content/uploads/P111022-3.pdf（访问日期：2026-11-21）</a></li>
+<li>Ravi Menon. <em>Making Sense of Crypto</em>. International Monetary Fund, Finance &amp; Development. <a href="https://www.imf.org/en/Publications/fandd/issues/2022/09/Making-sense-of-crypto-Ravi-Menon%EF%BC%88%E8%AE%BF%E9%97%AE%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-22%EF%BC%89">https://www.imf.org/en/Publications/fandd/issues/2022/09/Making-sense-of-crypto-Ravi-Menon（访问日期：2026-11-22）</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>能区分央行数字货币、代币化存款与稳定币的发行主体、负债归属和结算层级</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>能用一个支付流程说明技术优化了哪一步，又没有改变哪一项信用与法律权利</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>能区分央行数字货币、代币化存款与稳定币的发行主体、负债归属和结算层级</li><li>能用一个支付流程说明技术优化了哪一步，又没有改变哪一项信用与法律权利</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/payment-clearing-and-settlement/">FIN-007 · 支付清算与结算</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/functions-of-money/">FIN-001 · 货币的职能</a> </li><li> <a href="/learn/credit-relationships/">FIN-002 · 信用关系</a> </li><li> <a href="/learn/corporate-governance-and-conflicts/">FIN-024 · 公司治理与利益冲突</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.bis.org/publ/othp33.htm" rel="noopener noreferrer" target="_blank">Central bank digital currencies: foundational principles and core features</a> <p>Bank for International Settlements · Bank for International Settlements</p> <p>访问：2026-11-05 · 许可：BIS terms: non-commercial download, display and redistribution allowed with attribution</p> <p>支持论点：央行数字货币的设计需不损害货币与金融稳定，并涉及运营、准入、隐私和跨境安排等选择。 覆盖范围注记（2026-11-05 重取，HTTP 200，137,696 字节，去标签文本 10,650 字符，缓存 .scratch/pages/m024-bis-cbdc.htm）：monetary and financial stability 出现 4 次，而 direct claim／central bank liability／digital form of central bank money 各 0 次，即该页没有写出央行数字货币的负债属性，正文因此把该说法标为本文的工作定义。</p> </div><div class="source"> <a href="https://www.sec.gov/securities-topics/crypto-assets" rel="noopener noreferrer" target="_blank">Crypto Assets</a> <p>U.S. Securities and Exchange Commission · U.S. Securities and Exchange Commission</p> <p>访问：2026-10-30 · 许可：U.S. public information; copying and further distribution allowed</p> <p>支持论点：数字资产可能涉及证券法、托管、披露和欺诈风险；监管适用取决于具体结构和事实，不能只凭名称判断。</p> </div><div class="source"> <a href="https://fsb.org/wp-content/uploads/P111022-3.pdf" rel="noopener noreferrer" target="_blank">Regulation, Supervision and Oversight of Crypto-Asset Activities and Markets</a> <p>Financial Stability Board · Financial Stability Board</p> <p>访问：2026-11-21 · 许可：© Financial Stability Board; linked summary only</p> <p>支持论点：监管当局应按“同样的活动、同样的风险、同样的监管”原则，对加密资产活动与市场实施与风险相称的监管；要求发行人和服务商建立治理、风险管理、数据与披露框架；稳定币安排还需满足储备与赎回相关要求。</p> </div><div class="source"> <a href="https://www.imf.org/en/Publications/fandd/issues/2022/09/Making-sense-of-crypto-Ravi-Menon" rel="noopener noreferrer" target="_blank">Making Sense of Crypto</a> <p>Ravi Menon · International Monetary Fund, Finance &amp; Development</p> <p>访问：2026-11-22 · 许可：IMF copyright; cite-only, attributed summary; no full-text republication</p> <p>支持论点：CBDC 是央行的直接负债与支付工具；稳定币是把价值锚定到另一资产（通常是法币）的代币，需以高质量储备支持；代币化银行存款、稳定币与 CBDC 是不同形态的数字货币，但只有 CBDC 直接构成央行负债。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/foundations-of-digital-finance/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>Three Messages in the Yield Curve: Expectations, Risk and Liquidity · 51Invest</title><meta name="description" content="An inverted yield curve is often read as a recession signal, but the curve carries at least three messages: future rate expectations, term risk premium and liquidity premium. Separating them tells whether inversion reflects tight policy or risk repricing."><link rel="canonical" href="https://finance.51invest.com/en/learn/yield-curve-three-informations-expectations-risk-liquidity/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/yield-curve-three-informations-expectations-risk-liquidity/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/yield-curve-three-informations-expectations-risk-liquidity/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/yield-curve-three-informations-expectations-risk-liquidity/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/en/" data-main-home aria-label="51Invest"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">51Invest</span> <span class="brand-caption">WUYAO INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="Knowledge stations"> <a class="nav-link" href="https://51invest.com/en/" data-main-home> Home </a> <a class="nav-link" href="https://economics.51invest.com/en/"> Economics </a><a class="nav-link active" href="/en/" aria-current="page"> Finance </a><a class="nav-link" href="https://markets.51invest.com/en/"> Markets </a><a class="nav-link" href="https://invest.51invest.com/en/"> Investing </a><a class="nav-link" href="https://history.51invest.com/en/"> History </a><a class="nav-link" href="https://research.51invest.com/en/"> Research </a> <a class="nav-link" href="https://51invest.com/en/contents/"> Content map </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/learn/yield-curve-three-informations-expectations-risk-liquidity/" hreflang="zh-CN" lang="zh-CN" data-language-link="zh" aria-label="Switch to Chinese" title="Switch to Chinese"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="Theme: System" title="Theme: System" data-label-auto="Theme: System" data-label-light="Theme: Light" data-label-dark="Theme: Dark"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">System</span> <span class="theme-text" data-theme-text="light">Light</span> <span class="theme-text" data-theme-text="dark">Dark</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/en/" data-main-home>Home</a> <span class="sep">/</span> <a href="/en/">Finance</a> <span class="sep">/</span> <span aria-current="page">Three Messages in the Yield Curve: Expectations, Risk and Liquidity</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">Concept</span> <h1 class="article-title">Three Messages in the Yield Curve: Expectations, Risk and Liquidity</h1> <p class="article-summary">An inverted yield curve is often read as a recession signal, but the curve carries at least three messages: future rate expectations, term risk premium and liquidity premium. Separating them tells whether inversion reflects tight policy or risk repricing.</p>  <div class="meta-grid"> <div class="meta-item"><span>Module</span><strong>FIN-M07 · 利率与资金价格</strong></div> <div class="meta-item"><span>Level</span><strong>Systematic</strong></div> <div class="meta-item"><span>Read</span><strong>7 min · 12 sections</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> This article has an interactive demo <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>Definition and intuition</h2>
+<p>The <strong>yield curve</strong> plots yields across maturities. It carries at least three messages:</p>
+<p><strong>Expectations</strong>: long rates are the average of expected future short rates; if the market expects rate cuts, long rates can fall below short rates and the curve inverts.</p>
+<p><strong>Term premium</strong>: investors demand compensation for holding long bonds through repricing and inflation uncertainty; a higher premium steepens the curve.</p>
+<p><strong>Liquidity premium</strong>: long bonds differ in market depth, bid-ask spreads and collateral treatment; less liquidity means higher yield.</p>
+<p>Mixing the three misreads &#39;expected cuts&#39; as &#39;recession&#39; or &#39;risk premium up&#39; as &#39;policy easing&#39;[1][2].</p>
+<h2>Formal expression and worked example</h2>
+<p>Suppose the 2-year yield is 4.8%, the 10-year 4.2%, so the <code>10y−2y</code> spread is −0.6 points and the curve is inverted.</p>
+<p>Using the expectations hypothesis, if the expected average short rate over the next eight years is 3.8% and the term premium is 0.4%, the 10-year yield is about <code>3.8+0.4=4.2%</code>; the 2-year 4.8% reflects high current policy and expected cuts. Inversion comes from &#39;high now, low later&#39;, not necessarily recession.</p>
+<p>If the term premium rises from 0.4% to 1.2%, the 10-year yield rises to 5.0% even with unchanged rate expectations, and the curve steepens. Inversion ending may reflect higher risk premium, not better growth. All numbers are teaching assumptions.</p>
+<h2>Three signals</h2>
+<p><strong>Recession signal</strong>: inversion persists for months alongside wider credit spreads, weaker PMI and higher jobless claims; the curve alone is insufficient.</p>
+<p><strong>Policy signal</strong>: the short end is anchored by policy; the long end falls on expected cuts. If inflation is high and the central bank is hawkish, the short end rises and inversion deepens.</p>
+<p><strong>Risk signal</strong>: long yields can rise from term or liquidity premium rather than growth expectations; the curve steepens but risk assets may not benefit.</p>
+<p>Ask which end is moving: short-end moves are mostly policy; long-end moves can be expectations, risk or liquidity. The shape is the result; decomposing drivers is the analysis[3][4].</p>
+<h2>Figures</h2>
+<figure>
+<svg role="img" aria-labelledby="fig-yield-curve-three-informations-expectations-risk-liquidity-1-title fig-yield-curve-three-informations-expectations-risk-liquidity-1-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-yield-curve-three-informations-expectations-risk-liquidity-1-title">Information chain of the yield curve</title>
+<desc id="fig-yield-curve-three-informations-expectations-risk-liquidity-1-desc">Three steps: rate expectations, term premium, liquidity premium.</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">Three messages in the yield curve</text>
+<text x="24" y="54" font-size="11" text-anchor="start">Expectations, term premium and liq</text>
+<text x="24" y="68" font-size="11" text-anchor="start">uidity premium set the shape.</text>
+<rect x="14" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="69" y="140" font-size="12" text-anchor="middle">Rate expectations</text>
+<text x="69" y="184" font-size="12" text-anchor="middle" font-weight="700">Cuts/hikes</text>
+<rect x="136" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="191" y="140" font-size="12" text-anchor="middle">Term premium</text>
+<text x="191" y="184" font-size="12" text-anchor="middle" font-weight="700">+0.4%</text>
+<rect x="258" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="313" y="140" font-size="12" text-anchor="middle">Liquidity premium</text>
+<text x="313" y="184" font-size="12" text-anchor="middle" font-weight="700">Market depth</text>
+<rect x="380" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="435" y="140" font-size="12" text-anchor="middle">Curve shape</text>
+<text x="435" y="184" font-size="12" text-anchor="middle" font-weight="700">Inverted/steep</text>
+<line x1="125" y1="160" x2="135" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="247" y1="160" x2="257" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="369" y1="160" x2="379" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<text x="24" y="246" font-size="11" text-anchor="start">Teaching diagram, no statistical data.</text>
+</g>
+</svg>
+<figcaption>Figure 1: information chain of the yield curve; teaching diagram.</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-yield-curve-three-informations-expectations-risk-liquidity-2-title fig-yield-curve-three-informations-expectations-risk-liquidity-2-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-yield-curve-three-informations-expectations-risk-liquidity-2-title">2-year and 10-year yields</title>
+<desc id="fig-yield-curve-three-informations-expectations-risk-liquidity-2-desc">Two shapes, inverted and steep, compared on 2-year and 10-year yields.</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">Inverted and steep curves</text>
+<text x="24" y="54" font-size="11" text-anchor="start">Inverted: 2-year 4.8%, 10-year 4.2</text>
+<text x="24" y="68" font-size="11" text-anchor="start">%; steep: 2-year 3.0%, 10-year 4.5</text>
+<text x="24" y="82" font-size="11" text-anchor="start">%.</text>
+<line x1="178" y1="64" x2="178" y2="270" stroke="currentColor" stroke-width="1" opacity=".45"/>
+<text x="20" y="97" font-size="12">Inverted 2y</text>
+<rect x="178" y="78" width="360" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="95" font-size="12" font-weight="700">4.8%</text>
+<text x="20" y="145" font-size="12">Inverted 10y</text>
+<rect x="178" y="126" width="315.00000000000006" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="143" font-size="12" font-weight="700">4.2%</text>
+<text x="20" y="193" font-size="12">Steep 2y</text>
+<rect x="178" y="174" width="225" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="191" font-size="12" font-weight="700">3.0%</text>
+<text x="20" y="241" font-size="12">Steep 10y</text>
+<rect x="178" y="222" width="337.5" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="239" font-size="12" font-weight="700">4.5%</text>
+<text x="24" y="292" font-size="11" text-anchor="start">Teaching assumptions; unit: %.</text>
+</g>
+</svg>
+<figcaption>Figure 2: 2-year and 10-year yields; teaching assumptions, unit %.</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-yield-curve-three-informations-expectations-risk-liquidity-3-title fig-yield-curve-three-informations-expectations-risk-liquidity-3-desc" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-yield-curve-three-informations-expectations-risk-liquidity-3-title">Four quadrants of curve changes</title>
+<desc id="fig-yield-curve-three-informations-expectations-risk-liquidity-3-desc">Axes: short-end and long-end direction; quadrants map to tightening, risk repricing, growth expectations and easing.</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">Four curve changes by short- and long-end</text>
+<text x="24" y="49" font-size="16" text-anchor="start">drivers</text>
+<text x="24" y="54" font-size="11" text-anchor="start">Short up, long down is tightening;</text>
+<text x="24" y="68" font-size="11" text-anchor="start"> short down, long up is risk repri</text>
+<text x="24" y="82" font-size="11" text-anchor="start">cing.</text>
+<text x="40" y="68" font-size="11">Short end up</text>
+<text x="40" y="286" font-size="11">Short end down</text>
+<text x="110" y="314" font-size="11" text-anchor="middle">Long end down</text>
+<text x="500" y="314" font-size="11" text-anchor="middle">Long end up</text>
+<rect x="96" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="100" font-size="12" text-anchor="start">Tightening</text>
+<text x="108" y="130" font-size="11" text-anchor="start">Short up, long down</text>
+<text x="108" y="170" font-size="11" font-weight="700">Deeper inversion</text>
+<rect x="338" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="100" font-size="12" text-anchor="start">Risk repricing</text>
+<text x="350" y="130" font-size="11" text-anchor="start">Short up, long up</text>
+<text x="350" y="170" font-size="11" font-weight="700">Bear steepener</text>
+<rect x="96" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="214" font-size="12" text-anchor="start">Growth expectations</text>
+<text x="108" y="244" font-size="11" text-anchor="start">Short down, long up</text>
+<text x="108" y="284" font-size="11" font-weight="700">Bull steepener</text>
+<rect x="338" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="214" font-size="12" text-anchor="start">Easing</text>
+<text x="350" y="244" font-size="11" text-anchor="start">Short down, long down</text>
+<text x="350" y="284" font-size="11" font-weight="700">Bull flattener</text>
+</g>
+</svg>
+<figcaption>Figure 3: four quadrants of curve changes; comparison and classification diagram.</figcaption>
+</figure>
+
+<p>Figure 1 links expectations, term premium and liquidity premium into the curve. Figure 2 shows inverted and steep shapes using 2-year and 10-year rates. Figure 3 uses short-end and long-end drivers to mark four curve changes. All numbers are teaching assumptions.</p>
+<h2>Conditions, boundaries and common mistakes</h2>
+<p><strong>Boundary 1: term premium is unobservable.</strong> It is model-estimated; different models give different answers, and residuals are not facts.</p>
+<p><strong>Boundary 2: the term spread is not the only indicator.</strong> The 3-month/10-year spread, futures, credit spreads and bank lending surveys all add information.</p>
+<p><strong>Boundary 3: central-bank purchases compress the term premium.</strong> QE and QT change the curve; inversion may reflect the policy mix, not market expectations.</p>
+<p><strong>Mistake 1: inversion guarantees recession.</strong> It is a probability signal, not a guarantee; credit, employment and earnings matter.</p>
+<p><strong>Mistake 2: a steep curve means a strong economy.</strong> Steepness can come from a higher term premium, fiscal risk or inflation uncertainty, not growth.</p>
+<h2>Deeper note: split the curve into level, slope and curvature</h2>
+<p>Curve analysis should not fixate on the 10y-2y spread alone. A fuller approach splits the curve into three factors: <strong>level</strong> (parallel moves), <strong>slope</strong> (long-short spread) and <strong>curvature</strong> (the belly versus the wings). Level shifts usually reflect policy rates or inflation expectations; slope changes reflect term premia and the expected policy path; curvature changes often appear around policy turns or rising recession odds.</p>
+<p><strong>Term-premium estimation</strong> is the key. Academic and practitioner models such as ACM and KW decompose long yields into the average expected short rate and the term premium. If the 10-year yield rises 0.5 points but the model shows the premium up 0.7 and expected rates down 0.2, the move is mainly risk compensation, not growth optimism. Without the decomposition, &#39;risk repricing&#39; is misread as &#39;overheating&#39;.</p>
+<p><strong>Four curve shapes</strong> need separate readings: bear steepening (long end rises faster) usually means a higher term premium or inflation worry; bear flattening (short end rises faster) usually means central-bank hikes; bull steepening (short end falls faster) usually means rate-cut expectations; bull flattening (long end falls faster) usually means growth fear. The same word &#39;steeper&#39; can mean opposite things.</p>
+<p><strong>Real versus nominal</strong> must be separated. If nominal yields rise while breakeven inflation falls, real rates rise, which is worse for growth and risk assets; if the rise is mostly inflation expectations, real rates may be unchanged. TIPS or inflation swaps are more reliable than the nominal curve alone.</p>
+<p><strong>Signals lag and are noisy.</strong> Inversions have led recessions by months to two years on average, but each cycle differs; timing on inversion alone can be early or late. Combine the curve with credit spreads, jobless claims, PMI and bank lending standards rather than using one spread as a switch.</p>
+<h2>Trading implications and signal limits</h2>
+<p><strong>Curve trades</strong> typically express a view through duration-neutral portfolios: expect steepening, go long the short end and short the long end; expect flattening, the reverse. But the trade is relative value, not direction; if the curve steepens as expected while rates rise overall, the portfolio can still lose. Curve trades must manage duration, convexity and liquidity together.</p>
+<p><strong>The inversion-recession signal has preconditions.</strong> It needs a sustained inversion, rising real rates and wider credit spreads; if inversion comes from a compressed term premium, the signal is weaker. The US inverted in 2019 and recession came in 2020, but the 2022-2023 inversion persisted with strong growth, showing that a single indicator cannot be used mechanically.</p>
+<p><strong>Real rates</strong> explain growth better than the nominal curve. If the 10-year nominal rises 0.6 points with breakeven inflation up 0.4, the real rate rises only 0.2 and the growth drag is limited; if nominal rises 0.6 with unchanged inflation expectations, the real rise is 0.6 and the drag is stronger. Split nominal and real.</p>
+<p><strong>Liquidity premia</strong> amplify under stress. In a crisis, long-bond bid-ask spreads widen and collateral haircuts rise, pushing yields up; this is falling market depth, not better growth. Verify with volumes, spreads and repo haircuts rather than yields alone.</p>
+<p><strong>Signal limits</strong>: the curve sums market expectations, and expectations are wrong; policy, term premia and liquidity premia interfere; curve shapes across countries and maturities are not directly comparable. Treat the curve as a probability hint, not a certain forecast.</p>
+<h2>Further reading</h2>
+<p>Campbell and Shiller&#39;s term-structure work decomposes long yields into expected short rates and a term premium; the ACM model of Ang, Piazzesi and Wei provides an operational term-premium estimate. Local studies often use central-bank working papers and academic journals with different methods and data conventions; harmonise them before comparing.</p>
+<p>Read with this article&#39;s three layers: expectations, term premium and liquidity premium. Any model explains only part; before calling the residual &#39;market sentiment&#39;, check the data and specification. A final caution: the term premium is an estimate, not an observable; when models disagree, report the range and assumptions rather than picking the number that fits the narrative. Backtest each model update instead of keeping only the version with the best hindsight fit, and state how much of the curve move remains unexplained.</p>
+<h2>What would change the conclusion</h2>
+<p>The three yield-curve signals depend on decomposition:</p>
+<ol>
+<li><strong>Term premium is model-based.</strong> If the model is wrong, expectations and risk premium cannot be separated and the signal is overstated.</li>
+<li><strong>Foreign demand dominates.</strong> If foreign central banks and institutions hold large shares, the curve reflects global term premium rather than domestic policy expectations.</li>
+<li><strong>Yield-curve control.</strong> If the central bank pins a segment, the shape is administrative and not a market forecast.</li>
+<li><strong>Inflation expectations de-anchor.</strong> If expectations stop being anchored, the meaning of steepening or inversion changes.</li>
+</ol>
+<p><strong>Practical implication:</strong> treat the curve as a bundle of information, not a forecasting machine: level for policy path, slope for cycle, curvature for tails; when they disagree, check liquidity premia and foreign demand first.</p>
+<p><strong>Data note:</strong> compare constant-maturity, same-liquidity buckets; on-the-run and off-the-run liquidity premia differ and distort the slope.</p>
+<p><strong>Scope note:</strong> use consistent maturity and liquidity buckets; curve segments of different maturities cannot be stitched into one signal.</p>
+<h2>Exercises</h2>
+<ol>
+<li><p>Decompose the curve into expectations, term premium and liquidity premium; write one sentence each.</p>
+</li>
+<li><p>2-year 4.8%, 10-year 4.2%: what is the term spread?</p>
+</li>
+<li><p>If the term premium rises from 0.4% to 1.0%, roughly calculate the 10-year yield.</p>
+</li>
+<li><p>How do you read persistent inversion with narrowing credit spreads?</p>
+</li>
+<li><p>Why does quantitative easing change the curve shape?</p>
+</li>
+<li><p>What do short-end and long-end moves each reflect?</p>
+</li>
+<li><p>True or false: a steeper curve always means better growth expectations. Give two counterexamples.</p>
+</li>
+<li><p>What do level, slope and curvature each reflect, and why do bear steepening and bull steepening mean opposite things?</p>
+</li>
+<li><p>The 10-year yield rises 0.5 points: how do you tell whether expectations or the term premium drove it?</p>
+</li>
+<li><p>Why is a curve trade relative value rather than directional?</p>
+</li>
+<li><p>When the nominal yield rises 0.6 points, how do breakevens tell you what happened to the real rate?</p>
+</li>
+<li><p>Can a term-premium decomposition explain all curve moves, and how should the residual be treated?</p>
+</li>
+<li><p>Why must data conventions be harmonised before comparing term-premium estimates across studies?</p>
+</li>
+</ol>
+<h2>Related</h2>
+<p>Prerequisite FIN-012; compare FIN-034; neighbours ECO-039 and INV-006.</p>
+<h2>Sources</h2>
+<ol>
+<li>Julie Dahlquist; Rainford Knight, <em>Principles of Finance 2e, 3.4 Interest Rates</em>. OpenStax, accessed 2026-10-30. <a href="https://openstax.org/books/principles-finance-2e/pages/3-4-interest-rates">https://openstax.org/books/principles-finance-2e/pages/3-4-interest-rates</a></li>
+<li>Julie Dahlquist; Rainford Knight, <em>Principles of Finance 2e, 10.3 Using the Yield Curve</em>. OpenStax, accessed 2026-11-03. <a href="https://openstax.org/books/principles-finance-2e/pages/10-3-using-the-yield-curve">https://openstax.org/books/principles-finance-2e/pages/10-3-using-the-yield-curve</a></li>
+<li>Board of Governors of the Federal Reserve System, <em>H.15 Selected Interest Rates</em>. Board of Governors of the Federal Reserve System, accessed 2026-11-03. <a href="https://www.federalreserve.gov/releases/h15/default.htm">https://www.federalreserve.gov/releases/h15/default.htm</a></li>
+<li>Julie Dahlquist; Rainford Knight, <em>Principles of Finance 2e, 10.4 Risks of Interest Rates and Default</em>. OpenStax, accessed 2026-11-03. <a href="https://openstax.org/books/principles-finance-2e/pages/10-4-risks-of-interest-rates-and-default">https://openstax.org/books/principles-finance-2e/pages/10-4-risks-of-interest-rates-and-default</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="en" aria-labelledby="demo-check-title" data-check-done="All three are covered: the core of this article is in place." data-check-pending="One item is still open: go back to the matching section and retell it with a number or counterexample." data-check-count="Ticked"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">Worked demo</p> <button class="demo-reset" type="button" data-demo-reset>Reset</button> </div> <h2 id="demo-check-title">Read-through check: can you say three things?</h2> <p class="demo-intro">No recitation needed. Tick each sentence below and see whether you can explain the mechanism, one worked example and one boundary in your own words.</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>Decompose the curve into expectations, term premium and liquidity premium.</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>Calculate the term spread between 2-year and 10-year rates.</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>Name one condition under which the article’s conclusion does not hold</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> Ticked 0 / 3
+</p> </div> <p class="demo-footnote">The numbers are teaching assumptions that show relationships, not forecasts or investment advice.</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> This article has passed the current publication gate. Factual, calculation and translation revisions update both language versions together. </p> <p> <a class="button secondary" href="/en/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>Back to station </a> </p> </div> <aside class="article-aside" aria-label="Article information"> <section class="aside-card"> <h2>Learning objectives</h2> <ul> <li>Decompose the curve into expectations, term premium and liquidity premium.</li><li>Calculate the term spread between 2-year and 10-year rates.</li><li>Judge when inversion is a recession signal and when it is policy or risk.</li> </ul> </section> <section class="aside-card"> <h2>Required prerequisites</h2> <ul> <li> <a href="/en/learn/interest-rate-types-and-conventions/">FIN-012 · Interest-Rate Types and Conventions</a> </li> </ul> </section> <section class="aside-card"> <h2>Recommended reading</h2> <ul> <li> <a href="/en/learn/rate-conventions-and-credit-spreads/">FIN-034 · Rate Conventions and Credit Spreads: Different Labels for the Same Price of Money</a> </li><li> <a href="https://economics.51invest.com/en/learn/monetary-policy-transmission-channels-and-lags/">ECO-039 · Monetary Policy Transmission: Interest-Rate, Credit and Balance-Sheet Channels</a> </li><li> <a href="https://invest.51invest.com/en/learn/macro-scenario-analysis/">INV-006 · Macro Scenario Analysis</a> </li> </ul> </section> <section class="aside-card"> <h2>AI review record</h2> <p class="muted"> There is no human sign-off; these states come from the AI-only editorial review. </p> <ul> <li> Facts and calculations : AI review passed </li><li> Subject : AI review passed </li><li> English : AI review passed </li><li> Page : AI review passed </li> </ul> </section> <section class="aside-card"> <h2>Sources</h2> <div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/3-4-interest-rates" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 3.4 Interest Rates</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>Accessed: 2026-10-30 · License: CC BY-NC-SA 4.0</p> <p>Supports: Supports the basics of interest rates, nominal/real rates, compounding and discounting.</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/10-3-using-the-yield-curve" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 10.3 Using the Yield Curve</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>Accessed: 2026-11-03 · License: CC BY-NC-SA 4.0</p> <p>Supports: Supports the yield curve, term structure and expectations hypothesis.</p> </div><div class="source"> <a href="https://www.federalreserve.gov/releases/h15/default.htm" rel="noopener noreferrer" target="_blank">H.15 Selected Interest Rates</a> <p>Board of Governors of the Federal Reserve System · Board of Governors of the Federal Reserve System</p> <p>Accessed: 2026-11-03 · License: U.S. Government work (public domain), 17 U.S.C. §105</p> <p>Supports: Supports the statistical convention of U.S. Treasury yields and term spreads.</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/10-4-risks-of-interest-rates-and-default" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 10.4 Risks of Interest Rates and Default</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>Accessed: 2026-11-03 · License: CC BY-NC-SA 4.0</p> <p>Supports: Supports interest-rate risk, repricing and duration management.</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">A free, non-commercial knowledge site. Sources and definitions are labelled; nothing here is investment advice.</p> </div> </div> <nav class="footer-links" aria-label="Knowledge stations"> <a href="https://51invest.com/en/" data-main-home>Home</a> <a href="https://51invest.com/en/contents/">Content map</a> <a href="/en/glossary/">Glossary</a> <a href="/en/search/">Search</a> <a href="https://51invest.com/en/charts/" data-main-link>Charts</a> <a href="https://51invest.com/en/sources/" data-main-link>Data &amp; licences</a> <a href="/en/">Station home</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="Knowledge stations"> <a class="mobile-link" href="https://51invest.com/en/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>Home</span> </a> <a class="mobile-link" href="https://51invest.com/en/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>Knowledge stations</span> </a> <a class="mobile-link active" href="/en/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>Station home</span> </a> <a class="mobile-link" href="/learn/yield-curve-three-informations-expectations-risk-liquidity/" data-language-link="zh"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

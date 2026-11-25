@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>会计估计与应计项目：盈利质量从哪里看 · 巫妖投资</title><meta name="description" content="同样的现金流，不同的折旧年限、坏账准备和保修计提，会给出完全不同的净利润。应计项目本身不是造假，但它给了管理层判断空间；看盈利质量，要追应计去了哪里、是否反向转回。"><link rel="canonical" href="https://finance.51invest.com/learn/accounting-estimates-accrual-discretion-earnings-quality/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/accounting-estimates-accrual-discretion-earnings-quality/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/accounting-estimates-accrual-discretion-earnings-quality/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/accounting-estimates-accrual-discretion-earnings-quality/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/accounting-estimates-accrual-discretion-earnings-quality/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">会计估计与应计项目：盈利质量从哪里看</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">会计估计与应计项目：盈利质量从哪里看</h1> <p class="article-summary">同样的现金流，不同的折旧年限、坏账准备和保修计提，会给出完全不同的净利润。应计项目本身不是造假，但它给了管理层判断空间；看盈利质量，要追应计去了哪里、是否反向转回。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M10 · 会计基础</strong></div> <div class="meta-item"><span>层级</span><strong>系统</strong></div> <div class="meta-item"><span>阅读</span><strong>8 分钟 · 11 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义与直觉</h2>
+<p>**应计项目（accruals）**是把现金收付推迟或提前到利润表的项目：应收账款、应付账款、存货、保修准备、坏账准备和递延收入。<strong>会计估计</strong>是应计背后的假设：坏账率、退货率、保修成本、折旧年限和减值幅度。</p>
+<p>应计本身是必要的：收入在交付时确认，费用在受益期确认，比收付实现制更能反映经济实质。但估计给管理层留下判断空间：调低保修计提会立刻增加利润，调高坏账准备会压低当期利润、为未来转回留空间。</p>
+<p><strong>盈利质量</strong>看的是“利润里有多少来自可持续的现金流和真实经营，多少来自估计变化和一次性项目”。应计高、现金流弱、准备反复转回，都是警示信号[1][2]。</p>
+<h2>正式表达与示例</h2>
+<p>某公司年销售额 1,000 万元，保修计提比例 2%，计提 20 万元；实际保修支出 18 万元。若计提不变，利润中的保修费用是 20 万元，现金支出 18 万元，差异 2 万元是应计负债。</p>
+<p>第二年管理层把计提降到 1.5%，计提 15 万元，实际支出仍 18 万元；费用减少 5 万元，利润增加 5 万元，但现金支出没变。第三年若问题暴露，计提回到 2.5%，利润又减少 10 万元。</p>
+<p>看盈利质量时，要把“计提变化”与“实际支出”分开：计提下降带来的利润增长不可持续；若同时应收增加、现金流下降，信号更强。以上数字均为教学假设。</p>
+<h2>三个信号</h2>
+<p><strong>信号一：应计与现金流背离。</strong> 净利润增长但经营现金流下降，应收和存货增速高于收入，说明利润可能靠应计撑住。</p>
+<p><strong>信号二：准备反复转回。</strong> 坏账、保修、重组准备在后期转回，直接增加利润；要查转回是否对应真实估计改善。</p>
+<p><strong>信号三：估计变更频繁。</strong> 折旧年限、残值率、退货率每年调整，且总朝有利方向，说明管理层在用估计管理利润。</p>
+<p>反过来，保守估计会压低当期利润、提高未来利润，也不一定是“高质量”；关键是估计是否与业务实质一致、披露是否充分[3][4]。</p>
+<h2>图表</h2>
+<figure>
+<svg role="img" aria-labelledby="fig-accounting-estimates-accrual-discretion-earnings-quality-1-title fig-accounting-estimates-accrual-discretion-earnings-quality-1-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-accounting-estimates-accrual-discretion-earnings-quality-1-title">保修计提与应计负债</title>
+<desc id="fig-accounting-estimates-accrual-discretion-earnings-quality-1-desc">四步：销售、计提、实际支出、应计负债。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">应计的形成链</text>
+<text x="24" y="54" font-size="11" text-anchor="start">销售、计提、实际支出、应计负债四步。</text>
+<rect x="14" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="69" y="140" font-size="12" text-anchor="middle">销售</text>
+<text x="69" y="184" font-size="12" text-anchor="middle" font-weight="700">1000 万</text>
+<rect x="136" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="191" y="140" font-size="12" text-anchor="middle">计提</text>
+<text x="191" y="184" font-size="12" text-anchor="middle" font-weight="700">20 万</text>
+<rect x="258" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="313" y="140" font-size="12" text-anchor="middle">支出</text>
+<text x="313" y="184" font-size="12" text-anchor="middle" font-weight="700">18 万</text>
+<rect x="380" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="435" y="140" font-size="12" text-anchor="middle">应计</text>
+<text x="435" y="184" font-size="12" text-anchor="middle" font-weight="700">2 万</text>
+<line x1="125" y1="160" x2="135" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="247" y1="160" x2="257" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="369" y1="160" x2="379" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<text x="24" y="246" font-size="11" text-anchor="start">教学示意，不含统计数据。</text>
+</g>
+</svg>
+<figcaption>图 1：保修计提与应计负债；教学示意。</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-accounting-estimates-accrual-discretion-earnings-quality-2-title fig-accounting-estimates-accrual-discretion-earnings-quality-2-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-accounting-estimates-accrual-discretion-earnings-quality-2-title">计提比例与利润</title>
+<desc id="fig-accounting-estimates-accrual-discretion-earnings-quality-2-desc">同一销售与支出下，三种计提比例对应 80、85、75 万元利润。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">三种计提下的利润</text>
+<text x="24" y="54" font-size="11" text-anchor="start">2.0% 计提利润 80 万元；1.5% 为 85 万元；2.5% </text>
+<text x="24" y="68" font-size="11" text-anchor="start">为 75 万元。</text>
+<line x1="178" y1="64" x2="178" y2="270" stroke="currentColor" stroke-width="1" opacity=".45"/>
+<text x="20" y="97" font-size="12">2.0%</text>
+<rect x="178" y="78" width="338.8235294117647" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="95" font-size="12" font-weight="700">80</text>
+<text x="20" y="145" font-size="12">1.5%</text>
+<rect x="178" y="126" width="360" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="143" font-size="12" font-weight="700">85</text>
+<text x="20" y="193" font-size="12">2.5%</text>
+<rect x="178" y="174" width="317.6470588235294" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="191" font-size="12" font-weight="700">75</text>
+<text x="24" y="292" font-size="11" text-anchor="start">教学假设；单位：万元。</text>
+</g>
+</svg>
+<figcaption>图 2：计提比例与利润；教学假设，单位万元。</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-accounting-estimates-accrual-discretion-earnings-quality-3-title fig-accounting-estimates-accrual-discretion-earnings-quality-3-desc" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-accounting-estimates-accrual-discretion-earnings-quality-3-title">盈利质量的四象限</title>
+<desc id="fig-accounting-estimates-accrual-discretion-earnings-quality-3-desc">两轴：应计高低、现金流强弱；四象限对应健康、利润撑住、现金支撑和双重恶化。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">应计与现金流的四类组合</text>
+<text x="24" y="54" font-size="11" text-anchor="start">高应计、弱现金流最危险；低应计、强现金流最健康。</text>
+<text x="40" y="68" font-size="11">应计高</text>
+<text x="40" y="286" font-size="11">应计低</text>
+<text x="110" y="314" font-size="11" text-anchor="middle">现金流弱</text>
+<text x="500" y="314" font-size="11" text-anchor="middle">现金流强</text>
+<rect x="96" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="100" font-size="12" text-anchor="start">利润撑住</text>
+<text x="108" y="130" font-size="11" text-anchor="start">高应计、弱现金</text>
+<text x="108" y="170" font-size="11" font-weight="700">警示</text>
+<rect x="338" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="100" font-size="12" text-anchor="start">健康</text>
+<text x="350" y="130" font-size="11" text-anchor="start">高应计、强现金</text>
+<text x="350" y="170" font-size="11" font-weight="700">扩张</text>
+<rect x="96" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="214" font-size="12" text-anchor="start">双重恶化</text>
+<text x="108" y="244" font-size="11" text-anchor="start">低应计、弱现金</text>
+<text x="108" y="284" font-size="11" font-weight="700">最差</text>
+<rect x="338" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="214" font-size="12" text-anchor="start">现金支撑</text>
+<text x="350" y="244" font-size="11" text-anchor="start">低应计、强现金</text>
+<text x="350" y="284" font-size="11" font-weight="700">稳健</text>
+</g>
+</svg>
+<figcaption>图 3：盈利质量的四象限；对比分类示意。</figcaption>
+</figure>
+
+<p>图 1 把销售、计提、实际支出和应计负债串成一条链；图 2 比较 2%、1.5% 和 2.5% 三种计提下的利润；图 3 用“应计高低—现金流强弱”两轴划出四类盈利质量。图中数字均为教学假设。</p>
+<h2>适用条件、边界与常见误区</h2>
+<p><strong>边界一：应计不是造假。</strong> 没有应计，利润表无法匹配收入与费用；问题在于估计是否合理、披露是否充分。</p>
+<p><strong>边界二：行业差异大。</strong> 软件递延收入、工程完工百分比和保险准备金各有惯例，不能跨行业直接比应计水平。</p>
+<p><strong>边界三：现金流也会被操纵。</strong> 推迟付款、保理应收和分类调整可以美化经营现金流；要结合附注和三表勾稽。</p>
+<p><strong>误解一：利润等于现金。</strong> 利润含应计，现金不含；两者长期应趋同，短期可以背离。</p>
+<p><strong>误解二：计提越保守越好。</strong> 过度计提会压低当期利润、未来转回；关键是估计与真实风险匹配。</p>
+<h2>深化：应计分解与操纵识别</h2>
+<p><strong>应计可以分解为“资产负债表应计”和“现金流量表应计”</strong>。前者看应收账款、存货、应付账款等营运资本项目的变动；后者用净利润减经营现金流。两者应大致互相印证。如果净利润比经营现金流高很多，而应收和存货的增幅又超过收入，说明利润更多停在账面，没有变成现金。</p>
+<p><strong>应计异象</strong>是会计研究里最稳定的发现之一：高应计的公司，未来盈利和股票收益往往更差。原因不是市场立刻看懂，而是应计里包含较多主观估计，反转更慢。用应计比率（净利润减经营现金流，除以平均总资产）排序，可以作为一个粗筛，但不能单独作为买卖信号。</p>
+<p><strong>操纵的四个通道</strong>要分开查。第一是收入确认：提前开票、压货给经销商、bill-and-hold、把退货权藏在小字里；表现为收入增长快于现金回款、应收天数上升。第二是费用递延：把本应费用化的研发、维护、获客成本资本化；表现为资本开支与收入不匹配、摊销年限变长。第三是准备转回：前期多提坏账、保修、重组准备，后期释放；表现为准备金率下降而实际支出未降。第四是“大洗澡”：新任管理层一次性计提巨额减值，把未来成本提前，换取下一年的干净基数。</p>
+<p><strong>Beneish M-score 一类的模型</strong>把应收指数、毛利率指数、资产质量指数、销售增长指数、折旧指数、费用指数、杠杆指数和总应计放在一起打分。它能提高发现概率，但会误伤高增长、重资产或季节性的正常公司；模型分数只能提示“需要读附注”，不能替代阅读。</p>
+<p><strong>读附注的顺序</strong>：先看会计政策有没有变更，再看估计变更的方向和金额，然后看准备金期初期末滚动表，最后看审计意见、关键审计事项和关联交易。若估计变更恰好把利润推到业绩承诺或分红门槛之上，动机就值得追问。</p>
+<p><strong>合法估计与操纵的边界</strong>在于证据：估计是否有历史数据、合同条款和行业经验支持；变更是否披露原因和影响；现金流是否最终兑现。没有这三类证据，不能仅凭“估计偏乐观”就指控造假；反过来，只有利润没有现金，也不能因为“审计意见干净”就放心。</p>
+<p><strong>跨行业比较要谨慎</strong>。软件、生物医药、工程建设的应计结构差异很大；同样 10% 的应计比率，在快消和长期项目公司含义不同。比较应在同业、同商业模式、同会计政策下进行，并至少看三年趋势。</p>
+<p><strong>一个可操作的做法</strong>：把净利润、经营现金流、自由现金流三条线画在一起，标注每次估计变更；若利润线持续高于现金流线，且变更总朝有利方向，列入观察名单。然后再用应收天数、存货天数、准备金率、资本化率四项做交叉验证。</p>
+<p><strong>最后</strong>，应计分析的目标不是给公司贴“造假”标签，而是判断当前利润的可持续性和可预测性。可持续的利润应该能被现金流验证；可预测的利润不应该依赖每年调整估计。</p>
+<h2>尽调清单</h2>
+<p><strong>第一步，读会计政策与估计变更表</strong>：本期有没有变更折旧年限、坏账率、保修率、资本化条件；变更理由是什么，影响金额多少，是否追溯调整。没有变更表，就去附注里逐项找。</p>
+<p><strong>第二步，做三年趋势</strong>：应计比率、应收天数、存货天数、准备金率、资本化率五项，至少看三年。单年异常可能是业务波动，连续三年同向变化才更像管理动作。</p>
+<p><strong>第三步，对现金</strong>：经营现金流、自由现金流、现金转换率（经营现金流/净利润）。若利润增长而现金转换率持续下降，要查应收和存货。</p>
+<p><strong>第四步，查动机</strong>：业绩承诺、分红门槛、股权激励行权条件、债务契约指标。若估计变更恰好让指标“过线”，把动机写入风险清单。</p>
+<p><strong>第五步，看外部证据</strong>：审计意见、关键审计事项、监管问询、做空报告、上下游访谈。外部证据不能替代报表，但能提示哪里需要深挖。</p>
+<p><strong>边界</strong>：应计高不等于造假，应计低也不等于高质量；有些行业天生应计高（长期项目、重资产），有些公司保守计提压低当期利润。结论要写成“利润的现金支撑强弱”和“估计的可验证性”，而不是“好公司/坏公司”。</p>
+<h2>反证条件</h2>
+<p>应计与盈利质量的判断依赖会计口径：</p>
+<ol>
+<li><strong>收入确认规则变化。</strong> 若新准则改变确认时点，应计项目和现金流的时间差不可比。</li>
+<li><strong>审计更保守。</strong> 若审计师和监管要求更保守的计提，估计空间缩小，盈利质量信号增强。</li>
+<li><strong>现金流分类变化。</strong> 若经营/投资现金流重分类，应计与现金的对照会被扭曲。</li>
+</ol>
+<p><strong>实践含义：</strong> 应计分析要同行比较、跨期比较和现金流对照；单看一年应计高低，无法区分增长投资和盈余操纵。</p>
+<h2>练习</h2>
+<ol>
+<li><p>区分应计、估计和现金流，各举一例。</p>
+</li>
+<li><p>销售 1,000 万元、计提 2%，保修费用是多少？</p>
+</li>
+<li><p>计提降到 1.5%、实际支出 18 万元，利润变化多少？</p>
+</li>
+<li><p>为什么计提下降带来的利润增长不可持续？</p>
+</li>
+<li><p>应计与现金流背离说明什么？</p>
+</li>
+<li><p>准备转回一定是坏事吗？写出两种情形。</p>
+</li>
+<li><p>判断：利润等于现金吗？说明两者长期关系。</p>
+</li>
+<li><p>资产负债表应计与现金流量表应计分别怎么算？两者背离说明什么？</p>
+</li>
+<li><p>收入确认操纵通常留下哪两个可观察痕迹？</p>
+</li>
+<li><p>尽调时为什么要同时看会计政策变更表和三年的应计趋势？</p>
+</li>
+<li><p>业绩承诺或分红门槛如何构成估计操纵的动机？</p>
+</li>
+</ol>
+<h2>关联</h2>
+<p>先修 FIN-023；对照 FIN-024；相邻 FIN-025、FIN-015。</p>
+<h2>来源</h2>
+<ol>
+<li>Julie Dahlquist; Rainford Knight, <em>Principles of Finance 2e, 4.2 Economic Basis for Accrual Accounting</em>. OpenStax, accessed 2026-11-03. <a href="https://openstax.org/books/principles-finance-2e/pages/4-2-economic-basis-for-accrual-accounting">https://openstax.org/books/principles-finance-2e/pages/4-2-economic-basis-for-accrual-accounting</a></li>
+<li>Mitchell Franklin; Patty Graybeal; Dixon Cooper, <em>Principles of Accounting, Volume 1: Financial Accounting, 2.3 Prepare an Income Statement, Statement of Owner&#39;s Equity, and Balance Sheet</em>. OpenStax, accessed 2026-11-03. <a href="https://openstax.org/books/principles-financial-accounting/pages/2-3-prepare-an-income-statement-statement-of-owners-equity-and-balance-sheet">https://openstax.org/books/principles-financial-accounting/pages/2-3-prepare-an-income-statement-statement-of-owners-equity-and-balance-sheet</a></li>
+<li>U.S. Securities and Exchange Commission, <em>Beginners&#39; Guide to Financial Statements</em>. U.S. Securities and Exchange Commission, accessed 2026-10-30. <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsbegfinstmtguide">https://www.sec.gov/reportspubs/investor-publications/investorpubsbegfinstmtguide</a></li>
+<li>Mitchell Franklin; Patty Graybeal; Dixon Cooper, <em>Principles of Accounting, Volume 1: Financial Accounting, 16.3 Prepare the Statement of Cash Flows Using the Indirect Method</em>. OpenStax, accessed 2026-10-30. <a href="https://openstax.org/books/principles-financial-accounting/pages/16-3-prepare-the-statement-of-cash-flows-using-the-indirect-method">https://openstax.org/books/principles-financial-accounting/pages/16-3-prepare-the-statement-of-cash-flows-using-the-indirect-method</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>区分应计、估计与现金流。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>用保修计提算净利润的跨期变化。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>区分应计、估计与现金流。</li><li>用保修计提算净利润的跨期变化。</li><li>识别应计反转与盈利质量信号。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/dividends-and-buybacks/">FIN-023 · 分红与回购</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/corporate-governance-and-conflicts/">FIN-024 · 公司治理与利益冲突</a> </li><li> <a href="/learn/introduction-to-finance/">FIN-025 · 金融导论</a> </li><li> <a href="/learn/asset-pricing-models-introduction/">FIN-015 · 资产定价模型入门</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/4-2-economic-basis-for-accrual-accounting" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 4.2 Economic Basis for Accrual Accounting</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-11-03 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：支持权责发生制与应计项目的经济基础。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-financial-accounting/pages/2-3-prepare-an-income-statement-statement-of-owners-equity-and-balance-sheet" rel="noopener noreferrer" target="_blank">Principles of Accounting, Volume 1: Financial Accounting, 2.3 Prepare an Income Statement, Statement of Owner&#39;s Equity, and Balance Sheet</a> <p>Mitchell Franklin; Patty Graybeal; Dixon Cooper · OpenStax</p> <p>访问：2026-11-03 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：支持利润表结构、收入确认与费用配比。</p> </div><div class="source"> <a href="https://www.sec.gov/reportspubs/investor-publications/investorpubsbegfinstmtguide" rel="noopener noreferrer" target="_blank">Beginners&#39; Guide to Financial Statements</a> <p>U.S. Securities and Exchange Commission · U.S. Securities and Exchange Commission</p> <p>访问：2026-10-30 · 许可：U.S. public information; copying and further distribution allowed</p> <p>支持论点：支持财报三表与现金流、利润的关系。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-financial-accounting/pages/16-3-prepare-the-statement-of-cash-flows-using-the-indirect-method" rel="noopener noreferrer" target="_blank">Principles of Accounting, Volume 1: Financial Accounting, 16.3 Prepare the Statement of Cash Flows Using the Indirect Method</a> <p>Mitchell Franklin; Patty Graybeal; Dixon Cooper · OpenStax</p> <p>访问：2026-10-30 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：支持间接法现金流与应计调整。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/accounting-estimates-accrual-discretion-earnings-quality/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

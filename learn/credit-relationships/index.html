@@ -1,0 +1,263 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>信用关系 · 巫妖投资</title><meta name="description" content="信用关系是资金跨期转移的合约：出借人让渡购买力，借款人承诺按约定偿还本金和利息；可执行性、信息与抵押品决定这种关系能否成立。"><link rel="canonical" href="https://finance.51invest.com/learn/credit-relationships/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/credit-relationships/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/credit-relationships/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/credit-relationships/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/credit-relationships/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">信用关系</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">信用关系</h1> <p class="article-summary">信用关系是资金跨期转移的合约：出借人让渡购买力，借款人承诺按约定偿还本金和利息；可执行性、信息与抵押品决定这种关系能否成立。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M02 · 货币与信用</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>5 分钟 · 11 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义</h2>
+<p>信用关系（credit relationship）是出借人（债权人）与借款人（债务人）之间跨期转移购买力的合约：出借人现在提供资金，借款人承诺未来偿还本金并支付利息。本金、利率、期限、还款安排、抵押品和违约条款是基本要素。付息债券是标准化的信用关系：票息是定期支付的利息，面值到期偿还，违约风险指付款延迟或不发生[2]。</p>
+<h2>直觉</h2>
+<p>面包店主向邻居借 10,000 元买送货车，承诺一年后一次还本付息。邻居愿意出借，因为三件事可核查：店主有稳定现金流、借款用途能产生收入、违约时有可执行的追索或抵押。本文金额单位均为人民币元，且都是教学假设。</p>
+<h2>正式表达</h2>
+<p>按单利计算（教学口径）：</p>
+<div class="formula" role="math" aria-label="利息等于本金乘年利率乘年数">利息 = 本金 × 年利率 × 年数</div>
+
+<p>到期一次还本付息时：</p>
+<div class="formula" role="math" aria-label="到期偿还额等于本金加利息">到期偿还额 = 本金 + 利息</div>
+
+<p>单利不考虑复利和费用；<code>年数</code> 以年计，期限不是整年时按月数折算（例如 12 个月记作 1 年，18 个月记作 1.5 年）。比较不同贷款时应统一为同一年化口径。</p>
+<h2>适用条件与边界</h2>
+<ol>
+<li><strong>可执行性。</strong> 信用依赖合同、财产权和法院，这是本文对信用关系前提的表述。承诺难以执行时，出借人的反应不止两种：可以提高利率，也可以缩小额度、要求抵押或第三方担保、缩短期限、加入加速偿还与追索条款，或者直接拒绝放款。本文把这些列为可采取的防守动作，但某一项在具体法域内是否可执行、成本多大，本篇未逐一辖区核对，不作普遍可得的主张。</li>
+<li><strong>信息与激励。</strong> 借款人更了解自己的还款能力，形成逆向选择；拿到资金后可能改变用途，形成道德风险。筛选、披露、限制性条款和抵押品都是应对手段。</li>
+<li><strong>还款能力来自现金流。</strong> 抵押品是借款人违约后出借人可以扣押或处置的财产[1]，但它不能替代还款能力；现金流不足时，抵押品只能降低损失，不能避免违约。</li>
+<li><strong>抵押品价值会波动。</strong> 抵押物估值下跌会抬高贷款价值比、降低抵押覆盖率，并可能触发追加担保或收紧放款，放大信用周期。</li>
+<li><strong>信用不是股权。</strong> 债权人取得约定利息和本金，不分享企业成长收益；借款人保留剩余收益，也承担下行损失。</li>
+<li><strong>统计口径。</strong> 美联储 G.19 统计对个人的大部分信贷，不含以房地产担保的贷款，并区分循环与非循环信贷[3]；单一总量不能说明具体合约的期限和风险。</li>
+</ol>
+<h2>例子与计算</h2>
+<p>一笔教学假设的贷款：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th align="right">数值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>本金</td>
+<td align="right">10,000 元</td>
+</tr>
+<tr>
+<td>年利率（单利）</td>
+<td align="right">6%</td>
+</tr>
+<tr>
+<td>期限</td>
+<td align="right">12 个月</td>
+</tr>
+<tr>
+<td>付息方式</td>
+<td align="right">到期一次还本付息</td>
+</tr>
+<tr>
+<td>利息合计</td>
+<td align="right">600 元</td>
+</tr>
+<tr>
+<td>到期应还</td>
+<td align="right">10,600 元</td>
+</tr>
+<tr>
+<td>期初抵押物估值</td>
+<td align="right">12,000 元</td>
+</tr>
+<tr>
+<td>期末抵押物估值（假设下跌）</td>
+<td align="right">7,000 元</td>
+</tr>
+</tbody></table>
+<p>计算：<code>10,000 × 6% = 600</code> 元；<code>10,000 + 600 = 10,600</code> 元。贷款价值比按“未偿本金 ÷ 抵押物估值”计算：期初为 <code>10,000 ÷ 12,000 ≈ 83.3%</code>；若抵押物估值跌到 7,000 元，未偿本金仍是 10,000 元，贷款价值比升至 <code>10,000 ÷ 7,000 ≈ 142.9%</code>。抵押品不再覆盖本金，出借人面临更高的损失风险。</p>
+<h2>图表</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-credit-title fig-credit-desc" viewBox="0 0 420 190" width="100%">
+    <title id="fig-credit-title">信用关系的时间线</title>
+    <desc id="fig-credit-desc">示意图：期初放款 10,000 元；第 12 个月一次偿还本金和利息，合计 10,600 元。图中金额单位为人民币元，均为教学假设。</desc>
+    <line x1="35" y1="95" x2="385" y2="95" stroke="var(--border)" stroke-width="2"></line>
+    <circle cx="55" cy="95" r="7" fill="var(--accent)"></circle>
+    <circle cx="375" cy="95" r="7" fill="var(--accent)"></circle>
+    <g fill="var(--text)" font-size="11" font-family="inherit" text-anchor="middle">
+      <text x="55" y="70">期初放款 10,000</text>
+      <text x="368" y="70">到期 10,600</text>
+    </g>
+    <g fill="var(--muted)" font-size="10" font-family="inherit" text-anchor="middle">
+      <text x="55" y="122">第 0 月</text>
+      <text x="368" y="122">第 12 月</text>
+      <text x="210" y="162">还本付息合计 = 10,000 + 600</text>
+    </g>
+  </svg>
+  <figcaption>图 1：信用关系的现金流时间线。金额单位为人民币元，均为教学假设，不是任何真实贷款的条件。</figcaption>
+</figure>
+
+<h2>常见误解</h2>
+<ul>
+<li><strong>信用就是信任。</strong> 信任降低交易成本，但信用关系靠合约和追索权落实；没有执行机制，大额长期融资难以成立。</li>
+<li><strong>信用就是货币。</strong> 贷款是借款人的负债，货币是持有者的资产，两者不能混为一谈。</li>
+<li><strong>有抵押就没有风险。</strong> 抵押物会贬值、难处置，且受清偿顺序限制；有抵押贷款仍有信用风险。</li>
+<li><strong>借到的钱是收入。</strong> 借款同时增加资产和负债，不增加净财富；利息才是成本。</li>
+<li><strong>报价利率就是全部成本。</strong> 手续费、计息方式和复利会改变实际成本，比较时应统一口径。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>先修：货币的职能（FIN-001）。</li>
+<li>后续：银行资产负债表（FIN-003）、货币的时间价值（FIN-009）、债券的权利与现金流（MKT-004）。</li>
+<li>信用关系连接金融站的利率与风险、市场站的债券定价和投资站的杠杆。</li>
+</ul>
+<p>单利与复利的换算和边界另见《单利与复利》（FIN-010），本文的利率报价与计息频率差异以其定义为准。</p>
+<h2>图解</h2>
+<p>下面三张图分别检查本文的机制、边界与对照；图内文字取自本文小节，不是新数据。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">信用关系：机制链</title>
+    <desc id="fig-batch-chain-desc">信用关系 的三段结构：问题、机制、判断。图内文字取自本文小节，不是新的数据估计。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">信用关系：机制链</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图内文字取自本文小节；三段缺一不可。</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">问题</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">信用关系是资金跨期转</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">移的合约：出借人让渡…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">信用关系是资金跨期</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">转移的合约：出借人</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">让渡购买力，借款人</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">承诺按约定偿还本金</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">和利息；可执行性、…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">定义</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">定义：信用关系（credi</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">t relationship）是…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">定义：信用关系（cre</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">dit relationship</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">）是出借人（债权人）</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">与借款人（债务人）</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">之间跨期转移购买力…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">例子与计算</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">一笔教学假设的贷款：</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start"> | 项目 | 数值 |…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">一笔教学假设的贷款</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">： | 项目 | 数值</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">| | --- | ---:</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">| | 本金 |</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">10,000 元 | |…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">读法：先看问题能否成立，再看机制能否连通，最后看判断会不会越界。</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">若中间一步缺证据，后面的结论只能当假设，不能当事实。</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为结构示意，不是新的数据图；样本为本文论证。</text>
+  </svg>
+  <figcaption>图 2：信用关系的机制链：从问题、机制到判断。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">信用关系：适用边界</title>
+    <desc id="fig-batch-boundary-desc">把成立条件与失效条件分开；局部例子不能自动推广到所有情形。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">信用关系：什么情况下成立？</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">先检查条件，再看结论</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">条件、口径或样本一变，结论可能要重算</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">成立</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">可执行性。</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">不成立 / 需改写</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">信用就是信任。</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">图为边界示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 3：信用关系的边界：哪些条件成立，哪些条件失效。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">信用关系：对象、前提与常见误区</title>
+    <desc id="fig-batch-compare-desc">三行比较本文概念、成立条件与常见误区；比较不等于等价，也不能替代定义。</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">信用关系：一张表看对象、前提与误区</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">本篇</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">容易混淆</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">对象</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">信用关系是资金跨期转移的</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">合约：出借人让渡购买力…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相邻概念/常见说法</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">前提</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">可执行性。</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">信用就是信任。</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">检查</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">先定义，再比较；不能只看</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">名称</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">相关不等于因果，局部不等于普遍</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">图为比较示意；样本为本文论证，单位为文中标注。</text>
+  </svg>
+  <figcaption>图 4：信用关系的对象、前提与常见误区比较。样本为本文论证，单位为文中标注。</figcaption>
+</figure>
+
+<h2>练习</h2>
+<ol>
+<li><strong>概念辨别。</strong> 银行发放 30 年期住房抵押贷款 800,000 元，利率 4.5%，以房屋抵押。指出债权人、债务人、本金和抵押品，并说明房价下跌时谁承担损失。</li>
+<li><strong>计算。</strong> 借款 20,000 元，年单利 5%，期限 18 个月，到期一次还本付息。利息合计和到期偿还额各是多少？</li>
+<li><strong>适用条件。</strong> 借款人现金流稳定但没有抵押品，出借人要求提供抵押。抵押品可能发挥哪些作用？又有什么局限？</li>
+</ol>
+<details>
+<summary>参考答案</summary>
+
+<ol>
+<li>银行是债权人，借款人是债务人，本金为 800,000 元，抵押品是房屋。房价下跌先降低抵押品覆盖率；若借款人违约，损失落在谁身上取决于合同与所在地法律：无追索权时缺口主要由贷款人承担，有追索权时借款人仍需偿还差额。本文只推演这两种安排下的算术后果，不声称中国、美国各州或其他任何具体辖区在某年适用哪一种；追索权规则、抵押物处置程序与税务处理都需按合同文本与当地法律另行核对。</li>
+<li>18 个月按 1.5 年计：<code>20,000 × 5% × 1.5 = 1,500</code> 元；到期偿还 <code>20,000 + 1,500 = 21,500</code> 元。</li>
+<li>抵押品可以筛选借款人、提供履约激励并降低损失回收难度；局限是估值、处置成本、法律优先顺序和抵押品价格下跌。有抵押不消除信用风险。</li>
+</ol>
+</details>
+
+<h2>来源</h2>
+<ol>
+<li>European Central Bank. “What is collateral?” <a href="https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me/html/collateral.en.html">https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me/html/collateral.en.html</a>（访问日期：2026-10-30）</li>
+<li>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “Chapter 10 Key Terms.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/10-key-terms">https://openstax.org/books/principles-finance-2e/pages/10-key-terms</a>（访问日期：2026-10-30）</li>
+<li>Board of Governors of the Federal Reserve System. “Consumer Credit (G.19).” <a href="https://www.federalreserve.gov/releases/g19/current/default.htm">https://www.federalreserve.gov/releases/g19/current/default.htm</a>（访问日期：2026-10-30）</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>能用出借人让渡购买力、借款人承诺偿还的结构说明信用合约的三项要素</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>能解释可执行性、信息与抵押品如何决定信用关系能否成立</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>能用出借人让渡购买力、借款人承诺偿还的结构说明信用合约的三项要素</li><li>能解释可执行性、信息与抵押品如何决定信用关系能否成立</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/functions-of-money/">FIN-001 · 货币的职能</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/bank-balance-sheets/">FIN-003 · 银行资产负债表</a> </li><li> <a href="/learn/time-value-of-money/">FIN-009 · 货币的时间价值</a> </li><li> <a href="https://markets.51invest.com/learn/bond-rights-and-cash-flows/">MKT-004 · 债券的权利与现金流</a> </li><li> <a href="/learn/simple-and-compound-interest/">FIN-010 · 单利与复利</a> </li><li> <a href="/learn/functions-of-money/">FIN-001 · 货币的职能</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me/html/collateral.en.html" rel="noopener noreferrer" target="_blank">What is collateral?</a> <p>European Central Bank · European Central Bank</p> <p>访问：2026-10-30 · 许可：ECB statistics terms; attribution required</p> <p>支持论点：抵押品是借款人未按约定还款时出借人可以处置的财产；住房抵押贷款以房屋作为担保，出借人可出售房屋收回资金。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/10-key-terms" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, Chapter 10 Key Terms</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-10-30 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：票息是定期支付给债券持有人的利息，面值在到期日偿还；违约风险指付款延迟或不发生的风险。</p> </div><div class="source"> <a href="https://www.federalreserve.gov/releases/g19/current/default.htm" rel="noopener noreferrer" target="_blank">Consumer Credit (G.19)</a> <p>Board of Governors of the Federal Reserve System · Board of Governors of the Federal Reserve System</p> <p>访问：2026-10-30 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：G.19 统计对个人的大部分信贷，不含以房地产担保的贷款，并区分循环信贷与未偿非循环信贷。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/credit-relationships/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

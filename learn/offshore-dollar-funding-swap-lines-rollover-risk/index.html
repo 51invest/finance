@@ -1,0 +1,206 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>离岸美元融资：互换、掉期与展期风险 · 巫妖投资</title><meta name="description" content="离岸机构需要美元，但拿不到美国存款保险和贴现窗口；它们靠外汇掉期、离岸存款和央行互换获取美元。美元一紧，掉期基点扩大、展期变难，离岸美元体系就把压力传回在岸。"><link rel="canonical" href="https://finance.51invest.com/learn/offshore-dollar-funding-swap-lines-rollover-risk/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/offshore-dollar-funding-swap-lines-rollover-risk/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/offshore-dollar-funding-swap-lines-rollover-risk/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/offshore-dollar-funding-swap-lines-rollover-risk/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/offshore-dollar-funding-swap-lines-rollover-risk/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">离岸美元融资：互换、掉期与展期风险</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">离岸美元融资：互换、掉期与展期风险</h1> <p class="article-summary">离岸机构需要美元，但拿不到美国存款保险和贴现窗口；它们靠外汇掉期、离岸存款和央行互换获取美元。美元一紧，掉期基点扩大、展期变难，离岸美元体系就把压力传回在岸。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M15 · 国际金融体系</strong></div> <div class="meta-item"><span>层级</span><strong>系统</strong></div> <div class="meta-item"><span>阅读</span><strong>9 分钟 · 12 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义与直觉</h2>
+<p><strong>离岸美元</strong>指在美国境外流通、以美元计价的存款和债权。它不由美联储直接创造，而是通过商业银行、外汇掉期和离岸分行派生。</p>
+<p>离岸机构获取美元有三条渠道：<strong>外汇掉期</strong>（用本币换美元，约定未来换回）、<strong>离岸美元存款</strong>（非美银行吸收美元存款）、<strong>央行美元互换</strong>（美联储向其他央行提供美元，再由央行转贷给本地银行）。</p>
+<p>离岸美元体系的关键脆弱点是<strong>期限错配</strong>：负债短、资产长，靠不断展期维持。美元融资一紧，展期成本上升，机构被迫卖资产，压力传回在岸市场[1][2]。</p>
+<h2>正式表达与示例</h2>
+<p>假设一家欧洲银行用欧元换 1 亿美元，期限 3 个月，掉期点数换算成年化成本。若即期换汇成本加掉期点数为 0.3%，年化约 0.3%；若美元紧张，掉期点数扩大，年化成本升到 1.2%，比在岸美元利率高 0.9 个百分点。</p>
+<p>这 0.9 个百分点就是<strong>掉期基点（swap basis）</strong>：离岸美元比在岸美元贵。若银行资产收益率只有 1.0%，融资成本 1.2%，每 1 亿美元一年亏 20 万美元；它只能减少放贷或卖资产。</p>
+<p>若央行互换额度可用，银行可以用本币向央行换美元，成本接近政策利率，掉期基点被压回。互换额度是危机工具，不是日常融资来源。以上数字均为教学假设。</p>
+<h2>三个风险</h2>
+<p><strong>风险一：展期风险。</strong> 3 个月掉期到期，若美元市场关闭，机构无法滚动融资，只能抛售资产。</p>
+<p><strong>风险二：汇率与抵押品风险。</strong> 本币贬值会让掉期对手方要求更多抵押品，融资成本进一步上升。</p>
+<p><strong>风险三：传染。</strong> 离岸美元基金、非美银行和新兴市场借款人互相持有敞口，一家去杠杆会引发连锁卖盘。</p>
+<p>央行互换、常备回购和监管流动性要求可以缓解，但不能消除期限错配；离岸美元体系仍是全球金融的薄弱环节[3][4]。</p>
+<h2>图表</h2>
+<figure>
+<svg role="img" aria-labelledby="fig-offshore-dollar-funding-swap-lines-rollover-risk-1-title fig-offshore-dollar-funding-swap-lines-rollover-risk-1-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-offshore-dollar-funding-swap-lines-rollover-risk-1-title">离岸美元的融资链</title>
+<desc id="fig-offshore-dollar-funding-swap-lines-rollover-risk-1-desc">三条渠道：外汇掉期、离岸存款、央行互换。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">离岸美元的三条渠道</text>
+<text x="24" y="54" font-size="11" text-anchor="start">掉期、离岸存款、央行互换三条渠道汇入离岸美元。</text>
+<rect x="14" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="69" y="140" font-size="12" text-anchor="middle">外汇掉期</text>
+<text x="69" y="184" font-size="12" text-anchor="middle" font-weight="700">本币换美元</text>
+<rect x="136" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="191" y="140" font-size="12" text-anchor="middle">离岸存款</text>
+<text x="191" y="184" font-size="12" text-anchor="middle" font-weight="700">非美银行</text>
+<rect x="258" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="313" y="140" font-size="12" text-anchor="middle">央行互换</text>
+<text x="313" y="184" font-size="12" text-anchor="middle" font-weight="700">危机工具</text>
+<rect x="380" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="435" y="140" font-size="12" text-anchor="middle">离岸美元</text>
+<text x="435" y="184" font-size="12" text-anchor="middle" font-weight="700">投放</text>
+<line x1="125" y1="160" x2="135" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="247" y1="160" x2="257" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="369" y1="160" x2="379" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<text x="24" y="246" font-size="11" text-anchor="start">教学示意，不含统计数据。</text>
+</g>
+</svg>
+<figcaption>图 1：离岸美元的融资链；教学示意。</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-offshore-dollar-funding-swap-lines-rollover-risk-2-title fig-offshore-dollar-funding-swap-lines-rollover-risk-2-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-offshore-dollar-funding-swap-lines-rollover-risk-2-title">掉期基点的变化</title>
+<desc id="fig-offshore-dollar-funding-swap-lines-rollover-risk-2-desc">两个时期对比掉期基点。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">正常与紧张时期的掉期基点</text>
+<text x="24" y="54" font-size="11" text-anchor="start">正常 0.1 个百分点；紧张 0.9 个百分点。</text>
+<line x1="178" y1="64" x2="178" y2="270" stroke="currentColor" stroke-width="1" opacity=".45"/>
+<text x="20" y="97" font-size="12">正常</text>
+<rect x="178" y="78" width="36" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="95" font-size="12" font-weight="700">0.1</text>
+<text x="20" y="145" font-size="12">紧张</text>
+<rect x="178" y="126" width="324" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="143" font-size="12" font-weight="700">0.9</text>
+<text x="24" y="292" font-size="11" text-anchor="start">教学假设；单位：百分点。</text>
+</g>
+</svg>
+<figcaption>图 2：掉期基点的变化；教学假设。</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-offshore-dollar-funding-swap-lines-rollover-risk-3-title fig-offshore-dollar-funding-swap-lines-rollover-risk-3-desc" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-offshore-dollar-funding-swap-lines-rollover-risk-3-title">离岸融资的二维矩阵</title>
+<desc id="fig-offshore-dollar-funding-swap-lines-rollover-risk-3-desc">两轴：美元供给、展期需求；四象限对应宽松、紧张、危机和需求疲弱。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">美元供给与展期需求的四类状态</text>
+<text x="24" y="54" font-size="11" text-anchor="start">供给足、展期需求高最稳；供给紧、需求高是危机。</text>
+<text x="40" y="68" font-size="11">供给充足</text>
+<text x="40" y="286" font-size="11">供给紧张</text>
+<text x="110" y="314" font-size="11" text-anchor="middle">展期需求低</text>
+<text x="500" y="314" font-size="11" text-anchor="middle">展期需求高</text>
+<rect x="96" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="100" font-size="12" text-anchor="start">宽松</text>
+<text x="108" y="130" font-size="11" text-anchor="start">供给足、需求低</text>
+<text x="108" y="170" font-size="11" font-weight="700">成本低</text>
+<rect x="338" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="100" font-size="12" text-anchor="start">紧张</text>
+<text x="350" y="130" font-size="11" text-anchor="start">供给足、需求高</text>
+<text x="350" y="170" font-size="11" font-weight="700">基点扩大</text>
+<rect x="96" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="214" font-size="12" text-anchor="start">危机</text>
+<text x="108" y="244" font-size="11" text-anchor="start">供给紧、需求高</text>
+<text x="108" y="284" font-size="11" font-weight="700">展期失败</text>
+<rect x="338" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="214" font-size="12" text-anchor="start">需求疲弱</text>
+<text x="350" y="244" font-size="11" text-anchor="start">供给紧、需求低</text>
+<text x="350" y="284" font-size="11" font-weight="700">观望</text>
+</g>
+</svg>
+<figcaption>图 3：离岸融资的二维矩阵；对比分类示意。</figcaption>
+</figure>
+
+<p>图 1 把离岸美元的三条融资渠道串成一条链；图 2 比较正常与紧张时期的掉期基点；图 3 用“美元供给—展期需求”两轴划出四类离岸融资状态。图中数字均为教学假设。</p>
+<h2>适用条件、边界与常见误区</h2>
+<p><strong>边界一：离岸美元不是“假美元”。</strong> 它是商业银行负债，受发行银行和所在国监管约束；不是美联储直接负债。</p>
+<p><strong>边界二：互换额度有政治和额度限制。</strong> 并非所有央行都能获得美联储互换；额度、抵押品和期限都有限。</p>
+<p><strong>边界三：离岸市场也服务贸易和投资。</strong> 离岸美元不是只有投机；贸易结算、跨境贷款和债券发行都依赖它。</p>
+<p><strong>误解一：美元是全球储备货币，融资永远便宜。</strong> 危机时离岸美元溢价可以很高；储备货币地位不等于无限流动性。</p>
+<p><strong>误解二：央行互换能解决所有问题。</strong> 互换提供流动性，但不解决偿付能力和抵押品折价；银行仍需资本和期限管理。</p>
+<h2>深化：交叉货币基差与展期阶梯</h2>
+<p><strong>离岸美元融资的定价核心是交叉货币基差</strong>。一个欧洲银行要在纽约支付美元，可以直接去美元货币市场借，也可以借欧元再换成美元。后者隐含的美元成本等于欧元利率加上换汇成本；当直接美元融资紧张时，交叉货币基差走阔，借欧元换美元变得更贵。这个基差不是抽象指标，它直接进入银行的负债成本。</p>
+<p><strong>三条融资渠道</strong>要分开看。第一是美元商业票据和回购，期限短、对市场情绪敏感；第二是外汇互换市场，灵活但受对手方额度和抵押品限制；第三是央行互换便利，成本低但只有合格机构能用。压力时，前两条渠道先收紧，第三条成为兜底，但兜底有污名和额度限制。</p>
+<p><strong>展期阶梯</strong>是评估风险的基本工具。把未来 30 天、90 天、一年内到期的美元负债按日排列，标出每天需要滚动的金额、利率和对手方集中度。若某几天到期金额超过流动资产，或对手方集中在少数机构，展期风险就高。2008 年和 2020 年 3 月都出现过“资产没问题、负债滚不动”的局面。</p>
+<p><strong>互换便利的作用有边界</strong>。央行互换能缓解离岸美元短缺，但不能解决偿付能力问题；它把流动性风险从银行转移到央行资产负债表，同时可能让机构推迟去杠杆。使用便利的机构也可能被市场标记为“需要帮助”，形成污名。</p>
+<p><strong>监测指标</strong>包括：美元 Libor/SOFR 与隔夜指数互换的利差、交叉货币基差、商业票据 Outstanding 的期限结构、外汇互换成交量、以及银行 CDS 与股价。单一指标会误判，组合看才能区分“技术性紧张”和“信用危机”。</p>
+<p><strong>政策含义</strong>：提高美元融资的期限和对手方分散度，减少对短期批发性融资的依赖；在压力时先使用外汇互换和回购，再考虑央行便利；监管上要关注货币基金和外资行的美元负债，因为它们是离岸美元链条的放大器。</p>
+<p><strong>常见误用</strong>：把互换便利当成“无限美元”，忽略额度、合格抵押品和污名；把交叉货币基差走阔只当成套利机会，忽略它反映的融资压力；把离岸美元短缺当成美国国内问题，忽略全球美元体系的联动。</p>
+<p><strong>最后</strong>，离岸美元融资的风险不是“有没有美元”，而是“在需要的时候能不能以可承受的成本滚动手里的美元负债”。看资产负债表、展期阶梯和对手方集中度，比看单一利率更可靠。</p>
+<h2>压力情景：三档美元融资冲击</h2>
+<p><strong>轻度冲击</strong>：美元利率上升 50 个基点，交叉货币基差走阔 20 个基点。银行仍能滚动负债，但成本上升；此时应延长部分负债期限，锁定成本，不必动用互换便利。</p>
+<p><strong>中度冲击</strong>：商业票据市场对部分发行人关闭，回购折扣上升 10 个百分点。银行需要在 30 天内找到替代融资，或出售流动资产；若流动资产不足，向央行或互换便利求助。此时要区分“流动性问题”和“偿付能力问题”，后者不能靠融资解决。</p>
+<p><strong>重度冲击</strong>：多家机构同时停止展期，交叉货币基差走阔 100 个基点以上，外汇互换市场出现对手方拒付。银行只能依赖央行便利和抵押品；若抵押品不足，可能被迫火售资产。此时政策重点是防止传染，而不是单家机构的利润。</p>
+<p><strong>触发指标</strong>：美元 Libor/SOFR 利差、交叉货币基差、商业票据期限缩短、回购折扣、对手方 CDS。四项同时恶化，说明不是技术性紧张。</p>
+<p><strong>准备清单</strong>：滚动到期表、抵押品清单、对手方限额、备用融资额度、压力测试和恢复计划。平时做好，压力时才有选择；临时找钱，成本最高。</p>
+<h2>要点回顾</h2>
+<ul>
+<li>离岸美元融资的边际成本看交叉货币基差，不看单一美元利率。</li>
+<li>三条渠道（货币市场、外汇互换、央行便利）在压力时依次收紧，便利有额度和污名。</li>
+<li>展期阶梯按日列出到期金额、利率和对手方集中度，是评估滚续风险的基本工具。</li>
+<li>互换便利解决流动性，不解决偿付能力；使用便利可能被市场标记。</li>
+<li>监测要组合看利差、基差、CP 期限、回购折扣和对手方 CDS，单一指标会误判。</li>
+</ul>
+<h2>反证条件</h2>
+<p>离岸美元融资的结论依赖互换和基差：</p>
+<ol>
+<li><strong>央行互换扩容。</strong> 若互换额度充足且可快速使用，展期风险下降，利率冲击被缓冲。</li>
+<li><strong>基差收窄。</strong> 若交叉货币基差回归正常，对冲成本下降，借款人的美元融资压力减轻。</li>
+<li><strong>自然美元资产。</strong> 若借款人有美元收入或资产，货币错配小于表面负债。</li>
+<li><strong>非银中介替代。</strong> 若影子银行提供美元融资，风险从银行转移到监管较少的部门。</li>
+<li><strong>全球美元荒。</strong> 若危机中美元同时紧缺，互换和储备不足以覆盖所有借款人。</li>
+</ol>
+<p><strong>实践含义：</strong> 离岸美元风险要看互换可用性、基差和借款人自然美元资产；只看外债总额，会高估或低估展期压力。</p>
+<p><strong>数据附注：</strong> 合并表内外美元负债，并按剩余期限分档；只看母公司的外币债券，会漏掉 SPV 和回购。</p>
+<p><strong>范围说明：</strong> 分开银行、非银和企业借款人；三者的美元融资渠道和挤兑速度不同，合并会掩盖风险。还要区分存量负债和承诺额度，后者在压力期会被 drawing。</p>
+<p><strong>最后：</strong> 已提取负债和承诺额度要分开；压力期未提取的授信会被动用。</p>
+<h2>练习</h2>
+<ol>
+<li><p>列出离岸美元的三条融资渠道。</p>
+</li>
+<li><p>掉期年化成本从 0.3% 升到 1.2%，掉期基点扩大多少？</p>
+</li>
+<li><p>资产收益 1.0%、融资 1.2%，每亿美元一年亏多少？</p>
+</li>
+<li><p>为什么展期风险在美元紧张时更大？</p>
+</li>
+<li><p>央行互换如何压低掉期基点？</p>
+</li>
+<li><p>本币贬值如何影响掉期抵押品？</p>
+</li>
+<li><p>判断：美元是储备货币，离岸融资就永远便宜吗？说明理由。</p>
+</li>
+<li><p>交叉货币基差走阔说明什么？它如何进入银行负债成本？</p>
+</li>
+<li><p>为什么央行互换便利不能解决偿付能力问题？</p>
+</li>
+<li><p>中度冲击下，如何区分流动性问题与偿付能力问题？</p>
+</li>
+<li><p>哪些指标同时恶化说明美元融资不是技术性紧张？</p>
+</li>
+<li><p>为什么说离岸美元融资的边际成本是交叉货币基差，而不是美元利率？</p>
+</li>
+<li><p>展期阶梯应至少列出哪三类信息？</p>
+</li>
+</ol>
+<h2>关联</h2>
+<p>先修 FIN-013；对照 FIN-034；相邻 ECO-053、FIN-036。</p>
+<h2>来源</h2>
+<ol>
+<li>International Monetary Fund, <em>External Sector Report 2025: External Positions and Policies</em>. International Monetary Fund, accessed 2026-11-24. <a href="https://www.imf.org/-/media/files/publications/esr/2025/english/ch1.pdf">https://www.imf.org/-/media/files/publications/esr/2025/english/ch1.pdf</a></li>
+<li>Bank for International Settlements, <em>The global drivers of private credit (BIS Quarterly Review, March 2025)</em>. Bank for International Settlements, accessed 2026-11-05. <a href="https://www.bis.org/publ/qtrpdf/r_qt2503b.htm">https://www.bis.org/publ/qtrpdf/r_qt2503b.htm</a></li>
+<li>Board of Governors of the Federal Reserve System, <em>H.4.1 Factors Affecting Reserve Balances</em>. Board of Governors of the Federal Reserve System, accessed 2026-10-30. <a href="https://www.federalreserve.gov/releases/h41/current/default.htm">https://www.federalreserve.gov/releases/h41/current/default.htm</a></li>
+<li>European Central Bank, <em>Eurosystem balance sheet</em>. European Central Bank, accessed 2026-10-30. <a href="https://www.ecb.europa.eu/pub/annual/balance/html/index.en.html">https://www.ecb.europa.eu/pub/annual/balance/html/index.en.html</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>说明离岸美元的三条融资渠道。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>用掉期基点解释离岸美元溢价。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>说明离岸美元的三条融资渠道。</li><li>用掉期基点解释离岸美元溢价。</li><li>识别展期风险与央行互换的作用。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/risk-premium/">FIN-013 · 风险溢价</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/rate-conventions-and-credit-spreads/">FIN-034 · 利率口径与利差：同一笔资金价格的不同标签</a> </li><li> <a href="https://economics.51invest.com/learn/balance-of-payments-crisis-reserves-capital-flows-exchange-regimes/">ECO-053 · 国际收支危机：储备、资本流动与汇率制度</a> </li><li> <a href="/learn/cross-border-payments-and-reserve-currencies/">FIN-036 · 跨境支付与储备货币：国际金融的管道</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.imf.org/-/media/files/publications/esr/2025/english/ch1.pdf" rel="noopener noreferrer" target="_blank">External Sector Report 2025: External Positions and Policies</a> <p>International Monetary Fund · International Monetary Fund</p> <p>访问：2026-11-24 · 许可：IMF publication; citation only under IMF terms of use</p> <p>支持论点：支持全球外部头寸、经常账户与跨境资本流动。</p> </div><div class="source"> <a href="https://www.bis.org/publ/qtrpdf/r_qt2503b.htm" rel="noopener noreferrer" target="_blank">The global drivers of private credit (BIS Quarterly Review, March 2025)</a> <p>Bank for International Settlements · Bank for International Settlements</p> <p>访问：2026-11-05 · 许可：BIS terms: non-commercial download, display and redistribution allowed with attribution</p> <p>支持论点：支持私人信贷与全球融资结构的变化。</p> </div><div class="source"> <a href="https://www.federalreserve.gov/releases/h41/current/default.htm" rel="noopener noreferrer" target="_blank">H.4.1 Factors Affecting Reserve Balances</a> <p>Board of Governors of the Federal Reserve System · Board of Governors of the Federal Reserve System</p> <p>访问：2026-10-30 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：支持美联储准备金、资产负债表与美元流动性。</p> </div><div class="source"> <a href="https://www.ecb.europa.eu/pub/annual/balance/html/index.en.html" rel="noopener noreferrer" target="_blank">Eurosystem balance sheet</a> <p>European Central Bank · European Central Bank</p> <p>访问：2026-10-30 · 许可：ECB statistics terms; attribution required</p> <p>支持论点：支持欧元体系报表与跨境美元融资对照。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/offshore-dollar-funding-swap-lines-rollover-risk/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

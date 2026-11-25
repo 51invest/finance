@@ -1,0 +1,254 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>Risk Premium · 51Invest</title><meta name="description" content="A risk premium is the expected return above the risk-free rate; it compensates non-diversifiable risk, not every kind of volatility."><link rel="canonical" href="https://finance.51invest.com/en/learn/risk-premium/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/risk-premium/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/risk-premium/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/risk-premium/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/en/" data-main-home aria-label="51Invest"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">51Invest</span> <span class="brand-caption">WUYAO INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="Knowledge stations"> <a class="nav-link" href="https://51invest.com/en/" data-main-home> Home </a> <a class="nav-link" href="https://economics.51invest.com/en/"> Economics </a><a class="nav-link active" href="/en/" aria-current="page"> Finance </a><a class="nav-link" href="https://markets.51invest.com/en/"> Markets </a><a class="nav-link" href="https://invest.51invest.com/en/"> Investing </a><a class="nav-link" href="https://history.51invest.com/en/"> History </a><a class="nav-link" href="https://research.51invest.com/en/"> Research </a> <a class="nav-link" href="https://51invest.com/en/contents/"> Content map </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/learn/risk-premium/" hreflang="zh-CN" lang="zh-CN" data-language-link="zh" aria-label="Switch to Chinese" title="Switch to Chinese"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="Theme: System" title="Theme: System" data-label-auto="Theme: System" data-label-light="Theme: Light" data-label-dark="Theme: Dark"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">System</span> <span class="theme-text" data-theme-text="light">Light</span> <span class="theme-text" data-theme-text="dark">Dark</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/en/" data-main-home>Home</a> <span class="sep">/</span> <a href="/en/">Finance</a> <span class="sep">/</span> <span aria-current="page">Risk Premium</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">Concept</span> <h1 class="article-title">Risk Premium</h1> <p class="article-summary">A risk premium is the expected return above the risk-free rate; it compensates non-diversifiable risk, not every kind of volatility.</p>  <div class="meta-grid"> <div class="meta-item"><span>Module</span><strong>FIN-M09 · 风险与金融定价原理</strong></div> <div class="meta-item"><span>Level</span><strong>Foundation</strong></div> <div class="meta-item"><span>Read</span><strong>6 min · 12 sections</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> This article has an interactive demo <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <blockquote>
+<p>By the end of this article, you can separate a quoted spread, a risk premium, and a realized excess return, and use CAPM to calculate a required return instead of treating a high yield as a high premium.</p>
+</blockquote>
+<h2>Definition</h2>
+<p>A risk premium is the part of a risky asset’s expected return above the risk-free rate; it compensates for bearing risk[1][3]. The market risk premium is the expected return on the market portfolio minus the risk-free rate, and an asset’s risk premium is scaled to its systematic risk[3].</p>
+<h2>Intuition</h2>
+<p>Suppose that, in one currency, a one-year government bond yields 4.0% and a corporate bond of the same maturity yields 6.5%; this article takes the same-maturity government bond as the risk-free reference, while the textbook&#39;s usual proxy is the three-month US Treasury bill rate[1]. Part of the 2.5-point spread compensates default and liquidity risk[2], so only the remainder is closer to an expected premium. Equity risk premiums compensate market risk that cannot be diversified away, not firm-specific risk.</p>
+<h2>Formal expression</h2>
+<p>Asset risk premium:</p>
+<div class="formula" role="math" aria-label="Asset risk premium equals expected asset return minus the risk-free rate">RP_i = E[R_i] - R_f</div>
+
+<p>Market risk premium:</p>
+<div class="formula" role="math" aria-label="Market risk premium equals expected market return minus the risk-free rate">MRP = E[R_m] - R_f</div>
+
+<p>Capital asset pricing model (CAPM):</p>
+<div class="formula" role="math" aria-label="Expected return equals the risk-free rate plus beta times the market risk premium">E[R_i] = R_f + β_i × MRP</div>
+
+<p>Here <code>E[R_i]</code> is expected return, <code>R_f</code> is the risk-free rate, <code>E[R_m]</code> is the expected market return, and <code>β_i = Cov(R_i, R_m) / Var(R_m)</code> measures systematic risk: <code>Cov</code> and <code>Var</code> are covariance and variance, whose sample estimators and units are set out in the main article on covariance and correlation (RES-010), and the textbook defines beta as the slope of a regression on market returns, so this formula is the same slope written in different notation[3]. A quoted yield can be roughly split into the risk-free rate, credit, liquidity and term premiums[2]; this is an analytical framework, not an accounting identity.</p>
+<h2>Conditions and limits</h2>
+<ul>
+<li>The risk premium is expected, not realized; ex-post excess returns can be negative.</li>
+<li>Match currency, horizon, tax, liquidity and default characteristics.</li>
+<li>The risk-free rate is only low-default-risk; inflation, duration and reinvestment risk remain, so match its maturity to the cash flows.</li>
+<li>Under the CAPM assumptions it is systematic risk that is compensated and diversifiable idiosyncratic risk that does not raise the required return[3]; this is a result of the model, not a claim about every market.</li>
+<li>A quoted spread contains expected default losses and a liquidity compensation, and the textbook also lists the taxability of bond interest and the likelihood of a call among the factors behind yields[2] (a call feature is one kind of embedded option), so the spread usually exceeds the expected premium.</li>
+<li>This article holds the market risk premium fixed only to work the example; in practice it varies with the economic regime and the estimation window, so it is not a constant. That scope note is this article’s own convention, not a sourced result.</li>
+</ul>
+<h2>Worked example</h2>
+<p>All numbers are hypothetical teaching assumptions; every rate is quoted in the same currency and on the same maturity basis, and MRP, required return and risk premium are annual percentages (differences in percentage points). Let <code>R_f = 4.0%</code> and <code>E[R_m] = 9.0%</code>, so <code>MRP = 9.0% - 4.0% = 5.0%</code>.</p>
+<ul>
+<li><code>β = 0.8</code>: <code>E[R_i] = 4.0% + 0.8 × 5.0% = 8.0%</code>; asset risk premium <code>4.0%</code>.</li>
+<li><code>β = 1.2</code>: <code>E[R_i] = 4.0% + 1.2 × 5.0% = 10.0%</code>; asset risk premium <code>6.0%</code>.</li>
+</ul>
+<p>A same-maturity corporate bond yielding 6.5% over a 4.0% government bond has a 2.5-point spread. With 1.0 point of expected default loss, the remaining 1.5 points are closer to an expected excess return (before liquidity and taxes).</p>
+<h2>Figure</h2>
+<p>Table 1: Required return and risk premium by beta (percentage per year, hypothetical)</p>
+<table>
+<thead>
+<tr>
+<th align="right">β</th>
+<th align="right">Market risk premium</th>
+<th align="right">Asset risk premium</th>
+<th align="right">Required return</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">0.0</td>
+<td align="right">5.0%</td>
+<td align="right">0.0%</td>
+<td align="right">4.0%</td>
+</tr>
+<tr>
+<td align="right">0.8</td>
+<td align="right">5.0%</td>
+<td align="right">4.0%</td>
+<td align="right">8.0%</td>
+</tr>
+<tr>
+<td align="right">1.0</td>
+<td align="right">5.0%</td>
+<td align="right">5.0%</td>
+<td align="right">9.0%</td>
+</tr>
+<tr>
+<td align="right">1.2</td>
+<td align="right">5.0%</td>
+<td align="right">6.0%</td>
+<td align="right">10.0%</td>
+</tr>
+</tbody></table>
+<p>A higher beta raises the asset risk premium; this is a model relationship, not a guarantee about realized returns.</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-rp-title fig-rp-desc" viewBox="0 0 420 210" width="100%">
+    <title id="fig-rp-title">Required return rises linearly with beta</title>
+    <desc id="fig-rp-desc">The vertical axis is required return in percent on a zero baseline, the horizontal axis is beta. Four points: beta 0 at 4 percent, 0.8 at 8 percent, 1.0 at 9 percent and 1.2 at 10 percent, all on one straight line whose slope is five percentage points per unit of beta.</desc>
+    <line x1="60" y1="180" x2="380" y2="180" stroke="var(--border)" stroke-width="2"></line>
+    <polyline points="70,125.5 253,70.9 299,57.3 344,43.6" fill="none" stroke="var(--accent)" stroke-width="2.5"></polyline>
+    <g fill="var(--gold)">
+      <circle cx="70" cy="125.5" r="5"></circle>
+      <circle cx="253" cy="70.9" r="5"></circle>
+      <circle cx="299" cy="57.3" r="5"></circle>
+      <circle cx="344" cy="43.6" r="5"></circle>
+    </g>
+    <g fill="var(--muted)" font-size="11" font-family="inherit">
+      <text x="60" y="20">Required return (%, zero baseline)</text>
+      <text x="82" y="145">risk-free 4.0%</text>
+      <text x="255" y="62">8.0%</text>
+      <text x="301" y="48">9.0%</text>
+      <text x="336" y="36">10.0%</text>
+      <text x="64" y="198">β = 0</text>
+      <text x="241" y="198">0.8</text>
+      <text x="291" y="198">1.0</text>
+      <text x="336" y="198">1.2</text>
+      <text x="170" y="150">slope = market premium 5.0%</text>
+    </g>
+  </svg>
+  <figcaption>Figure 1: with `required return = risk-free rate + β × market risk premium`, a 4.0% risk-free rate and a 5.0% market premium give 4.0%, 8.0%, 9.0% and 10.0% at β of 0, 0.8, 1.0 and 1.2 - five percentage points per unit of beta. The axis starts at zero and the line is drawn from the table values; the numbers are teaching assumptions.</figcaption>
+</figure>
+
+<h2>Common misconceptions</h2>
+<ul>
+<li><strong>Risk premium equals historical excess return.</strong> No. It is an ex-ante expectation; history reflects luck and valuation changes.</li>
+<li><strong>The whole high-yield spread is a risk premium.</strong> No. It also contains expected default losses, liquidity, taxes and covenants.</li>
+<li><strong>Higher volatility always means a higher premium.</strong> Not necessarily. Systematic risk is what the model prices; diversifiable idiosyncratic risk earns no premium, and the definitions of diversification and idiosyncratic risk are in the main article on diversification and common risk (INV-017).</li>
+<li><strong>The risk-free rate is truly riskless.</strong> No. It usually means only very low default risk; inflation, duration and reinvestment risk remain.</li>
+</ul>
+<h2>Figures in plain language</h2>
+<p>The three figures decompose a quoted spread, put expected and realized excess returns side by side, and trace the CAPM chain; all rates remain the article&#39;s illustrative assumptions.</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-spread-stack-title-en fig-spread-stack-desc-en" viewBox="0 0 440 220" width="100%">
+    <title id="fig-spread-stack-title-en">Only part of a 2.5-point spread is close to a risk premium</title>
+    <desc id="fig-spread-stack-desc-en">Stacked bar: the spread between a 6.5% corporate bond and a 4.0% government bond is 2.5 percentage points; expected default loss is 1.0 point, and the remaining 1.5 points also include liquidity, tax, and covenant compensation, so it is not all risk premium.</desc>
+    <text x="20" y="24" font-size="12" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">6.5% − 4.0% = 2.5 points, not 2.5 points of risk premium</text>
+    <rect x="60" y="76" width="128" height="44" fill="var(--gold)" opacity="0.65"/>
+    <rect x="188" y="76" width="192" height="44" fill="var(--accent)" opacity="0.55"/>
+    <text x="124" y="103" font-size="10" text-anchor="middle" fill="var(--text)" font-family="inherit">Expected default 1.0</text>
+    <text x="284" y="103" font-size="10" text-anchor="middle" fill="var(--text)" font-family="inherit">Remaining 1.5: liquidity, tax, terms</text>
+    <text x="60" y="64" font-size="9" fill="var(--muted)" font-family="inherit">Quoted spread 2.5 percentage points</text>
+    <text x="60" y="146" font-size="9" fill="var(--muted)" font-family="inherit">After default loss, the rest is closer to excess return (still includes liquidity/tax).</text>
+    <text x="60" y="166" font-size="9" fill="var(--muted)" font-family="inherit">So “all spread is risk premium” is false; 2.5 is not the required-return increment.</text>
+    <text x="20" y="202" font-size="9" fill="var(--muted)" font-family="inherit" text-anchor="start">Unit: percentage points/year; figures are illustrative.</text>
+  </svg>
+  <figcaption>Figure 2: Comparison of a 6.5% corporate bond and a 4.0% government bond: within the 2.5-point spread, expected default loss is 1.0 point; the remaining 1.5 points also include liquidity, tax, and covenant compensation, so it is not all risk premium. Unit: percentage points per year; figures are illustrative.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-realized-excess-title-en fig-realized-excess-desc-en" viewBox="0 0 440 240" width="100%">
+    <title id="fig-realized-excess-title-en">Expected excess 5.0%, realized only 3.0%</title>
+    <desc id="fig-realized-excess-desc-en">The left bar is expected market excess return of 5.0 percentage points; the right bar is realized excess return of 3.0 points; the gap is 2.0 points. A risk premium is an ex-ante expectation, and realized results can be lower or negative.</desc>
+    <text x="20" y="24" font-size="12" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">The same compensation can differ by 2 points before and after the fact</text>
+    <line x1="60" y1="190" x2="380" y2="190" stroke="var(--border)" stroke-width="1.5"/>
+    <rect x="100" y="90" width="70" height="100" fill="var(--accent)" opacity="0.8"/>
+    <rect x="250" y="130" width="70" height="60" fill="var(--gold)" opacity="0.7"/>
+    <text x="135" y="82" font-size="10.5" text-anchor="middle" fill="var(--text)" font-family="inherit">5.0%</text>
+    <text x="285" y="122" font-size="10.5" text-anchor="middle" fill="var(--text)" font-family="inherit">3.0%</text>
+    <text x="135" y="210" font-size="9" text-anchor="middle" fill="var(--muted)" font-family="inherit">Expected excess</text>
+    <text x="285" y="210" font-size="9" text-anchor="middle" fill="var(--muted)" font-family="inherit">Realized excess</text>
+    <line x1="170" y1="100" x2="250" y2="100" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="210" y="92" font-size="9" text-anchor="middle" fill="var(--muted)" font-family="inherit">gap 2.0</text>
+    <text x="20" y="230" font-size="9" fill="var(--muted)" font-family="inherit" text-anchor="start">Unit: percentage points/year; figures are illustrative.</text>
+  </svg>
+  <figcaption>Figure 3: Expected versus realized comparison: with a 4.0% risk-free rate, 9.0% expected market return, and 7.0% realized market return, expected excess is 5.0 points and realized excess is 3.0 points. A risk premium is an ex-ante expectation; it can be lower or negative after the fact. Unit: percentage points per year; figures are illustrative.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-capm-chain-title-en fig-capm-chain-desc-en" viewBox="0 0 440 220" width="100%">
+    <title id="fig-capm-chain-title-en">CAPM links the risk-free rate, beta, and market premium into a required return</title>
+    <desc id="fig-capm-chain-desc-en">Chain: risk-free rate 4.0% plus beta 1.2 times market risk premium 5.0% gives required return 10.0%; subtracting the risk-free rate leaves an asset risk premium of 6.0 percentage points.</desc>
+    <text x="20" y="24" font-size="12" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">4.0% + 1.2 × 5.0% = 10.0% required return</text>
+    <rect x="20" y="52" width="120" height="48" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="80" y="72" font-size="9.5" text-anchor="middle" fill="var(--text)" font-family="inherit">Risk-free Rf</text>
+    <text x="80" y="88" font-size="12" text-anchor="middle" fill="var(--accent)" font-family="inherit">4.0%</text>
+    <text x="146" y="82" font-size="16" fill="var(--muted)" font-family="inherit">+</text>
+    <rect x="160" y="52" width="120" height="48" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="220" y="72" font-size="9.5" text-anchor="middle" fill="var(--text)" font-family="inherit">β × market premium</text>
+    <text x="220" y="88" font-size="12" text-anchor="middle" fill="var(--accent)" font-family="inherit">1.2 × 5.0%</text>
+    <line x1="280" y1="76" x2="314" y2="76" stroke="var(--border)" stroke-width="1.5"/>
+    <path d="M307 72 L314 76 L307 80" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+    <rect x="316" y="52" width="104" height="48" rx="7" fill="var(--accent-soft)" stroke="var(--accent)"/>
+    <text x="368" y="72" font-size="9.5" text-anchor="middle" fill="var(--text)" font-family="inherit">Required return</text>
+    <text x="368" y="88" font-size="12" text-anchor="middle" fill="var(--accent)" font-family="inherit">10.0%</text>
+    <text x="20" y="132" font-size="9" fill="var(--muted)" font-family="inherit" text-anchor="start">Asset risk premium = required return 10.0% − risk-free 4.0% = 6.0 percentage points.</text>
+    <text x="20" y="152" font-size="9" fill="var(--muted)" font-family="inherit" text-anchor="start">Each extra unit of beta adds one market risk premium (5.0 points here) to the required return.</text>
+    <text x="20" y="172" font-size="9" fill="var(--muted)" font-family="inherit" text-anchor="start">This is a CAPM model relation, not a guarantee on realized returns.</text>
+    <text x="20" y="202" font-size="9" fill="var(--muted)" font-family="inherit" text-anchor="start">Unit: % per year; Rf 4.0%, MRP 5.0%, β 1.2 are illustrative assumptions.</text>
+  </svg>
+  <figcaption>Figure 4: The CAPM transmission chain links a 4.0% risk-free rate, beta 1.2, and a 5.0% market risk premium into a 10.0% required return; the asset risk premium is 10.0% − 4.0% = 6.0 percentage points. Each extra unit of beta adds 5.0 points to the required return. Unit: % per year; figures are illustrative.</figcaption>
+</figure>
+
+
+<!-- kp-supplement:start -->
+<h2>Knowledge-point review</h2>
+<h3>no-arbitrage</h3>
+<p><strong>Definition</strong>: No-arbitrage means equivalent cash flows should not trade at different prices, since a zero-cost riskless profit would otherwise exist.</p>
+<p><strong>Mechanism</strong>: Arbitrageurs buy the cheap and sell the rich asset until prices converge; transaction costs, financing and short-sale limits can block full arbitrage.</p>
+<p><strong>Example</strong>: For example, if the same stock&#39;s cross-exchange gap exceeds costs, arbitrageurs buy low and sell high until it narrows.</p>
+<p><strong>Boundary</strong>: No-arbitrage is a pricing restriction, not a forecast; liquidity droughts, counterparty risk and constraints let deviations persist, and replication conditions matter.</p>
+<h3>law of one price</h3>
+<p><strong>Definition</strong>: The law of one price says the same good should have one price in competitive markets without transport or trade barriers, or arbitrage removes differences.</p>
+<p><strong>Mechanism</strong>: Cross-market gaps reflect shipping, tariffs, exchange rates, quality and transaction costs; tradable and non-tradable goods converge differently.</p>
+<p><strong>Example</strong>: For example, the dollar price of identical gold in London and New York is usually close, and wider gaps attract arbitrage or hedging flows.</p>
+<p><strong>Boundary</strong>: The law does not hold for all goods; housing, services and regulated products cannot be shipped, and brands, taxes and local supply keep gaps.</p>
+<h3>risk premium</h3>
+<p><strong>Definition</strong>: A risk premium is the extra expected return investors demand for holding a risky asset instead of a risk-free one.</p>
+<p><strong>Mechanism</strong>: It reflects risk size, correlation, liquidity, leverage and risk appetite; equity, credit and term premia have different sources.</p>
+<p><strong>Example</strong>: For example, stocks are expected to earn more than government bonds over time, partly compensating earnings uncertainty and drawdowns.</p>
+<p><strong>Boundary</strong>: A risk premium is not guaranteed return; expectations can fail, historical premia depend on samples and valuations, and low volatility can coexist with rich prices and weak future returns.</p>
+<h3>asset pricing and market efficiency</h3>
+<p><strong>Definition</strong>: Asset pricing studies the link between risk and expected return, while market efficiency studies how quickly prices absorb information.</p>
+<p><strong>Mechanism</strong>: CAPM, multi-factor models and DCF offer different frameworks; weak, semi-strong and strong efficiency correspond to different information sets.</p>
+<p><strong>Example</strong>: For example, prices adjust quickly after an earnings release, suggesting public information is absorbed; persistent insider profits would contradict strong efficiency.</p>
+<p><strong>Boundary</strong>: Efficiency does not mean prices are always right; noise, arbitrage limits, behavioural biases and frictions create mispricing, and models can omit risk factors.</p>
+<!-- kp-supplement:end -->
+
+<h2>Related</h2>
+<ul>
+<li>Prerequisite: The Time Value of Money (FIN-009).</li>
+<li>Applications: The Law of One Price and No-Arbitrage (FIN-014), Introduction to Asset Pricing Models (FIN-015), Cost of Capital (FIN-016), Return, Risk and Cost Trade-offs (INV-002), Bond Rights and Cash Flows (MKT-004).</li>
+<li>Conventions: Interest-Rate Types and Conventions (FIN-012) covers nominal versus real, pre-tax versus after-tax and annualization conventions.</li>
+<li>Contexts: credit spreads, equity required returns and project discount rates.</li>
+</ul>
+<h2>Exercises</h2>
+<ol>
+<li><strong>Concept.</strong> A government bond yields 4.0% and equity is expected to return 9.0%. What is the market risk premium?</li>
+<li><strong>Calculation.</strong> <code>R_f = 4.0%</code>, <code>MRP = 5.0%</code>, <code>β = 1.2</code>. What are the required return and asset risk premium?</li>
+<li><strong>Conditions.</strong> A corporate bond yields 6.5% and a same-maturity government bond 4.0%. Can the whole 2.5-point spread be called a risk premium?</li>
+</ol>
+<details>
+<summary>Suggested answers</summary>
+
+<ol>
+<li><code>9.0%-4.0% = 5.0</code> percentage points.</li>
+<li>Required return <code>4.0% + 1.2 × 5.0% = 10.0%</code>; risk premium <code>6.0%</code>.</li>
+<li>No. It also contains expected default loss, liquidity, taxes and covenants; use the same maturity, currency and tax basis, and deduct expected losses before comparing.</li>
+</ol>
+</details>
+
+<h2>Sources</h2>
+<ol>
+<li>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “3.4 Interest Rates.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/3-4-interest-rates">https://openstax.org/books/principles-finance-2e/pages/3-4-interest-rates</a> (accessed 2026-10-30)</li>
+<li>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “10.4 Risks of Interest Rates and Default.” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/10-4-risks-of-interest-rates-and-default">https://openstax.org/books/principles-finance-2e/pages/10-4-risks-of-interest-rates-and-default</a> (accessed 2026-10-30)</li>
+<li>Dahlquist, Julie, and Rainford Knight. <em>Principles of Finance 2e</em>, “15.3 The Capital Asset Pricing Model (CAPM).” OpenStax. CC BY-NC-SA 4.0. <a href="https://openstax.org/books/principles-finance-2e/pages/15-3-the-capital-asset-pricing-model-capm">https://openstax.org/books/principles-finance-2e/pages/15-3-the-capital-asset-pricing-model-capm</a> (accessed 2026-10-30)</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="en" aria-labelledby="demo-check-title" data-check-done="All three are covered: the core of this article is in place." data-check-pending="One item is still open: go back to the matching section and retell it with a number or counterexample." data-check-count="Ticked"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">Worked demo</p> <button class="demo-reset" type="button" data-demo-reset>Reset</button> </div> <h2 id="demo-check-title">Read-through check: can you say three things?</h2> <p class="demo-intro">No recitation needed. Tick each sentence below and see whether you can explain the mechanism, one worked example and one boundary in your own words.</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>Recompute the required return from the risk-free rate, market premium and beta, and interpret the slope</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>Distinguish non-diversifiable risk from volatility in general and say which one the premium compensates</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>Name one condition under which the article’s conclusion does not hold</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> Ticked 0 / 3
+</p> </div> <p class="demo-footnote">The numbers are teaching assumptions that show relationships, not forecasts or investment advice.</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> This article has passed the current publication gate. Factual, calculation and translation revisions update both language versions together. </p> <p> <a class="button secondary" href="/en/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>Back to station </a> </p> </div> <aside class="article-aside" aria-label="Article information"> <section class="aside-card"> <h2>Learning objectives</h2> <ul> <li>Recompute the required return from the risk-free rate, market premium and beta, and interpret the slope</li><li>Distinguish non-diversifiable risk from volatility in general and say which one the premium compensates</li> </ul> </section> <section class="aside-card"> <h2>Required prerequisites</h2> <ul> <li> <a href="/en/learn/time-value-of-money/">FIN-009 · The Time Value of Money</a> </li> </ul> </section> <section class="aside-card"> <h2>Recommended reading</h2> <ul> <li> <a href="/en/learn/asset-pricing-models-introduction/">FIN-015 · Introduction to Asset Pricing Models</a> </li><li> <a href="https://invest.51invest.com/en/learn/return-risk-and-cost-tradeoffs/">INV-002 · Return, Risk and Cost Trade-offs</a> </li><li> <a href="https://markets.51invest.com/en/learn/bond-rights-and-cash-flows/">MKT-004 · Bond Rights and Cash Flows</a> </li><li> <a href="/en/learn/time-value-of-money/">FIN-009 · The Time Value of Money</a> </li><li> <a href="/en/learn/law-of-one-price-and-no-arbitrage/">FIN-014 · The Law of One Price and No-Arbitrage</a> </li><li> <a href="/en/learn/cost-of-capital/">FIN-016 · Cost of Capital</a> </li><li> <a href="/en/learn/interest-rate-types-and-conventions/">FIN-012 · Interest-Rate Types and Conventions</a> </li> </ul> </section> <section class="aside-card"> <h2>AI review record</h2> <p class="muted"> There is no human sign-off; these states come from the AI-only editorial review. </p> <ul> <li> Facts and calculations : AI review passed </li><li> Subject : AI review passed </li><li> English : AI review passed </li><li> Page : AI review passed </li> </ul> </section> <section class="aside-card"> <h2>Sources</h2> <div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/3-4-interest-rates" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 3.4 Interest Rates</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>Accessed: 2026-10-30 · License: CC BY-NC-SA 4.0</p> <p>Supports: Lenders charge a risk premium for higher default risk; the three-month US Treasury rate is often treated as the risk-free reference.</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/10-4-risks-of-interest-rates-and-default" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 10.4 Risks of Interest Rates and Default</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>Accessed: 2026-10-30 · License: CC BY-NC-SA 4.0</p> <p>Supports: Credit risk and liquidity risk lead investors to demand a higher yield; term risk is usually measured by a special indicator referred to as the term premium. The same page also lists the taxability of bond interest and call likelihood among the factors behind yields verbatim (&quot;Prevailing interest rates are among the most critical of these, but also important are factors such as maturity periods, the taxability of bond interest, the credit standing of bond issuers, and the likelihood of bond call, or issuers paying off their debt early.&quot;; &quot;Call risk is the risk of bonds being redeemed or called by the issuing firm before their maturity dates.&quot;).</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/15-3-the-capital-asset-pricing-model-capm" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 15.3 The Capital Asset Pricing Model (CAPM)</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>Accessed: 2026-10-30 · License: CC BY-NC-SA 4.0</p> <p>Supports: Risk premium is &quot;the extra return that you will earn for taking on risk&quot; and &quot;your reward for being willing to bear risk&quot;; the CAPM equation is Re = Rf + Beta × Market Risk Premium = Rf + Beta × (Rm − Rf), with Rm the expected return of the market, so the market risk premium is Rm − Rf. The page also states verbatim that only systematic risk is rewarded (&quot;Because investors can eliminate firm-specific risk through diversification, they will not be rewarded for that risk. Investors are rewarded for the amount of systematic risk they incur.&quot;) and defines beta as the slope of the regression line (&quot;The slope of this line, 1.39, is DAL’s beta.&quot;); it never uses the words covariance or variance.</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">A free, non-commercial knowledge site. Sources and definitions are labelled; nothing here is investment advice.</p> </div> </div> <nav class="footer-links" aria-label="Knowledge stations"> <a href="https://51invest.com/en/" data-main-home>Home</a> <a href="https://51invest.com/en/contents/">Content map</a> <a href="/en/glossary/">Glossary</a> <a href="/en/search/">Search</a> <a href="https://51invest.com/en/charts/" data-main-link>Charts</a> <a href="https://51invest.com/en/sources/" data-main-link>Data &amp; licences</a> <a href="/en/">Station home</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="Knowledge stations"> <a class="mobile-link" href="https://51invest.com/en/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>Home</span> </a> <a class="mobile-link" href="https://51invest.com/en/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>Knowledge stations</span> </a> <a class="mobile-link active" href="/en/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>Station home</span> </a> <a class="mobile-link" href="/learn/risk-premium/" data-language-link="zh"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>Tokenized Deposits and Stablecoins: The Ledger of Payment Infrastructure · 51Invest</title><meta name="description" content="Stablecoins and tokenized deposits both move “deposits” onto programmable ledgers, but the obligor, reserve assets and redemption rights differ. Safety cannot be read from the on-chain price alone; it depends on reserve cover, redemption order, settlement finality and who bears a run."><link rel="canonical" href="https://finance.51invest.com/en/learn/tokenized-deposits-and-stablecoin-infrastructure/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/tokenized-deposits-and-stablecoin-infrastructure/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/tokenized-deposits-and-stablecoin-infrastructure/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/tokenized-deposits-and-stablecoin-infrastructure/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/en/" data-main-home aria-label="51Invest"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">51Invest</span> <span class="brand-caption">WUYAO INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="Knowledge stations"> <a class="nav-link" href="https://51invest.com/en/" data-main-home> Home </a> <a class="nav-link" href="https://economics.51invest.com/en/"> Economics </a><a class="nav-link active" href="/en/" aria-current="page"> Finance </a><a class="nav-link" href="https://markets.51invest.com/en/"> Markets </a><a class="nav-link" href="https://invest.51invest.com/en/"> Investing </a><a class="nav-link" href="https://history.51invest.com/en/"> History </a><a class="nav-link" href="https://research.51invest.com/en/"> Research </a> <a class="nav-link" href="https://51invest.com/en/contents/"> Content map </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/learn/tokenized-deposits-and-stablecoin-infrastructure/" hreflang="zh-CN" lang="zh-CN" data-language-link="zh" aria-label="Switch to Chinese" title="Switch to Chinese"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="Theme: System" title="Theme: System" data-label-auto="Theme: System" data-label-light="Theme: Light" data-label-dark="Theme: Dark"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">System</span> <span class="theme-text" data-theme-text="light">Light</span> <span class="theme-text" data-theme-text="dark">Dark</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/en/" data-main-home>Home</a> <span class="sep">/</span> <a href="/en/">Finance</a> <span class="sep">/</span> <span aria-current="page">Tokenized Deposits and Stablecoins: The Ledger of Payment Infrastructure</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">Concept</span> <h1 class="article-title">Tokenized Deposits and Stablecoins: The Ledger of Payment Infrastructure</h1> <p class="article-summary">Stablecoins and tokenized deposits both move “deposits” onto programmable ledgers, but the obligor, reserve assets and redemption rights differ. Safety cannot be read from the on-chain price alone; it depends on reserve cover, redemption order, settlement finality and who bears a run.</p>  <div class="meta-grid"> <div class="meta-item"><span>Module</span><strong>FIN-M16 · 数字金融基础</strong></div> <div class="meta-item"><span>Level</span><strong>Systematic</strong></div> <div class="meta-item"><span>Read</span><strong>4 min · 10 sections</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> This article has an interactive demo <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>Definition</h2>
+<p>A <strong>stablecoin</strong> is usually a private issuer’s promise to redeem at par, backed by reserve assets. A <strong>tokenized deposit</strong> is a bank deposit represented on a distributed ledger; the liability remains the bank’s. A <strong>central bank digital currency (CBDC)</strong> is a direct central-bank liability. All three can use the same cryptography, but their legal obligations differ[1].</p>
+<p><strong>Reserve cover</strong> is the market value of reserve assets divided by outstanding tokens; <strong>settlement finality</strong> is the point at which a transfer cannot be reversed. On-chain confirmation is not legal finality; the issuer, custodian and bank can still fail[3].</p>
+<h2>Intuition</h2>
+<p>A stablecoin is like a redeemable locker ticket: the ticket circulates, and the locker holds cash and short-term bonds. If everyone comes at once, whether the assets can be sold at par and in what order decides whether the ticket is truly stable. A tokenized deposit is more like an electronic key to a bank account: the key can change hands, but the account liability stays with the bank.</p>
+<p>Technology changes the booking and transfer method, not three old questions: who owes you, can the assets be liquidated, and who stands first in line if something fails.</p>
+<h2>Formal expression</h2>
+<p>Let outstanding tokens be (T) and reserve assets (R). Reserve cover is:</p>
+<p>$$
+C=\frac{R}{T}
+$$</p>
+<p>If redemptions of size (r) occur and liquid assets are sold at haircut (h), post-run cover is:</p>
+<p>$$
+C&#39;=\frac{R(1-h)-r}{T-r}
+$$</p>
+<p>Settlement cost can be written as:</p>
+<p>$$
+\text{Cost}=F+v,Q
+$$</p>
+<p>(F) is fixed access cost, (v) is variable cost per payment and (Q) is the number of payments. On-chain transfer lowers some variable costs, but compliance, custody and liquidity costs remain.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Stablecoin</th>
+<th>Tokenized deposit</th>
+<th>CBDC</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Obligor</td>
+<td>Private issuer</td>
+<td>Bank</td>
+<td>Central bank</td>
+</tr>
+<tr>
+<td>Reserve</td>
+<td>Issuer assets</td>
+<td>Bank balance sheet</td>
+<td>Central-bank liability</td>
+</tr>
+<tr>
+<td>Redemption</td>
+<td>Against issuer</td>
+<td>Against bank</td>
+<td>Against central bank</td>
+</tr>
+<tr>
+<td>Main risk</td>
+<td>Reserves and run</td>
+<td>Bank credit</td>
+<td>Privacy and policy</td>
+</tr>
+</tbody></table>
+<h2>When it applies</h2>
+<ul>
+<li>Reserve assets must be liquid, transparent and auditable; short-term bonds can still trade at a discount in stress.</li>
+<li>Redemption order and legal priority must be clear; the same token can represent different rights in different jurisdictions.</li>
+<li>Settlement finality must be guaranteed by law and systems, not only by block confirmations.</li>
+<li>Responsibility across issuer, custodian, bank and wallet provider must be traceable; a technical failure is not an excuse.</li>
+<li>Cross-border payments still face FX, sanctions compliance and local licensing; on-chain speed is not cross-border legality.</li>
+<li>Privacy and anti-money-laundering requirements must be designed with payment efficiency, not bolted on afterwards.</li>
+</ul>
+<h2>Example and calculation</h2>
+<p>A stablecoin has 100 units outstanding and 100 units of reserves, of which 102 units are quickly realizable; coverage is 102%. If 30 units are redeemed, remaining reserves are 72 and remaining tokens 70, so coverage is about 102.9%. If liquid assets take a 10% haircut in stress, realizable value is 64.8 and coverage against 70 falls to 92.6%.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Outstanding tokens</td>
+<td>100</td>
+<td>Liability</td>
+</tr>
+<tr>
+<td>Reserve assets</td>
+<td>102</td>
+<td>Quickly realizable</td>
+</tr>
+<tr>
+<td>Initial cover</td>
+<td>102%</td>
+<td>102/100</td>
+</tr>
+<tr>
+<td>Redemption</td>
+<td>30</td>
+<td>Stress scenario</td>
+</tr>
+<tr>
+<td>Post-run cover</td>
+<td>92.6%</td>
+<td>64.8/70</td>
+</tr>
+</tbody></table>
+<p>If 20% of reserves take more than three months to realize, initial cover may still look like 102%, but stress cover can fall below 90%. That is the difference between “fully backed on paper” and “redeemable under stress”.</p>
+<h2>图表</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-037-1-title fig-fin-037-1-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-037-1-title">The chain from reserves to redemption cover</title>
+    <desc id="fig-fin-037-1-desc">Issue 100 tokens 100, Reserves 102 102, Stress cover 92.6% 92.6%. Initial cover is 102%; after 30 redemptions and a 10% haircut it falls to 92.6%. Units: token units and percent; numbers are teaching assumptions. Teaching mechanism figure.</desc>
+    <rect x="14" y="38" width="432" height="32" rx="7" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="28" y="59" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit">C=R/T；C’=(R(1-h)-r)/(T-r)</text>
+    <rect x="14" y="82" width="132" height="92" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="26" y="104" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">Issue 100 tokens</text>
+    <text x="26" y="128" font-size="12" font-weight="700" fill="var(--accent)" font-family="inherit">100</text>
+    <text x="26" y="148" font-size="9.2" fill="var(--muted)" font-family="inherit">private liability</text>
+    <text x="26" y="164" font-size="9.2" fill="var(--muted)" font-family="inherit">on-chain</text>
+    <rect x="164" y="82" width="132" height="92" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="176" y="104" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">Reserves 102</text>
+    <text x="176" y="128" font-size="12" font-weight="700" fill="var(--accent)" font-family="inherit">102</text>
+    <text x="176" y="148" font-size="9.2" fill="var(--muted)" font-family="inherit">cash and bills</text>
+    <text x="176" y="164" font-size="9.2" fill="var(--muted)" font-family="inherit">auditable</text>
+    <rect x="314" y="82" width="132" height="92" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="326" y="104" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">Stress cover 92.6%</text>
+    <text x="326" y="128" font-size="12" font-weight="700" fill="var(--accent)" font-family="inherit">92.6%</text>
+    <text x="326" y="148" font-size="9.2" fill="var(--muted)" font-family="inherit">run 30</text>
+    <text x="326" y="164" font-size="9.2" fill="var(--muted)" font-family="inherit">haircut 10%</text>
+    <line x1="146" y1="128" x2="164" y2="128" stroke="var(--border)" stroke-width="1.5"></line>
+    <line x1="296" y1="128" x2="314" y2="128" stroke="var(--border)" stroke-width="1.5"></line>
+    <rect x="14" y="190" width="432" height="82" rx="8" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="28" y="214" font-size="10" font-weight="650" fill="var(--text)" font-family="inherit">Fully backed on paper is not redeemable in stress</text>
+    <text x="28" y="236" font-size="9.6" fill="var(--muted)" font-family="inherit">Initial cover is 102%; after 30 redemptions and a 10% haircut it falls to 92.6%. Units: token units and percent; numbers are teaching assumptions.</text>
+    <text x="28" y="256" font-size="9.6" fill="var(--muted)" font-family="inherit"></text>
+  </svg>
+  <figcaption>Figure 1:Issue 100 tokens 100, Reserves 102 102, Stress cover 92.6% 92.6%. Initial cover is 102%; after 30 redemptions and a 10% haircut it falls to 92.6%. Units: token units and percent; numbers are teaching assumptions. Teaching mechanism figure.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-037-2-title fig-fin-037-2-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-037-2-title">Stablecoin redemption stress example</title>
+    <desc id="fig-fin-037-2-desc">Stablecoin redemption stress example. Initial state: Tokens 100, Reserves 102, Cover 102%; After stress: Tokens 70, Reserves 64.8, Cover 92.6%. After 30 redemptions and a 10% liquid-asset haircut, 70 tokens remain against 64.8 realizable reserves. Units: token units and percent; numbers are teaching assumptions. Numbers are teaching assumptions.</desc>
+    <rect x="14" y="36" width="432" height="34" rx="7" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="28" y="57" font-size="10" font-weight="650" fill="var(--text)" font-family="inherit">C=102/100；C’=64.8/70=92.6%</text>
+    <rect x="14" y="86" width="204" height="132" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="28" y="109" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">Initial state</text>
+    <text x="26" y="135" font-size="9.4" fill="var(--muted)" font-family="inherit">Tokens</text>
+    <text x="206" y="135" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">100</text>
+    <text x="26" y="163" font-size="9.4" fill="var(--muted)" font-family="inherit">Reserves</text>
+    <text x="206" y="163" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">102</text>
+    <text x="26" y="191" font-size="9.4" fill="var(--muted)" font-family="inherit">Cover</text>
+    <text x="206" y="191" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">102%</text>
+    <rect x="242" y="86" width="204" height="132" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="256" y="109" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">After stress</text>
+    <text x="254" y="135" font-size="9.4" fill="var(--muted)" font-family="inherit">Tokens</text>
+    <text x="434" y="135" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">70</text>
+    <text x="254" y="163" font-size="9.4" fill="var(--muted)" font-family="inherit">Reserves</text>
+    <text x="434" y="163" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">64.8</text>
+    <text x="254" y="191" font-size="9.4" fill="var(--muted)" font-family="inherit">Cover</text>
+    <text x="434" y="191" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">92.6%</text>
+    <text x="28" y="240" font-size="9.6" fill="var(--muted)" font-family="inherit">After 30 redemptions and a 10% liquid-asset haircut, 70 tokens remain against 64.8 realizable reserves. Units: token units and percent; numbers are teaching assumptions.</text>
+    <text x="28" y="262" font-size="9.6" fill="var(--muted)" font-family="inherit"></text>
+  </svg>
+  <figcaption>Figure 2:Stablecoin redemption stress example. Initial state: Tokens 100, Reserves 102, Cover 102%; After stress: Tokens 70, Reserves 64.8, Cover 92.6%. After 30 redemptions and a 10% liquid-asset haircut, 70 tokens remain against 64.8 realizable reserves. Units: token units and percent; numbers are teaching assumptions. Numbers are teaching assumptions.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-037-3-title fig-fin-037-3-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-037-3-title">Stablecoin versus tokenized deposit</title>
+    <desc id="fig-fin-037-3-desc">Stablecoin versus tokenized deposit. Stablecoin: Obligor 发行人, Protection 储备资产, Failure order 发行人债权人; Tokenized deposit: Obligor 银行, Protection 存款保险, Failure order 银行债权人. Both can run on a ledger, but the claimant and protection differ; on-chain price does not replace legal rights. Units: qualitative comparison; numbers are teaching assumptions. Teaching comparison figure.</desc>
+    <rect x="14" y="38" width="204" height="172" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="28" y="61" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">Stablecoin</text>
+    <text x="26" y="88" font-size="9.4" fill="var(--muted)" font-family="inherit">Obligor</text>
+    <text x="206" y="88" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">发行人</text>
+    <text x="26" y="116" font-size="9.4" fill="var(--muted)" font-family="inherit">Protection</text>
+    <text x="206" y="116" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">储备资产</text>
+    <text x="26" y="144" font-size="9.4" fill="var(--muted)" font-family="inherit">Failure order</text>
+    <text x="206" y="144" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">发行人债权人</text>
+    <rect x="242" y="38" width="204" height="172" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="256" y="61" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">Tokenized deposit</text>
+    <text x="254" y="88" font-size="9.4" fill="var(--muted)" font-family="inherit">Obligor</text>
+    <text x="434" y="88" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">银行</text>
+    <text x="254" y="116" font-size="9.4" fill="var(--muted)" font-family="inherit">Protection</text>
+    <text x="434" y="116" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">存款保险</text>
+    <text x="254" y="144" font-size="9.4" fill="var(--muted)" font-family="inherit">Failure order</text>
+    <text x="434" y="144" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">银行债权人</text>
+    <text x="28" y="240" font-size="9.6" fill="var(--muted)" font-family="inherit">Both can run on a ledger, but the claimant and protection differ; on-chain price does not replace legal rights. Units: qualitative comparison; numbers are teaching assumptions.</text>
+    <text x="28" y="262" font-size="9.6" fill="var(--muted)" font-family="inherit"></text>
+  </svg>
+  <figcaption>Figure 3:Stablecoin versus tokenized deposit. Stablecoin: Obligor 发行人, Protection 储备资产, Failure order 发行人债权人; Tokenized deposit: Obligor 银行, Protection 存款保险, Failure order 银行债权人. Both can run on a ledger, but the claimant and protection differ; on-chain price does not replace legal rights. Units: qualitative comparison; numbers are teaching assumptions. Teaching comparison figure.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-037-4-title fig-fin-037-4-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-037-4-title">6 conditions for payment infrastructure</title>
+    <desc id="fig-fin-037-4-desc">6 conditions for payment infrastructure. Auditable reserves; Clear redemption; Settlement finality; Traceable liability; Cross-border compliant; Acceptable privacy. If one condition fails, payment efficiency may come at legal or credit risk; whether to use a ledger depends on these conditions. Units: condition checklist; numbers are teaching assumptions. These conditions decide whether the method applies.</desc>
+    <text x="28" y="36" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit">Check reserves, redemption, finality and compliance</text>
+    <rect x="14" y="52" width="204" height="52" rx="7" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="24" y="72" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">Auditable reserves</text>
+    <text x="24" y="89" font-size="9.2" fill="var(--muted)" font-family="inherit">transparent and verified</text>
+    <rect x="242" y="52" width="204" height="52" rx="7" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="252" y="72" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">Clear redemption</text>
+    <text x="252" y="89" font-size="9.2" fill="var(--muted)" font-family="inherit">order and limits</text>
+    <rect x="14" y="110" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="24" y="130" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">Settlement finality</text>
+    <text x="24" y="147" font-size="9.2" fill="var(--muted)" font-family="inherit">law and systems</text>
+    <rect x="242" y="110" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="252" y="130" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">Traceable liability</text>
+    <text x="252" y="147" font-size="9.2" fill="var(--muted)" font-family="inherit">issuer/custodian/bank</text>
+    <rect x="14" y="168" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="24" y="188" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">Cross-border compliant</text>
+    <text x="24" y="205" font-size="9.2" fill="var(--muted)" font-family="inherit">licensing and sanctions</text>
+    <rect x="242" y="168" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="252" y="188" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">Acceptable privacy</text>
+    <text x="252" y="205" font-size="9.2" fill="var(--muted)" font-family="inherit">AML and data</text>
+    <text x="28" y="248" font-size="9.6" fill="var(--muted)" font-family="inherit">If one condition fails, payment efficiency may come at legal or credit risk; whether to use a ledger depends on these conditions. Units: condition checklist; numbers are teaching assumptions.</text>
+    <text x="28" y="270" font-size="9.6" fill="var(--muted)" font-family="inherit"></text>
+  </svg>
+  <figcaption>Figure 4:6 conditions for payment infrastructure. Auditable reserves; Clear redemption; Settlement finality; Traceable liability; Cross-border compliant; Acceptable privacy. If one condition fails, payment efficiency may come at legal or credit risk; whether to use a ledger depends on these conditions. Units: condition checklist; numbers are teaching assumptions. These conditions decide whether the method applies.</figcaption>
+</figure>
+
+<h2>Common mistakes</h2>
+<p><strong>“A 1:1 market price means safe.”</strong> Market price reflects marginal trades, not large-redemption liquidity and legal order[2].</p>
+<p><strong>“A stablecoin is a digital deposit.”</strong> Deposits carry deposit insurance and bank supervision; a stablecoin is a private liability with a different claimant[1].</p>
+<p><strong>“On-chain settlement removes cross-border cost.”</strong> On-chain settlement is fast, but FX, compliance, licensing and custody still cost money; total cost is the whole chain[3].</p>
+<h2>Related</h2>
+<ul>
+<li>与 <strong>FIN-029 Foundations of Digital Finance</strong> 的关系：The parent article gives the module&#39;s overall frame; this article isolates “reserves, redemption and settlement finality for on-chain deposits” and turns it into a worked example and explicit conditions.</li>
+<li>与 <strong>FIN-028 The International Financial System</strong> 的关系：An adjacent topic in the same station provides background or contrast; this article does not repeat its focus and concentrates on “reserves, redemption and settlement finality for on-chain deposits”.</li>
+<li>与 <strong>MKT-024 Digital Assets and Digital Finance</strong> 的关系：An adjacent topic in the same station provides background or contrast; this article does not repeat its focus and concentrates on “reserves, redemption and settlement finality for on-chain deposits”.</li>
+</ul>
+<h2>Exercises</h2>
+<ol>
+<li>Structure question: who is the obligor for a stablecoin, a tokenized deposit and a CBDC? If the issuer fails, who does the holder claim against?</li>
+<li>Cover question: 120 tokens outstanding, reserves 126, liquid-asset haircut 8%, redemptions 40. What is post-run coverage?</li>
+<li>Conditions question: a firm wants to use a stablecoin for cross-border payments. List three reserve and legal conditions to check, and explain why “on-chain confirmation” is not “legal finality”.</li>
+</ol>
+<h2>Sources</h2>
+<ol>
+<li>Bank for International Settlements, <em>Central bank digital currencies: foundational principles and core features</em>, Bank for International Settlements. <a href="https://www.bis.org/publ/othp33.htm">https://www.bis.org/publ/othp33.htm</a></li>
+<li>U.S. Securities and Exchange Commission, <em>Crypto Assets</em>, U.S. Securities and Exchange Commission. <a href="https://www.sec.gov/securities-topics/crypto-assets">https://www.sec.gov/securities-topics/crypto-assets</a></li>
+<li>Financial Stability Board, <em>Regulation, Supervision and Oversight of Crypto-Asset Activities and Markets</em>, Financial Stability Board. <a href="https://fsb.org/wp-content/uploads/P111022-3.pdf">https://fsb.org/wp-content/uploads/P111022-3.pdf</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="en" aria-labelledby="demo-check-title" data-check-done="All three are covered: the core of this article is in place." data-check-pending="One item is still open: go back to the matching section and retell it with a number or counterexample." data-check-count="Ticked"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">Worked demo</p> <button class="demo-reset" type="button" data-demo-reset>Reset</button> </div> <h2 id="demo-check-title">Read-through check: can you say three things?</h2> <p class="demo-intro">No recitation needed. Tick each sentence below and see whether you can explain the mechanism, one worked example and one boundary in your own words.</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>Distinguish stablecoins, tokenized deposits and CBDCs by issuer, liability and redemption right.</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>Compute reserve coverage and post-run coverage using a liquid-asset haircut.</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>Name one condition under which the article’s conclusion does not hold</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> Ticked 0 / 3
+</p> </div> <p class="demo-footnote">The numbers are teaching assumptions that show relationships, not forecasts or investment advice.</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> This article has passed the current publication gate. Factual, calculation and translation revisions update both language versions together. </p> <p> <a class="button secondary" href="/en/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>Back to station </a> </p> </div> <aside class="article-aside" aria-label="Article information"> <section class="aside-card"> <h2>Learning objectives</h2> <ul> <li>Distinguish stablecoins, tokenized deposits and CBDCs by issuer, liability and redemption right.</li><li>Compute reserve coverage and post-run coverage using a liquid-asset haircut.</li><li>List 6 conditions for payment-infrastructure choice and explain why “on-chain” does not remove credit risk.</li> </ul> </section> <section class="aside-card"> <h2>Required prerequisites</h2> <ul> <li> <a href="/en/learn/foundations-of-digital-finance/">FIN-029 · Foundations of Digital Finance</a> </li> </ul> </section> <section class="aside-card"> <h2>Recommended reading</h2> <ul> <li> <a href="/en/learn/foundations-of-digital-finance/">FIN-029 · Foundations of Digital Finance</a> </li><li> <a href="/en/learn/international-financial-system/">FIN-028 · The International Financial System</a> </li><li> <a href="https://markets.51invest.com/en/learn/digital-assets-and-digital-finance/">MKT-024 · Digital Assets and Digital Finance</a> </li> </ul> </section> <section class="aside-card"> <h2>AI review record</h2> <p class="muted"> There is no human sign-off; these states come from the AI-only editorial review. </p> <ul> <li> Facts and calculations : AI review passed </li><li> Subject : AI review passed </li><li> English : AI review passed </li><li> Page : AI review passed </li> </ul> </section> <section class="aside-card"> <h2>Sources</h2> <div class="source"> <a href="https://www.bis.org/publ/othp33.htm" rel="noopener noreferrer" target="_blank">Central bank digital currencies: foundational principles and core features</a> <p>Bank for International Settlements · Bank for International Settlements</p> <p>Accessed: 2026-11-24 · License: BIS terms: non-commercial download, display and redistribution allowed with attribution</p> <p>Supports: Used to check the public concept, institutional or historical background for “tokenized deposits and stablecoins”; numerical examples are teaching assumptions, not statistics.</p> </div><div class="source"> <a href="https://www.sec.gov/securities-topics/crypto-assets" rel="noopener noreferrer" target="_blank">Crypto Assets</a> <p>U.S. Securities and Exchange Commission · U.S. Securities and Exchange Commission</p> <p>Accessed: 2026-11-24 · License: U.S. public information; copying and further distribution allowed</p> <p>Supports: Used to check the public concept, institutional or historical background for “tokenized deposits and stablecoins”; numerical examples are teaching assumptions, not statistics.</p> </div><div class="source"> <a href="https://fsb.org/wp-content/uploads/P111022-3.pdf" rel="noopener noreferrer" target="_blank">Regulation, Supervision and Oversight of Crypto-Asset Activities and Markets</a> <p>Financial Stability Board · Financial Stability Board</p> <p>Accessed: 2026-11-24 · License: © Financial Stability Board; linked summary only</p> <p>Supports: Used to check the public concept, institutional or historical background for “tokenized deposits and stablecoins”; numerical examples are teaching assumptions, not statistics.</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">A free, non-commercial knowledge site. Sources and definitions are labelled; nothing here is investment advice.</p> </div> </div> <nav class="footer-links" aria-label="Knowledge stations"> <a href="https://51invest.com/en/" data-main-home>Home</a> <a href="https://51invest.com/en/contents/">Content map</a> <a href="/en/glossary/">Glossary</a> <a href="/en/search/">Search</a> <a href="https://51invest.com/en/charts/" data-main-link>Charts</a> <a href="https://51invest.com/en/sources/" data-main-link>Data &amp; licences</a> <a href="/en/">Station home</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="Knowledge stations"> <a class="mobile-link" href="https://51invest.com/en/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>Home</span> </a> <a class="mobile-link" href="https://51invest.com/en/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>Knowledge stations</span> </a> <a class="mobile-link active" href="/en/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>Station home</span> </a> <a class="mobile-link" href="/learn/tokenized-deposits-and-stablecoin-infrastructure/" data-language-link="zh"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

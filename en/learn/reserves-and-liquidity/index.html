@@ -1,0 +1,302 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>Reserves and Liquidity · 51Invest</title><meta name="description" content="Reserves are balances that banks hold at the central bank, while liquidity is a bank's ability to pay on time without unacceptable losses; reserves are only one layer of liquidity, and reserve requirements are no substitute for liquidity regulation."><link rel="canonical" href="https://finance.51invest.com/en/learn/reserves-and-liquidity/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/reserves-and-liquidity/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/reserves-and-liquidity/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/reserves-and-liquidity/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/en/" data-main-home aria-label="51Invest"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">51Invest</span> <span class="brand-caption">WUYAO INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="Knowledge stations"> <a class="nav-link" href="https://51invest.com/en/" data-main-home> Home </a> <a class="nav-link" href="https://economics.51invest.com/en/"> Economics </a><a class="nav-link active" href="/en/" aria-current="page"> Finance </a><a class="nav-link" href="https://markets.51invest.com/en/"> Markets </a><a class="nav-link" href="https://invest.51invest.com/en/"> Investing </a><a class="nav-link" href="https://history.51invest.com/en/"> History </a><a class="nav-link" href="https://research.51invest.com/en/"> Research </a> <a class="nav-link" href="https://51invest.com/en/contents/"> Content map </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/learn/reserves-and-liquidity/" hreflang="zh-CN" lang="zh-CN" data-language-link="zh" aria-label="Switch to Chinese" title="Switch to Chinese"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="Theme: System" title="Theme: System" data-label-auto="Theme: System" data-label-light="Theme: Light" data-label-dark="Theme: Dark"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">System</span> <span class="theme-text" data-theme-text="light">Light</span> <span class="theme-text" data-theme-text="dark">Dark</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/en/" data-main-home>Home</a> <span class="sep">/</span> <a href="/en/">Finance</a> <span class="sep">/</span> <span aria-current="page">Reserves and Liquidity</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">Concept</span> <h1 class="article-title">Reserves and Liquidity</h1> <p class="article-summary">Reserves are balances that banks hold at the central bank, while liquidity is a bank&#39;s ability to pay on time without unacceptable losses; reserves are only one layer of liquidity, and reserve requirements are no substitute for liquidity regulation.</p>  <div class="meta-grid"> <div class="meta-item"><span>Module</span><strong>FIN-M04 · 中央银行业务</strong></div> <div class="meta-item"><span>Level</span><strong>Foundation</strong></div> <div class="meta-item"><span>Read</span><strong>4 min · 11 sections</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> This article has an interactive demo <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>Definition</h2>
+<p>Reserves usually mean the balances that banks hold at the central bank, used for interbank payments and reserve requirements. For compliance purposes the Board&#39;s Regulation D provides that reserve requirements must be satisfied by holding vault cash and, if vault cash is insufficient, by maintaining a balance at a Federal Reserve Bank [1]; elsewhere in this article &quot;reserves&quot; means those balances, and whether vault cash counts depends on the rule being cited. Liquidity is a bank&#39;s ability to pay maturing obligations and meet withdrawals on time without incurring unacceptable losses.</p>
+<h2>Intuition</h2>
+<p>All amounts in this article are in units of RMB 100 million. A bank holding 12 of reserves can still fail to cover 30 of deposit outflows. Reserves are the first buffer, but securities must be sold at a discount, loans are hard to sell quickly, and wholesale funding may not roll over. Liquidity is the match between all available funds and outflows as they fall due.</p>
+<h2>Formal expression</h2>
+<p>Table 1: Simplified bank balance sheet (units: RMB 100 million, teaching assumptions)</p>
+<table>
+<thead>
+<tr>
+<th>Assets</th>
+<th align="right">Amount</th>
+<th>Liabilities and equity</th>
+<th align="right">Amount</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Reserves</td>
+<td align="right">12</td>
+<td>Deposits</td>
+<td align="right">90</td>
+</tr>
+<tr>
+<td>Securities</td>
+<td align="right">30</td>
+<td>Wholesale funding</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>Loans</td>
+<td align="right">66</td>
+<td><strong>Total liabilities</strong></td>
+<td align="right"><strong>100</strong></td>
+</tr>
+<tr>
+<td></td>
+<td align="right"></td>
+<td><strong>Equity</strong></td>
+<td align="right"><strong>8</strong></td>
+</tr>
+<tr>
+<td><strong>Total assets</strong></td>
+<td align="right"><strong>108</strong></td>
+<td><strong>Total liabilities and equity</strong></td>
+<td align="right"><strong>108</strong></td>
+</tr>
+</tbody></table>
+<p>The Basel framework uses two ratios to measure liquidity:</p>
+<div class="formula" role="math" aria-label="Liquidity coverage ratio equals high-quality liquid assets HQLA divided by thirty-day net cash outflows">Liquidity coverage ratio = high-quality liquid assets (HQLA) ÷ 30-day net cash outflows ≥ 100%</div>
+
+<div class="formula" role="math" aria-label="Net stable funding ratio equals available stable funding divided by required stable funding">Net stable funding ratio = available stable funding ÷ required stable funding ≥ 100%</div>
+
+<p>The first requires enough unencumbered high-quality liquid assets to cover net cash outflows in a 30-day stress scenario[2]; the second requires a stable funding profile over a one-year horizon relative to assets and off-balance-sheet activities[3]. Jurisdictions set the detailed scope.</p>
+<h2>Conditions and limits</h2>
+<ol>
+<li><strong>One bank versus the system.</strong> Interbank reserve payments only shift balances and leave the system total unchanged; that total is a Federal Reserve liability and moves with the central bank&#39;s own balance-sheet operations and the public&#39;s currency holdings. This article does not claim the list is exhaustive: transactions between the central bank and sectors outside the banking system, such as movements of government deposits, also change the total, and that addition is this article&#39;s own framing rather than a claim supported sentence by sentence by the registered sources.</li>
+<li><strong>Reserve requirements are not liquidity requirements.</strong> The Federal Reserve&#39;s reserve requirement ratios are now zero, but the three liability types reached zero at different dates: net transaction accounts from March 26, 2020, and nonpersonal time deposits and Eurocurrency liabilities from December 27, 1990[1]; zero does not mean no liquidity need.</li>
+<li><strong>The LCR is a stress metric.</strong> Haircuts, outflow rates and funding assumptions are set by rules, not forecasts; check the basis across jurisdictions.</li>
+<li><strong>Central bank liquidity is not solvency.</strong> Lending against collateral is limited by haircuts, quotas and stigma; an insolvent bank needs capital.</li>
+<li><strong>Foreign currency liquidity is separate.</strong> Foreign liabilities need foreign assets or swap lines; domestic liquidity cannot cover a currency mismatch.</li>
+</ol>
+<h2>Example and calculation</h2>
+<p>Using Table 1 (teaching assumptions), deposits fall by 30 and wholesale funding of 10 is not renewed, so net cash outflows total <code>30 + 10 = 40</code> over 30 days. Reserves are usable in full and provide 12; securities realize <code>30 × (1 - 40%) = 18</code> after a 40% haircut, so the high-quality assets available total <code>12 + 18 = 30</code>. The LCR is <code>30 ÷ 40 = 75%</code>, a shortfall of <code>40 - 30 = 10</code>. The bank must add 10 of high-quality assets or cut outflows to 30 to reach 100%; selling loans may realize a discount and erode equity.</p>
+<h2>Figure</h2>
+<p>Table 2: Sources and uses of funds in a 30-day stress (units: RMB 100 million, teaching assumptions)</p>
+<table>
+<thead>
+<tr>
+<th>Uses</th>
+<th align="right">Amount</th>
+<th>Sources</th>
+<th align="right">Amount</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Deposit outflow</td>
+<td align="right">30</td>
+<td>Reserves</td>
+<td align="right">12</td>
+</tr>
+<tr>
+<td>Wholesale funding not renewed</td>
+<td align="right">10</td>
+<td>Securities sold (40% haircut)</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td></td>
+<td align="right"></td>
+<td><strong>Shortfall</strong></td>
+<td align="right"><strong>10</strong></td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td align="right"><strong>40</strong></td>
+<td><strong>Total</strong></td>
+<td align="right"><strong>40</strong></td>
+</tr>
+</tbody></table>
+<p>Table 2 turns stocks into flows: reserves cover 12, securities 18, and the remaining 10 must come from new funding, asset sales or central bank facilities. The numbers are assumptions.</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-liq-title fig-liq-desc" viewBox="0 0 420 215" width="100%">
+    <title id="fig-liq-title">Cash uses stacked against available funding sources</title>
+    <desc id="fig-liq-desc">Two zero-based stacked bars at three pixels per unit. The left bar is uses of funds: deposit outflow 30 (90 pixels) plus non-rollover of wholesale funding 10 (30 pixels), totalling 40. The right bar is available sources: reserves 12 (36 pixels) plus securities sold at a discount worth 18 (54 pixels) plus a gap of 10 shown in gold (30 pixels), also totalling 40.</desc>
+    <line x1="60" y1="180" x2="380" y2="180" stroke="var(--border)" stroke-width="2"></line>
+    <rect x="110" y="90" width="70" height="90" fill="var(--accent)" opacity="0.8"></rect>
+    <rect x="110" y="60" width="70" height="30" fill="var(--accent)" opacity="0.5"></rect>
+    <rect x="250" y="144" width="70" height="36" fill="var(--accent)" opacity="0.8"></rect>
+    <rect x="250" y="90" width="70" height="54" fill="var(--accent)" opacity="0.5"></rect>
+    <rect x="250" y="60" width="70" height="30" fill="var(--gold)"></rect>
+    <g fill="var(--muted)" font-size="11" font-family="inherit">
+      <text x="60" y="20">Amount (same unit as the table, zero baseline, 3 px per unit)</text>
+      <text x="116" y="82">no rollover 10</text>
+      <text x="116" y="136">deposit outflow 30</text>
+      <text x="330" y="82">gap 10</text>
+      <text x="330" y="122">securities 18</text>
+      <text x="330" y="166">reserves 12</text>
+      <text x="100" y="200">uses total 40</text>
+      <text x="238" y="200">sources 30 + gap 10</text>
+    </g>
+  </svg>
+  <figcaption>Figure 1: in the stress scenario, uses of funds (deposit outflow 30 plus non-rollover 10 = 40) exceed available sources (reserves 12 plus discounted securities 18 = 30) by a gap of 10; the bars are equal height only because the gap is added to the right-hand total. Three pixels per unit on a zero baseline, so segment heights match the table exactly; amounts are teaching assumptions.</figcaption>
+</figure>
+
+<h2>Common mistakes</h2>
+<ul>
+<li><strong>Large reserves mean no liquidity risk.</strong> Reserves cover only part of outflows; a funding stop and fire-sale discounts can exhaust the buffer.</li>
+<li><strong>A zero reserve ratio means no reserves are needed.</strong> Payments still require balances, and liquidity rules remain.</li>
+<li><strong>Liquidity equals capital.</strong> Capital absorbs losses; liquidity meets payment timing. They are not substitutes.</li>
+<li><strong>The central bank can supply unlimited liquidity.</strong> Lending requires eligible collateral and does not fix insolvency.</li>
+</ul>
+<h2>Related</h2>
+<ul>
+<li>Prerequisite: Bank balance sheets (FIN-003); Central bank balance sheets (FIN-005).</li>
+<li>Follow-up: Payment, clearing and settlement (FIN-007).</li>
+<li>Related: Deposits, lending and credit creation (FIN-004); Cash and Money-Market Instruments (MKT-002).</li>
+</ul>
+<h2>Figures in plain language</h2>
+<p>The three figures below check the mechanism, boundary and comparison in this article; labels come from its own sections, not new data.</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-chain-title fig-batch-chain-desc" viewBox="0 0 340 304" width="100%">
+    <title id="fig-batch-chain-title">Reserves and Liquidity: mechanism chain</title>
+    <desc id="fig-batch-chain-desc">Reserves and Liquidity — three-step structure: problem, mechanism, judgment. Labels come from the article's sections, not new data.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Reserves and Liquidity: mechanism chain</text>
+    <text x="14" y="38" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Labels come from the article's sections; all three steps matter.</text>
+    <line x1="14" y1="46" x2="326" y2="46" stroke="var(--border)" stroke-width="1"/>
+    <g>
+      <rect x="14" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="22" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Problem</text>
+      <text x="22" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Reserves are</text>
+      <text x="22" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">balances that…</text>
+      <text x="22" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Reserves are</text>
+      <text x="22" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">balances that</text>
+      <text x="22" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">banks hold at</text>
+      <text x="22" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">the central</text>
+      <text x="22" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">bank, while…</text>
+    </g>
+      <g>
+      <rect x="123" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="131" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Definition</text>
+      <text x="131" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Definition:</text>
+      <text x="131" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Reserves usually…</text>
+      <text x="131" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Definition:</text>
+      <text x="131" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Reserves usually</text>
+      <text x="131" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start"> mean the</text>
+      <text x="131" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">balances that</text>
+      <text x="131" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">banks hold at…</text>
+    </g>
+      <g>
+      <rect x="232" y="54" width="94" height="180" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+      <text x="240" y="72" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Example and calculation</text>
+      <text x="240" y="90" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Using Table 1</text>
+      <text x="240" y="102" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">(teaching assumpt…</text>
+      <text x="240" y="124" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Using Table 1</text>
+      <text x="240" y="141" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">(teaching</text>
+      <text x="240" y="158" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">assumptions),</text>
+      <text x="240" y="175" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">deposits fall</text>
+      <text x="240" y="192" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">by 30 and…</text>
+    </g>
+    <line x1="108" y1="144" x2="123" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M120 140 L125 144 L120 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="217" y1="144" x2="232" y2="144" stroke="var(--border)" stroke-width="1.1"/>
+    <path d="M229 140 L234 144 L229 148" fill="none" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="14" y1="250" x2="326" y2="250" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="266" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Reading order: test the problem, then the mechanism, then whether the judgment overreaches.</text>
+    <text x="14" y="280" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">If a middle step lacks evidence, later conclusions are hypotheses, not facts.</text>
+    <text x="14" y="294" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Structural illustration, not a new data chart; sample is the article's own argument.</text>
+  </svg>
+  <figcaption>Figure 2: Reserves and Liquidity — mechanism chain: problem, mechanism, judgment. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-boundary-title fig-batch-boundary-desc" viewBox="0 0 340 244" width="100%">
+    <title id="fig-batch-boundary-title">Reserves and Liquidity: boundary</title>
+    <desc id="fig-batch-boundary-desc">Separates conditions where the claim holds from those where it fails; a local example is not universal.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Reserves and Liquidity: when does it hold?</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <rect x="14" y="44" width="312" height="38" rx="7" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="170" y="62" font-size="8.8" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="middle">Check the conditions before the conclusion</text>
+    <text x="170" y="75" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="middle">If conditions, definitions or samples change, recompute the conclusion</text>
+    <line x1="170" y1="82" x2="90" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <line x1="170" y1="82" x2="250" y2="104" stroke="var(--border)" stroke-width="1.1"/>
+    <rect x="14" y="104" width="148" height="100" rx="8" fill="var(--surface-2)" stroke="var(--border)"/>
+    <text x="24" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Holds</text>
+    <text x="24" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">One bank versus the system.</text>
+    <rect x="178" y="104" width="148" height="100" rx="8" fill="var(--gold)" opacity="0.18" stroke="var(--border)"/>
+    <text x="188" y="122" font-size="8.6" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Fails / rewrite</text>
+    <text x="188" y="138" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Large reserves mean no</text>
+      <text x="188" y="154" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">liquidity risk.</text>
+    <line x1="14" y1="216" x2="326" y2="216" stroke="var(--border)" stroke-width="1"/>
+    <text x="14" y="232" font-size="8.3" fill="var(--muted)" font-family="inherit" text-anchor="start">Boundary illustration; sample is the article's own argument; units as stated in the text.</text>
+  </svg>
+  <figcaption>Figure 3: Reserves and Liquidity — boundary: when the claim holds, and when it fails. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-batch-compare-title fig-batch-compare-desc" viewBox="0 0 340 252" width="100%">
+    <title id="fig-batch-compare-title">Reserves and Liquidity: object, conditions and common mistakes</title>
+    <desc id="fig-batch-compare-desc">Three rows compare the concept, its conditions and common mistakes; comparison is not equivalence and does not replace a definition.</desc>
+    <text x="14" y="22" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Reserves and Liquidity: object, conditions and common mistakes at a glance</text>
+    <line x1="14" y1="34" x2="326" y2="34" stroke="var(--border)" stroke-width="1"/>
+    <text x="82" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">This article</text>
+    <text x="200" y="46" font-size="8.4" font-weight="650" fill="var(--text)" font-family="inherit" text-anchor="start">Commonly confused</text>
+    <g>
+      <rect x="14" y="52" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="72" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Object</text>
+      <text x="82" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Reserves are</text>
+      <text x="82" y="88" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">balances that banks…</text>
+      <text x="200" y="72" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Adjacent concepts / common claims</text>
+    </g>
+    <g>
+      <rect x="14" y="110" width="312" height="58" fill="var(--surface-2)" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="130" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Conditions</text>
+      <text x="82" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">One bank versus the</text>
+      <text x="82" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">system.…</text>
+      <text x="200" y="130" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Large reserves mean no</text>
+      <text x="200" y="146" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">liquidity risk.…</text>
+    </g>
+    <g>
+      <rect x="14" y="168" width="312" height="58" fill="transparent" stroke="var(--border)" stroke-width="0.7"/>
+      <text x="22" y="188" font-size="8.4" font-weight="650" fill="var(--muted)" font-family="inherit" text-anchor="start">Check</text>
+      <text x="82" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Define first, then compare; never judge</text>
+      <text x="82" y="204" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">labels only</text>
+      <text x="200" y="188" font-size="8.4" fill="var(--text)" font-family="inherit" text-anchor="start">Correlation is not causation; a local case is not universal</text>
+    </g>
+    <text x="14" y="244" font-size="8.2" fill="var(--muted)" font-family="inherit" text-anchor="start">Comparison illustration; sample is the article's own argument; units as stated in the text.</text>
+  </svg>
+  <figcaption>Figure 4: Reserves and Liquidity — comparison of object, conditions and common mistakes. Sample: the article's own argument; units as stated in the text.</figcaption>
+</figure>
+
+<h2>Exercises</h2>
+<ol>
+<li><strong>Concept check.</strong> Which is a liquidity requirement, not a capital requirement? A. Common Equity Tier 1; B. Liquidity coverage ratio; C. Leverage ratio; D. Large exposure limit.</li>
+<li><strong>Calculation.</strong> HQLA are 48 and 30-day net cash outflows are 60 (RMB 100 million). What is the LCR, and how much more HQLA is needed to reach 100%?</li>
+<li><strong>Conditions.</strong> A bank faces a zero reserve requirement and holds large reserves. Can it still suffer a liquidity crisis?</li>
+</ol>
+<details>
+<summary>Suggested answers</summary>
+
+<ol>
+<li>B. The other three are capital or exposure constraints.</li>
+<li><code>48 ÷ 60 = 80%</code>, a shortfall of <code>60 - 48 = 12</code>; adding 12 of HQLA reaches 100%.</li>
+<li>Yes. The reserve ratio only sets a legal requirement; concentrated withdrawals, a funding stop and asset discounts can still cause a crisis.</li>
+</ol>
+</details>
+
+<h2>Sources</h2>
+<ol>
+<li>Board of Governors of the Federal Reserve System. &quot;Reserve Requirements.&quot; U.S. Government work (public domain), 17 U.S.C. §105. <a href="https://www.federalreserve.gov/monetarypolicy/reservereq.htm">https://www.federalreserve.gov/monetarypolicy/reservereq.htm</a> (accessed 2026-10-30)</li>
+<li>Basel Committee on Banking Supervision. &quot;Basel III: The Liquidity Coverage Ratio and liquidity risk monitoring tools.&quot; Bank for International Settlements, 2013. BIS terms: non-commercial download, display and redistribution allowed with attribution. <a href="https://www.bis.org/publ/bcbs238.htm">https://www.bis.org/publ/bcbs238.htm</a> (accessed 2026-10-30)</li>
+<li>Basel Committee on Banking Supervision. &quot;Basel III: the net stable funding ratio.&quot; Bank for International Settlements, 2014. BIS terms: non-commercial download, display and redistribution allowed with attribution. <a href="https://www.bis.org/bcbs/publ/d295.htm">https://www.bis.org/bcbs/publ/d295.htm</a> (accessed 2026-10-30)</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="en" aria-labelledby="demo-check-title" data-check-done="All three are covered: the core of this article is in place." data-check-pending="One item is still open: go back to the matching section and retell it with a number or counterexample." data-check-count="Ticked"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">Worked demo</p> <button class="demo-reset" type="button" data-demo-reset>Reset</button> </div> <h2 id="demo-check-title">Read-through check: can you say three things?</h2> <p class="demo-intro">No recitation needed. Tick each sentence below and see whether you can explain the mechanism, one worked example and one boundary in your own words.</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>Distinguish reserves held at the central bank from the ability to pay on time, and explain why the first is only one layer</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>Use a funding-gap example to show that a required reserve ratio is not liquidity regulation</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>Name one condition under which the article’s conclusion does not hold</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> Ticked 0 / 3
+</p> </div> <p class="demo-footnote">The numbers are teaching assumptions that show relationships, not forecasts or investment advice.</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> This article has passed the current publication gate. Factual, calculation and translation revisions update both language versions together. </p> <p> <a class="button secondary" href="/en/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>Back to station </a> </p> </div> <aside class="article-aside" aria-label="Article information"> <section class="aside-card"> <h2>Learning objectives</h2> <ul> <li>Distinguish reserves held at the central bank from the ability to pay on time, and explain why the first is only one layer</li><li>Use a funding-gap example to show that a required reserve ratio is not liquidity regulation</li> </ul> </section> <section class="aside-card"> <h2>Required prerequisites</h2> <ul> <li> <a href="/en/learn/bank-balance-sheets/">FIN-003 · Bank Balance Sheets</a> </li><li> <a href="/en/learn/central-bank-balance-sheets/">FIN-005 · Central Bank Balance Sheets</a> </li> </ul> </section> <section class="aside-card"> <h2>Recommended reading</h2> <ul> <li> <a href="/en/learn/deposits-lending-and-credit-creation/">FIN-004 · Deposits, Lending and Credit Creation</a> </li><li> <a href="/en/learn/payment-clearing-and-settlement/">FIN-007 · Payment, Clearing and Settlement</a> </li><li> <a href="https://markets.51invest.com/en/learn/cash-and-money-market-instruments/">MKT-002 · Cash and Money-Market Instruments</a> </li><li> <a href="/en/learn/bank-balance-sheets/">FIN-003 · Bank Balance Sheets</a> </li><li> <a href="/en/learn/central-bank-balance-sheets/">FIN-005 · Central Bank Balance Sheets</a> </li> </ul> </section> <section class="aside-card"> <h2>AI review record</h2> <p class="muted"> There is no human sign-off; these states come from the AI-only editorial review. </p> <ul> <li> Facts and calculations : AI review passed </li><li> Subject : AI review passed </li><li> English : AI review passed </li><li> Page : AI review passed </li> </ul> </section> <section class="aside-card"> <h2>Sources</h2> <div class="source"> <a href="https://www.federalreserve.gov/monetarypolicy/reservereq.htm" rel="noopener noreferrer" target="_blank">Reserve Requirements</a> <p>Board of Governors of the Federal Reserve System · Board of Governors of the Federal Reserve System</p> <p>Accessed: 2026-11-04 · License: U.S. Government work (public domain), 17 U.S.C. §105</p> <p>Supports: The Federal Reserve sets reserve requirements on transaction accounts, nonpersonal time deposits and Eurocurrency liabilities; net transaction accounts have been zero since March 26, 2020, while nonpersonal time deposits and Eurocurrency liabilities have been zero since December 27, 1990. Verbatim record: vault cash and a Federal Reserve balance may satisfy requirements; the three liability types are transaction accounts, nonpersonal time deposits and Eurocurrency liabilities; the table rows are 0/2020-03-26, 0/1990-12-27 and 0/1990-12-27.</p> </div><div class="source"> <a href="https://www.bis.org/publ/bcbs238.htm" rel="noopener noreferrer" target="_blank">Basel III: The Liquidity Coverage Ratio and liquidity risk monitoring tools</a> <p>Basel Committee on Banking Supervision, Bank for International Settlements · Bank for International Settlements</p> <p>Accessed: 2026-10-30 · License: BIS terms: non-commercial download, display and redistribution allowed with attribution</p> <p>Supports: The liquidity coverage ratio requires banks to hold an adequate stock of unencumbered high-quality liquid assets to meet net cash outflows in a 30-day stress scenario and promotes short-term liquidity resilience.</p> </div><div class="source"> <a href="https://www.bis.org/bcbs/publ/d295.htm" rel="noopener noreferrer" target="_blank">Basel III: the net stable funding ratio</a> <p>Basel Committee on Banking Supervision, Bank for International Settlements · Bank for International Settlements</p> <p>Accessed: 2026-10-30 · License: BIS terms: non-commercial download, display and redistribution allowed with attribution</p> <p>Supports: The net stable funding ratio requires banks to maintain a stable funding profile in relation to their assets and off-balance-sheet activities over a one-year horizon.</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">A free, non-commercial knowledge site. Sources and definitions are labelled; nothing here is investment advice.</p> </div> </div> <nav class="footer-links" aria-label="Knowledge stations"> <a href="https://51invest.com/en/" data-main-home>Home</a> <a href="https://51invest.com/en/contents/">Content map</a> <a href="/en/glossary/">Glossary</a> <a href="/en/search/">Search</a> <a href="https://51invest.com/en/charts/" data-main-link>Charts</a> <a href="https://51invest.com/en/sources/" data-main-link>Data &amp; licences</a> <a href="/en/">Station home</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="Knowledge stations"> <a class="mobile-link" href="https://51invest.com/en/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>Home</span> </a> <a class="mobile-link" href="https://51invest.com/en/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>Knowledge stations</span> </a> <a class="mobile-link active" href="/en/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>Station home</span> </a> <a class="mobile-link" href="/learn/reserves-and-liquidity/" data-language-link="zh"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>Offshore Dollar Funding: Swaps, FX Swaps and Rollover Risk · 51Invest</title><meta name="description" content="Offshore institutions need dollars but lack U.S. deposit insurance and the discount window; they obtain dollars through FX swaps, offshore deposits and central-bank swap lines. When dollars tighten, swap basis widens and rollover becomes difficult, transmitting stress back onshore."><link rel="canonical" href="https://finance.51invest.com/en/learn/offshore-dollar-funding-swap-lines-rollover-risk/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/offshore-dollar-funding-swap-lines-rollover-risk/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/offshore-dollar-funding-swap-lines-rollover-risk/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/offshore-dollar-funding-swap-lines-rollover-risk/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/en/" data-main-home aria-label="51Invest"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">51Invest</span> <span class="brand-caption">WUYAO INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="Knowledge stations"> <a class="nav-link" href="https://51invest.com/en/" data-main-home> Home </a> <a class="nav-link" href="https://economics.51invest.com/en/"> Economics </a><a class="nav-link active" href="/en/" aria-current="page"> Finance </a><a class="nav-link" href="https://markets.51invest.com/en/"> Markets </a><a class="nav-link" href="https://invest.51invest.com/en/"> Investing </a><a class="nav-link" href="https://history.51invest.com/en/"> History </a><a class="nav-link" href="https://research.51invest.com/en/"> Research </a> <a class="nav-link" href="https://51invest.com/en/contents/"> Content map </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/learn/offshore-dollar-funding-swap-lines-rollover-risk/" hreflang="zh-CN" lang="zh-CN" data-language-link="zh" aria-label="Switch to Chinese" title="Switch to Chinese"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="Theme: System" title="Theme: System" data-label-auto="Theme: System" data-label-light="Theme: Light" data-label-dark="Theme: Dark"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">System</span> <span class="theme-text" data-theme-text="light">Light</span> <span class="theme-text" data-theme-text="dark">Dark</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/en/" data-main-home>Home</a> <span class="sep">/</span> <a href="/en/">Finance</a> <span class="sep">/</span> <span aria-current="page">Offshore Dollar Funding: Swaps, FX Swaps and Rollover Risk</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">Concept</span> <h1 class="article-title">Offshore Dollar Funding: Swaps, FX Swaps and Rollover Risk</h1> <p class="article-summary">Offshore institutions need dollars but lack U.S. deposit insurance and the discount window; they obtain dollars through FX swaps, offshore deposits and central-bank swap lines. When dollars tighten, swap basis widens and rollover becomes difficult, transmitting stress back onshore.</p>  <div class="meta-grid"> <div class="meta-item"><span>Module</span><strong>FIN-M15 · 国际金融体系</strong></div> <div class="meta-item"><span>Level</span><strong>Systematic</strong></div> <div class="meta-item"><span>Read</span><strong>7 min · 12 sections</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> This article has an interactive demo <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>Definition and intuition</h2>
+<p><strong>Offshore dollars</strong> are dollar-denominated deposits and claims circulating outside the United States. They are not created directly by the Fed but by commercial banks, FX swaps and offshore branches.</p>
+<p>Offshore institutions obtain dollars through three channels: <strong>FX swaps</strong> (exchange local currency for dollars and agree to reverse later), <strong>offshore dollar deposits</strong> (non-U.S. banks take dollar deposits), and <strong>central-bank dollar swap lines</strong> (the Fed lends dollars to other central banks, which on-lend to local banks).</p>
+<p>The key vulnerability is <strong>maturity mismatch</strong>: short liabilities fund long assets and must be rolled over. When dollar funding tightens, rollover costs rise, institutions sell assets and stress transmits back onshore[1][2].</p>
+<h2>Formal expression and worked example</h2>
+<p>Suppose a European bank swaps euros for 100 million dollars for three months. If the spot and swap cost is 0.3% annualised, funding costs 0.3%; if dollars tighten and the swap points widen, the annualised cost rises to 1.2%, 0.9 points above the onshore dollar rate.</p>
+<p>That 0.9 point is the <strong>swap basis</strong>: offshore dollars are more expensive than onshore dollars. If the bank&#39;s assets yield 1.0% and funding costs 1.2%, it loses 200,000 dollars a year per 100 million and must cut lending or sell assets.</p>
+<p>If a central-bank swap line is available, the bank can swap local currency for dollars near the policy rate and compress the basis. Swap lines are crisis tools, not daily funding sources. All numbers are teaching assumptions.</p>
+<h2>Three risks</h2>
+<p><strong>Risk 1: rollover.</strong> A three-month swap matures; if the dollar market closes, the institution cannot roll funding and must sell assets.</p>
+<p><strong>Risk 2: FX and collateral.</strong> Local-currency depreciation makes swap counterparties demand more collateral, raising funding costs further.</p>
+<p><strong>Risk 3: contagion.</strong> Offshore dollar funds, non-U.S. banks and emerging-market borrowers hold overlapping exposures; deleveraging by one triggers chain selling.</p>
+<p>Central-bank swaps, standing repo and regulatory liquidity requirements can ease but not eliminate maturity mismatch; the offshore dollar system remains a weak link in global finance[3][4].</p>
+<h2>Figures</h2>
+<figure>
+<svg role="img" aria-labelledby="fig-offshore-dollar-funding-swap-lines-rollover-risk-1-title fig-offshore-dollar-funding-swap-lines-rollover-risk-1-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-offshore-dollar-funding-swap-lines-rollover-risk-1-title">Offshore dollar funding chain</title>
+<desc id="fig-offshore-dollar-funding-swap-lines-rollover-risk-1-desc">Three channels: FX swaps, offshore deposits, central-bank swaps.</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">Three offshore dollar channels</text>
+<text x="24" y="54" font-size="11" text-anchor="start">FX swaps, offshore deposits and ce</text>
+<text x="24" y="68" font-size="11" text-anchor="start">ntral-bank swaps feed offshore dol</text>
+<text x="24" y="82" font-size="11" text-anchor="start">lars.</text>
+<rect x="14" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="69" y="140" font-size="12" text-anchor="middle">FX swap</text>
+<text x="69" y="184" font-size="12" text-anchor="middle" font-weight="700">Local for USD</text>
+<rect x="136" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="191" y="140" font-size="12" text-anchor="middle">Offshore deposit</text>
+<text x="191" y="184" font-size="12" text-anchor="middle" font-weight="700">Non-U.S. bank</text>
+<rect x="258" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="313" y="140" font-size="12" text-anchor="middle">Swap line</text>
+<text x="313" y="184" font-size="12" text-anchor="middle" font-weight="700">Crisis tool</text>
+<rect x="380" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="435" y="140" font-size="12" text-anchor="middle">Offshore USD</text>
+<text x="435" y="184" font-size="12" text-anchor="middle" font-weight="700">Supply</text>
+<line x1="125" y1="160" x2="135" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="247" y1="160" x2="257" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="369" y1="160" x2="379" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<text x="24" y="246" font-size="11" text-anchor="start">Teaching diagram, no statistical data.</text>
+</g>
+</svg>
+<figcaption>Figure 1: offshore dollar funding chain; teaching diagram.</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-offshore-dollar-funding-swap-lines-rollover-risk-2-title fig-offshore-dollar-funding-swap-lines-rollover-risk-2-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-offshore-dollar-funding-swap-lines-rollover-risk-2-title">Changes in the swap basis</title>
+<desc id="fig-offshore-dollar-funding-swap-lines-rollover-risk-2-desc">Compare the swap basis across two periods.</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">Swap basis in normal and stressed periods</text>
+<text x="24" y="54" font-size="11" text-anchor="start">Normal 0.1 point; stressed 0.9 poi</text>
+<text x="24" y="68" font-size="11" text-anchor="start">nt.</text>
+<line x1="178" y1="64" x2="178" y2="270" stroke="currentColor" stroke-width="1" opacity=".45"/>
+<text x="20" y="97" font-size="12">Normal</text>
+<rect x="178" y="78" width="36" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="95" font-size="12" font-weight="700">0.1</text>
+<text x="20" y="145" font-size="12">Stressed</text>
+<rect x="178" y="126" width="324" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="143" font-size="12" font-weight="700">0.9</text>
+<text x="24" y="292" font-size="11" text-anchor="start">Teaching assumptions; unit: percentage points.</text>
+</g>
+</svg>
+<figcaption>Figure 2: changes in the swap basis; teaching assumptions.</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-offshore-dollar-funding-swap-lines-rollover-risk-3-title fig-offshore-dollar-funding-swap-lines-rollover-risk-3-desc" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-offshore-dollar-funding-swap-lines-rollover-risk-3-title">Two-dimensional matrix of offshore funding</title>
+<desc id="fig-offshore-dollar-funding-swap-lines-rollover-risk-3-desc">Axes: dollar supply and rollover demand; quadrants map to easy, tight, crisis and weak demand.</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">Four offshore funding states by supply and</text>
+<text x="24" y="49" font-size="16" text-anchor="start">rollover demand</text>
+<text x="24" y="54" font-size="11" text-anchor="start">Ample supply with high rollover de</text>
+<text x="24" y="68" font-size="11" text-anchor="start">mand is stable; tight supply with </text>
+<text x="24" y="82" font-size="11" text-anchor="start">high demand is a crisis.</text>
+<text x="40" y="68" font-size="11">Ample supply</text>
+<text x="40" y="286" font-size="11">Tight supply</text>
+<text x="110" y="314" font-size="11" text-anchor="middle">Low rollover demand</text>
+<text x="500" y="314" font-size="11" text-anchor="middle">High rollover demand</text>
+<rect x="96" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="100" font-size="12" text-anchor="start">Easy</text>
+<text x="108" y="130" font-size="11" text-anchor="start">Ample supply, low demand</text>
+<text x="108" y="170" font-size="11" font-weight="700">Low cost</text>
+<rect x="338" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="100" font-size="12" text-anchor="start">Tight</text>
+<text x="350" y="130" font-size="11" text-anchor="start">Ample supply, high demand</text>
+<text x="350" y="170" font-size="11" font-weight="700">Wider basis</text>
+<rect x="96" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="214" font-size="12" text-anchor="start">Crisis</text>
+<text x="108" y="244" font-size="11" text-anchor="start">Tight supply, high demand</text>
+<text x="108" y="284" font-size="11" font-weight="700">Rollover fails</text>
+<rect x="338" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="214" font-size="12" text-anchor="start">Weak demand</text>
+<text x="350" y="244" font-size="11" text-anchor="start">Tight supply, low demand</text>
+<text x="350" y="284" font-size="11" font-weight="700">Wait</text>
+</g>
+</svg>
+<figcaption>Figure 3: two-dimensional matrix of offshore funding; comparison and classification diagram.</figcaption>
+</figure>
+
+<p>Figure 1 links the three offshore dollar funding channels. Figure 2 compares the swap basis in normal and stressed periods. Figure 3 uses dollar supply and rollover demand axes to mark four offshore funding states. All numbers are teaching assumptions.</p>
+<h2>Conditions, boundaries and common mistakes</h2>
+<p><strong>Boundary 1: offshore dollars are not fake dollars.</strong> They are commercial-bank liabilities subject to issuer and host-country regulation, not direct Fed liabilities.</p>
+<p><strong>Boundary 2: swap lines have political and size limits.</strong> Not every central bank has Fed access; size, collateral and tenor are limited.</p>
+<p><strong>Boundary 3: offshore markets serve trade and investment.</strong> They are not only speculative; trade settlement, cross-border loans and bond issuance depend on them.</p>
+<p><strong>Mistake 1: a reserve currency means cheap funding forever.</strong> Offshore dollar premia can spike in crises; reserve status is not unlimited liquidity.</p>
+<p><strong>Mistake 2: swap lines solve everything.</strong> They provide liquidity, not solvency or collateral discounts; banks still need capital and maturity management.</p>
+<h2>Deeper note: cross-currency basis and the rollover ladder</h2>
+<p><strong>The pricing core of offshore dollar funding is the cross-currency basis.</strong> A European bank needing dollars in New York can borrow directly in the dollar money market or borrow euros and swap them into dollars. The implied dollar cost equals the euro rate plus the swap cost; when direct dollar funding tightens, the cross-currency basis widens and borrowing euros to swap becomes more expensive. The basis is not an abstract indicator; it enters the bank&#39;s funding cost directly.</p>
+<p><strong>Three funding channels</strong> need separate reading. First, dollar commercial paper and repo: short-term and sensitive to sentiment. Second, the FX swap market: flexible but constrained by counterparty limits and collateral. Third, central-bank swap lines: cheap but available only to eligible institutions. Under stress the first two tighten and the third backstops, but with stigma and limits.</p>
+<p><strong>The rollover ladder</strong> is the basic risk tool. List dollar liabilities maturing in the next 30, 90 and 365 days by date, marking the amount to roll, the rate and counterparty concentration. If maturities on some days exceed liquid assets, or counterparties are concentrated, rollover risk is high. 2008 and March 2020 both showed &#39;sound assets, frozen liabilities&#39;.</p>
+<p><strong>Swap lines have boundaries.</strong> They relieve offshore dollar shortages but cannot fix solvency; they move liquidity risk from banks to the central bank&#39;s balance sheet and may let institutions delay deleveraging. Users may also be marked as &#39;needing help&#39;, creating stigma.</p>
+<p><strong>Monitoring indicators</strong> include the dollar Libor/SOFR-OIS spread, the cross-currency basis, the maturity structure of commercial paper outstanding, FX swap volumes, and bank CDS and equity. One indicator misleads; a combination separates technical tightness from a credit crisis.</p>
+<p><strong>Policy implications</strong>: lengthen and diversify dollar funding, reduce reliance on short-term wholesale funding; under stress use FX swaps and repo before central-bank facilities; supervise money funds and foreign banks&#39; dollar liabilities because they amplify the offshore dollar chain.</p>
+<p><strong>Common misuses</strong>: treating swap lines as unlimited dollars, ignoring limits, eligible collateral and stigma; treating a wider cross-currency basis only as an arbitrage, ignoring the funding stress it reflects; treating offshore dollar shortages as a purely US problem, ignoring global dollar linkage.</p>
+<p><strong>Finally</strong>, offshore dollar risk is not &#39;whether dollars exist&#39; but &#39;whether dollar liabilities can be rolled at tolerable cost when needed&#39;. Read the balance sheet, the rollover ladder and counterparty concentration rather than a single rate.</p>
+<h2>Stress scenarios: three levels of dollar funding shock</h2>
+<p><strong>Mild shock</strong>: dollar rates rise 50 basis points and the cross-currency basis widens 20. Banks can still roll liabilities but at higher cost; extend some maturities to lock in funding and avoid using swap lines.</p>
+<p><strong>Moderate shock</strong>: commercial paper closes to some issuers and repo haircuts rise 10 points. Banks need replacement funding within 30 days or must sell liquid assets; if liquidity is insufficient, turn to central-bank or swap facilities. Distinguish a liquidity problem from a solvency problem; the latter cannot be funded away.</p>
+<p><strong>Severe shock</strong>: several institutions stop rolling at once, the basis widens beyond 100 points and FX swap counterparties refuse. Banks depend on central-bank facilities and collateral; insufficient collateral forces fire sales. Policy focus shifts to contagion, not single-firm profit.</p>
+<p><strong>Trigger indicators</strong>: dollar Libor/SOFR spread, cross-currency basis, shortening commercial paper tenor, repo haircuts and counterparty CDS. All four worsening means it is not technical tightness.</p>
+<p><strong>Preparedness list</strong>: maturity ladder, collateral inventory, counterparty limits, backup facilities, stress tests and recovery plans. Prepare in calm times or pay the highest price under stress.</p>
+<h2>Key takeaways</h2>
+<ul>
+<li>The marginal cost of offshore dollar funding is the cross-currency basis, not a single dollar rate.</li>
+<li>The three channels - money market, FX swaps and central-bank facilities - tighten in sequence, and facilities have limits and stigma.</li>
+<li>The rollover ladder lists maturing amounts, rates and counterparty concentration by date, the basic tool for rollover risk.</li>
+<li>Swap lines solve liquidity, not solvency; users may be marked by the market.</li>
+<li>Monitor spreads, basis, CP tenor, repo haircuts and counterparty CDS together; one indicator misleads.</li>
+</ul>
+<h2>What would change the conclusion</h2>
+<p>Offshore-dollar conclusions depend on swap lines and basis:</p>
+<ol>
+<li><strong>Larger central-bank swaps.</strong> If facilities are ample and quickly usable, rollover risk falls and rate shocks are buffered.</li>
+<li><strong>Narrower basis.</strong> If the cross-currency basis normalises, hedging costs fall and dollar funding pressure eases.</li>
+<li><strong>Natural dollar assets.</strong> If borrowers have dollar revenues or assets, currency mismatch is smaller than headline liabilities.</li>
+<li><strong>Non-bank intermediation.</strong> If shadow banks supply dollars, risk moves from banks to less-regulated entities.</li>
+<li><strong>Global dollar shortage.</strong> If dollars are scarce everywhere in a crisis, swaps and reserves cannot cover all borrowers.</li>
+</ol>
+<p><strong>Practical implication:</strong> offshore-dollar risk depends on swap availability, basis and borrowers&#39; natural dollar assets; headline external debt alone misstates rollover pressure.</p>
+<p><strong>Data note:</strong> consolidate on- and off-balance dollar liabilities by remaining maturity; parent-only foreign bonds miss SPVs and repo.</p>
+<p><strong>Scope note:</strong> separate bank, non-bank and corporate borrowers; their dollar funding channels and run speeds differ, and merging hides risk. Also distinguish drawn liabilities from committed lines, which get drawn in stress.</p>
+<p><strong>Final note:</strong> separate drawn debt from committed lines; undrawn facilities get drawn in stress.</p>
+<h2>Exercises</h2>
+<ol>
+<li><p>List the three offshore dollar funding channels.</p>
+</li>
+<li><p>Swap cost rises from 0.3% to 1.2%; how much does the basis widen?</p>
+</li>
+<li><p>Assets yield 1.0%, funding costs 1.2%: what is the annual loss per 100 million?</p>
+</li>
+<li><p>Why is rollover risk larger when dollars tighten?</p>
+</li>
+<li><p>How do central-bank swaps compress the basis?</p>
+</li>
+<li><p>How does local-currency depreciation affect swap collateral?</p>
+</li>
+<li><p>True or false: because the dollar is a reserve currency, offshore funding is always cheap. Explain.</p>
+</li>
+<li><p>What does a wider cross-currency basis signal, and how does it enter a bank&#39;s funding cost?</p>
+</li>
+<li><p>Why can central-bank swap lines not fix a solvency problem?</p>
+</li>
+<li><p>Under a moderate shock, how do you distinguish liquidity from solvency problems?</p>
+</li>
+<li><p>Which indicators worsening together show the dollar funding stress is not technical?</p>
+</li>
+<li><p>Why is the cross-currency basis the marginal cost of offshore dollar funding rather than the dollar rate?</p>
+</li>
+<li><p>Which three types of information should a rollover ladder list at minimum?</p>
+</li>
+</ol>
+<h2>Related</h2>
+<p>Prerequisite FIN-013; compare FIN-034; neighbours ECO-053 and FIN-036.</p>
+<h2>Sources</h2>
+<ol>
+<li>International Monetary Fund, <em>External Sector Report 2025: External Positions and Policies</em>. International Monetary Fund, accessed 2026-11-24. <a href="https://www.imf.org/-/media/files/publications/esr/2025/english/ch1.pdf">https://www.imf.org/-/media/files/publications/esr/2025/english/ch1.pdf</a></li>
+<li>Bank for International Settlements, <em>The global drivers of private credit (BIS Quarterly Review, March 2025)</em>. Bank for International Settlements, accessed 2026-11-05. <a href="https://www.bis.org/publ/qtrpdf/r_qt2503b.htm">https://www.bis.org/publ/qtrpdf/r_qt2503b.htm</a></li>
+<li>Board of Governors of the Federal Reserve System, <em>H.4.1 Factors Affecting Reserve Balances</em>. Board of Governors of the Federal Reserve System, accessed 2026-10-30. <a href="https://www.federalreserve.gov/releases/h41/current/default.htm">https://www.federalreserve.gov/releases/h41/current/default.htm</a></li>
+<li>European Central Bank, <em>Eurosystem balance sheet</em>. European Central Bank, accessed 2026-10-30. <a href="https://www.ecb.europa.eu/pub/annual/balance/html/index.en.html">https://www.ecb.europa.eu/pub/annual/balance/html/index.en.html</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="en" aria-labelledby="demo-check-title" data-check-done="All three are covered: the core of this article is in place." data-check-pending="One item is still open: go back to the matching section and retell it with a number or counterexample." data-check-count="Ticked"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">Worked demo</p> <button class="demo-reset" type="button" data-demo-reset>Reset</button> </div> <h2 id="demo-check-title">Read-through check: can you say three things?</h2> <p class="demo-intro">No recitation needed. Tick each sentence below and see whether you can explain the mechanism, one worked example and one boundary in your own words.</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>Explain the three funding channels for offshore dollars.</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>Use the swap basis to explain the offshore dollar premium.</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>Name one condition under which the article’s conclusion does not hold</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> Ticked 0 / 3
+</p> </div> <p class="demo-footnote">The numbers are teaching assumptions that show relationships, not forecasts or investment advice.</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> This article has passed the current publication gate. Factual, calculation and translation revisions update both language versions together. </p> <p> <a class="button secondary" href="/en/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>Back to station </a> </p> </div> <aside class="article-aside" aria-label="Article information"> <section class="aside-card"> <h2>Learning objectives</h2> <ul> <li>Explain the three funding channels for offshore dollars.</li><li>Use the swap basis to explain the offshore dollar premium.</li><li>Identify rollover risk and the role of central-bank swap lines.</li> </ul> </section> <section class="aside-card"> <h2>Required prerequisites</h2> <ul> <li> <a href="/en/learn/risk-premium/">FIN-013 · Risk Premium</a> </li> </ul> </section> <section class="aside-card"> <h2>Recommended reading</h2> <ul> <li> <a href="/en/learn/rate-conventions-and-credit-spreads/">FIN-034 · Rate Conventions and Credit Spreads: Different Labels for the Same Price of Money</a> </li><li> <a href="https://economics.51invest.com/en/learn/balance-of-payments-crisis-reserves-capital-flows-exchange-regimes/">ECO-053 · Balance-of-Payments Crises: Reserves, Capital Flows and Exchange Regimes</a> </li><li> <a href="/en/learn/cross-border-payments-and-reserve-currencies/">FIN-036 · Cross-Border Payments and Reserve Currencies: The Plumbing of International Finance</a> </li> </ul> </section> <section class="aside-card"> <h2>AI review record</h2> <p class="muted"> There is no human sign-off; these states come from the AI-only editorial review. </p> <ul> <li> Facts and calculations : AI review passed </li><li> Subject : AI review passed </li><li> English : AI review passed </li><li> Page : AI review passed </li> </ul> </section> <section class="aside-card"> <h2>Sources</h2> <div class="source"> <a href="https://www.imf.org/-/media/files/publications/esr/2025/english/ch1.pdf" rel="noopener noreferrer" target="_blank">External Sector Report 2025: External Positions and Policies</a> <p>International Monetary Fund · International Monetary Fund</p> <p>Accessed: 2026-11-24 · License: IMF publication; citation only under IMF terms of use</p> <p>Supports: Supports global external positions, current accounts and cross-border capital flows.</p> </div><div class="source"> <a href="https://www.bis.org/publ/qtrpdf/r_qt2503b.htm" rel="noopener noreferrer" target="_blank">The global drivers of private credit (BIS Quarterly Review, March 2025)</a> <p>Bank for International Settlements · Bank for International Settlements</p> <p>Accessed: 2026-11-05 · License: BIS terms: non-commercial download, display and redistribution allowed with attribution</p> <p>Supports: Supports private credit and changes in global funding structures.</p> </div><div class="source"> <a href="https://www.federalreserve.gov/releases/h41/current/default.htm" rel="noopener noreferrer" target="_blank">H.4.1 Factors Affecting Reserve Balances</a> <p>Board of Governors of the Federal Reserve System · Board of Governors of the Federal Reserve System</p> <p>Accessed: 2026-10-30 · License: U.S. Government work (public domain), 17 U.S.C. §105</p> <p>Supports: Supports Federal Reserve reserves, the balance sheet and dollar liquidity.</p> </div><div class="source"> <a href="https://www.ecb.europa.eu/pub/annual/balance/html/index.en.html" rel="noopener noreferrer" target="_blank">Eurosystem balance sheet</a> <p>European Central Bank · European Central Bank</p> <p>Accessed: 2026-10-30 · License: ECB statistics terms; attribution required</p> <p>Supports: Supports the Eurosystem balance sheet as a comparison for cross-border dollar funding.</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">A free, non-commercial knowledge site. Sources and definitions are labelled; nothing here is investment advice.</p> </div> </div> <nav class="footer-links" aria-label="Knowledge stations"> <a href="https://51invest.com/en/" data-main-home>Home</a> <a href="https://51invest.com/en/contents/">Content map</a> <a href="/en/glossary/">Glossary</a> <a href="/en/search/">Search</a> <a href="https://51invest.com/en/charts/" data-main-link>Charts</a> <a href="https://51invest.com/en/sources/" data-main-link>Data &amp; licences</a> <a href="/en/">Station home</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="Knowledge stations"> <a class="mobile-link" href="https://51invest.com/en/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>Home</span> </a> <a class="mobile-link" href="https://51invest.com/en/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>Knowledge stations</span> </a> <a class="mobile-link active" href="/en/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>Station home</span> </a> <a class="mobile-link" href="/learn/offshore-dollar-funding-swap-lines-rollover-risk/" data-language-link="zh"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>中文</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

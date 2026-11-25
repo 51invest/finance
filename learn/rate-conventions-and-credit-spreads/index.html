@@ -1,0 +1,253 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>利率口径与利差：同一笔资金价格的不同标签 · 巫妖投资</title><meta name="description" content="同一个 5% 可能是名义利率、实际利率、票面利率、到期收益率或年化百分比，差别不只是小数点。把通胀、复利频率、信用和流动性溢价拆开，才能比较两笔资金到底谁更贵。"><link rel="canonical" href="https://finance.51invest.com/learn/rate-conventions-and-credit-spreads/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/rate-conventions-and-credit-spreads/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/rate-conventions-and-credit-spreads/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/rate-conventions-and-credit-spreads/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/rate-conventions-and-credit-spreads/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">利率口径与利差：同一笔资金价格的不同标签</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">利率口径与利差：同一笔资金价格的不同标签</h1> <p class="article-summary">同一个 5% 可能是名义利率、实际利率、票面利率、到期收益率或年化百分比，差别不只是小数点。把通胀、复利频率、信用和流动性溢价拆开，才能比较两笔资金到底谁更贵。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M07 · 利率与资金价格</strong></div> <div class="meta-item"><span>层级</span><strong>入门</strong></div> <div class="meta-item"><span>阅读</span><strong>4 分钟 · 10 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义</h2>
+<p><strong>名义利率</strong>（nominal interest rate）是合同或报价上写的利率，未扣除通胀；<strong>实际利率</strong>是扣除通胀后能增加购买力的利率；<strong>有效年利率</strong>（effective annual rate, EAR）把一年内的复利次数折算成可比口径。<strong>信用溢价</strong>补偿违约风险，<strong>流动性溢价</strong>补偿难以及时卖出或融资的资产[1]。</p>
+<p>本文不比较“哪个利率最真实”，而是把利率拆成可核对的三层：购买力层（名义与实际）、时间层（期限与复利）、风险层（信用与流动性）。只有三层都对齐，两个利率才有可比性。</p>
+<h2>直觉</h2>
+<p>利率像商品的价签：名义利率是标签上的数字，实际利率是去掉包装后的净含量，有效年利率是把不同包装规格折算成每公斤价格。一个 5% 的标签，在 2% 通胀、12 次复利和 3% 信用溢价下，可能对应完全不同的真实负担。</p>
+<p>复利频率是“利息多久滚一次”。一年滚一次，5% 就是 5%；每月滚一次，年末会比 5% 多一点点；滚得越频繁，有效年利率越高。差别在短期不明显，在长期和 large 金额上会变成真金白银[2]。</p>
+<h2>正式表达</h2>
+<p>费雪方程把名义利率 (i)、实际利率 (r) 和通胀率 (\pi) 连起来：</p>
+<p>$$
+(1+i)=(1+r)(1+\pi)
+$$</p>
+<p>近似式为 (i \approx r+\pi)；通胀较高时，近似会高估实际利率。有效年利率为：</p>
+<p>$$
+EAR=\left(1+\frac{i}{m}\right)^m-1
+$$</p>
+<p>(m) 是一年内的复利次数。若报价是单利，则 (EAR=i)。</p>
+<table>
+<thead>
+<tr>
+<th>口径</th>
+<th>含义</th>
+<th>常见误读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>名义利率</td>
+<td>合同标价</td>
+<td>直接当作真实收益</td>
+</tr>
+<tr>
+<td>实际利率</td>
+<td>扣除通胀后的购买力</td>
+<td>忽略通胀与税收</td>
+</tr>
+<tr>
+<td>有效年利率</td>
+<td>统一复利频率</td>
+<td>与名义利率混用</td>
+</tr>
+<tr>
+<td>信用溢价</td>
+<td>违约风险补偿</td>
+<td>当作无风险收益</td>
+</tr>
+</tbody></table>
+<h2>适用条件</h2>
+<ul>
+<li>比较两个利率时，先统一期限、复利频率、计息基础和税务口径。</li>
+<li>费雪方程假设通胀是唯一改变购买力的因素；税收、费用和违约会再改变结果。</li>
+<li>有效年利率适合比较同一货币、同一期限的产品；跨币种还要考虑汇率和资本管制。</li>
+<li>信用溢价只有在违约概率和回收率可估计时才能定价；流动性溢价则取决于市场深度和融资安排。</li>
+<li>基准利率必须与资产的期限和现金流匹配，不能用隔夜利率给三十年负债定价。</li>
+</ul>
+<h2>例子与计算</h2>
+<p>名义利率 5.0%，通胀 2.0%。精确实际利率为 ((1.05/1.02)-1=2.94%)；近似式为 (5.0%-2.0%=3.0%)，高估约 0.06 个百分点。若利息按 12 次复利，有效年利率为 ((1+5.0%/12)^{12}-1=5.12%)。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>数值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>名义利率</td>
+<td>5.0%</td>
+<td>合同标价</td>
+</tr>
+<tr>
+<td>通胀率</td>
+<td>2.0%</td>
+<td>购买力变化</td>
+</tr>
+<tr>
+<td>精确实际利率</td>
+<td>2.94%</td>
+<td>费雪方程</td>
+</tr>
+<tr>
+<td>有效年利率</td>
+<td>5.12%</td>
+<td>月复利</td>
+</tr>
+</tbody></table>
+<p>若对 4.0% 的税后利息再扣 20% 税，税后名义利率为 4.0%，税后实际利率为 ((1.04/1.02)-1=1.96%)。税收和通胀一起吃掉购买力，单看名义利率会高估收益。</p>
+<h2>图表</h2>
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-034-1-title fig-fin-034-1-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-034-1-title">名义利率到实际利率的传导链</title>
+    <desc id="fig-fin-034-1-desc">名义报价 5.0% 5.0%，通胀 2.0% 2.0%，实际 2.94% 2.94%。月复利有效年利率 5.12%；税收再扣 20% 后，税后实际利率降到 1.96%。单位：百分比，数字为教学假设。 教学机制图。</desc>
+    <rect x="14" y="38" width="432" height="32" rx="7" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="28" y="59" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit">(1+i)=(1+r)(1+π)；i=5.0%；π=2.0%</text>
+    <rect x="14" y="82" width="132" height="92" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="26" y="104" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">名义报价 5.0%</text>
+    <text x="26" y="128" font-size="12" font-weight="700" fill="var(--accent)" font-family="inherit">5.0%</text>
+    <text x="26" y="148" font-size="9.2" fill="var(--muted)" font-family="inherit">合同标价</text>
+    <text x="26" y="164" font-size="9.2" fill="var(--muted)" font-family="inherit">未扣通胀</text>
+    <rect x="164" y="82" width="132" height="92" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="176" y="104" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">通胀 2.0%</text>
+    <text x="176" y="128" font-size="12" font-weight="700" fill="var(--accent)" font-family="inherit">2.0%</text>
+    <text x="176" y="148" font-size="9.2" fill="var(--muted)" font-family="inherit">购买力变化</text>
+    <text x="176" y="164" font-size="9.2" fill="var(--muted)" font-family="inherit">价格水平</text>
+    <rect x="314" y="82" width="132" height="92" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="326" y="104" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">实际 2.94%</text>
+    <text x="326" y="128" font-size="12" font-weight="700" fill="var(--accent)" font-family="inherit">2.94%</text>
+    <text x="326" y="148" font-size="9.2" fill="var(--muted)" font-family="inherit">精确费雪</text>
+    <text x="326" y="164" font-size="9.2" fill="var(--muted)" font-family="inherit">近似 3.0%</text>
+    <line x1="146" y1="128" x2="164" y2="128" stroke="var(--border)" stroke-width="1.5"></line>
+    <line x1="296" y1="128" x2="314" y2="128" stroke="var(--border)" stroke-width="1.5"></line>
+    <rect x="14" y="190" width="432" height="82" rx="8" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="28" y="214" font-size="10" font-weight="650" fill="var(--text)" font-family="inherit">复利频率再把 5.0% 抬到 5.12%</text>
+    <text x="28" y="236" font-size="9.6" fill="var(--muted)" font-family="inherit">月复利有效年利率 5.12%；税收再扣 20% 后，税后实际利率降到 1.96%</text>
+    <text x="28" y="256" font-size="9.6" fill="var(--muted)" font-family="inherit">单位：百分比，数字为教学假设</text>
+  </svg>
+  <figcaption>图 1：名义报价 5.0% 5.0%，通胀 2.0% 2.0%，实际 2.94% 2.94%。月复利有效年利率 5.12%；税收再扣 20% 后，税后实际利率降到 1.96%。单位：百分比，数字为教学假设。 教学机制图。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-034-2-title fig-fin-034-2-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-034-2-title">5.0% 名义利率的三种读法</title>
+    <desc id="fig-fin-034-2-desc">5.0% 名义利率的三种读法。税前口径：名义利率 5.0%，精确实际 2.94%，有效年利率 5.12%；税后口径：After-tax nominal 4.0%，After-tax real 1.96%，Tax rate 20%。同一笔 5.0% 报价，税前实际 2.94%、税后实际 1.96%；差别来自通胀与税收。单位：百分比，数字为教学假设。 数字为教学假设。</desc>
+    <rect x="14" y="36" width="432" height="34" rx="7" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="28" y="57" font-size="10" font-weight="650" fill="var(--text)" font-family="inherit">实际 2.94%；EAR 5.12%；税后实际 1.96%</text>
+    <rect x="14" y="86" width="204" height="132" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="28" y="109" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">税前口径</text>
+    <text x="26" y="135" font-size="9.4" fill="var(--muted)" font-family="inherit">名义利率</text>
+    <text x="206" y="135" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">5.0%</text>
+    <text x="26" y="163" font-size="9.4" fill="var(--muted)" font-family="inherit">精确实际</text>
+    <text x="206" y="163" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">2.94%</text>
+    <text x="26" y="191" font-size="9.4" fill="var(--muted)" font-family="inherit">有效年利率</text>
+    <text x="206" y="191" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">5.12%</text>
+    <rect x="242" y="86" width="204" height="132" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="256" y="109" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">税后口径</text>
+    <text x="254" y="135" font-size="9.4" fill="var(--muted)" font-family="inherit">税后名义</text>
+    <text x="434" y="135" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">4.0%</text>
+    <text x="254" y="163" font-size="9.4" fill="var(--muted)" font-family="inherit">税后实际</text>
+    <text x="434" y="163" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">1.96%</text>
+    <text x="254" y="191" font-size="9.4" fill="var(--muted)" font-family="inherit">税率</text>
+    <text x="434" y="191" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">20%</text>
+    <text x="28" y="240" font-size="9.6" fill="var(--muted)" font-family="inherit">同一笔 5.0% 报价，税前实际 2.94%、税后实际 1.96%；差别来自通胀与税收</text>
+    <text x="28" y="262" font-size="9.6" fill="var(--muted)" font-family="inherit">单位：百分比，数字为教学假设</text>
+  </svg>
+  <figcaption>图 2：5.0% 名义利率的三种读法。税前口径：名义利率 5.0%，精确实际 2.94%，有效年利率 5.12%；税后口径：After-tax nominal 4.0%，After-tax real 1.96%，Tax rate 20%。同一笔 5.0% 报价，税前实际 2.94%、税后实际 1.96%；差别来自通胀与税收。单位：百分比，数字为教学假设。 数字为教学假设。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-034-3-title fig-fin-034-3-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-034-3-title">单利与复利的有效年利率对比</title>
+    <desc id="fig-fin-034-3-desc">单利与复利的有效年利率对比。单利口径：报价利率 6.0%，年内计息 1，有效年利率 6.0%；月复利口径：报价利率 6.0%，年内计息 12，有效年利率 6.17%。6.0% 月复利的有效年利率为 6.17%；复利次数越多，实际负担越高于标价。单位：百分比，数字为教学假设。 教学对比图。</desc>
+    <rect x="14" y="38" width="204" height="172" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="28" y="61" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">单利口径</text>
+    <text x="26" y="88" font-size="9.4" fill="var(--muted)" font-family="inherit">报价利率</text>
+    <text x="206" y="88" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">6.0%</text>
+    <text x="26" y="116" font-size="9.4" fill="var(--muted)" font-family="inherit">年内计息</text>
+    <text x="206" y="116" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">1</text>
+    <text x="26" y="144" font-size="9.4" fill="var(--muted)" font-family="inherit">有效年利率</text>
+    <text x="206" y="144" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">6.0%</text>
+    <rect x="242" y="38" width="204" height="172" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="256" y="61" font-size="10.2" font-weight="650" fill="var(--text)" font-family="inherit">月复利口径</text>
+    <text x="254" y="88" font-size="9.4" fill="var(--muted)" font-family="inherit">报价利率</text>
+    <text x="434" y="88" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">6.0%</text>
+    <text x="254" y="116" font-size="9.4" fill="var(--muted)" font-family="inherit">年内计息</text>
+    <text x="434" y="116" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">12</text>
+    <text x="254" y="144" font-size="9.4" fill="var(--muted)" font-family="inherit">有效年利率</text>
+    <text x="434" y="144" text-anchor="end" font-size="9.6" font-weight="650" fill="var(--text)" font-family="inherit">6.17%</text>
+    <text x="28" y="240" font-size="9.6" fill="var(--muted)" font-family="inherit">6.0% 月复利的有效年利率为 6.17%；复利次数越多，实际负担越高于标价</text>
+    <text x="28" y="262" font-size="9.6" fill="var(--muted)" font-family="inherit">单位：百分比，数字为教学假设</text>
+  </svg>
+  <figcaption>图 3：单利与复利的有效年利率对比。单利口径：报价利率 6.0%，年内计息 1，有效年利率 6.0%；月复利口径：报价利率 6.0%，年内计息 12，有效年利率 6.17%。6.0% 月复利的有效年利率为 6.17%；复利次数越多，实际负担越高于标价。单位：百分比，数字为教学假设。 教学对比图。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-034-4-title fig-fin-034-4-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-034-4-title">比较利率前必须对齐的6 个条件</title>
+    <desc id="fig-fin-034-4-desc">比较利率前必须对齐的6 个条件。期限一致；复利频率一致；计息基础一致；税务口径一致；信用风险可估；流动性可估。任何一项不一致，利率差就可能只是口径差；是否可直接比较取决于这6 项。单位：条件清单，数字为教学假设。 这些条件决定方法是否适用。</desc>
+    <text x="28" y="36" font-size="10.5" font-weight="650" fill="var(--text)" font-family="inherit">6 项都对上，两个利率才可以比</text>
+    <rect x="14" y="52" width="204" height="52" rx="7" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="24" y="72" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">期限一致</text>
+    <text x="24" y="89" font-size="9.2" fill="var(--muted)" font-family="inherit">隔夜不能比三十年</text>
+    <rect x="242" y="52" width="204" height="52" rx="7" fill="var(--accent-soft)" stroke="var(--accent)"></rect>
+    <text x="252" y="72" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">复利频率一致</text>
+    <text x="252" y="89" font-size="9.2" fill="var(--muted)" font-family="inherit">年、季、月要折算</text>
+    <rect x="14" y="110" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="24" y="130" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">计息基础一致</text>
+    <text x="24" y="147" font-size="9.2" fill="var(--muted)" font-family="inherit">实际/360 与实际/365</text>
+    <rect x="242" y="110" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="252" y="130" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">税务口径一致</text>
+    <text x="252" y="147" font-size="9.2" fill="var(--muted)" font-family="inherit">税前与税后不能混</text>
+    <rect x="14" y="168" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="24" y="188" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">信用风险可估</text>
+    <text x="24" y="205" font-size="9.2" fill="var(--muted)" font-family="inherit">违约概率与回收率</text>
+    <rect x="242" y="168" width="204" height="52" rx="7" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="252" y="188" font-size="9.8" font-weight="650" fill="var(--text)" font-family="inherit">流动性可估</text>
+    <text x="252" y="205" font-size="9.2" fill="var(--muted)" font-family="inherit">市场深度与融资折扣</text>
+    <text x="28" y="248" font-size="9.6" fill="var(--muted)" font-family="inherit">任何一项不一致，利率差就可能只是口径差；是否可直接比较取决于这6 项</text>
+    <text x="28" y="270" font-size="9.6" fill="var(--muted)" font-family="inherit">单位：条件清单，数字为教学假设</text>
+  </svg>
+  <figcaption>图 4：比较利率前必须对齐的6 个条件。期限一致；复利频率一致；计息基础一致；税务口径一致；信用风险可估；流动性可估。任何一项不一致，利率差就可能只是口径差；是否可直接比较取决于这6 项。单位：条件清单，数字为教学假设。 这些条件决定方法是否适用。</figcaption>
+</figure>
+
+<h2>常见误解</h2>
+<p><strong>“5% 就是 5%。”</strong> 名义、实际、有效年利率和票面利率是四个不同口径；不复利频率的 5% 不能直接比较[2]。</p>
+<p><strong>“实际利率等于名义利率减通胀。”</strong> 这是近似式；通胀越高、利率越高，误差越大。精确式要用 ((1+i)/(1+\pi)-1)。</p>
+<p><strong>“信用溢价就是多赚的钱。”</strong> 信用溢价先要覆盖违约损失；如果违约概率被低估，溢价会把本金一起吃掉[3]。</p>
+<h2>关联</h2>
+<ul>
+<li>与 <strong>FIN-012 利率种类与口径</strong> 的关系：母文给出模块总框架；本文把「同一个利率数字在不同口径下如何变化」单独拆开，落到可计算的例子和适用条件上。</li>
+<li>与 <strong>FIN-025 金融导论</strong> 的关系：同站相邻主题，提供背景或对照；本文不重复它的重点，而聚焦「同一个利率数字在不同口径下如何变化」。</li>
+<li>与 <strong>FIN-030 金融稳定</strong> 的关系：同站相邻主题，提供背景或对照；本文不重复它的重点，而聚焦「同一个利率数字在不同口径下如何变化」。</li>
+</ul>
+<h2>练习</h2>
+<ol>
+<li>口径题：名义利率 4.0%、通胀 3.0%。用精确式和近似式分别计算实际利率，并说明误差方向。</li>
+<li>复利题：名义利率 6.0%，分别按年、季、月复利。三种有效年利率各是多少？</li>
+<li>利差题：同期限国债收益率 3.0%，某企业债 6.5%。若预期违约损失为 2.0%，剩余部分能全部解释为流动性溢价吗？请说明还缺哪些信息。</li>
+</ol>
+<h2>来源</h2>
+<ol>
+<li>Julie Dahlquist; Rainford Knight, <em>Principles of Finance 2e, 3.4 Interest Rates</em>, OpenStax. <a href="https://openstax.org/books/principles-finance-2e/pages/3-4-interest-rates">https://openstax.org/books/principles-finance-2e/pages/3-4-interest-rates</a></li>
+<li>Julie Dahlquist; Rainford Knight, <em>Principles of Finance 2e, 8.4 Stated versus Effective Rates</em>, OpenStax. <a href="https://openstax.org/books/principles-finance-2e/pages/8-4-stated-versus-effective-rates">https://openstax.org/books/principles-finance-2e/pages/8-4-stated-versus-effective-rates</a></li>
+<li>Board of Governors of the Federal Reserve System, <em>H.15 Selected Interest Rates</em>, Board of Governors of the Federal Reserve System. <a href="https://www.federalreserve.gov/releases/h15/default.htm">https://www.federalreserve.gov/releases/h15/default.htm</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>把名义利率拆成实际利率与通胀，并用费雪方程核对近似式和精确式。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>计算不同复利频率下的有效年利率，解释为什么月复利高于名义利率。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>把名义利率拆成实际利率与通胀，并用费雪方程核对近似式和精确式。</li><li>计算不同复利频率下的有效年利率，解释为什么月复利高于名义利率。</li><li>把信用溢价与流动性溢价分开，说明同一期限的两笔资金为什么价格不同。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/interest-rate-types-and-conventions/">FIN-012 · 利率种类与口径</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/interest-rate-types-and-conventions/">FIN-012 · 利率种类与口径</a> </li><li> <a href="/learn/introduction-to-finance/">FIN-025 · 金融导论</a> </li><li> <a href="/learn/financial-stability/">FIN-030 · 金融稳定</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/3-4-interest-rates" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 3.4 Interest Rates</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-11-24 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：用于核对本文关于「利率口径与利差」的公开概念、制度或历史背景；正文数字与算例为教学假设，不写成统计。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/8-4-stated-versus-effective-rates" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 8.4 Stated versus Effective Rates</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-11-24 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：用于核对本文关于「利率口径与利差」的公开概念、制度或历史背景；正文数字与算例为教学假设，不写成统计。</p> </div><div class="source"> <a href="https://www.federalreserve.gov/releases/h15/default.htm" rel="noopener noreferrer" target="_blank">H.15 Selected Interest Rates</a> <p>Board of Governors of the Federal Reserve System · Board of Governors of the Federal Reserve System</p> <p>访问：2026-11-24 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：用于核对本文关于「利率口径与利差」的公开概念、制度或历史背景；正文数字与算例为教学假设，不写成统计。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/rate-conventions-and-credit-spreads/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>

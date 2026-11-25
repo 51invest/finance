@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>收益率曲线的三种信息：预期、风险与流动性 · 巫妖投资</title><meta name="description" content="收益率曲线倒挂常被当成衰退信号，但曲线里至少有三层信息：未来利率预期、期限风险溢价和流动性溢价。把三层拆开，才能判断倒挂是“政策紧”还是“风险重定价”。"><link rel="canonical" href="https://finance.51invest.com/learn/yield-curve-three-informations-expectations-risk-liquidity/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/yield-curve-three-informations-expectations-risk-liquidity/"><link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/yield-curve-three-informations-expectations-risk-liquidity/"><link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/yield-curve-three-informations-expectations-risk-liquidity/"><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><link rel="stylesheet" href="/_astro/Base.CocbJOeh.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link" href="https://51invest.com/contents/"> 内容地图 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/yield-curve-three-informations-expectations-risk-liquidity/" hreflang="en" lang="en" data-language-link="en" aria-label="切换为英文" title="切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path> </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>  </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>   </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">收益率曲线的三种信息：预期、风险与流动性</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">收益率曲线的三种信息：预期、风险与流动性</h1> <p class="article-summary">收益率曲线倒挂常被当成衰退信号，但曲线里至少有三层信息：未来利率预期、期限风险溢价和流动性溢价。把三层拆开，才能判断倒挂是“政策紧”还是“风险重定价”。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M07 · 利率与资金价格</strong></div> <div class="meta-item"><span>层级</span><strong>系统</strong></div> <div class="meta-item"><span>阅读</span><strong>8 分钟 · 12 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <h2>定义与直觉</h2>
+<p><strong>收益率曲线</strong>把不同期限的债券收益率画在同一张图上。它至少包含三层信息：</p>
+<p><strong>预期</strong>：长期利率是未来短期利率预期的平均值；如果市场预期央行降息，长期利率可能低于短期利率，曲线倒挂。</p>
+<p><strong>期限溢价</strong>：投资者持有长期债券要承担再定价和通胀不确定性，通常要求额外补偿；补偿越高，曲线越陡。</p>
+<p><strong>流动性溢价</strong>：长期债券的交易深度、买卖价差和抵押品折扣不同，流动性越差，收益率越高。</p>
+<p>把三层混在一起，会把“预期降息”误读成“衰退”，或把“风险溢价上升”误读成“政策放松”[1][2]。</p>
+<h2>正式表达与示例</h2>
+<p>假设 2 年期收益率 4.8%，10 年期 4.2%，期限利差 <code>10y−2y = −0.6</code> 个百分点，曲线倒挂。</p>
+<p>用预期假说粗算：如果未来 8 年的平均短期利率预期是 3.8%，加上期限溢价 0.4%，10 年期约为 <code>3.8+0.4=4.2%</code>；2 年期 4.8% 反映当前政策利率高、市场预期未来降息。倒挂来自“当前高+未来低”，不一定是衰退。</p>
+<p>若期限溢价从 0.4% 升到 1.2%，即使未来短期利率预期不变，10 年期也会升到 5.0%，曲线变陡。倒挂消失可能来自风险溢价上升，而不是增长预期改善。以上数字均为教学假设。</p>
+<h2>三种信号</h2>
+<p><strong>衰退信号</strong>：倒挂持续数月，且伴随信用利差扩大、PMI 下行、失业申请上升；单一曲线不足。</p>
+<p><strong>政策信号</strong>：短端由政策利率锚定，长端下行反映市场预期降息；若通胀高、央行鹰派，短端更高，倒挂更深。</p>
+<p><strong>风险信号</strong>：长端收益率上升可能来自期限溢价或流动性溢价，而不是增长预期；此时曲线变陡，风险资产未必受益。</p>
+<p>判断时要看“谁在动”：短端动，多是政策；长端动，可能是预期、风险或流动性。曲线形态只是结果，拆解驱动才是分析[3][4]。</p>
+<h2>图表</h2>
+<figure>
+<svg role="img" aria-labelledby="fig-yield-curve-three-informations-expectations-risk-liquidity-1-title fig-yield-curve-three-informations-expectations-risk-liquidity-1-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-yield-curve-three-informations-expectations-risk-liquidity-1-title">收益率曲线的信息链</title>
+<desc id="fig-yield-curve-three-informations-expectations-risk-liquidity-1-desc">三步：利率预期、期限溢价、流动性溢价。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">收益率曲线的三层信息</text>
+<text x="24" y="54" font-size="11" text-anchor="start">预期、期限溢价、流动性溢价共同决定曲线形态。</text>
+<rect x="14" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="69" y="140" font-size="12" text-anchor="middle">利率预期</text>
+<text x="69" y="184" font-size="12" text-anchor="middle" font-weight="700">降息/加息</text>
+<rect x="136" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="191" y="140" font-size="12" text-anchor="middle">期限溢价</text>
+<text x="191" y="184" font-size="12" text-anchor="middle" font-weight="700">+0.4%</text>
+<rect x="258" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="313" y="140" font-size="12" text-anchor="middle">流动性溢价</text>
+<text x="313" y="184" font-size="12" text-anchor="middle" font-weight="700">交易深度</text>
+<rect x="380" y="116" width="110" height="88" rx="10" fill="currentColor" opacity=".08" stroke="currentColor" stroke-width="1.2"/>
+<text x="435" y="140" font-size="12" text-anchor="middle">曲线形态</text>
+<text x="435" y="184" font-size="12" text-anchor="middle" font-weight="700">倒挂/陡峭</text>
+<line x1="125" y1="160" x2="135" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="247" y1="160" x2="257" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<line x1="369" y1="160" x2="379" y2="160" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+<text x="24" y="246" font-size="11" text-anchor="start">教学示意，不含统计数据。</text>
+</g>
+</svg>
+<figcaption>图 1：收益率曲线的信息链；教学示意。</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-yield-curve-three-informations-expectations-risk-liquidity-2-title fig-yield-curve-three-informations-expectations-risk-liquidity-2-desc" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-yield-curve-three-informations-expectations-risk-liquidity-2-title">2 年与 10 年收益率</title>
+<desc id="fig-yield-curve-three-informations-expectations-risk-liquidity-2-desc">两种形态：倒挂和陡峭，比较 2 年与 10 年收益率。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">倒挂与陡峭两种曲线</text>
+<text x="24" y="54" font-size="11" text-anchor="start">倒挂：2 年 4.8%、10 年 4.2%；陡峭：2 年 3.0%、</text>
+<text x="24" y="68" font-size="11" text-anchor="start">10 年 4.5%。</text>
+<line x1="178" y1="64" x2="178" y2="270" stroke="currentColor" stroke-width="1" opacity=".45"/>
+<text x="20" y="97" font-size="12">倒挂2年</text>
+<rect x="178" y="78" width="360" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="95" font-size="12" font-weight="700">4.8%</text>
+<text x="20" y="145" font-size="12">倒挂10年</text>
+<rect x="178" y="126" width="315.00000000000006" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="143" font-size="12" font-weight="700">4.2%</text>
+<text x="20" y="193" font-size="12">陡峭2年</text>
+<rect x="178" y="174" width="225" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="191" font-size="12" font-weight="700">3.0%</text>
+<text x="20" y="241" font-size="12">陡峭10年</text>
+<rect x="178" y="222" width="337.5" height="24" rx="5" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="1"/>
+<text x="554" y="239" font-size="12" font-weight="700">4.5%</text>
+<text x="24" y="292" font-size="11" text-anchor="start">教学假设；单位：%。</text>
+</g>
+</svg>
+<figcaption>图 2：2 年与 10 年收益率；教学假设，单位 %。</figcaption>
+</figure>
+
+<figure>
+<svg role="img" aria-labelledby="fig-yield-curve-three-informations-expectations-risk-liquidity-3-title fig-yield-curve-three-informations-expectations-risk-liquidity-3-desc" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-yield-curve-three-informations-expectations-risk-liquidity-3-title">曲线变化的四象限</title>
+<desc id="fig-yield-curve-three-informations-expectations-risk-liquidity-3-desc">两轴：短端方向、长端方向；四象限对应政策收紧、风险重定价、政策放松和增长预期。</desc>
+<g fill="currentColor">
+<text x="24" y="30" font-size="16" text-anchor="start">短端与长端驱动的四类变化</text>
+<text x="24" y="54" font-size="11" text-anchor="start">短端上行、长端下行是政策收紧；短端下行、长端上行是风险重定价。</text>
+<text x="40" y="68" font-size="11">短端上行</text>
+<text x="40" y="286" font-size="11">短端下行</text>
+<text x="110" y="314" font-size="11" text-anchor="middle">长端下行</text>
+<text x="500" y="314" font-size="11" text-anchor="middle">长端上行</text>
+<rect x="96" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="100" font-size="12" text-anchor="start">政策收紧</text>
+<text x="108" y="130" font-size="11" text-anchor="start">短上、长下</text>
+<text x="108" y="170" font-size="11" font-weight="700">倒挂加深</text>
+<rect x="338" y="76" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="100" font-size="12" text-anchor="start">风险重定价</text>
+<text x="350" y="130" font-size="11" text-anchor="start">短上、长上</text>
+<text x="350" y="170" font-size="11" font-weight="700">熊陡</text>
+<rect x="96" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="108" y="214" font-size="12" text-anchor="start">增长预期</text>
+<text x="108" y="244" font-size="11" text-anchor="start">短下、长上</text>
+<text x="108" y="284" font-size="11" font-weight="700">牛陡</text>
+<rect x="338" y="190" width="226" height="104" rx="8" fill="currentColor" opacity=".06" stroke="currentColor" stroke-width="1"/>
+<text x="350" y="214" font-size="12" text-anchor="start">政策放松</text>
+<text x="350" y="244" font-size="11" text-anchor="start">短下、长下</text>
+<text x="350" y="284" font-size="11" font-weight="700">牛平</text>
+</g>
+</svg>
+<figcaption>图 3：曲线变化的四象限；对比分类示意。</figcaption>
+</figure>
+
+<p>图 1 把预期、期限溢价和流动性溢价串成曲线；图 2 用 2 年与 10 年利率展示倒挂与陡峭两种形态；图 3 用“短端驱动—长端驱动”两轴划出四类曲线变化。图中数字均为教学假设。</p>
+<h2>适用条件、边界与常见误区</h2>
+<p><strong>边界一：期限溢价不可直接观测。</strong> 它由模型估计，不同模型给出不同结果；不能把模型残差当成事实。</p>
+<p><strong>边界二：期限利差不是唯一指标。</strong> 3 个月与 10 年利差、近远月期货、信用利差和银行信贷调查都提供信息。</p>
+<p><strong>边界三：央行买债会压低期限溢价。</strong> 量化宽松和缩表会改变曲线形态，倒挂可能反映政策组合，而不是市场预期。</p>
+<p><strong>误解一：倒挂必然衰退。</strong> 倒挂是概率信号，不是保证；还要看信用、就业和盈利。</p>
+<p><strong>误解二：曲线陡峭就是经济好。</strong> 陡峭可能来自期限溢价上升、财政风险或通胀不确定性，未必是增长。</p>
+<h2>深化：把曲线拆成水平、斜率与曲率</h2>
+<p>曲线分析不能只盯着 10y−2y 一个利差。更完整的做法是把曲线拆成三个因子：<strong>水平</strong>（整条曲线上下移动）、<strong>斜率</strong>（长短期利差）、<strong>曲率</strong>（中段相对两端的弯曲）。水平上升多与政策利率或通胀预期有关；斜率变化反映期限溢价和未来政策路径；曲率变化常出现在政策转向或衰退预期升温时。</p>
+<p><strong>期限溢价的估计</strong>是拆解的关键。学术和实务常用 ACM、KW 等模型，把长期收益率分解为“预期短期利率的平均”和“期限溢价”。若 10 年期收益率上升 0.5 个百分点，但模型显示期限溢价上升 0.7、预期利率下降 0.2，则上升主要来自风险补偿，而不是增长预期。不拆溢价，就会把“风险重定价”误读为“经济过热”。</p>
+<p><strong>四种曲线形态</strong>要分开解释：熊陡（长端涨得更快）常是期限溢价上升或通胀担忧；熊平（短端涨得更快）常是央行加息；牛陡（短端跌得更快）常是降息预期；牛平（长端跌得更快）常是增长担忧。同样是“变陡”，熊陡和牛陡的含义相反。</p>
+<p><strong>实际利率与名义利率</strong>要分开。若名义收益率上升但盈亏平衡通胀下降，实际利率上升，对增长和风险资产更不利；若名义上升主要来自通胀预期，实际利率可能没变。用 TIPS 或通胀互换拆分，比只看名义曲线更可靠。</p>
+<p><strong>信号有滞后和噪声</strong>。倒挂平均领先衰退数月到两年，但每次周期不同；用倒挂做择时，可能过早或过晚。更稳健的做法是把曲线与信用利差、失业申请、PMI 和银行贷款标准一起看，而不是把单一利差当开关。</p>
+<h2>交易含义与信号局限</h2>
+<p><strong>曲线交易</strong>通常用久期中性组合表达观点：预期变陡，做多短端、做空长端；预期变平，反之。但交易的是“相对价值”，不是方向；若曲线按预期变陡但整体利率上行，组合仍可能亏损。曲线交易要同时管理久期、凸性和流动性。</p>
+<p><strong>倒挂的衰退信号有前提</strong>。它需要倒挂持续、实际利率上升、信用利差扩大；若倒挂由期限溢价压缩导致，信号可能偏弱。美国 2019 年倒挂后衰退在 2020 年到来，但 2022—2023 年倒挂持续很久而增长仍强，说明单一指标不能机械使用。</p>
+<p><strong>实际利率</strong>比名义曲线更能解释增长。若名义 10 年期上升 0.6 个百分点、盈亏平衡通胀上升 0.4，实际利率只升 0.2，对增长的压制有限；若名义上升 0.6、通胀预期不变，实际利率升 0.6，压制更强。分析时要拆分名义与实际。</p>
+<p><strong>流动性溢价</strong>在压力时会被放大。长期债券在危机中买卖价差扩大、抵押品折扣上升，收益率被动抬高；这不是增长预期改善，而是市场深度下降。用成交量、买卖价差和回购折扣验证，比只看收益率可靠。</p>
+<p><strong>信号局限</strong>：曲线是市场预期的加总，预期会错；央行政策、期限溢价和流动性溢价互相干扰；不同国家、不同期限的曲线形态不可直接类比。把曲线当“概率提示”，而不是“确定性预测”。</p>
+<h2>延伸阅读</h2>
+<p>坎贝尔（John Campbell）与席勒（Robert Shiller）的期限结构研究，把长期债券收益率分解为预期短期利率与期限溢价；安德鲁斯（Andrew Ang）、李（Monika Piazzesi）和魏（Min Wei）的 ACM 模型则提供了可操作的期限溢价估计。国内研究常用央行工作论文和学术期刊的期限溢价分解，方法与数据口径不同，比较时要统一。</p>
+<p>阅读时带着本文的三层信息：预期、期限溢价、流动性溢价。任何模型都只能解释一部分；把残差当成“市场情绪”之前，先检查数据和模型设定。最后提醒：期限溢价是估计量，不是观测量；不同模型给出不同分解时，应报告区间和假设，而不是选一个最符合叙事的数字；模型更新后也要回溯检验，而不是只保留事后解释力最强的一版。</p>
+<h2>反证条件</h2>
+<p>收益率曲线的三种信息依赖分解方法：</p>
+<ol>
+<li><strong>期限溢价用模型估计。</strong> 若模型假设错误，预期成分和风险溢价无法分离，曲线信号被高估。</li>
+<li><strong>海外需求主导。</strong> 若外国央行和机构大量持有，曲线反映全球期限溢价而非本国政策预期。</li>
+<li><strong>曲线控制政策。</strong> 若央行直接盯住某段利率，曲线形状是行政结果，不能当市场预期。</li>
+<li><strong>通胀预期脱锚。</strong> 若预期不再锚定，曲线变陡或倒挂的含义会改变。</li>
+</ol>
+<p><strong>实践含义：</strong> 把曲线当信息组合而不是预测机器：水平看政策路径，斜率看周期，曲率看尾部；三者分歧时，先查流动性溢价和海外需求。</p>
+<p><strong>数据附注：</strong> 用同期限、同流动性 buckets 比较曲线；on-the-run 与 off-the-run 的流动性溢价不同，会扭曲斜率。</p>
+<p><strong>范围说明：</strong> 用一致的期限桶和流动性桶；不同 maturity 的曲线段不能直接拼成一条信号。</p>
+<h2>练习</h2>
+<ol>
+<li><p>把曲线拆成预期、期限溢价和流动性溢价，各写一句。</p>
+</li>
+<li><p>2 年期 4.8%、10 年期 4.2%，期限利差是多少？</p>
+</li>
+<li><p>若期限溢价从 0.4% 升到 1.0%，粗算 10 年期收益率。</p>
+</li>
+<li><p>倒挂持续但信用利差收窄，如何判断信号？</p>
+</li>
+<li><p>为什么量化宽松会改变曲线形态？</p>
+</li>
+<li><p>短端动与长端动分别更可能反映什么？</p>
+</li>
+<li><p>判断：曲线陡峭一定代表增长预期改善吗？写出两个反例。</p>
+</li>
+<li><p>曲线水平、斜率、曲率各反映什么？熊陡和牛陡的含义为什么相反？</p>
+</li>
+<li><p>10 年期收益率上升 0.5 个百分点，如何判断是预期还是期限溢价驱动？</p>
+</li>
+<li><p>曲线交易为什么是相对价值交易，而不是方向交易？</p>
+</li>
+<li><p>名义收益率上升 0.6 个百分点时，怎样用盈亏平衡通胀判断实际利率的变化？</p>
+</li>
+<li><p>期限溢价分解模型能解释曲线的全部变化吗？残差应如何对待？</p>
+</li>
+<li><p>比较不同研究的期限溢价估计时，为什么要先统一数据口径？</p>
+</li>
+</ol>
+<h2>关联</h2>
+<p>先修 FIN-012；对照 FIN-034；相邻 ECO-039、INV-006。</p>
+<h2>来源</h2>
+<ol>
+<li>Julie Dahlquist; Rainford Knight, <em>Principles of Finance 2e, 3.4 Interest Rates</em>. OpenStax, accessed 2026-10-30. <a href="https://openstax.org/books/principles-finance-2e/pages/3-4-interest-rates">https://openstax.org/books/principles-finance-2e/pages/3-4-interest-rates</a></li>
+<li>Julie Dahlquist; Rainford Knight, <em>Principles of Finance 2e, 10.3 Using the Yield Curve</em>. OpenStax, accessed 2026-11-03. <a href="https://openstax.org/books/principles-finance-2e/pages/10-3-using-the-yield-curve">https://openstax.org/books/principles-finance-2e/pages/10-3-using-the-yield-curve</a></li>
+<li>Board of Governors of the Federal Reserve System, <em>H.15 Selected Interest Rates</em>. Board of Governors of the Federal Reserve System, accessed 2026-11-03. <a href="https://www.federalreserve.gov/releases/h15/default.htm">https://www.federalreserve.gov/releases/h15/default.htm</a></li>
+<li>Julie Dahlquist; Rainford Knight, <em>Principles of Finance 2e, 10.4 Risks of Interest Rates and Default</em>. OpenStax, accessed 2026-11-03. <a href="https://openstax.org/books/principles-finance-2e/pages/10-4-risks-of-interest-rates-and-default">https://openstax.org/books/principles-finance-2e/pages/10-4-risks-of-interest-rates-and-default</a></li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>用预期假说、期限溢价和流动性溢价拆解曲线。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>算一个 2 年与 10 年利率的期限利差。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>        </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>用预期假说、期限溢价和流动性溢价拆解曲线。</li><li>算一个 2 年与 10 年利率的期限利差。</li><li>判断倒挂何时是衰退信号、何时是政策或风险信号。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/interest-rate-types-and-conventions/">FIN-012 · 利率种类与口径</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/rate-conventions-and-credit-spreads/">FIN-034 · 利率口径与利差：同一笔资金价格的不同标签</a> </li><li> <a href="https://economics.51invest.com/learn/monetary-policy-transmission-channels-and-lags/">ECO-039 · 货币政策传导：利率、信用与资产负债表渠道</a> </li><li> <a href="https://invest.51invest.com/learn/macro-scenario-analysis/">INV-006 · 宏观情景分析</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/3-4-interest-rates" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 3.4 Interest Rates</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-10-30 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：支持利率、名义与实际利率、复利与折现的基础。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/10-3-using-the-yield-curve" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 10.3 Using the Yield Curve</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-11-03 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：支持收益率曲线、期限结构与预期假说的解释。</p> </div><div class="source"> <a href="https://www.federalreserve.gov/releases/h15/default.htm" rel="noopener noreferrer" target="_blank">H.15 Selected Interest Rates</a> <p>Board of Governors of the Federal Reserve System · Board of Governors of the Federal Reserve System</p> <p>访问：2026-11-03 · 许可：U.S. Government work (public domain), 17 U.S.C. §105</p> <p>支持论点：支持美国国债收益率与期限利差的统计口径。</p> </div><div class="source"> <a href="https://openstax.org/books/principles-finance-2e/pages/10-4-risks-of-interest-rates-and-default" rel="noopener noreferrer" target="_blank">Principles of Finance 2e, 10.4 Risks of Interest Rates and Default</a> <p>Julie Dahlquist; Rainford Knight · OpenStax</p> <p>访问：2026-11-03 · 许可：CC BY-NC-SA 4.0</p> <p>支持论点：支持利率风险、再定价与久期的风险管理。</p> </div> </section> </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="知识分站"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>     </svg> <span>首页</span> </a> <a class="mobile-link" href="https://51invest.com/#stations" data-main-home> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>   <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>      </svg> <span>知识分站</span> </a> <a class="mobile-link active" href="/" aria-current="page"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>  <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"></path><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"></path>       </svg> <span>分站首页</span> </a> <a class="mobile-link" href="/en/learn/yield-curve-three-informations-expectations-risk-liquidity/" data-language-link="en"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>    </svg> <span>English</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>
