@@ -1,0 +1,320 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>私人信贷与直接贷款：利差、契约与周期 · 巫妖投资</title><meta name="description" content="私人信贷不是“高收益债券的替代品”，而是一条从借款人到基金、银行授信和最终投资者的中介链。利差要先扣资金成本、费用、运营和预期损失，再看杠杆后的权益回报。"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://finance.51invest.com/learn/private-credit-direct-lending-spreads-covenants-cycle/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/private-credit-direct-lending-spreads-covenants-cycle/" />
+    <link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/private-credit-direct-lending-spreads-covenants-cycle/" />
+    <link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/private-credit-direct-lending-spreads-covenants-cycle/" /><link rel="alternate" type="application/rss+xml" title="巫妖投资 RSS" href="/rss.xml"><meta property="og:site_name" content="51invest"><meta property="og:type" content="article"><meta property="og:title" content="私人信贷与直接贷款：利差、契约与周期 · 巫妖投资"><meta property="og:description" content="私人信贷不是“高收益债券的替代品”，而是一条从借款人到基金、银行授信和最终投资者的中介链。利差要先扣资金成本、费用、运营和预期损失，再看杠杆后的权益回报。"><meta property="og:url" content="https://finance.51invest.com/learn/private-credit-direct-lending-spreads-covenants-cycle/"><meta property="og:image" content="https://51invest.com/_astro/finance.B-5wXnDx.png"><meta property="og:locale" content="zh_CN"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="私人信贷与直接贷款：利差、契约与周期 · 巫妖投资"><meta name="twitter:description" content="私人信贷不是“高收益债券的替代品”，而是一条从借款人到基金、银行授信和最终投资者的中介链。利差要先扣资金成本、费用、运营和预期损失，再看杠杆后的权益回报。"><meta name="twitter:image" content="https://51invest.com/_astro/finance.B-5wXnDx.png"><meta property="article:published_time" content="2026-11-26"><meta property="article:modified_time" content="2026-11-26"><meta property="article:section" content="概念"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"私人信贷与直接贷款：利差、契约与周期","description":"私人信贷不是“高收益债券的替代品”，而是一条从借款人到基金、银行授信和最终投资者的中介链。利差要先扣资金成本、费用、运营和预期损失，再看杠杆后的权益回报。","inLanguage":"zh-CN","mainEntityOfPage":"https://finance.51invest.com/learn/private-credit-direct-lending-spreads-covenants-cycle/","datePublished":"2026-11-26","dateModified":"2026-11-26","articleSection":"概念","author":{"@type":"Organization","name":"51invest AI 编辑部","url":"https://51invest.com/"},"publisher":{"@type":"Organization","name":"51invest","url":"https://51invest.com/","logo":{"@type":"ImageObject","url":"https://51invest.com/_astro/neutral.Dr5C2SoA.png"}},"image":["https://51invest.com/_astro/neutral.Dr5C2SoA.png"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://51invest.com/"},{"@type":"ListItem","position":2,"name":"金融基础","item":"https://finance.51invest.com/"},{"@type":"ListItem","position":3,"name":"私人信贷与直接贷款：利差、契约与周期","item":"https://finance.51invest.com/learn/private-credit-direct-lending-spreads-covenants-cycle/"}]}]}</script><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><script>
+      (() => {
+        const host = location.hostname;
+        if (host === 'www.51invest.com' || (host === '51invest.com' && location.protocol === 'http:')) {
+          location.replace(`https://51invest.com${location.pathname}${location.search}${location.hash}`);
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/Base.C6WC_-AH.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资 51INVEST"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link nav-external" href="https://nav.51invest.com/" data-external-nav rel="noopener noreferrer" aria-label="打开外链导航"> 导航 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/private-credit-direct-lending-spreads-covenants-cycle/" hreflang="en" lang="en" data-language-link="en" aria-label="English — 切换为英文" title="English — 切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>            </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path>         </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>          </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>           </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">私人信贷与直接贷款：利差、契约与周期</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">私人信贷与直接贷款：利差、契约与周期</h1> <p class="article-summary">私人信贷不是“高收益债券的替代品”，而是一条从借款人到基金、银行授信和最终投资者的中介链。利差要先扣资金成本、费用、运营和预期损失，再看杠杆后的权益回报。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M06 · 金融机构</strong></div> <div class="meta-item"><span>层级</span><strong>进阶</strong></div> <div class="meta-item"><span>阅读</span><strong>10 分钟 · 14 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <div class="article-toc-mobile"> <details> <summary>本文目录 · 14 节</summary> <ol> <li><a href="#section-1">问题与范围</a></li><li><a href="#section-2">中介链：四层，不是一笔贷款</a></li><li><a href="#section-3">利差不是收益率</a></li><li><a href="#section-4">契约：把“控制”写进条款</a></li><li><a href="#section-5">契约监控闭环</a></li><li><a href="#section-6">数值算例：100 单位贷款池</a></li><li><a href="#section-7">周期：估值、干火药与赎回</a></li><li><a href="#section-8">边界与反例</a></li><li><a href="#section-9">一页清单</a></li><li><a href="#section-10">口径表：利差、票息与净收益</a></li><li><a href="#section-11">常见误读</a></li><li><a href="#section-12">练习</a></li><li><a href="#section-13">关联</a></li><li><a href="#section-14">来源</a></li> </ol> </details> </div> <h2 id="section-1">问题与范围</h2>
+<p>私人信贷常被一句话概括：银行不做的贷款，由基金直接放给企业，收益更高。这句话漏掉了三个关键：谁的钱、什么契约、在周期哪一段。私人信贷基金不是银行，它没有存款保险和央行贴现窗口；它也不是高收益债券市场，贷款不在公开市场每日报价。它介于两者之间：用长期资金放浮动利率贷款，靠契约和关系监控借款人，靠估值和授信维持流动性。</p>
+<p>本文把私人信贷拆成四层：中介链、利差、契约、周期。先用一个 100 单位贷款池算清“毛利差”和“权益回报”的差别，再说明契约和估值为什么能同时放大收益和风险。数字都是教学假设，不是对任何基金或市场的预测。私人信贷的规模、银行授信和风险特征见美联储[1][2]，全球金融稳定视角见 IMF[3]，货币与跨境条件见 BIS[4]，零售产品披露见 SEC[5]。</p>
+<h2 id="section-2">中介链：四层，不是一笔贷款</h2>
+<p>第一层是<strong>借款人</strong>。私人信贷的典型借款人是中型企业：太大，银行关系贷款不够；太小，进不了公开债市；或者所有者希望避免公开披露。借款人拿到浮动利率贷款，期限 5—7 年，附带契约和维护要求。</p>
+<p>第二层是<strong>私人信贷基金</strong>。基金募集长期资金，向借款人放贷，收取利差、发起费和管理费。基金资产不是每日报价，估值多依赖模型、可比交易和借款人财报；这降低了短期波动，也降低了价格发现。</p>
+<p>第三层是<strong>银行授信与仓库融资</strong>。基金可能用银行授信做资金周转或杠杆；银行对基金的授信不是存款，期限更短，提款条件更严。银行授信和基金资产之间存在期限错配：资产 5—7 年，授信可能按年甚至按季重审。</p>
+<p>第四层是<strong>最终投资者</strong>。养老金、保险、捐赠基金、家族办公室和部分零售资金提供权益或债务。养老金负债很长，能承受低流动性；零售资金负债短，遇到赎回时可能迫使基金卖资产或限制赎回。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-060-private-credit-direct-lending-spreads-covenants-cycle-zh-1-title fig-fin-060-private-credit-direct-lending-spreads-covenants-cycle-zh-1-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-060-private-credit-direct-lending-spreads-covenants-cycle-zh-1-title">私人信贷的四层中介链</title>
+    <desc id="fig-fin-060-private-credit-direct-lending-spreads-covenants-cycle-zh-1-desc">借款人、私人信贷基金、银行授信与最终投资者四层。图中标出期限与流动性错配。图为教学结构，不是任何基金的法律结构。</desc>
+    <text x="230" y="24" font-size="12" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">四层中介链</text>
+    <rect x="18" y="92" width="96" height="72" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <rect x="126" y="92" width="112" height="72" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <rect x="250" y="92" width="96" height="72" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <rect x="358" y="92" width="88" height="72" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="66" y="118" font-size="10.2" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">借款人</text>
+    <text x="66" y="136" font-size="8.6" fill="var(--muted)" text-anchor="middle" font-family="inherit">中型企业</text>
+    <text x="66" y="152" font-size="8.6" fill="var(--muted)" text-anchor="middle" font-family="inherit">5—7 年浮动</text>
+    <text x="182" y="118" font-size="10.2" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">私人信贷基金</text>
+    <text x="182" y="136" font-size="8.6" fill="var(--muted)" text-anchor="middle" font-family="inherit">长期资金放贷</text>
+    <text x="182" y="152" font-size="8.6" fill="var(--muted)" text-anchor="middle" font-family="inherit">模型估值</text>
+    <text x="298" y="118" font-size="10.2" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">银行授信</text>
+    <text x="298" y="136" font-size="8.6" fill="var(--muted)" text-anchor="middle" font-family="inherit">仓库与杠杆</text>
+    <text x="298" y="152" font-size="8.6" fill="var(--muted)" text-anchor="middle" font-family="inherit">按年重审</text>
+    <text x="402" y="118" font-size="10.2" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">最终投资者</text>
+    <text x="402" y="136" font-size="8.6" fill="var(--muted)" text-anchor="middle" font-family="inherit">养老金/保险</text>
+    <text x="402" y="152" font-size="8.6" fill="var(--muted)" text-anchor="middle" font-family="inherit">部分零售资金</text>
+    <line x1="114" y1="128" x2="124" y2="128" stroke="currentColor" stroke-width="1.6"></line>
+    <line x1="238" y1="128" x2="248" y2="128" stroke="currentColor" stroke-width="1.6"></line>
+    <line x1="346" y1="128" x2="356" y2="128" stroke="currentColor" stroke-width="1.6"></line>
+    <text x="230" y="200" font-size="9" fill="var(--muted)" text-anchor="middle" font-family="inherit">资产端 5—7 年；负债与授信端更短 → 期限错配</text>
+    <text x="230" y="222" font-size="9" fill="var(--muted)" text-anchor="middle" font-family="inherit">基金资产非每日报价 → 估值依赖模型与财报</text>
+  </svg>
+  <figcaption>图 1：私人信贷的四层中介链。借款人、基金、银行授信与最终投资者之间同时存在期限错配和流动性错配；图为教学结构，不是任何基金的法律结构。</figcaption>
+</figure>
+
+<p>这条链的每一层都在做“借短放长”或“借低流动性放高流动性”的转换。转换本身不是坏事：养老金用长期负债支持长期贷款，是期限匹配；零售资金用短负债支持长期贷款，才是脆弱环节。判断风险时，先看资金端的负债期限，不要只看资产端的收益率。</p>
+<h2 id="section-3">利差不是收益率</h2>
+<p>一笔私人信贷贷款的“利差”通常是合同利率减基准利率，例如 SOFR + 300bp。但基金拿到的净收益要扣：</p>
+<ul>
+<li>资金成本：基金借款或授信的成本；</li>
+<li>发起费与管理费：一次性和年度；</li>
+<li>运营成本：尽调、监控、法务、服务商；</li>
+<li>预期信用损失：违约概率 × 违约损失率；</li>
+<li>未提用承诺与现金拖累：备用额度、未投放资金。</li>
+</ul>
+<p>所以“毛利差 300bp”不等于“净回报 300bp”。如果资金成本 6%、贷款利率 9%、费用和运营合计 1%、预期损失 1.4%，资产端净收益只有 1.8%。再加 5 倍资产/权益杠杆，权益回报约 9%；如果预期损失翻倍，权益回报接近 0。杠杆放大的是净收益，不是毛利差。</p>
+<h2 id="section-4">契约：把“控制”写进条款</h2>
+<p>私人信贷的契约比公开债更厚。常见条款包括：</p>
+<ul>
+<li><strong>杠杆与覆盖率</strong>：净债务/EBITDA、利息覆盖率、固定费用覆盖率；</li>
+<li><strong>受限支付</strong>：分红、并购、追加债务需要贷款人同意；</li>
+<li><strong>EBITDA 定义</strong>：加回哪些项目、上限多少、是否允许“预计协同”；</li>
+<li><strong>抵押与担保</strong>：资产留置、应收账款、股权质押；</li>
+<li><strong>信息权与访问权</strong>：月度财报、预算、管理层会议；</li>
+<li><strong>违约与补救</strong>：交叉违约、加速到期、修正与豁免。</li>
+</ul>
+<p>契约的作用不是保证不亏，而是把信息权和谈判权提前写清。借款人经营变差时，贷款人能否及时拿到数据、能否限制分红、能否追加抵押，决定了回收率。契约太松，损失发现得晚；契约太紧，借款人可能转向其他融资，或者在压力下直接违约。契约设计是权衡，不是越严越好。</p>
+<h2 id="section-5">契约监控闭环</h2>
+<p>契约不是签完就结束，而是一条持续循环：发起时定条款，放款后按月收财报、按季测覆盖率，触发阈值时谈判修正或退出。循环的速度决定损失发现得早晚：如果信息权只允许年度审计，借款人可能在两个季度里耗尽现金；如果契约允许贷款人随时访问系统，预警会更早，但运营成本也更高。监控闭环还要写清“谁来看、看什么、触发后谁有权决定”，否则契约只是一份静态文件。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-060-private-credit-direct-lending-spreads-covenants-cycle-zh-3-title fig-fin-060-private-credit-direct-lending-spreads-covenants-cycle-zh-3-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-060-private-credit-direct-lending-spreads-covenants-cycle-zh-3-title">契约监控闭环：发起、监控、触发、修正或退出</title>
+    <desc id="fig-fin-060-private-credit-direct-lending-spreads-covenants-cycle-zh-3-desc">四步闭环：发起定约、定期监控、触发阈值、修正或退出。图为教学流程，不是任何基金的操作手册。</desc>
+    <text x="230" y="24" font-size="12" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">契约监控闭环</text>
+    <rect x="30" y="90" width="96" height="66" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <rect x="138" y="90" width="96" height="66" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <rect x="246" y="90" width="96" height="66" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <rect x="354" y="90" width="88" height="66" rx="8" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="78" y="118" font-size="10.2" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">发起定约</text>
+    <text x="78" y="136" font-size="8.8" fill="var(--muted)" text-anchor="middle" font-family="inherit">杠杆/覆盖/信息权</text>
+    <text x="186" y="118" font-size="10.2" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">定期监控</text>
+    <text x="186" y="136" font-size="8.8" fill="var(--muted)" text-anchor="middle" font-family="inherit">月报/季测/预算</text>
+    <text x="294" y="118" font-size="10.2" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">触发阈值</text>
+    <text x="294" y="136" font-size="8.8" fill="var(--muted)" text-anchor="middle" font-family="inherit">覆盖率/流动性</text>
+    <text x="398" y="118" font-size="10.2" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">修正或退出</text>
+    <text x="398" y="136" font-size="8.8" fill="var(--muted)" text-anchor="middle" font-family="inherit">豁免/追加/出售</text>
+    <path d="M126 155 C156 195 186 195 216 155" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#arrow-fin-060-zh)"></path>
+    <path d="M234 155 C264 195 294 195 324 155" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#arrow-fin-060-zh)"></path>
+    <path d="M342 155 C372 195 398 195 420 155" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#arrow-fin-060-zh)"></path>
+    <path d="M398 198 C330 236 142 236 78 198" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arrow-fin-060-zh)"></path>
+    <defs>
+      <marker id="arrow-fin-060-zh" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" fill="currentColor"></path>
+      </marker>
+    </defs>
+    <text x="230" y="258" font-size="9.2" fill="var(--muted)" text-anchor="middle" font-family="inherit">虚线：修正结果进入下一轮监控</text>
+  </svg>
+  <figcaption>图 2：契约监控闭环。四步为发起定约、定期监控、触发阈值、修正或退出；虚线表示修正结果进入下一轮监控。图为教学流程，不是任何基金的操作手册。</figcaption>
+</figure>
+
+<h2 id="section-6">数值算例：100 单位贷款池</h2>
+<p>假设一个基金有 100 单位资产，权益 20，债务 80，债务成本 6%。资产端贷款利率 9%，费用 0.5%，运营成本 0.5%，预期信用损失 1.4%（违约概率 4%，违约损失率 35%）。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th align="right">金额</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>利息收入</td>
+<td align="right">9.0</td>
+<td>100 × 9%</td>
+</tr>
+<tr>
+<td>债务成本</td>
+<td align="right">4.8</td>
+<td>80 × 6%</td>
+</tr>
+<tr>
+<td>费用</td>
+<td align="right">0.5</td>
+<td>发起与管理费</td>
+</tr>
+<tr>
+<td>运营成本</td>
+<td align="right">0.5</td>
+<td>尽调、监控、法务</td>
+</tr>
+<tr>
+<td>预期信用损失</td>
+<td align="right">1.4</td>
+<td>4% × 35% × 100</td>
+</tr>
+<tr>
+<td>净收益</td>
+<td align="right">1.8</td>
+<td>9.0 − 4.8 − 0.5 − 0.5 − 1.4</td>
+</tr>
+<tr>
+<td>权益回报</td>
+<td align="right">9.0%</td>
+<td>1.8 / 20</td>
+</tr>
+</tbody></table>
+<p>三种情景：</p>
+<ul>
+<li>基准：违约 4%、回收 65%，损失 1.4，净收益 1.8，ROE 9.0%。</li>
+<li>下行：违约 8%、回收 60%，损失 3.2，净收益 0，ROE 0%。</li>
+<li>上行：违约 2%、回收 75%，损失 0.5，净收益 3.1，ROE 15.5%。</li>
+</ul>
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-060-private-credit-direct-lending-spreads-covenants-cycle-zh-4-title fig-fin-060-private-credit-direct-lending-spreads-covenants-cycle-zh-4-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-060-private-credit-direct-lending-spreads-covenants-cycle-zh-4-title">贷款池的权益回报情景</title>
+    <desc id="fig-fin-060-private-credit-direct-lending-spreads-covenants-cycle-zh-4-desc">基准、下行、上行三种信用情景下的权益回报：9.0%、0%、15.5%。资产 100、权益 20、债务 80、债务成本 6%。数字为教学假设。</desc>
+    <text x="230" y="24" font-size="12" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">权益回报情景</text>
+    <line x1="60" y1="240" x2="430" y2="240" stroke="currentColor" stroke-width="1.2"></line>
+    <line x1="60" y1="56" x2="60" y2="240" stroke="currentColor" stroke-width="1.2"></line>
+    <text x="245" y="272" font-size="10" fill="var(--muted)" text-anchor="middle" font-family="inherit">信用情景</text>
+    <text x="24" y="150" font-size="10" fill="var(--muted)" text-anchor="middle" transform="rotate(-90 24 150)" font-family="inherit">ROE %</text>
+    <text x="48" y="236" font-size="9" fill="var(--muted)" text-anchor="end" font-family="inherit">0</text>
+    <text x="48" y="182" font-size="9" fill="var(--muted)" text-anchor="end" font-family="inherit">5</text>
+    <text x="48" y="128" font-size="9" fill="var(--muted)" text-anchor="end" font-family="inherit">10</text>
+    <text x="48" y="74" font-size="9" fill="var(--muted)" text-anchor="end" font-family="inherit">15</text>
+    <rect x="108" y="143" width="66" height="97" rx="3" fill="currentColor" opacity="0.82"></rect>
+    <rect x="198" y="236" width="66" height="4" rx="2" fill="currentColor" opacity="0.55"></rect>
+    <rect x="288" y="73" width="66" height="167" rx="3" fill="currentColor" opacity="0.7"></rect>
+    <text x="141" y="134" font-size="10" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">9.0</text>
+    <text x="231" y="228" font-size="10" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">0.0</text>
+    <text x="321" y="64" font-size="10" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">15.5</text>
+    <text x="141" y="258" font-size="9" fill="var(--muted)" text-anchor="middle" font-family="inherit">基准：损失 1.4</text>
+    <text x="231" y="258" font-size="9" fill="var(--muted)" text-anchor="middle" font-family="inherit">下行：损失 3.2</text>
+    <text x="321" y="258" font-size="9" fill="var(--muted)" text-anchor="middle" font-family="inherit">上行：损失 0.5</text>
+  </svg>
+  <figcaption>图 3：贷款池的权益回报情景。资产 100、权益 20、债务 80、债务成本 6%；基准、下行、上行分别对应损失 1.4、3.2、0.5，ROE 为 9.0%、0%、15.5%。数字为教学假设。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-060-private-credit-direct-lending-spreads-covenants-cycle-zh-2-title fig-fin-060-private-credit-direct-lending-spreads-covenants-cycle-zh-2-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-060-private-credit-direct-lending-spreads-covenants-cycle-zh-2-title">从毛利差到净收益的瀑布</title>
+    <desc id="fig-fin-060-private-credit-direct-lending-spreads-covenants-cycle-zh-2-desc">从 9.0 的利息收入依次扣除 4.8 债务成本、0.5 费用、0.5 运营和 1.4 预期损失，得到 1.8 净收益。数字为教学假设。</desc>
+    <text x="230" y="24" font-size="12" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">净收益瀑布</text>
+    <line x1="52" y1="246" x2="430" y2="246" stroke="currentColor" stroke-width="1.2"></line>
+    <rect x="68" y="88" width="46" height="128" rx="2" fill="currentColor" opacity="0.8"></rect>
+    <rect x="132" y="148" width="46" height="68" rx="2" fill="currentColor" opacity="0.45"></rect>
+    <rect x="196" y="209" width="46" height="7" rx="2" fill="currentColor" opacity="0.45"></rect>
+    <rect x="260" y="209" width="46" height="7" rx="2" fill="currentColor" opacity="0.45"></rect>
+    <rect x="324" y="196" width="46" height="20" rx="2" fill="currentColor" opacity="0.45"></rect>
+    <rect x="388" y="220" width="42" height="26" rx="2" fill="currentColor" opacity="0.8"></rect>
+    <text x="91" y="78" font-size="9.4" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">9.0</text>
+    <text x="155" y="138" font-size="9.4" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">−4.8</text>
+    <text x="219" y="199" font-size="9.4" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">−0.5</text>
+    <text x="283" y="199" font-size="9.4" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">−0.5</text>
+    <text x="347" y="186" font-size="9.4" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">−1.4</text>
+    <text x="409" y="210" font-size="9.4" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">1.8</text>
+    <text x="91" y="266" font-size="8.8" fill="var(--muted)" text-anchor="middle" font-family="inherit">利息收入</text>
+    <text x="155" y="266" font-size="8.8" fill="var(--muted)" text-anchor="middle" font-family="inherit">债务成本</text>
+    <text x="219" y="266" font-size="8.8" fill="var(--muted)" text-anchor="middle" font-family="inherit">费用</text>
+    <text x="283" y="266" font-size="8.8" fill="var(--muted)" text-anchor="middle" font-family="inherit">运营</text>
+    <text x="347" y="266" font-size="8.8" fill="var(--muted)" text-anchor="middle" font-family="inherit">预期损失</text>
+    <text x="409" y="266" font-size="8.8" fill="var(--muted)" text-anchor="middle" font-family="inherit">净收益</text>
+  </svg>
+  <figcaption>图 4：从毛利差到净收益的瀑布。纵轴为每 100 单位资产的收益或成本；9.0 的利息收入扣除 4.8、0.5、0.5、1.4 后得到 1.8。数字为教学假设。</figcaption>
+</figure>
+
+<p>这张表说明两件事。第一，私人信贷的“高收益”大部分是对流动性、契约监控和信用风险的补偿，不是免费溢价。第二，杠杆对权益回报的放大是非线性的：损失从 1.4 升到 3.2，净收益从 1.8 降到 0，ROE 从 9% 降到 0；如果损失继续升到 4.0，权益会被侵蚀。压力测试要测损失分布，不要只测基准利差。</p>
+<h2 id="section-7">周期：估值、干火药与赎回</h2>
+<p>私人信贷的周期有三个放大器：</p>
+<ol>
+<li><strong>估值滞后</strong>。资产不每日报价，估值靠模型和财报。市场利率上升时，基金净值不会立刻下跌，但新贷款利差会扩大、旧贷款的公允价值会下降。滞后不是谎报，但它让投资者在周期转折时误以为风险没变。</li>
+<li><strong>干火药（dry powder）</strong>。未投放的承诺资金在信贷紧缩时是缓冲，在竞争激烈时是压利差的来源。干火药多，基金有动力放宽契约抢项目；干火药少，遇到赎回时只能卖资产或停止放贷。</li>
+<li><strong>赎回与锁定期</strong>。长期基金有锁定期，短期零售产品没有。零售资金涌入时，基金规模扩张；赎回时，非流动性资产难以快速变现，可能触发赎回限制或折价。</li>
+</ol>
+<h2 id="section-8">边界与反例</h2>
+<p>第一，<strong>私人信贷不是“银行替代”</strong>。银行有存款保险、央行流动性和监管资本；私人信贷基金没有。把两者当成同一类中介，会低估挤兑和流动性风险。</p>
+<p>第二，<strong>低波动不等于低风险</strong>。模型估值平滑了净值曲线，但底层现金流、契约和借款人的经营风险仍在。用短期波动率衡量长期非流动资产，会低估尾部风险。</p>
+<p>第三，<strong>契约不是万能</strong>。契约能争取信息权和谈判权，但不能让坏资产变好；执行契约需要法律、时间和成本。借款人可能在契约触发前就转移资产或寻求破产保护。</p>
+<p>第四，<strong>利差扩大不必然是买点</strong>。利差扩大可能补偿更高的违约概率和更低的回收率；如果损失上升快于利差，净收益反而下降。要同时看利差、契约、借款人现金流和资金端负债期限。</p>
+<h2 id="section-9">一页清单</h2>
+<ul>
+<li>先画中介链：借款人、基金、银行授信、最终投资者；标出每一层的期限和流动性。</li>
+<li>利差要扣资金成本、费用、运营、预期损失和现金拖累，再看杠杆后的 ROE。</li>
+<li>契约检查杠杆、覆盖率、受限支付、EBITDA 定义、信息权和违约补救。</li>
+<li>压力测试至少做基准、下行、上行三种信用情景，不只测毛利差。</li>
+<li>估值要问：资产多久重估一次，模型假设是什么，赎回时能否变现。</li>
+<li>任何教学数字都标注假设，不冒充基金业绩或官方统计。</li>
+</ul>
+<h2 id="section-10">口径表：利差、票息与净收益</h2>
+<table>
+<thead>
+<tr>
+<th>数字</th>
+<th>回答的问题</th>
+<th>容易漏掉的部分</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>票息</td>
+<td>借款人合同上每年付多少</td>
+<td>折价、费用与实物支付</td>
+</tr>
+<tr>
+<td>利差</td>
+<td>相对基准多收多少补偿</td>
+<td>违约、回收与重组</td>
+</tr>
+<tr>
+<td>净收益率</td>
+<td>扣除费用和损失后，贷款池实际赚多少</td>
+<td>未调用资金、估值时点与流动性</td>
+</tr>
+</tbody></table>
+<p>利差是价格补偿，不是投资者拿到的收益。它覆盖信用风险、流动性不足、契约监控和资金锁定，但只有把票息、折价、费用、违约、回收与退出估值放进同一条现金流，才会得到净收益。用“利差 8%”宣传产品，等于把最乐观的一层当成全部。</p>
+<p>复核时先问：利差相对哪个基准，期限是否匹配；票息里有多少是实物支付或递延；贷款池是否含未调用资金；违约是用毛损失还是回收后净损失；估值采用交易价、模型价还是最近一次融资。四个口径中任何一个换了，净收益都会变。把利差、票息和净收益混用，会同时高估收益、低估流动性风险。</p>
+<h2 id="section-11">常见误读</h2>
+<p>误读一：私人信贷收益率高，所以比公开债好。高收益补偿的是流动性、监控和信用风险；扣掉费用和损失后，净回报可能接近公开市场。</p>
+<p>误读二：私人信贷没有每日报价，所以风险低。低波动是估值方式的结果，不是风险消失；非流动性资产在压力下可能折价。</p>
+<p>误读三：契约越严越安全。契约太严会逼走借款人，太松会延迟损失确认；关键是契约能否被执行，以及贷款人有没有信息权。</p>
+<h2 id="section-12">练习</h2>
+<ol>
+<li>画出一个私人信贷基金的中介链，标出资产端和负债端的期限。</li>
+<li>用本文算例，若债务成本从 6% 升到 7%，其他不变，重算净收益和 ROE。</li>
+<li>若违约概率从 4% 升到 6%、回收率从 65% 降到 60%，重算预期损失和 ROE。</li>
+<li>解释为什么“毛利差 300bp”不等于“净回报 300bp”，列出至少四项扣除。</li>
+<li>设计一条 EBITDA 定义，说明加回项目、上限和测试口径。</li>
+<li>契约中的受限支付条款解决什么问题？举一个借款人绕过的例子。</li>
+<li>为什么私人信贷的估值滞后会放大周期？用净值、赎回和新贷款利率三个变量解释。</li>
+<li>干火药多时，基金的行为可能怎样变化？对利差和契约有什么影响。</li>
+<li>比较银行和私人信贷基金在流动性支持上的差异，写出两个关键不同。</li>
+<li>写一条针对私人信贷基金的压力测试建议，明确情景、损失和流动性三个维度。</li>
+</ol>
+<p>数据说明：私人信贷规模、银行授信、全球金融稳定、BIS 货币条件和 SEC 披露入口参考[1][2][3][4][5]；正文数字为教学假设。</p>
+<h2 id="section-13">关联</h2>
+<ul>
+<li>先修：FIN-038 挤兑、杠杆与传染：金融稳定的压力测试</li>
+<li>延伸：MKT-042 私募与对冲基金：费用、锁定期与流动性</li>
+<li>延伸：FIN-059 担保、优先权与违约回收率</li>
+</ul>
+<h2 id="section-14">来源</h2>
+<ol>
+<li>Federal Reserve Board. <em>Private Credit: Characteristics and Risks</em>. <a href="https://www.federalreserve.gov/econres/notes/feds-notes/private-credit-characteristics-and-risks-20240223.html" rel="noopener noreferrer">https://www.federalreserve.gov/econres/notes/feds-notes/private-credit-characteristics-and-risks-20240223.html</a>（访问日期：2026-11-26）</li>
+<li>Federal Reserve Board. <em>Bank Lending to Private Credit: Size, Characteristics, and Financial Stability Implications</em>. <a href="https://www.federalreserve.gov/econres/notes/feds-notes/bank-lending-to-private-credit-size-characteristics-and-financial-stability-implications-20250523.html" rel="noopener noreferrer">https://www.federalreserve.gov/econres/notes/feds-notes/bank-lending-to-private-credit-size-characteristics-and-financial-stability-implications-20250523.html</a>（访问日期：2026-11-26）</li>
+<li>International Monetary Fund. <em>Global Financial Stability Report: The Rise and Risks of Private Credit</em>. <a href="https://www.imf.org/-/media/files/publications/gfsr/2024/april/english/text.pdf" rel="noopener noreferrer">https://www.imf.org/-/media/files/publications/gfsr/2024/april/english/text.pdf</a>（访问日期：2026-11-26）</li>
+<li>Bank for International Settlements. <em>BIS Quarterly Review</em>. <a href="https://www.bis.org/publ/qtrpdf/r_qt2403.htm" rel="noopener noreferrer">https://www.bis.org/publ/qtrpdf/r_qt2403.htm</a>（访问日期：2026-11-26）</li>
+<li>U.S. Securities and Exchange Commission. <em>Investor bulletins: private funds and business development companies</em>. <a href="https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins" rel="noopener noreferrer">https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins</a>（访问日期：2026-11-26）</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>能画出借款人、私人信贷基金、银行授信与最终投资者的中介链，并说明每一层的期限和流动性错配。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>能用利差、预期信用损失、费用和杠杆复算本文的贷款池算例，并指出至少一个估值或契约边界。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <section class="article-cite" aria-labelledby="cite-heading"> <h2 id="cite-heading">引用这篇</h2> <p>非商业引用请注明作者、标题、本站和链接；第三方来源按原许可。</p> <code data-cite-text>私人信贷与直接贷款：利差、契约与周期。巫妖投资，2026-11-26。https://finance.51invest.com/learn/private-credit-direct-lending-spreads-covenants-cycle/</code> <div class="cite-actions"> <button type="button" data-copy-cite>复制引用</button> <span data-cite-status role="status" aria-live="polite"></span> </div> </section> <nav class="article-pager" aria-label="同站上一篇与下一篇"> <a href="/learn/collateral-priority-recovery-rates/"> <small>上一篇</small> <strong>担保、优先权与违约回收率</strong> </a> <span></span> </nav> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>                </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card article-toc-aside"> <h2>本文目录</h2> <ol> <li><a href="#section-1">问题与范围</a></li><li><a href="#section-2">中介链：四层，不是一笔贷款</a></li><li><a href="#section-3">利差不是收益率</a></li><li><a href="#section-4">契约：把“控制”写进条款</a></li><li><a href="#section-5">契约监控闭环</a></li><li><a href="#section-6">数值算例：100 单位贷款池</a></li><li><a href="#section-7">周期：估值、干火药与赎回</a></li><li><a href="#section-8">边界与反例</a></li><li><a href="#section-9">一页清单</a></li><li><a href="#section-10">口径表：利差、票息与净收益</a></li><li><a href="#section-11">常见误读</a></li><li><a href="#section-12">练习</a></li><li><a href="#section-13">关联</a></li><li><a href="#section-14">来源</a></li> </ol> </section> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>能画出借款人、私人信贷基金、银行授信与最终投资者的中介链，并说明每一层的期限和流动性错配。</li><li>能用利差、预期信用损失、费用和杠杆复算本文的贷款池算例，并指出至少一个估值或契约边界。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/bank-runs-leverage-and-contagion/">FIN-038 · 挤兑、杠杆与传染：金融稳定的压力测试</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="https://markets.51invest.com/learn/private-funds-and-hedge-funds-fees-locks-liquidity/">MKT-042 · 私募与对冲基金：费用、锁定期与流动性</a> </li><li> <a href="/learn/collateral-priority-recovery-rates/">FIN-059 · 担保、优先权与违约回收率</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> <p class="muted"> 复核日期：2026-11-26 </p> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.federalreserve.gov/econres/notes/feds-notes/private-credit-characteristics-and-risks-20240223.html" rel="noopener noreferrer" target="_blank">Private Credit: Characteristics and Risks</a> <p>Federal Reserve Board · Federal Reserve Board</p> <p>访问：2026-11-26 · 许可：U.S. Government work; public domain</p> <p>支持论点：用于核对私人信贷与直接贷款的规模、增长和风险特征；正文教学算例不冒充官方统计。</p> </div><div class="source"> <a href="https://www.federalreserve.gov/econres/notes/feds-notes/bank-lending-to-private-credit-size-characteristics-and-financial-stability-implications-20250523.html" rel="noopener noreferrer" target="_blank">Bank Lending to Private Credit: Size, Characteristics, and Financial Stability Implications</a> <p>Federal Reserve Board · Federal Reserve Board</p> <p>访问：2026-11-26 · 许可：U.S. Government work; public domain</p> <p>支持论点：用于核对银行对私人信贷载体的授信规模、提款压力和互联风险。</p> </div><div class="source"> <a href="https://www.imf.org/-/media/files/publications/gfsr/2024/april/english/text.pdf" rel="noopener noreferrer" target="_blank">Global Financial Stability Report: The Rise and Risks of Private Credit</a> <p>International Monetary Fund · IMF</p> <p>访问：2026-11-26 · 许可：IMF terms; cite-only</p> <p>支持论点：用于核对私人信贷的借款人结构、估值不确定性和零售资金赎回风险。</p> </div><div class="source"> <a href="https://www.bis.org/publ/qtrpdf/r_qt2403.htm" rel="noopener noreferrer" target="_blank">BIS Quarterly Review</a> <p>Bank for International Settlements · BIS</p> <p>访问：2026-11-26 · 许可：BIS terms; cite-only</p> <p>支持论点：用于核对非银信用中介、杠杆与跨境金融条件的数据入口。</p> </div><div class="source"> <a href="https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins" rel="noopener noreferrer" target="_blank">Investor bulletins: private funds and business development companies</a> <p>U.S. Securities and Exchange Commission · SEC</p> <p>访问：2026-11-26 · 许可：U.S. Government work; public domain</p> <p>支持论点：用于核对私人基金、BDC 与零售投资者的披露和适当性入口。</p> </div> </section>  </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}var n=document.querySelector(`[data-copy-cite]`),r=document.querySelector(`[data-cite-text]`),i=document.querySelector(`[data-cite-status]`);n?.addEventListener(`click`,async()=>{if(!r)return;let e=r.textContent?.trim()??``;try{await navigator.clipboard.writeText(e),i&&(i.textContent=document.documentElement.lang===`en`?`Copied`:`已复制`)}catch{i&&(i.textContent=document.documentElement.lang===`en`?`Copy failed; select the text manually.`:`复制失败，请手动选择文字。`)}window.setTimeout(()=>{i&&(i.textContent=``)},2500)});</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="https://51invest.com/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="https://51invest.com/about/" data-main-link>关于</a> <a href="https://51invest.com/method/" data-main-link>方法</a> <a href="https://51invest.com/corrections/" data-main-link>更正</a> <a href="https://51invest.com/privacy/" data-main-link>隐私</a> <a href="https://nav.51invest.com/" rel="noopener noreferrer">导航</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="快捷导航"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>             </svg> <span>首页</span> </a> <a class="mobile-link" href="https://economics.51invest.com/" aria-label="经济学" title="经济学"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>           <path d="M4 19V5"></path><path d="M4 19h16"></path><path d="m7 15 3-4 3 2 4-6"></path>      </svg> <span>经济学</span> </a><a class="mobile-link active" href="/" aria-current="page" aria-label="金融基础" title="金融基础"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>            <path d="m3 9 9-6 9 6"></path><path d="M4 10h16"></path><path d="M6 10v8M10 10v8M14 10v8M18 10v8"></path><path d="M3 19h18"></path>     </svg> <span>金融</span> </a><a class="mobile-link" href="https://markets.51invest.com/" aria-label="市场与产品" title="市场与产品"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>             <path d="m12 3 9 5-9 5-9-5 9-5Z"></path><path d="m3 12 9 5 9-5"></path><path d="m3 16 9 5 9-5"></path>    </svg> <span>市场</span> </a><a class="mobile-link" href="https://invest.51invest.com/" aria-label="投资方法" title="投资方法"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>              <circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path>   </svg> <span>投资</span> </a><a class="mobile-link" href="https://history.51invest.com/" aria-label="经济与金融史" title="经济与金融史"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>               <circle cx="12" cy="12" r="8.5"></circle><path d="M12 7v5l3 2"></path>  </svg> <span>经济史</span> </a><a class="mobile-link" href="https://research.51invest.com/" aria-label="研究方法" title="研究方法"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>                <path d="M9 3h6"></path><path d="M10 3v5L5 17a3 3 0 0 0 2.6 4h8.8a3 3 0 0 0 2.6-4L14 8V3"></path><path d="M7 15h10"></path> </svg> <span>研究</span> </a> <a class="mobile-link" href="https://nav.51invest.com/" rel="noopener noreferrer" data-external-nav aria-label="打开外链导航"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>          <path d="M10 13a5 5 0 0 0 7.1 0l2-2a5 5 0 0 0-7.1-7.1l-1.2 1.2"></path><path d="M14 11a5 5 0 0 0-7.1 0l-2 2A5 5 0 0 0 12 20.1l1.2-1.2"></path>       </svg> <span>导航</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>
