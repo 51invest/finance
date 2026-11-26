@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-theme-mode="auto"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>担保、优先权与违约回收率 · 巫妖投资</title><meta name="description" content="一笔贷款违约后能收回多少，不取决于合同写了多少担保，而取决于担保是否有效、清偿顺序如何、处置成本和剩余价值归谁。"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="canonical" href="https://finance.51invest.com/learn/collateral-priority-recovery-rates/"><link rel="alternate" hreflang="zh-CN" href="https://finance.51invest.com/learn/collateral-priority-recovery-rates/" />
+    <link rel="alternate" hreflang="en" href="https://finance.51invest.com/en/learn/collateral-priority-recovery-rates/" />
+    <link rel="alternate" hreflang="x-default" href="https://finance.51invest.com/learn/collateral-priority-recovery-rates/" /><link rel="alternate" type="application/rss+xml" title="巫妖投资 RSS" href="/rss.xml"><meta property="og:site_name" content="51invest"><meta property="og:type" content="article"><meta property="og:title" content="担保、优先权与违约回收率 · 巫妖投资"><meta property="og:description" content="一笔贷款违约后能收回多少，不取决于合同写了多少担保，而取决于担保是否有效、清偿顺序如何、处置成本和剩余价值归谁。"><meta property="og:url" content="https://finance.51invest.com/learn/collateral-priority-recovery-rates/"><meta property="og:image" content="https://51invest.com/_astro/finance.B-5wXnDx.png"><meta property="og:locale" content="zh_CN"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="担保、优先权与违约回收率 · 巫妖投资"><meta name="twitter:description" content="一笔贷款违约后能收回多少，不取决于合同写了多少担保，而取决于担保是否有效、清偿顺序如何、处置成本和剩余价值归谁。"><meta name="twitter:image" content="https://51invest.com/_astro/finance.B-5wXnDx.png"><meta property="article:published_time" content="2026-11-26"><meta property="article:modified_time" content="2026-11-26"><meta property="article:section" content="概念"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"担保、优先权与违约回收率","description":"一笔贷款违约后能收回多少，不取决于合同写了多少担保，而取决于担保是否有效、清偿顺序如何、处置成本和剩余价值归谁。","inLanguage":"zh-CN","mainEntityOfPage":"https://finance.51invest.com/learn/collateral-priority-recovery-rates/","datePublished":"2026-11-26","dateModified":"2026-11-26","articleSection":"概念","author":{"@type":"Organization","name":"51invest AI 编辑部","url":"https://51invest.com/"},"publisher":{"@type":"Organization","name":"51invest","url":"https://51invest.com/","logo":{"@type":"ImageObject","url":"https://51invest.com/_astro/neutral.Dr5C2SoA.png"}},"image":["https://51invest.com/_astro/neutral.Dr5C2SoA.png"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://51invest.com/"},{"@type":"ListItem","position":2,"name":"金融基础","item":"https://finance.51invest.com/"},{"@type":"ListItem","position":3,"name":"担保、优先权与违约回收率","item":"https://finance.51invest.com/learn/collateral-priority-recovery-rates/"}]}]}</script><link rel="icon" type="image/png" href="/_astro/neutral.Dr5C2SoA.png"><script>
+  (() => {
+    const root = document.documentElement;
+    const readCookie = key => {
+      try {
+        return document.cookie.split('; ').find(value => value.startsWith(`51invest-${key}=`))?.split('=').slice(1).join('=') ?? null;
+      } catch {
+        return null;
+      }
+    };
+    const readLocal = key => {
+      try {
+        return localStorage.getItem(`51invest-${key}`);
+      } catch {
+        return null;
+      }
+    };
+    const storedTheme = readCookie('theme') || readLocal('theme');
+    const mode = ['light', 'dark', 'auto'].includes(storedTheme) ? storedTheme : 'auto';
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const apply = () => {
+      root.dataset.theme = mode === 'auto' ? (media.matches ? 'dark' : 'light') : mode;
+      root.dataset.themeMode = mode;
+    };
+    apply();
+    media.addEventListener('change', () => {
+      if (root.dataset.themeMode === 'auto') apply();
+    });
+  })();
+</script><script>
+      (() => {
+        const host = location.hostname;
+        if (host === 'www.51invest.com' || (host === '51invest.com' && location.protocol === 'http:')) {
+          location.replace(`https://51invest.com${location.pathname}${location.search}${location.hash}`);
+        }
+      })();
+    </script><link rel="stylesheet" href="/_astro/Base.C6WC_-AH.css"></head> <body>  <a class="skip-link" href="#main">跳到正文</a> <header class="site-header"> <div class="container header-inner"> <a class="brand" href="https://51invest.com/" data-main-home aria-label="巫妖投资 51INVEST"> <span class="brand-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="36" height="36" alt class="mascot" loading="lazy" decoding="async"></span> <span class="brand-copy"> <span class="brand-name">巫妖投资</span> <span class="brand-caption">51INVEST</span> </span> </a> <nav class="desktop-nav" aria-label="知识分站"> <a class="nav-link" href="https://51invest.com/" data-main-home> 首页 </a> <a class="nav-link" href="https://economics.51invest.com/"> 经济学 </a><a class="nav-link active" href="/" aria-current="page"> 金融基础 </a><a class="nav-link" href="https://markets.51invest.com/"> 市场与产品 </a><a class="nav-link" href="https://invest.51invest.com/"> 投资方法 </a><a class="nav-link" href="https://history.51invest.com/"> 经济与金融史 </a><a class="nav-link" href="https://research.51invest.com/"> 研究方法 </a> <a class="nav-link nav-external" href="https://nav.51invest.com/" data-external-nav rel="noopener noreferrer" aria-label="打开外链导航"> 导航 </a> </nav> <div class="header-tools"> <a class="icon-button language-button" href="/en/learn/collateral-priority-recovery-rates/" hreflang="en" lang="en" data-language-link="en" aria-label="English — 切换为英文" title="English — 切换为英文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>     <path d="M4 5h10"></path><path d="M9 3v2"></path><path d="M6 5c0 5 3 8 8 9"></path><path d="M12 11c-1 4-4 7-8 8"></path><path d="m14 20 4-10 4 10"></path><path d="M15.5 17h5"></path>            </svg> <span>English</span> </a> <button class="icon-button theme-button" type="button" data-theme-toggle aria-label="主题: 跟随系统" title="主题: 跟随系统" data-label-auto="主题: 跟随系统" data-label-light="主题: 浅色" data-label-dark="主题: 深色"> <span class="theme-icon" data-theme-icon="auto"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>        <circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v17"></path><path d="M12 7a5 5 0 0 1 0 10" fill="currentColor" stroke="none"></path>         </svg></span> <span class="theme-icon" data-theme-icon="light"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>       <circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>          </svg></span> <span class="theme-icon" data-theme-icon="dark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>      <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>           </svg></span> <span class="theme-text" data-theme-text="auto">跟随系统</span> <span class="theme-text" data-theme-text="light">浅色</span> <span class="theme-text" data-theme-text="dark">深色</span> </button> </div> </div> </header> <main id="main" class="site-main" data-pagefind-body>  <div class="reading-progress" data-reading-progress aria-hidden="true"><span></span></div> <div class="container"> <nav class="breadcrumbs" aria-label="Breadcrumb"> <a href="https://51invest.com/" data-main-home>首页</a> <span class="sep">/</span> <a href="/">金融基础</a> <span class="sep">/</span> <span aria-current="page">担保、优先权与违约回收率</span> </nav> </div> <article> <header class="article-header"> <div class="container"> <span class="article-type">概念</span> <h1 class="article-title">担保、优先权与违约回收率</h1> <p class="article-summary">一笔贷款违约后能收回多少，不取决于合同写了多少担保，而取决于担保是否有效、清偿顺序如何、处置成本和剩余价值归谁。</p>  <div class="meta-grid"> <div class="meta-item"><span>模块</span><strong>FIN-M13 · 分配与企业变动</strong></div> <div class="meta-item"><span>层级</span><strong>进阶</strong></div> <div class="meta-item"><span>阅读</span><strong>11 分钟 · 12 节</strong></div> </div> <p class="demo-jump"> <a href="#demo-check"> 这篇有一个可以动手操作的演示 <span aria-hidden="true">↓</span> </a> </p> </div> </header> <div class="container article-layout"> <div class="article-body"> <div class="article-toc-mobile"> <details> <summary>本文目录 · 12 节</summary> <ol> <li><a href="#section-1">问题与范围</a></li><li><a href="#section-2">担保的五层结构</a></li><li><a href="#section-3">优先权瀑布</a></li><li><a href="#section-4">回收率与违约损失率</a></li><li><a href="#section-5">数值算例</a></li><li><a href="#section-6">边界与反例</a></li><li><a href="#section-7">一页清单</a></li><li><a href="#section-8">常见误读</a></li><li><a href="#section-9">数据口径</a></li><li><a href="#section-10">练习</a></li><li><a href="#section-11">关联</a></li><li><a href="#section-12">来源</a></li> </ol> </details> </div> <h2 id="section-1">问题与范围</h2>
+<p>信用分析经常把“有担保”当成“低风险”的同义词。现实并非如此。一笔有抵押的贷款，可能在登记、评估、处置或优先权顺位上失效；一笔无担保贷款，也可能因为借款人现金流强、债权人分散而获得较高回收。回收率不是合同条款的装饰，它是违约情形下现金流的分配结果。</p>
+<p>本文把违约回收拆成五层：担保物权是否成立、担保物价值多少、处置成本多高、清偿顺序如何、剩余缺口由谁承担。再用一个教学算例把“抵押覆盖率”“贷款价值比”“违约损失率”和“回收率”四个常见指标接起来。最后讨论几类最容易把回收率算错的情形：重复抵押、自动冻结、欺诈性转移、跨境破产和“救活企业比清算更值钱”。</p>
+<h2 id="section-2">担保的五层结构</h2>
+<p>第一层是<strong>债权本身</strong>。贷款合同、债券契约或贸易应收款确定了本金、利息、费用和加速到期条款。若债权本身无效，担保再强也没有附着对象。第二层是<strong>担保物权</strong>。抵押、质押、留置、保证和信用增强，法律效果不同：抵押通常针对特定资产，保证则针对第三人的一般财产。第三层是<strong>登记与对抗第三人</strong>。没有登记或没有占有，担保可能无法对抗善意买受人或后来的债权人。第四层是<strong>处置与执行</strong>。司法拍卖、庭外处置、资产打包出售的速度和价格，决定了“账面担保”能变成多少现金。第五层是<strong>优先权瀑布</strong>。担保债权、优先债权、员工工资、税费、破产管理费用和有担保重整债务，谁先拿钱，决定了同一笔抵押物在不同债权人手里的回收率。</p>
+<p>这五层中任何一层断裂，都会让“担保覆盖率 80%”变成“实际回收 20%”。因此，看一笔有担保贷款，不能只看抵押物估值，还要看担保是否可执行、执行成本多高、是否有其他优先债权插队。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-059-collateral-priority-recovery-rates-zh-1-title fig-fin-059-collateral-priority-recovery-rates-zh-1-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-059-collateral-priority-recovery-rates-zh-1-title">从债权到担保、处置与优先权瀑布的五层链（教学示意）</title>
+    <desc id="fig-fin-059-collateral-priority-recovery-rates-zh-1-desc">从债权到担保、处置与优先权瀑布的五层链（教学示意）。图中数字为教学假设，不是真实统计。</desc>
+<text x="230" y="40" font-size="12" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">四个核算节点</text>
+    <rect x="16" y="120" width="96" height="62" rx="9" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="64" y="155" font-size="10.5" font-weight="600" fill="var(--text)" text-anchor="middle" font-family="inherit">债权</text>
+    <line x1="112" y1="151" x2="126" y2="151" stroke="currentColor" stroke-width="1.4"></line>
+    <rect x="126" y="120" width="96" height="62" rx="9" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="174" y="155" font-size="10.5" font-weight="600" fill="var(--text)" text-anchor="middle" font-family="inherit">担保物权</text>
+    <line x1="222" y1="151" x2="236" y2="151" stroke="currentColor" stroke-width="1.4"></line>
+    <rect x="236" y="120" width="96" height="62" rx="9" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="284" y="155" font-size="10.5" font-weight="600" fill="var(--text)" text-anchor="middle" font-family="inherit">处置成本</text>
+    <line x1="332" y1="151" x2="346" y2="151" stroke="currentColor" stroke-width="1.4"></line>
+    <rect x="346" y="120" width="96" height="62" rx="9" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="394" y="155" font-size="10.5" font-weight="600" fill="var(--text)" text-anchor="middle" font-family="inherit">优先瀑布</text>
+    <text x="230" y="238" font-size="9.5" font-weight="500" fill="var(--muted)" text-anchor="middle" font-family="inherit">箭头表示核算顺序，不代表因果</text>
+  </svg>
+  <figcaption>图 1：从债权到担保、处置与优先权瀑布的五层链（教学示意）。</figcaption>
+</figure>
+
+<h2 id="section-3">优先权瀑布</h2>
+<p>清算 waterfall 的常见顺序是：担保债权就担保物优先受偿；破产管理费用和员工债权按法定顺序；税费；无担保优先债权；普通无担保债权；股东剩余。不同司法辖区的顺序不同，同一辖区不同工具（破产清算、重整、庭外和解）也不同。分析时至少画出三条瀑布：清算、重整和庭外处置。三者的回收率可能相差很大。</p>
+<p>一个常见错误是把“抵押物价值”直接当成“回收金额”。正确的顺序是：担保物处置价减去处置成本、税费和优先费用，得到可分配金额；再按担保债权金额封顶；剩余部分才进入无担保池。若担保物价值低于担保债权，缺口转为无担保债权，而不是自动由借款人补足。</p>
+<p>另一个错误是把“优先”当成“全额”。优先权只解决排队位置，不解决资金够不够。担保物价值 100、处置成本 10、优先费用 5，可分配 85；若担保债权 120，担保债权人只拿到 85，剩余 35 变成无担保缺口。优先权提高了回收概率，但没有消除价值不足。</p>
+<h2 id="section-4">回收率与违约损失率</h2>
+<p>回收率（recovery rate）通常定义为违约暴露中最终收回的比例；违约损失率（LGD）等于 1 减回收率。风险暴露、违约概率（PD）和 LGD 三者相乘，得到预期损失。若 PD 为 2%、LGD 为 45%，预期损失率为 0.9%。贷款利率中的信用溢价至少要覆盖预期损失、资本占用和运营成本，否则放贷规模越大，经济亏损越大。</p>
+<p>回收率有三种口径：<strong>名义回收率</strong>按合同本金计算；<strong>经济回收率</strong>按违约时点的现值计算，扣掉处置时间和折现；<strong>最终回收率</strong>按重整完成后的实际现金流计算。三者的差别在长期重整中尤其大：三年前承诺的 60% 回收，若折现率 8%，现值只有 47.6%。把名义回收率直接与当期拨备比较，会高估风险缓释效果。</p>
+<h2 id="section-5">数值算例</h2>
+<p>假设一笔 100 元贷款，担保物评估值 80 元，处置成本 6 元，优先费用 4 元，担保债权 60 元，普通债权 40 元。清算时可分配金额为 80-6-4=70 元。担保债权先拿 60 元，剩余 10 元进入无担保池；普通债权回收 10/40=25%。总回收率为 70/100=70%。担保债权回收率 100%，普通债权 25%。</p>
+<p>若担保物价格下跌到 50 元，处置成本仍为 6 元、优先费用 4 元，可分配 40 元。担保债权只能拿 40 元，回收率 40/60=66.7%；普通债权为 0；总回收率 40%。同一笔贷款，抵押物价格从 80 降到 50，总回收率从 70% 降到 40%，LGD 从 30% 升到 60%。这就是“抵押覆盖率”与“回收率”不是一回事的原因。</p>
+<p>若进入重整，企业继续经营，担保物不出售，债权人按重整计划每年拿 10 元、共 5 年，折现率 8%。年金现值约为 10×3.993=39.9 元，低于清算的 70 元。除非重整能保住企业价值并提高总现金流，否则“救活企业”不一定比清算更回收。这个比较必须把时间、折现和执行风险一起算。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-059-collateral-priority-recovery-rates-zh-2-title fig-fin-059-collateral-priority-recovery-rates-zh-2-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-059-collateral-priority-recovery-rates-zh-2-title">担保物 80 与 50 两种价格下的总回收率（教学假设）</title>
+    <desc id="fig-fin-059-collateral-priority-recovery-rates-zh-2-desc">担保物 80 与 50 两种价格下的总回收率（教学假设）。图中数字为教学假设，不是真实统计。</desc>
+<text x="230" y="38" font-size="12" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">数值对照（教学假设）</text>
+    <line x1="40" y1="232" x2="430" y2="232" stroke="var(--border)" stroke-width="1.2"></line>
+    <rect x="63" y="82" width="56" height="150" rx="4" fill="currentColor" opacity=".82"></rect>
+    <text x="91" y="75" font-size="9.5" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">80元</text>
+    <text x="91" y="252" font-size="9" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">担保 80</text>
+    <rect x="153" y="138.25" width="56" height="93.75" rx="4" fill="currentColor" opacity=".82"></rect>
+    <text x="181" y="131.25" font-size="9.5" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">50元</text>
+    <text x="181" y="252" font-size="9" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">担保 50</text>
+    <rect x="243" y="100.75" width="56" height="131.25" rx="4" fill="currentColor" opacity=".82"></rect>
+    <text x="271" y="93.75" font-size="9.5" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">70元</text>
+    <text x="271" y="252" font-size="9" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">清算 70</text>
+    <rect x="333" y="157" width="56" height="75" rx="4" fill="currentColor" opacity=".55"></rect>
+    <text x="361" y="150" font-size="9.5" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">40元</text>
+    <text x="361" y="252" font-size="9" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">清算 40</text>
+  </svg>
+  <figcaption>图 2：担保物 80 与 50 两种价格下的总回收率（教学假设）。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-059-collateral-priority-recovery-rates-zh-3-title fig-fin-059-collateral-priority-recovery-rates-zh-3-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-059-collateral-priority-recovery-rates-zh-3-title">担保物价格下跌时总回收率的非线性变化（教学假设）</title>
+    <desc id="fig-fin-059-collateral-priority-recovery-rates-zh-3-desc">担保物价格下跌时总回收率的非线性变化（教学假设）。图中数字为教学假设，不是真实统计。</desc>
+<text x="230" y="38" font-size="12" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">路径与阈值（教学假设）</text>
+    <line x1="44" y1="230" x2="430" y2="230" stroke="var(--border)" stroke-width="1.2"></line>
+    <line x1="50" y1="155" x2="170" y2="136.25" stroke="currentColor" stroke-width="2"></line>
+    <line x1="170" y1="136.25" x2="290" y2="111.875" stroke="currentColor" stroke-width="2"></line>
+    <line x1="290" y1="111.875" x2="410" y2="98.75" stroke="currentColor" stroke-width="2"></line>
+    <circle cx="50" cy="155" r="3.4" fill="currentColor"></circle>
+    <text x="50" y="145" font-size="9" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">40%</text>
+    <text x="50" y="252" font-size="8.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">50</text>
+    <circle cx="170" cy="136.25" r="3.4" fill="currentColor"></circle>
+    <text x="170" y="126.25" font-size="9" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">50%</text>
+    <text x="170" y="252" font-size="8.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">60</text>
+    <circle cx="290" cy="111.875" r="3.4" fill="currentColor"></circle>
+    <text x="290" y="101.875" font-size="9" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">63%</text>
+    <text x="290" y="252" font-size="8.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">70</text>
+    <circle cx="410" cy="98.75" r="3.4" fill="currentColor"></circle>
+    <text x="410" y="88.75" font-size="9" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">70%</text>
+    <text x="410" y="252" font-size="8.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">80</text>
+  </svg>
+  <figcaption>图 3：担保物价格下跌时总回收率的非线性变化（教学假设）。</figcaption>
+</figure>
+
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-059-collateral-priority-recovery-rates-zh-4-title fig-fin-059-collateral-priority-recovery-rates-zh-4-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-059-collateral-priority-recovery-rates-zh-4-title">两种担保物价格下的瀑布分配（教学假设）</title>
+    <desc id="fig-fin-059-collateral-priority-recovery-rates-zh-4-desc">两种担保物价格下的瀑布分配（教学假设）。图中数字为教学假设，不是真实统计。</desc>
+<text x="230" y="38" font-size="12" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">关键数字表（教学假设）</text>
+    <rect x="20" y="62" width="140" height="38" rx="4" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="90" y="86" font-size="9.6" font-weight="700" fill="var(--text)" text-anchor="middle" font-family="inherit">项目</text>
+    <rect x="170" y="62" width="140" height="38" rx="4" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="240" y="86" font-size="9.6" font-weight="700" fill="var(--text)" text-anchor="middle" font-family="inherit">担保 80</text>
+    <rect x="320" y="62" width="140" height="38" rx="4" fill="var(--surface-2)" stroke="var(--border)"></rect>
+    <text x="390" y="86" font-size="9.6" font-weight="700" fill="var(--text)" text-anchor="middle" font-family="inherit">担保 50</text>
+    <rect x="20" y="108" width="140" height="38" rx="4" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="90" y="132" font-size="9.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">可分配</text>
+    <rect x="170" y="108" width="140" height="38" rx="4" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="240" y="132" font-size="9.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">70</text>
+    <rect x="320" y="108" width="140" height="38" rx="4" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="390" y="132" font-size="9.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">40</text>
+    <rect x="20" y="154" width="140" height="38" rx="4" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="90" y="178" font-size="9.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">担保债权</text>
+    <rect x="170" y="154" width="140" height="38" rx="4" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="240" y="178" font-size="9.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">60</text>
+    <rect x="320" y="154" width="140" height="38" rx="4" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="390" y="178" font-size="9.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">40</text>
+    <rect x="20" y="200" width="140" height="38" rx="4" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="90" y="224" font-size="9.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">普通债权</text>
+    <rect x="170" y="200" width="140" height="38" rx="4" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="240" y="224" font-size="9.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">10</text>
+    <rect x="320" y="200" width="140" height="38" rx="4" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="390" y="224" font-size="9.6" font-weight="500" fill="var(--text)" text-anchor="middle" font-family="inherit">0</text>
+  </svg>
+  <figcaption>图 4：两种担保物价格下的瀑布分配（教学假设）。</figcaption>
+</figure>
+
+<h2 id="section-6">边界与反例</h2>
+<p>第一，<strong>担保物权可能无效</strong>。未登记、未占有、抵押人无处分权、担保物已被查封，都会让优先权落空。跨国交易还要看当地登记和冲突法。</p>
+<p>第二，<strong>自动冻结与重整程序</strong>会限制债权人立即处置担保物。破产法给的保护越强，债权人的回收时间越长，现值越低。</p>
+<p>第三，<strong>欺诈性转移和偏颇清偿</strong>可以撤销。违约前把资产低价转给关联方，或优先偿还某个债权人，可能被破产管理人追回；这类追回会增加回收，也会增加诉讼成本。</p>
+<p>第四，<strong>跨境破产</strong>没有统一瀑布。不同国家的担保、优先和重组规则叠加，可能导致同一组资产在不同法院得到不同回收。</p>
+<p>第五，<strong>回收率有样本偏差</strong>。违约样本只包含已经违约的借款人，不能代表全部贷款；经济繁荣期的回收率会被高估，危机期会被低估。用历史平均回收率做压力测试，必须加上危机情景的 haircut。</p>
+<p>第六，<strong>担保不是免费</strong>。登记、评估、保险、监控和处置都要成本；过度依赖担保会挤压借款人现金流，反而提高违约概率。</p>
+<p>第七，<strong>回收时间也是风险</strong>。同样 60% 的回收，三年后到账和三个月后到账不是同一种资产；若按 8% 折现，三年后的 60% 现值约 47.6%，三个月约 58.8%。建模时要把金额和时点一起存，至少做一次“延迟六个月”的敏感性测试，否则“高回收”组合仍可能流动性枯竭。</p>
+<figure>
+  <svg role="img" aria-labelledby="fig-fin-059-collateral-priority-recovery-rates-zh-5-title fig-fin-059-collateral-priority-recovery-rates-zh-5-desc" viewBox="0 0 460 300" width="100%">
+    <title id="fig-fin-059-collateral-priority-recovery-rates-zh-5-title">担保有效性与清算/重整路径对回收的影响（教学示意）</title>
+    <desc id="fig-fin-059-collateral-priority-recovery-rates-zh-5-desc">担保有效性与清算/重整路径对回收的影响（教学示意）。图中数字为教学假设，不是真实统计。</desc>
+<text x="230" y="36" font-size="12" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">二维判断矩阵（教学示意）</text>
+    <rect x="88" y="76" width="170" height="88" rx="6" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="173" y="124" font-size="10" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">按瀑布</text>
+    <rect x="88" y="174" width="170" height="88" rx="6" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="173" y="222" font-size="10" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">缺口</text>
+    <rect x="268" y="76" width="170" height="88" rx="6" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="353" y="124" font-size="10" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">按计划</text>
+    <rect x="268" y="174" width="170" height="88" rx="6" fill="var(--surface)" stroke="var(--border)"></rect>
+    <text x="353" y="222" font-size="10" font-weight="650" fill="var(--text)" text-anchor="middle" font-family="inherit">更缺口</text>
+    <text x="44" y="118" font-size="9" font-weight="600" fill="var(--text)" text-anchor="start" font-family="inherit">担保有效</text>
+    <text x="44" y="216" font-size="9" font-weight="600" fill="var(--text)" text-anchor="start" font-family="inherit">担保无效</text>
+    <text x="173" y="62" font-size="9" font-weight="600" fill="var(--text)" text-anchor="middle" font-family="inherit">清算</text>
+    <text x="353" y="62" font-size="9" font-weight="600" fill="var(--text)" text-anchor="middle" font-family="inherit">重整</text>
+  </svg>
+  <figcaption>图 5：担保有效性与清算/重整路径对回收的影响（教学示意）。</figcaption>
+</figure>
+
+<p>补充边界一：回收率不是一个单数。名义回收 60 元、延迟六个月、折现率 8%，现值只有约 57.7 元；若处置还要两年，现值更低。评级和拨备应同时看名义金额、时间和不确定性，而不是只看抵押覆盖率。</p>
+<p>补充边界二：抵押物价值有清算价和持续经营价两套。清算价 80 元、账面 100 元时，超额抵押可能只是会计幻觉；如果抵押物是专用设备，折价和处置周期都会上升。担保物越专用，回收率的分布越厚尾。</p>
+<p>补充边界三：优先权会被插队。员工欠薪、税费、破产管理费用和自动冻结都可能先于普通债权，跨境案件还要看当地担保登记和承认规则；同一份合同在两国可能得到不同瀑布。</p>
+<p>补充数值反例：100 元贷款、抵押 80、处置成本 6、优先费用 4、担保债权 60、普通债权 40，总回收 70%、普通回收 25%；抵押跌到 50 时，总回收 40%、担保回收 66.7%、普通回收 0。LGD 从 30% 跳到 60%，说明抵押缓释不是线性的。</p>
+<h2 id="section-7">一页清单</h2>
+<ul>
+<li>先确认债权有效，再确认担保物权是否成立、是否登记、能否对抗第三人。</li>
+<li>画出清算、重整、庭外处置三条瀑布，分别计算可分配金额。</li>
+<li>回收率要写明名义/经济/最终口径，长期重整要折现。</li>
+<li>LGD=1-回收率；预期损失=PD×LGD；信用溢价要覆盖预期损失和资本成本。</li>
+<li>担保物价值要扣处置成本、税费、优先费用和等待时间。</li>
+<li>检查欺诈性转移、偏颇清偿、自动冻结和跨境规则。</li>
+<li>不用单一历史平均回收率代替危机情景；至少做一次价格下跌和回收延迟的压力测试。</li>
+</ul>
+<h2 id="section-8">常见误读</h2>
+<p>误读一：抵押率越高越安全。抵押率用的是账面值，回收用的是清算价；100 元抵押物在压力下可能只卖 60 元，处置成本、优先费用和延迟还会继续打折。</p>
+<p>误读二：回收率就是 1 减 LGD。LGD 是经济口径，含时间、折现和回收成本；名义回收 60% 在延迟两年、折现 8% 后，现值可能只剩一半。</p>
+<p>误读三：优先权登记一次就一劳永逸。跨境交易、抵押物移动、登记失效和欺诈性转移都会让优先权重排；每次续贷和重组都应重新核对登记与当地法律意见。</p>
+<p>误读四：担保物越专用越值钱。专用设备在正常经营中可能估值很高，清算时却买家少、折价深、处置慢；回收率要看变现半径，不是账面标签。</p>
+<h2 id="section-9">数据口径</h2>
+<p>口径一：名义回收、现值回收和 LGD 要分开报。名义回收是合同金额，现值回收按处置时间和折现率折算，LGD 还要扣处置成本与优先费用；60 元延迟六个月、8% 折现的现值约 57.7 元。</p>
+<p>口径二：抵押物估值要写清算价还是持续经营价。账面 100 元、清算 80 元、LTV 80% 看似刚好覆盖，但处置成本 6 元和优先费用 4 元会把覆盖变成缺口；专用设备还要加折价和更长处置期。</p>
+<p>口径三：优先权瀑布要逐项披露。担保债权、员工欠薪、税费、破产管理费用和普通债权各占多少，自动冻结如何影响处置顺序，跨境案件适用哪国登记与承认规则，缺一项就无法复算回收率。</p>
+<h2 id="section-10">练习</h2>
+<ol>
+<li>100 元贷款、抵押 80、处置成本 6、优先费用 4、担保债权 60、普通债权 40，计算总回收率与普通债权回收率。</li>
+<li>抵押物跌到 50、其他条件不变，重算担保债权与普通债权的回收率。</li>
+<li>如果担保物权未登记，优先权瀑布会怎样变化？列出至少两个后果。</li>
+<li>清算可分配 70；重整每年 10 元、共 5 年、折现率 8%，比较两者的现值。</li>
+<li>写出 LGD 与回收率的关系，并用 PD=2%、LGD=45% 计算预期损失率。</li>
+<li>为什么名义回收率 60% 不等于经济回收率 60%？给出时间与折现两个原因。</li>
+<li>分别说明未登记、自动冻结、欺诈性转移对回收率的影响路径。</li>
+<li>设计一个跨境破产检查清单，至少包含担保、优先权、自动冻结和当地律师意见四项。</li>
+<li>处置延迟六个月，8% 折现率下 60 元回收的现值是多少？与即时回收比较。</li>
+<li>抵押物 100、处置成本 10、优先费用 5、担保债权 120，担保债权人拿多少？缺口是什么？</li>
+<li>普通债权人如何判断自己的优先权是否会被员工债权或税费插队？</li>
+<li>用一段话说明“有担保不等于低风险”，并举出两个反例。</li>
+</ol>
+<p>数据说明：担保、资本与破产顺序参考巴塞尔委员会、IMF、美联储、欧洲央行、美国法院、FDIC、世界银行与 S&amp;P 方法文件[1][2][3][4][5][6][7][8]；正文数字为教学假设。</p>
+<h2 id="section-11">关联</h2>
+<ul>
+<li>先修：FIN-024 公司治理与利益冲突</li>
+<li>延伸：FIN-038 挤兑、杠杆与传染：金融稳定的压力测试</li>
+</ul>
+<h2 id="section-12">来源</h2>
+<ol>
+<li>Basel Committee on Banking Supervision. <em>Basel Framework: credit risk</em>. <a href="https://www.bis.org/bcbs/" rel="noopener noreferrer">https://www.bis.org/bcbs/</a>（访问日期：2026-11-25）</li>
+<li>International Monetary Fund. <em>Financial sector and credit risk</em>. <a href="https://www.imf.org/en/Topics/financial-sector" rel="noopener noreferrer">https://www.imf.org/en/Topics/financial-sector</a>（访问日期：2026-11-25）</li>
+<li>Federal Reserve. <em>Supervisory guidance and credit risk</em>. <a href="https://www.federalreserve.gov/" rel="noopener noreferrer">https://www.federalreserve.gov/</a>（访问日期：2026-11-25）</li>
+<li>European Central Bank. <em>Collateral and credit risk frameworks</em>. <a href="https://www.ecb.europa.eu/" rel="noopener noreferrer">https://www.ecb.europa.eu/</a>（访问日期：2026-11-25）</li>
+<li>U.S. Courts. <em>Bankruptcy basics</em>. <a href="https://www.uscourts.gov/services-forms/bankruptcy" rel="noopener noreferrer">https://www.uscourts.gov/services-forms/bankruptcy</a>（访问日期：2026-11-25）</li>
+<li>Federal Deposit Insurance Corporation. <em>Risk management and loss given default</em>. <a href="https://www.fdic.gov/" rel="noopener noreferrer">https://www.fdic.gov/</a>（访问日期：2026-11-25）</li>
+<li>World Bank. <em>Insolvency and creditor rights</em>. <a href="https://www.worldbank.org/en/topic/financialsector" rel="noopener noreferrer">https://www.worldbank.org/en/topic/financialsector</a>（访问日期：2026-11-25）</li>
+<li>S&amp;P Global Ratings. <em>Recovery and rating methodology</em>. <a href="https://www.spglobal.com/ratings/en/" rel="noopener noreferrer">https://www.spglobal.com/ratings/en/</a>（访问日期：2026-11-25）</li>
+</ol>
+  <section class="article-demo" id="demo-check" data-demo="check" data-lang="zh" aria-labelledby="demo-check-title" data-check-done="三项都能说清：这篇的核心已经过关。" data-check-pending="还差一项：回到正文对应小节，找一个反例或数字再讲一遍。" data-check-count="已勾选"> <header class="demo-head"> <div class="demo-head-top"> <p class="demo-eyebrow">动手演示</p> <button class="demo-reset" type="button" data-demo-reset>恢复默认</button> </div> <h2 id="demo-check-title">读完自检：三句话能不能说清</h2> <p class="demo-intro">不用背定义。把下面三句逐个勾上，看自己能不能用自己的话讲清机制、算例和边界。</p> </header>          <div class="demo-check"> <ul class="demo-check-list"> <li> <label> <input type="checkbox" data-check-index="0"> <span>能画出清算与重整两条优先权瀑布，并说明担保债权、普通债权和股东各自的回收顺序。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="1"> <span>能用担保物价值、处置成本和优先费用复算总回收率与 LGD，并解释价格下跌时的非线性变化。</span> </label> </li><li> <label> <input type="checkbox" data-check-index="2"> <span>能说出一个本文结论不适用的条件</span> </label> </li> </ul> <p class="demo-check-status" data-out="checkStatus" role="status"> 已勾选 0 / 3
+</p> </div> <p class="demo-footnote">数字为教学假设，用来展示关系，不构成预测或投资建议。</p> </section><script type="module" src="/_astro/ArticleDemo.astro_astro_type_script_index_0_lang.C9VQAsQ0.js"></script> <p class="notice"> 本文已通过当前发布门槛；事实、计算与译文如有修订，会同步更新两个语言版本。 </p> <section class="article-cite" aria-labelledby="cite-heading"> <h2 id="cite-heading">引用这篇</h2> <p>非商业引用请注明作者、标题、本站和链接；第三方来源按原许可。</p> <code data-cite-text>担保、优先权与违约回收率。巫妖投资，2026-11-26。https://finance.51invest.com/learn/collateral-priority-recovery-rates/</code> <div class="cite-actions"> <button type="button" data-copy-cite>复制引用</button> <span data-cite-status role="status" aria-live="polite"></span> </div> </section> <nav class="article-pager" aria-label="同站上一篇与下一篇"> <a href="/learn/uk-ldi-crisis-2022-gilt-margin-spiral/"> <small>上一篇</small> <strong>2022 英国 LDI 危机：保证金螺旋与养老金</strong> </a> <span></span> </nav> <p> <a class="button secondary" href="/"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class> <path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path>                </svg>返回分站 </a> </p> </div> <aside class="article-aside" aria-label="文章信息"> <section class="aside-card article-toc-aside"> <h2>本文目录</h2> <ol> <li><a href="#section-1">问题与范围</a></li><li><a href="#section-2">担保的五层结构</a></li><li><a href="#section-3">优先权瀑布</a></li><li><a href="#section-4">回收率与违约损失率</a></li><li><a href="#section-5">数值算例</a></li><li><a href="#section-6">边界与反例</a></li><li><a href="#section-7">一页清单</a></li><li><a href="#section-8">常见误读</a></li><li><a href="#section-9">数据口径</a></li><li><a href="#section-10">练习</a></li><li><a href="#section-11">关联</a></li><li><a href="#section-12">来源</a></li> </ol> </section> <section class="aside-card"> <h2>学习目标</h2> <ul> <li>能画出清算与重整两条优先权瀑布，并说明担保债权、普通债权和股东各自的回收顺序。</li><li>能用担保物价值、处置成本和优先费用复算总回收率与 LGD，并解释价格下跌时的非线性变化。</li> </ul> </section> <section class="aside-card"> <h2>必需先修</h2> <ul> <li> <a href="/learn/corporate-governance-and-conflicts/">FIN-024 · 公司治理与利益冲突</a> </li> </ul> </section> <section class="aside-card"> <h2>建议阅读</h2> <ul> <li> <a href="/learn/bank-runs-leverage-and-contagion/">FIN-038 · 挤兑、杠杆与传染：金融稳定的压力测试</a> </li> </ul> </section> <section class="aside-card"> <h2>AI 复核记录</h2> <p class="muted"> 本项目没有真人签字；下列状态来自 AI-only 编辑复核。 </p> <ul> <li> 事实与计算 ：AI 复核通过 </li><li> 学科 ：AI 复核通过 </li><li> 英文 ：AI 复核通过 </li><li> 页面 ：AI 复核通过 </li> </ul> <p class="muted"> 复核日期：2026-11-26 </p> </section> <section class="aside-card"> <h2>来源</h2> <div class="source"> <a href="https://www.bis.org/bcbs/" rel="noopener noreferrer" target="_blank">Basel Framework: credit risk</a> <p>Basel Committee on Banking Supervision · BIS</p> <p>访问：2026-11-25 · 许可：BIS terms; cite-only</p> <p>支持论点：用于核对本文的制度、数据或方法入口；正文中的教学推演与来源事实分开标注。</p> </div><div class="source"> <a href="https://www.imf.org/en/Topics/financial-sector" rel="noopener noreferrer" target="_blank">Financial sector and credit risk</a> <p>International Monetary Fund · IMF</p> <p>访问：2026-11-25 · 许可：IMF terms; cite-only</p> <p>支持论点：用于核对本文的制度、数据或方法入口；正文中的教学推演与来源事实分开标注。</p> </div><div class="source"> <a href="https://www.federalreserve.gov/" rel="noopener noreferrer" target="_blank">Supervisory guidance and credit risk</a> <p>Federal Reserve · Federal Reserve</p> <p>访问：2026-11-25 · 许可：Public domain (U.S. government)</p> <p>支持论点：用于核对本文的制度、数据或方法入口；正文中的教学推演与来源事实分开标注。</p> </div><div class="source"> <a href="https://www.ecb.europa.eu/" rel="noopener noreferrer" target="_blank">Collateral and credit risk frameworks</a> <p>European Central Bank · ECB</p> <p>访问：2026-11-25 · 许可：ECB terms; cite-only</p> <p>支持论点：用于核对本文的制度、数据或方法入口；正文中的教学推演与来源事实分开标注。</p> </div><div class="source"> <a href="https://www.uscourts.gov/services-forms/bankruptcy" rel="noopener noreferrer" target="_blank">Bankruptcy basics</a> <p>U.S. Courts · U.S. Courts</p> <p>访问：2026-11-25 · 许可：Public domain (U.S. government)</p> <p>支持论点：用于核对本文的制度、数据或方法入口；正文中的教学推演与来源事实分开标注。</p> </div><div class="source"> <a href="https://www.fdic.gov/" rel="noopener noreferrer" target="_blank">Risk management and loss given default</a> <p>Federal Deposit Insurance Corporation · FDIC</p> <p>访问：2026-11-25 · 许可：Public domain (U.S. government)</p> <p>支持论点：用于核对本文的制度、数据或方法入口；正文中的教学推演与来源事实分开标注。</p> </div><div class="source"> <a href="https://www.worldbank.org/en/topic/financialsector" rel="noopener noreferrer" target="_blank">Insolvency and creditor rights</a> <p>World Bank · World Bank</p> <p>访问：2026-11-25 · 许可：CC BY 4.0</p> <p>支持论点：用于核对本文的制度、数据或方法入口；正文中的教学推演与来源事实分开标注。</p> </div><div class="source"> <a href="https://www.spglobal.com/ratings/en/" rel="noopener noreferrer" target="_blank">Recovery and rating methodology</a> <p>S&amp;P Global Ratings · S&amp;P Global Ratings</p> <p>访问：2026-11-25 · 许可：Publisher terms; cite-only</p> <p>支持论点：用于核对本文的制度、数据或方法入口；正文中的教学推演与来源事实分开标注。</p> </div> </section>  </aside> </div> </article><script type="module">var e=document.querySelector(`[data-reading-progress] span`),t=document.querySelector(`article`);if(e&&t){let n=()=>{let n=t.offsetTop,r=t.offsetHeight-window.innerHeight,i=r>0?(window.scrollY-n)/r:0;e.style.width=`${Math.min(1,Math.max(0,i))*100}%`};window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),n()}var n=document.querySelector(`[data-copy-cite]`),r=document.querySelector(`[data-cite-text]`),i=document.querySelector(`[data-cite-status]`);n?.addEventListener(`click`,async()=>{if(!r)return;let e=r.textContent?.trim()??``;try{await navigator.clipboard.writeText(e),i&&(i.textContent=document.documentElement.lang===`en`?`Copied`:`已复制`)}catch{i&&(i.textContent=document.documentElement.lang===`en`?`Copy failed; select the text manually.`:`复制失败，请手动选择文字。`)}window.setTimeout(()=>{i&&(i.textContent=``)},2500)});</script>  </main> <footer class="site-footer"> <div class="container footer-inner"> <div class="footer-brand"> <span class="footer-mascot"><img src="/_astro/neutral.Dr5C2SoA.png" width="28" height="28" alt class="mascot" loading="lazy" decoding="async"></span> <div> <strong>巫妖投资 51Invest</strong> <p class="footer-note">非商业免费知识站。每篇标出来源与口径；这里没有投资建议。</p> </div> </div> <nav class="footer-links" aria-label="知识分站"> <a href="https://51invest.com/" data-main-home>首页</a> <a href="https://51invest.com/contents/">内容地图</a> <a href="https://51invest.com/glossary/">术语表</a> <a href="/search/">搜索</a> <a href="https://51invest.com/charts/" data-main-link>图表</a> <a href="https://51invest.com/sources/" data-main-link>数据与许可</a> <a href="https://51invest.com/about/" data-main-link>关于</a> <a href="https://51invest.com/method/" data-main-link>方法</a> <a href="https://51invest.com/corrections/" data-main-link>更正</a> <a href="https://51invest.com/privacy/" data-main-link>隐私</a> <a href="https://nav.51invest.com/" rel="noopener noreferrer">导航</a> <a href="/">分站首页</a> </nav> </div> </footer> <nav class="mobile-nav" aria-label="快捷导航"> <a class="mobile-link" href="https://51invest.com/" data-main-home> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>    <path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path>             </svg> <span>首页</span> </a> <a class="mobile-link" href="https://economics.51invest.com/" aria-label="经济学" title="经济学"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>           <path d="M4 19V5"></path><path d="M4 19h16"></path><path d="m7 15 3-4 3 2 4-6"></path>      </svg> <span>经济学</span> </a><a class="mobile-link active" href="/" aria-current="page" aria-label="金融基础" title="金融基础"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>            <path d="m3 9 9-6 9 6"></path><path d="M4 10h16"></path><path d="M6 10v8M10 10v8M14 10v8M18 10v8"></path><path d="M3 19h18"></path>     </svg> <span>金融</span> </a><a class="mobile-link" href="https://markets.51invest.com/" aria-label="市场与产品" title="市场与产品"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>             <path d="m12 3 9 5-9 5-9-5 9-5Z"></path><path d="m3 12 9 5 9-5"></path><path d="m3 16 9 5 9-5"></path>    </svg> <span>市场</span> </a><a class="mobile-link" href="https://invest.51invest.com/" aria-label="投资方法" title="投资方法"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>              <circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path>   </svg> <span>投资</span> </a><a class="mobile-link" href="https://history.51invest.com/" aria-label="经济与金融史" title="经济与金融史"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>               <circle cx="12" cy="12" r="8.5"></circle><path d="M12 7v5l3 2"></path>  </svg> <span>经济史</span> </a><a class="mobile-link" href="https://research.51invest.com/" aria-label="研究方法" title="研究方法"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>                <path d="M9 3h6"></path><path d="M10 3v5L5 17a3 3 0 0 0 2.6 4h8.8a3 3 0 0 0 2.6-4L14 8V3"></path><path d="M7 15h10"></path> </svg> <span>研究</span> </a> <a class="mobile-link" href="https://nav.51invest.com/" rel="noopener noreferrer" data-external-nav aria-label="打开外链导航"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class>          <path d="M10 13a5 5 0 0 0 7.1 0l2-2a5 5 0 0 0-7.1-7.1l-1.2 1.2"></path><path d="M14 11a5 5 0 0 0-7.1 0l-2 2A5 5 0 0 0 12 20.1l1.2-1.2"></path>       </svg> <span>导航</span> </a> </nav><script type="module">var e=document.documentElement,t=[`auto`,`light`,`dark`],n=matchMedia(`(prefers-color-scheme: dark)`),r=()=>{let t=e.dataset.themeMode;return t===`light`||t===`dark`?t:`auto`},i=e=>{try{localStorage.setItem(`51invest-theme`,e)}catch{}try{let t=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-theme=${e}; Path=/; Max-Age=31536000; SameSite=Lax${t}`}catch{}},a=e=>{document.querySelectorAll(`[data-theme-toggle]`).forEach(t=>{let n=t.dataset[`label${e[0].toUpperCase()}${e.slice(1)}`];n&&(t.setAttribute(`aria-label`,n),t.setAttribute(`title`,n))})},o=t=>{e.dataset.themeMode=t,e.dataset.theme=t===`auto`?n.matches?`dark`:`light`:t,i(t),a(t)};a(r()),document.querySelectorAll(`[data-theme-toggle]`).forEach(e=>{e.addEventListener(`click`,()=>{let e=t[(t.indexOf(r())+1)%t.length];o(e)})}),n.addEventListener(`change`,()=>{r()===`auto`&&(e.dataset.theme=n.matches?`dark`:`light`)}),document.querySelectorAll(`[data-language-link]`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.dataset.languageLink;if(t===`zh`||t===`en`){try{localStorage.setItem(`51invest-language`,JSON.stringify(t))}catch{}try{let e=location.protocol===`https:`?`; Secure`:``;document.cookie=`51invest-language=${t}; Path=/; Max-Age=31536000; SameSite=Lax${e}`}catch{}}})});</script> </body> </html>
