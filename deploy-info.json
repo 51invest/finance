@@ -1,7 +1,1 @@
-{
-  "site": "finance",
-  "domain": "finance.51invest.com",
-  "source": "dist/finance",
-  "builtAt": "2026-11-25T08:52:06.041Z",
-  "note": "Static GitHub Pages deployment."
-}
+{"site":"finance","servedDomain":"finance.51invest.com","canonical":"https://finance.51invest.com","source":"dist/finance","builtAt":"2026-11-26T01:57:36Z","pages":121,"articles":58,"commit":"250e8e6","tag":"release-351-2026-11-26","note":"Static GitHub Pages deployment for the 351 baseline at finance.51invest.com."}
